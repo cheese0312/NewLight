@@ -1,0 +1,1 @@
+프로젝트 import > 프로젝트 bulid Path > 각자 가지고 있는 jstl.jar , mybatis-3.5.11.jar , mysql-connector-j.8.0.3.1.jar , standard.jar , tomcat-dbcp.jar 파일들을 Libraries에서 재설정 해주기 > Order and Export에서 Select All 해주기
