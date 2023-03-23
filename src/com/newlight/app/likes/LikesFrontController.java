@@ -7,6 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.newlight.app.member.CheckIdOkController;
+import com.newlight.app.member.JoinOkController;
+import com.newlight.app.member.LoginController;
+import com.newlight.app.member.LoginOkController;
+import com.newlight.app.member.LogoutOkController;
+
 public class LikesFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -20,7 +26,13 @@ public class LikesFrontController extends HttpServlet{
 	}
 
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target); 
 		
+		switch(target) {
+
+			
+		}
 	}
 
 }

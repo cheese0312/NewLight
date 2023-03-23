@@ -11,6 +11,7 @@
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
+		<typeAlias type="com.newlight.app.dto.FollowsVO" alias="FollowsVO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
@@ -21,7 +22,7 @@
 		<transactionManager type="JDBC"/>
 		<dataSource type="POOLED">
 			<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="url" value="jdbc:mysql://localhost:3306/jsp_pm"/>
+			<property name="url" value="jdbc:mysql://localhost:3306/newlight"/>
 			<property name="username" value="root"/>
 			<property name="password" value="1234"/>
 		</dataSource>
@@ -31,11 +32,12 @@
 	<mappers>
 		<mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/CreationsMapper.xml"/>
+ 		<mapper resource="com/mybatis/mapper/CreationsMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/FollowsMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/LikesMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 	</mappers>
 	
 </configuration>

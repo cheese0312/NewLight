@@ -4,6 +4,6 @@
 <!-- 좋아요 SQL문 작성 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="">
+<mapper namespace="likes">
 
 </mapper>

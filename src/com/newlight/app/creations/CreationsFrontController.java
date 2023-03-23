@@ -21,7 +21,12 @@ public class CreationsFrontController extends HttpServlet{
 	}
 	
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target); 
+		
+		switch(target) {
 
+		}
 	}
 
 }

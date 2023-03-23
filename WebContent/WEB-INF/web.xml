@@ -1,12 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
-  <display-name>newlight</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>newlight</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Member</servlet-name>
+		<servlet-class>com.newlight.app.member.MemberFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Member</servlet-name>
+		<url-pattern>*.me</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MyPage</servlet-name>
+		<servlet-class>com.newlight.app.mypage.MyPageFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyPage</servlet-name>
+		<url-pattern>*.mp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Likes</servlet-name>
+		<servlet-class>com.newlight.app.likes.LikesFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Likes</servlet-name>
+		<url-pattern>*.le</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Follows</servlet-name>
+		<servlet-class>com.newlight.app.follows.FollowsFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Follows</servlet-name>
+		<url-pattern>*.fw</url-pattern>
+	</servlet-mapping>
+	
+			<servlet>
+		<servlet-name>Creations</servlet-name>
+		<servlet-class>com.newlight.app.creations.CreationsFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Creations</servlet-name>
+		<url-pattern>*.ct</url-pattern>
+	</servlet-mapping>
+	
+
 </web-app>

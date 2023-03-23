@@ -4,6 +4,6 @@
 <!-- 커뮤니티 SQL작성 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="">
+<mapper namespace="community">
 
 </mapper>

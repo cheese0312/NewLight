@@ -1,0 +1,31 @@
+footer > hr {
+  width: 70%;
+  color: rgb(185, 185, 185);
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    color: gray;
+    align-items: center;
+}
+
+.footer-sub {
+  display: flex;
+  justify-content: flex-start;
+  width: 55%;
+}
+
+.footer-service,
+.footer-termsuse,
+.footer-company {
+  padding: 10px 15px;
+}
+
+.footer-newlight {
+  width: 10%;
+  font-size: 11px;
+  text-align: end;
+}
