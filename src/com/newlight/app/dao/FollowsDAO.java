@@ -10,4 +10,6 @@ public class FollowsDAO {
 	public FollowsDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
+	
+
 }

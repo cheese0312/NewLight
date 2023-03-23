@@ -1,0 +1,117 @@
+main {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main-box-bin {
+  height: 30px;
+}
+
+.admin-main {
+  width: 65%;
+  display: block;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.admin-btn {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  /* margin: 0 50px; */
+  /* padding: 0 30px; */
+}
+
+.admin-member > a {
+  text-decoration: none;
+  color: black;
+}
+
+.admin-creations > a {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  width: 90%;
+}
+
+.member-box {
+  margin: 30px 0;
+  width: 90%;
+  border: 1px solid gray;
+}
+
+.member-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 75px;
+  width: 80%;
+}
+
+.member-name {
+  width: 30%;
+}
+
+.member-creations {
+  width: 60%;
+}
+
+.member-status {
+  width: 30%;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 75px;
+  width: 80%;
+}
+
+.member-list-name {
+  width: 30%;
+}
+
+.member-list-creations {
+  width: 60%;
+}
+
+.member-list-status {
+  width: 30%;
+}
+
+.member-list-status1 {
+  color: blue;
+  display: inline-block;
+  position: relative;
+}
+
+.member-list-status1 > a{
+  list-style: none;
+  text-decoration: none;
+  color: gray;
+}
+
+
+
+.member-list-status2 {
+  color: red;
+}
+
+.member-list-status2 > a {
+  text-decoration: none;
+  color: gray;
+}
+
+
+.member-status-btn {
+  background-color: gainsboro;
+  border: 0px solid;
+  border-radius: 5px;
+}

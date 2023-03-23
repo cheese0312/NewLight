@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/header.css">
+  </head>
+  <body onload="checkErrCode()">
+    <main>
+      <aside>
+        <div class="main-asid"></div>
+      </aside>
+      <!-- 메뉴바 -->
+    <!-- 헤더 -->
+    <header>
+      <div class="header-box">
+
+          <!-- 로고 이미지 -->
+          <div class="logo">
+              <img src="../img/logo2.png" alt="">
+          </div>
+          <!-- 헤더 메인 박스 -->
+          <div class="main-header-box">
+          <div class="mian-nav-box"></div>
+
+          <!-- 헤더 네비 박스 -->
+          <div class="nav">
+
+          <!-- 드롭 박스 div -->
+          <div class="drop-box">
+
+          <!-- 드롭 박스 세트 1 -->
+          <div class="dropdown1">
+
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn1">1차 창작물</li>
+
+              <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content1">
+
+                  <!-- 해당 페이지 링크 걸어주기 -->
+                  <a href="#">손그림</a>
+                  <a href="#">배경화면</a>
+                  <a href="#">만화</a>
+                  <a href="#">폰트</a>
+                  <a href="#">카카오톡 테마</a>
+              </li>
+              </div>
+
+              <!-- 드롭 박스 세트 2 -->
+              <div class="dropdown2">
+
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn2">2차 창작물</li>
+
+               <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content2">
+
+                   <!-- 해당 페이지 링크 걸어주기 -->
+                  <a href="../html/background.html">배경화면</a>
+                  <a href="../html/tracing.html">트레이싱</a>
+                  <a href="../html/theme.html">카카오톡 테마</a>
+              </li>
+              </div>
+
+              <!-- 드롭 박스 세트 3 -->
+              <div class="dropdown3">
+
+              <!-- 드롭 박스 버튼 -->    
+              <li class="dropbtn3">커뮤니티</li>
+
+               <!-- 드롭 서브 메뉴 -->
+              </div>
+
+              <!-- 드롭 박스 세트 4 -->
+              <div class="dropdown4">
+
+               <!-- 드롭 박스 버튼 -->   
+              <li class="dropbtn4">•••</li>
+
+               <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content4">
+
+                   <!-- 해당 페이지 링크 걸어주기 -->
+                  <a href="#">공지사항</a>
+                  <a href="#">문의</a>
+              </li>
+              </div>
+          </div>
+          </div>
+      </div>
+          <!-- 로그인 세션 -->
+          <div class="btn-box">
+              <div class="login-box"></div>
+              <!-- 로그인 버튼 -->
+              <a href="#" class="login-btn">로그인</a>
+          </div>
+      </div>
+  </header>
+
+        <div class="login-page">
+          <div class="form">
+            <form:form class="login-form">
+              <input name="userId" type="text" placeholder="username" required="true" />
+              <input name="passwd" type="password" placeholder="password" required />
+
+              <button type="submit">login</button>
+              <p class="message">
+                <ul id="ullog">
+                  <li id="lilogb"><a href="#">회원가입</a></li>
+                  |
+                  <li id="lilog"><a href="#">아이디/</a> <a href="#">비밀번호 찾기</a></li>
+                </ul>
+              </p>
+            </form:form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

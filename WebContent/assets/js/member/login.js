@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+console.log(window.location.search);
+console.log(location.search);
+
+let queryString = location.search;
+
+//URLSearchParams 객체는 쿼리스트링을 해석해준다.
+let urlParams = new URLSearchParams(queryString);
+
+let result = urlParams.get('result');
+
+if(result == 'false'){
+	alert('아이디와 비밀번호를 확인해주세요.');
+}

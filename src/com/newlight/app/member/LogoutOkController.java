@@ -11,6 +11,7 @@ import com.newlight.app.Execute;
 public class LogoutOkController implements Execute{
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		
+		req.getSession().invalidate();
+		resp.sendRedirect("/member/login.me");
 	}
 }
