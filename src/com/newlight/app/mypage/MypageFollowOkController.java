@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.newlight.app.Execute;
-import com.newlight.app.dao.MypageDAO;
-import com.newlight.app.dto.MypageVO;
 
 public class MypageFollowOkController implements Execute {
 

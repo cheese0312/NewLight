@@ -7,11 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.newlight.app.member.JoinOkController;
-import com.newlight.app.member.LoginController;
-import com.newlight.app.member.LoginOkController;
-
-public class MyPageFrontController extends HttpServlet{
+public class MypageFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);

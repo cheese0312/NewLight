@@ -11,10 +11,10 @@
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
-		<typeAlias type="com.newlight.app.dto.FollowsVO" alias="FollowsVO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
+		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
 	</typeAliases>
 
 	<environments default="mysql">
