@@ -105,7 +105,6 @@ public class MemberDTO {
 	public void setMemberStatus(String memberStatus) {
 		this.memberStatus = memberStatus;
 	}
-	
 
 	public String getMemberId() {
 		return memberId;
@@ -125,3 +124,10 @@ public class MemberDTO {
 	}
 	
 }
+
+
+
+
+
+
+

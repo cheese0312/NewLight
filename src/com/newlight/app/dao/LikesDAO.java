@@ -10,13 +10,17 @@ import com.newlight.app.dto.LikesDTO;
 
 public class LikesDAO {
 	public SqlSession sqlSession;
-	
+
 	public LikesDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-	
+
 	public List<LikesDTO> likeOk(Map<String, Integer> page) {
-		return sqlSession.selectList("likes.like" , page);
+		return sqlSession.selectList("likes.like", page);
+	}
+
+	public void delete(int memberNumber) {
+		sqlSession.delete("like.delete", memberNumber);
 	}
 
 }

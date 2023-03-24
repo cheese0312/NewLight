@@ -9,6 +9,10 @@
 		insert into follows(follower_number, followee_number)
 		values(#{followerNumber}, #{followeeNumber})
 	</insert> -->
+	<delete id="delete" parameterType="_int">
+		delete from follows
+		where follower_number = #{memberNumber} or followee_number = #{memberNumber}
+	</delete>
 
 	
 </mapper>

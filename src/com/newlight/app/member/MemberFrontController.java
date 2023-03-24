@@ -67,9 +67,10 @@ public class MemberFrontController extends HttpServlet{
 		//회원 정보 수정 Ok 주소&컨트롤러 넣어주기	
 		case "8" :
 			break;
-			
 		//회원 탈퇴 주소&컨트롤러 넣어주기
-		case "9" :
+		case "/member/memberDeleteOk.me" :
+			System.out.println("dddd");
+			new DeleteOkController().execute(req, resp);
 			break;
 		}
 	}

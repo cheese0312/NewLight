@@ -28,4 +28,8 @@
 		where member_number=#{memberNumber};
 	</update> -->
 
+	<delete id="delete" parameterType="_int">
+		delete from tbl_member
+		where member_number= #{memberNumber};
+	</delete>
 </mapper>
