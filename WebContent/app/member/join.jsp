@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- 헤더 -->
-	<%@include file="/app/header.jsp"%>
+<%-- 	<%@include file="/app/header.jsp"%> --%>
 	<main>
 		<form action="${pageContext.request.contextPath}/member/joinOk.me" method=post>
 			<div class="main">
@@ -110,7 +110,7 @@
 		</form>
 	</main>
 	<!-- 푸터 -->
-	<%@include file="/app/footer.jsp"%>
+
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/member/join.js"></script>  
 </body>
