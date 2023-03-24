@@ -23,16 +23,17 @@ public class MemberFrontController extends HttpServlet{
 //		System.out.println("멤버 프론트 컨트롤러 실행!");
 		
 		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target);
 		
 		switch(target) {
 		//join 페이지 고유 주소 넣어주기
-		case "1" :
+		case "/member/join.me" :
 			//join.jsp 주소&컨트롤러 넣어주기
 			req.getRequestDispatcher("").forward(req, resp);
 			break;
 			
 		//join확인 완료 주소&컨트롤러 넣어주기
-		case "2" :
+		case "/member/joinOk.me" :
 			new JoinOkController().execute(req,resp);
 			break;
 		
@@ -62,9 +63,10 @@ public class MemberFrontController extends HttpServlet{
 		//회원 정보 수정 Ok 주소&컨트롤러 넣어주기	
 		case "8" :
 			break;
-			
 		//회원 탈퇴 주소&컨트롤러 넣어주기
-		case "9" :
+		case "/member/memberDeleteOk.me" :
+			System.out.println("dddd");
+			new DeleteOkController().execute(req, resp);
 			break;
 		}
 	}

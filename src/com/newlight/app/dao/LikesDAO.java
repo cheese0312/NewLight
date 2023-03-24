@@ -10,5 +10,9 @@ public class LikesDAO {
 	public LikesDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
+	
+	public void delete(int memberNumber) {
+		sqlSession.delete("like.delete", memberNumber);
+	}
 
 }

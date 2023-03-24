@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 문의사항 SQL문 작성 1차 2차 나눠질 예정-->
+<!-- 문의사항 SQL문 작성 1차 2차 나눠질 예정 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="">
+<mapper namespace="qna">
+	<delete id="delete" parameterType="_int">
+		delete from qna
+		where member_number = #{membeNumber}
+	</delete>
 
 </mapper>

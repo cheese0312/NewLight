@@ -14,6 +14,7 @@
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -21,7 +22,7 @@
 		<transactionManager type="JDBC"/>
 		<dataSource type="POOLED">
 			<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-			<property name="url" value="jdbc:mysql://localhost:3306/jsp_pm"/>
+			<property name="url" value="jdbc:mysql://localhost:3306/newlight"/>
 			<property name="username" value="root"/>
 			<property name="password" value="1234"/>
 		</dataSource>
@@ -36,6 +37,7 @@
 		<mapper resource="com/mybatis/mapper/LikesMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
 	</mappers>
 	
 </configuration>

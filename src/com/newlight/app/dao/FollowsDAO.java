@@ -10,4 +10,9 @@ public class FollowsDAO {
 	public FollowsDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
+	
+	public void delete(int memberNumber) {
+		 sqlSession.delete("follows.delete", memberNumber);
+	}
+	
 }

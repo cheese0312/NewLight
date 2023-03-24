@@ -21,7 +21,25 @@ public class CreationsFrontController extends HttpServlet{
 	}
 	
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target);
+		System.out.println("sadsasdadada");
+		
+		switch(target) {
+		case "/board/kakaoBoard.jsp.nc" :
+			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			break;
+		case "/board/themeDowoload.jsp.nc" :
+//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			break;
+		case "/board/aniBoard.jsp.nc" :
+//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			break;
+		case "/board/aniViewBoard.jsp.nc" :
+//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			break;
+		}
+		
 	}
-
+	
 }

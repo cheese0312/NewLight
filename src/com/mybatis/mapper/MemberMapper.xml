@@ -4,6 +4,15 @@
 <!-- 멤버 SQL작성 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="">
+<mapper namespace="member">
+	<insert id="join">
+	insert into `member`
+	(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_email, member_birth, member_address1, member_address2)
+	values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2})
+	</insert>
 
+	<delete id="delete" parameterType="_int">
+		delete from tbl_member
+		where member_number= #{memberNumber};
+	</delete>
 </mapper>
