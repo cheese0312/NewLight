@@ -5,5 +5,8 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="community">
-
+	<delete id="delete" parameterType="_int">
+		delete from community
+		where member_number = #{memberNumber}
+	</delete>
 </mapper>

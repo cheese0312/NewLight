@@ -11,5 +11,8 @@ public class QnADAO {
 	public QnADAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-
+	
+	public void delete(int memberNumber) {
+		sqlSession.delete("qna.delete", memberNumber);
+	}
 }

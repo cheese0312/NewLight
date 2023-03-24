@@ -5,5 +5,9 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="likes">
+	<delete id="delete" parameterType="_int">
+		delete from likes
+		where member_number = #{memberNumber}
+	</delete>
 
 </mapper>

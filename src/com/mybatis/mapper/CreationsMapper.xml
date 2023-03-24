@@ -5,5 +5,12 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="creations">
-
+	<select id="select" resultType="_int">
+		select count(creation_number) from tbl_creations
+	</select>
+	
+	<delete id="delete" parameterType="_int">
+		delete from creations 
+		where member_number = #{memberNumber}
+	</delete>
 </mapper>

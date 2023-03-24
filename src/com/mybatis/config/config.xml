@@ -15,6 +15,7 @@
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
 		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -38,6 +39,7 @@
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
 	</mappers>
 	
 </configuration>

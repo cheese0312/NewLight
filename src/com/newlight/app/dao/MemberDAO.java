@@ -25,5 +25,9 @@ public class MemberDAO {
 	public boolean checkId(String memberId) {
 		return (Integer)sqlSession.selectOne("member.checkId", memberId) < 1;
 	}
-
+	
+	public void delete(int memberNumber) {
+		sqlSession.delete("member.delete", memberNumber);
+	}
+	
 }

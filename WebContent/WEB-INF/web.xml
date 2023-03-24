@@ -42,8 +42,8 @@
 		<servlet-name>Likes</servlet-name>
 		<url-pattern>*.le</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>Follows</servlet-name>
 		<servlet-class>com.newlight.app.follows.FollowsFrontController</servlet-class>
 	</servlet>
@@ -52,8 +52,8 @@
 		<servlet-name>Follows</servlet-name>
 		<url-pattern>*.fw</url-pattern>
 	</servlet-mapping>
-	
-			<servlet>
+
+	<servlet>
 		<servlet-name>Creations</servlet-name>
 		<servlet-class>com.newlight.app.creations.CreationsFrontController</servlet-class>
 	</servlet>
@@ -62,6 +62,26 @@
 		<servlet-name>Creations</servlet-name>
 		<url-pattern>*.ct</url-pattern>
 	</servlet-mapping>
-	
+
+	<servlet>
+		<servlet-name>Community</servlet-name>
+		<servlet-class>com.newlight.app.community.CommunityFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Community</servlet-name>
+		<url-pattern>*.cm</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Notification</servlet-name>
+		<servlet-class>com.newlight.app.notification.NotificationFrontController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Notification</servlet-name>
+		<url-pattern>*.nc</url-pattern>
+	</servlet-mapping>
+
 
 </web-app>
