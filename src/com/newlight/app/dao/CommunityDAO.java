@@ -15,6 +15,10 @@ public class CommunityDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
+	public void delete(int memberNumber) {
+		sqlSession.delete("community.delete", memberNumber);
+	}
+	
 	public List<CommunityVO> selectAll(Map<String, Integer> pageMap) {
 		return sqlSession.selectList("community.selectAll", pageMap);
 	}
