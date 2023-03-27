@@ -71,7 +71,7 @@
 
 	<servlet-mapping>
 		<servlet-name>Community</servlet-name>
-		<url-pattern>*.co</url-pattern>
+		<url-pattern>*.cm</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
