@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MypageFrontController extends HttpServlet{
+public class MyPageFrontController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);
@@ -19,13 +19,15 @@ public class MypageFrontController extends HttpServlet{
 		doProcess(req, resp);
 	}
 
-	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target); 
 		
 		switch(target) {
 		case "/mypage/creationsOk.mp" :
+			System.out.println("마이페이지 내 작품 들어갈 예정!");
+//			req.getRequestDispatcher("/app/mypage/mypage_creations.jsp").forward(req, resp);
 			new MypageCreationsOkController().execute(req, resp);
 			break;
 			
