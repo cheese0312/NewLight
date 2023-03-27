@@ -11,6 +11,7 @@
 		<welcome-file>default.html</welcome-file>
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
+		<welcome-file>community.jsp</welcome-file>
 	</welcome-file-list>
 
 	<servlet>
@@ -70,7 +71,7 @@
 
 	<servlet-mapping>
 		<servlet-name>Community</servlet-name>
-		<url-pattern>*.cm</url-pattern>
+		<url-pattern>*.co</url-pattern>
 	</servlet-mapping>
 
 	<servlet>

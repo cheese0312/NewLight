@@ -22,6 +22,15 @@ public class CommunityFrontController extends HttpServlet{
 	
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target);
+		
+		switch(target) {
+		case "/community/communityListOk.co":
+		//임시로 이동 처리
+//			req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
+			new CommunityListOkController().execute(req, resp);
+		break;
 
 	}
 
