@@ -40,9 +40,9 @@
                     <!-- 해당 페이지 링크 걸어주기 -->
                     <a href="${pageContext.request.contextPath}/app/creations/handDrow/handDrow.jsp">손그림</a>
                     <a href="#">배경화면</a>
-                    <a href="#">만화</a>
+                    <a href="${pageContext.request.contextPath}/app/creations/ani/aniBoard.jsp">만화</a>
                     <a href="#">폰트</a>
-                    <a href="#">카카오톡 테마</a>
+                    <a href="${pageContext.request.contextPath}/app/creations/theme/kakaoBoard.jsp">카카오톡 테마</a>
                 </li>
                 </div>
 

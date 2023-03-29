@@ -14,6 +14,7 @@
 	<%@include file="/app/header.jsp"%>
 	<main>
 		<form action="${pageContext.request.contextPath}/member/joinOk.me" method=post enctype="multipart/form-data">
+
 			<div class="main">
 				<table width="600px">
 					<tr>

@@ -15,6 +15,10 @@ public class CreationsFileDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
+	public void insert(CreationsFileDTO creationDTO) {
+		sqlSession.insert("creationsfile.insert", creationDTO);
+	}
+	
 	public List<CreationsFileDTO> select(int creationNumber){
 		return sqlSession.selectList("creationsfile.select", creationNumber);
 	}

@@ -5,17 +5,20 @@ package com.newlight.app.dto;
 //creation_content varchar(1000)not null,
 //creation_category1 varchar(1000)not null,
 //creation_category2 varchar(1000)not null,
+//creation_writeday datetime default now(),
 //member_number int unsigned not null,
 //constraint fk_creation foreign key(member_number)
 //references member(member_number)
 
 public class CreationsDTO {
-	private int creationNumber;
-	private String creationTitle;
-	private String creationContent;
-	private String creationCategory1;
-	private String creationCategory2;
-	private int memberNumber;
+	
+	int creationNumber;
+	String creationTitle;
+	String creationContent;
+	String creationCategory1;
+	String creationCategory2;
+	String creationWriteday;
+	int memberNumber;
 	
 	public CreationsDTO() {
 		
@@ -61,6 +64,14 @@ public class CreationsDTO {
 		this.creationCategory2 = creationCategory2;
 	}
 
+	public String getCreationWriteday() {
+		return creationWriteday;
+	}
+
+	public void setCreationWriteday(String creationWriteday) {
+		this.creationWriteday = creationWriteday;
+	}
+
 	public int getMemberNumber() {
 		return memberNumber;
 	}
@@ -73,7 +84,8 @@ public class CreationsDTO {
 	public String toString() {
 		return "CreationsDTO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCategory1=" + creationCategory1
-				+ ", creationCategory2=" + creationCategory2 + ", memberNumber=" + memberNumber + "]";
+				+ ", creationCategory2=" + creationCategory2 + ", creationWriteday=" + creationWriteday
+				+ ", memberNumber=" + memberNumber + "]";
 	}
 	
 }
