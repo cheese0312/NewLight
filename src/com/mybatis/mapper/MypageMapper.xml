@@ -5,25 +5,38 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="mypage">
-	<select id="mypagelikeList" parameterType="LikesDTO" resultType="_int">
+	<select id="mypagelikeList" parameterType="MypageVO" resultType="_int">
 		select  creation_number
 		from likes l join `member` m 
 		on creation_number = m.member_number 
-		where m.member_number=#{memberNumber};
+		where m.member_number=#{memberNumber}
 	</select>
 	
-	<select id="mypagefollowee" parameterType="FollowsDTO" resultType="string">
+<!-- 	<select id="mypageLikeList" parameterType = "MypageVO" resultType="_int">
+		select c.*, count(l.member_number) like_count from creations c left outer join likes l 
+		on c.creation_number = l.creation_number 
+		group by c.creation_number 
+
+	</select> -->
+	
+	<select id="mypagefollowee" parameterType="MypageVO" resultType="string">
 		select member_nickname
-		from follows s join `member` m 
-		on s.follower_number = m.member_number 
-		where m.member_number =#{memberNumber};
+		from follows f  join `member` m 
+		on f.followee_number = m.member_number 
+		where f.follower_number = #{memberNumber};
 	</select>
 	
-	<select id="mypageCreations" resultType="CreationsVO"  parameterType="map">
+	<select id="mypageCreations" resultType="MypageVO"  parameterType="map">
 		select c.creation_title , m.member_nickname 
 		from likes l join creations c join `member` m 
 		on l.creation_number = c.creation_number = m.member_number 
-		where m.member_number = #{memberNumber};
+		where m.member_number = #{memberNumber}
+	</select>
+	
+	<select id="mypageinfo" parameterType="_int" resultType="string">
+		select member_nickname
+		from `member`
+		where member_number = #{memberNumber}
 	</select>
 	
 	

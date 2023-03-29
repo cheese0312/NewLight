@@ -12,14 +12,26 @@
 	<!-- 헤더 -->
 	<%@include file="/app/header.jsp"%>
 	<main>
+	<form action="${pageContext.request.contextPath}/mypage/followOk.mp">
 		<div class="main">
 			<div class="main-container">
 				<div class="mypage-main">
-					<div class="mypage-img">
-						<img src="../img/—Pngtree—vector business men icon_4186858.png"
+				<c:choose>
+					<c:when test="${not empty memberPfp}">
+						<div class="mypage-img">
+						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
 							alt="">
 					</div>
-					<div class="mypage-name">닉네임(새로운빛을만들다)</div>
+					</c:when>
+					<c:otherwise>
+						<div class="mypage-img">
+						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
+							alt="">
+					</div>
+					</c:otherwise>
+				</c:choose>
+					
+					<div class="mypage-name"><c:out value="${memberNickname}"/> </div>
 					<div class="bin"></div>
 					<div class="editbtn">
 						<a href="#">프로필수정</a>
@@ -42,17 +54,17 @@
 					</div>
 
 					<c:choose>
-						<c:when test="${not empty follows}">
-							<c:forEach var="follows" items="${Follow}">
+						<c:when test="${not empty followerList}">
+							<c:forEach var="follow" items="${followerList}">
 								<div class="creations-main">
 									<div class="mypage-main">
 										<div class="mypage-img">
-											<img
-												src="../img/—Pngtree—vector business men icon_4186858.png"
-												alt="">
+										<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
+							alt="">
+											<%-- <img src="${pageContext.request.contextPath}/upload/${follow.getMemberpfp}"/> --%>
 										</div>
 										<div class="mypage-box">
-											<div class="mypage-name"> <c:out value="${member.getMemberNickName}"/> </div>
+											<div class="mypage-name"><c:out value="${follow}"/> </div>
 											<div class="mypage-content">작가 소개</div>
 										</div>
 										<div class="bin"></div>
@@ -84,6 +96,7 @@
 			</div>
 
 		</div>
+		</form>
 	</main>
 	<!-- 푸터 -->
 	<%@include file="/app/footer.jsp"%>

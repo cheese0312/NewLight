@@ -117,5 +117,6 @@
 }
 
 .member-file {
-  display: none;
+ /*  display: none; */
+  /* visibility: hidden; */
 }

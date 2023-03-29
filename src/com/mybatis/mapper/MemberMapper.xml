@@ -5,31 +5,47 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="member">
+
 	<insert id="join" parameterType="MemberDTO">
-		insert into member(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_email, member_birth, member_address1, member_address2)
+		insert into `member`(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_email, member_birth, member_address1, member_address2)
 		values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2});
-	</insert> 
+	</insert>
+
+
+	<insert id="pfpinsert" parameterType="MemberFileDTO">
+		insert into member_file(member_pfp_file)
+		values(#{memberPfpFile})
+	</insert>
 	
-	<select id="login" parameterType="MemberDTO" resultType="_int">
-		select member_number
-		from member
-		where member_id = #{memberId} and member_password = #{memberPassword}
+	<select id="info" parameterType="MemberFileVO" resultType="MemberFileVO">
+		select m.member_nickname 
+		from `member` m join member_file mf
+		where member_number = #{memberNumber}
 	</select>
-	
+
+	<select id="login" parameterType="MemberDTO" resultType="_int">
+		select
+		member_number
+		from member
+		where member_id = #{memberId} and
+		member_password = #{memberPassword}
+	</select>
+
 	<select id="checkId" parameterType="string" resultType="_int">
-		select count(member_number)
+		select
+		count(member_number)
 		from member
 		where member_id= #{memberId}
 	</select>
-	
-<!-- 	<update id="edit" parameterType="MemberDTO">
-		update `member`
-		set member_name=#{memberName}, member_password=#{memberPassword}, member_nickname=#{memberNickname}, member_website=#{memberWebsite}, member_pfp=#{memberPfp}, member_email=#{memberEmail}, member_address1=#{memberAddress1}, member_address2=#{memberAddress2}
-		where member_number=#{memberNumber};
-	</update> -->
+
+	<!-- <update id="edit" parameterType="MemberDTO"> update `member` set member_name=#{memberName}, 
+		member_password=#{memberPassword}, member_nickname=#{memberNickname}, member_website=#{memberWebsite}, 
+		member_pfp=#{memberPfp}, member_email=#{memberEmail}, member_address1=#{memberAddress1}, 
+		member_address2=#{memberAddress2} where member_number=#{memberNumber}; </update> -->
 
 	<delete id="delete" parameterType="_int">
 		delete from tbl_member
-		where member_number= #{memberNumber};
+		where
+		member_number= #{memberNumber};
 	</delete>
 </mapper>
