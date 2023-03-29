@@ -38,7 +38,7 @@
                 <li class="dropdown-content1">
 
                     <!-- 해당 페이지 링크 걸어주기 -->
-                    <a href="#">손그림</a>
+                    <a href="${pageContext.request.contextPath}/app/creations/handDrow/handDrow.jsp">손그림</a>
                     <a href="#">배경화면</a>
                     <a href="${pageContext.request.contextPath}/app/creations/ani/aniBoard.jsp">만화</a>
                     <a href="#">폰트</a>
@@ -66,7 +66,7 @@
                 <div class="dropdown3">
 
                 <!-- 드롭 박스 버튼 -->    
-                <li class="dropbtn3">커뮤니티</li>
+                <li class="dropbtn3"> <a href="${pageContext.request.contextPath}/app/community/communityList.jsp">커뮤니티</a></li>
 
                  <!-- 드롭 서브 메뉴 -->
                 </div>
@@ -81,7 +81,7 @@
                 <li class="dropdown-content4">
 
                      <!-- 해당 페이지 링크 걸어주기 -->
-                    <a href="#">공지사항</a>
+                    <a href="${pageContext.request.contextPath}/app/admin/announcement.jsp">공지사항</a>
                     <a href="#">문의</a>
                 </li>
                 </div>

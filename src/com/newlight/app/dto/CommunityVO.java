@@ -6,7 +6,7 @@ public class CommunityVO {
 	private int communityNumber;
 	private String communityTitle;
 	private String communityContent;
-	private int communityReadNum;
+	private int communityReadCount;
 	private String communityWriteDay;
 	private String communityStatus;
 	private int memberNumber;
@@ -28,13 +28,13 @@ public class CommunityVO {
 
 
 	public int getCommunityReadNum() {
-		return communityReadNum;
+		return communityReadCount;
 	}
 
 
 
-	public void setCommunityReadNum(int communityReadNum) {
-		this.communityReadNum = communityReadNum;
+	public void setCommunityReadCount(int communityReadCount) {
+		this.communityReadCount = communityReadCount;
 	}
 
 
@@ -75,12 +75,12 @@ public class CommunityVO {
 		this.communityContent = communityContent;
 	}
 
-	public int getCommunityReadnum() {
-		return communityReadNum;
+	public int getCommunityReadCount() {
+		return communityReadCount;
 	}
 
-	public void setCommunityReadnum(int communityReadnum) {
-		this.communityReadNum = communityReadnum;
+	public void setCommunityReadnum(int communityReadCount) {
+		this.communityReadCount = communityReadCount;
 	}
 
 	public String getCommunityWriteday() {
@@ -111,7 +111,7 @@ public class CommunityVO {
 	public String toString() {
 		return "CommunityVO [memberNickName=" + memberNickName + ", communityNumber=" + communityNumber
 				+ ", communityTitle=" + communityTitle + ", communityContent=" + communityContent
-				+ ", communityReadNum=" + communityReadNum + ", communityWriteDay=" + communityWriteDay
+				+ ", communityReadCount=" + communityReadCount + ", communityWriteDay=" + communityWriteDay
 				+ ", communityStatus=" + communityStatus + ", memberNumber=" + memberNumber + "]";
 	}
 }

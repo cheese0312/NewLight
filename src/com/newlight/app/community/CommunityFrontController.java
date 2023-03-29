@@ -1,3 +1,4 @@
+
 package com.newlight.app.community;
 
 import java.io.IOException;
@@ -26,12 +27,21 @@ public class CommunityFrontController extends HttpServlet {
 		System.out.println(target);
 
 		switch (target) {
+		case "/community/communityList.cm" :
+			System.out.println("커뮤니티 페이지 들어옴!");
+			req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
+			break;
+			
 		case "/community/communityListOk.cm":
+			System.out.println("communityListOk 들어간다!");
 			// 임시로 이동 처리
 //			req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
 			new CommunityListOkController().execute(req, resp);
 			break;
-
+		case "/community/communityWrite.cm":
+//			req.getRequestDispatcher("/app/community/communityWrite.jsp").forward(req, resp);
+			new CommunityWriteController().execute(req,resp);
+		break;
 		}
 
 	}
