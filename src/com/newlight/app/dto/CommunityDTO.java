@@ -15,7 +15,7 @@ public class CommunityDTO {
 	private int communityNumber;
 	private String communityTitle;
 	private String communityContent;
-	private int communityReadnum;
+	private int communityReadCount;
 	private String communityWriteday;
 	private String communityStatus;
 	private int memberNumber;
@@ -48,12 +48,12 @@ public class CommunityDTO {
 		this.communityContent = communityContent;
 	}
 
-	public int getCommunityReadnum() {
-		return communityReadnum;
+	public int getCommunityReadCount() {
+		return communityReadCount;
 	}
 
-	public void setCommunityReadnum(int communityReadnum) {
-		this.communityReadnum = communityReadnum;
+	public void setCommunityReadCount(int communityReadCount) {
+		this.communityReadCount = communityReadCount;
 	}
 
 	public String getCommunityWriteday() {
@@ -83,7 +83,7 @@ public class CommunityDTO {
 	@Override
 	public String toString() {
 		return "CommunityDTO [communityNumber=" + communityNumber + ", communityTitle=" + communityTitle
-				+ ", communityContent=" + communityContent + ", communityReadnum=" + communityReadnum
+				+ ", communityContent=" + communityContent + ", communityReadCount=" + communityReadCount
 				+ ", communityWriteday=" + communityWriteday + ", communityStatus=" + communityStatus
 				+ ", memberNumber=" + memberNumber + "]";
 	}

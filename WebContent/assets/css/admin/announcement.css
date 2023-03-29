@@ -1,0 +1,113 @@
+* {
+  /* margin: 10px;
+  padding: 10px 0; */
+
+}
+
+
+
+/* .blank2>button{
+  
+  margin-left: 860px;
+  border-radius: 10%;
+  font-size: 10px;
+  height: 23px;
+  width: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  background-color: pink;
+  border: 1px solid pink;
+  
+} */
+
+section{
+    border: 1px solid black;
+    width: 70%;
+    height: 700px;
+    margin: 300px;
+    margin-top: 10px;
+   background-color: ivory;
+}
+
+
+
+section>.largetitle{
+    font-size: 15px;
+    width: 180px;
+    margin: 65px 110px;  
+}
+
+section>.box{
+    border-bottom: 3px solid purple;
+    width: 80%;
+    margin: -40px 110px;
+}
+
+section>.grap>.first{
+    display: flex;
+    border-bottom: 2px solid gray;
+    width: 80%;
+    margin: 0 110px;
+    font-size: 10px;
+    justify-content: space-between;
+    height: 40px;
+}
+
+.first>h2{
+    margin: 5px 15px;
+   margin-top: 1px;
+
+}
+
+.first>h1{
+    margin:0 400px;
+    margin-top: 1px;
+    margin-left: 80px;
+}
+
+section>.grap>.other{
+    border-bottom: 1px solid gray;
+    height: 25px;
+    width: 80%;
+    margin: 0 110px;
+    display: flex;
+    font-size: 11px;
+    justify-content: space-between;
+}
+
+.other>h3{
+    margin: 5px 195px;
+   margin-top: -7px;
+   width: 50%;
+  margin-left: 20px;
+}
+
+.other>h4{
+    margin:0 10px;
+    margin-top: -5px;
+    
+}
+
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -250px;
+  margin-left: -40px;
+}
+
+.button>button{
+  margin: 0 5px;
+  border-radius: 20%;
+  font-size: 2px;
+  border-width: 2px;
+  height: 30px;
+  width: 30px;
+  border-color: black;
+  background-color: ivory;
+}
+
+footer{
+    height: 200px;
+}
