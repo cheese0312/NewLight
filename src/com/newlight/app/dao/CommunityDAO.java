@@ -26,4 +26,6 @@ public class CommunityDAO {
 	public int getTotal() {
 		return sqlSession.selectOne("community.getTotal");
 	}
+	
+	
 }

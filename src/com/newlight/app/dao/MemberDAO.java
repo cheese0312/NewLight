@@ -30,4 +30,8 @@ public class MemberDAO {
 		sqlSession.delete("member.delete", memberNumber);
 	}
 	
+	public String getMemberId(int memberNumber) {
+		return sqlSession.selectOne("member.getMemberId", memberNumber);
+	}
+	
 }

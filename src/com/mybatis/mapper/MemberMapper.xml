@@ -32,4 +32,10 @@
 		delete from tbl_member
 		where member_number= #{memberNumber};
 	</delete>
+	
+	<select id="getMemberId" parameterType="int" resultType="string">
+	  select member_id
+	  from member
+	  where member_number = #{memberNumber}
+	</select>
 </mapper>
