@@ -13,6 +13,7 @@
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
+		<typeAlias type="com.newlight.app.vo.QnAVO" alias="QnAVO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
 		<!-- <typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/> -->
 		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>

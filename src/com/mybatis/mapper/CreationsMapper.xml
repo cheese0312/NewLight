@@ -6,7 +6,7 @@
 
 <mapper namespace="creations">
 	<select id="select" resultType="_int">
-		select count(creation_number) from tbl_creations
+		select count(creation_number) from creations
 	</select>
 	
 	<delete id="delete" parameterType="_int">

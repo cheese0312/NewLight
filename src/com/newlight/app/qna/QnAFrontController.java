@@ -19,8 +19,20 @@ public class QnAFrontController extends HttpServlet{
 	}
 	
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
+		System.out.println("문의사항 게시판 들어왔다.");
+		String target = req.getRequestURI().substring(req.getContextPath().length());
+		System.out.println(target); 
+		switch(target) {
+		case "qna/QnAListOk.qn" :
+			req.getRequestDispatcher("/app/qna/qnaBoardList.jsp").forward(req, resp);
+			break;
+		case "qna/QnAReadOk.qn" :
+			req.getRequestDispatcher("/app/qna/qnaRead.jsp").forward(req, resp);
+			break;
+		case "qna/QnAWriteOk.qn" :
+			req.getRequestDispatcher("/app/qna/qnaWrite.jsp").forward(req, resp);
+			break;
+		}
 	}
 
 }

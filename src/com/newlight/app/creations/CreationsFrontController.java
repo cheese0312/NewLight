@@ -30,15 +30,29 @@ public class CreationsFrontController extends HttpServlet{
 			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
 			break;
 		case "/board/themeDowoload.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
 			break;
 		case "/board/aniBoard.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
 			break;
 		case "/board/aniViewBoard.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
 			break;
+		case "/creations/background1.ct" :
+			new BgOneListOkController().execute(req, resp);
+			break;
+		case "/creations/background1in.ct" :
+			new BgOneInOkController().execute(req, resp);
+			break;
+		case "/creations/handwrite.ct" :
+			new HwOneListOkController().execute(req, resp);
+			break;
+		case "/creations/handwritein.ct" :
+			new HwOneInOkController().execute(req, resp);
+			break;
+			
 		}
+	
 		
 	}
 	
