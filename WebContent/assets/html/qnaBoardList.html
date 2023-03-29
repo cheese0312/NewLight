@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자유게시판</title>
+    <link rel="stylesheet" href="./test.css" />
+  </head>
+  <!-- 헤더 -->
+  <header>
+    <div class="header-box">
+      <!-- 로고 이미지 -->
+      <div class="logo">
+        <img src="../img/logo2.png" alt="" />
+      </div>
+      <!-- 헤더 메인 박스 -->
+      <div class="main-header-box">
+        <div class="mian-nav-box"></div>
+
+        <!-- 헤더 네비 박스 -->
+        <div class="nav">
+          <!-- 드롭 박스 div -->
+          <div class="drop-box">
+            <!-- 드롭 박스 세트 1 -->
+            <div class="dropdown1">
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn1">1차 창작물</li>
+
+              <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content1">
+                <!-- 해당 페이지 링크 걸어주기 -->
+                <a href="#">손그림</a>
+                <a href="#">배경화면</a>
+                <a href="#">만화</a>
+                <a href="#">폰트</a>
+                <a href="#">카카오톡 테마</a>
+              </li>
+            </div>
+
+            <!-- 드롭 박스 세트 2 -->
+            <div class="dropdown2">
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn2">2차 창작물</li>
+
+              <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content2">
+                <!-- 해당 페이지 링크 걸어주기 -->
+                <a href="../html/background.html">배경화면</a>
+                <a href="../html/tracing.html">트레이싱</a>
+                <a href="../html/theme.html">카카오톡 테마</a>
+              </li>
+            </div>
+
+            <!-- 드롭 박스 세트 3 -->
+            <div class="dropdown3">
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn3">커뮤니티</li>
+
+              <!-- 드롭 서브 메뉴 -->
+            </div>
+
+            <!-- 드롭 박스 세트 4 -->
+            <div class="dropdown4">
+              <!-- 드롭 박스 버튼 -->
+              <li class="dropbtn4">•••</li>
+
+              <!-- 드롭 서브 메뉴 -->
+              <li class="dropdown-content4">
+                <!-- 해당 페이지 링크 걸어주기 -->
+                <a href="#">공지사항</a>
+                <a href="#">문의</a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 로그인 세션 -->
+      <div class="btn-box">
+        <div class="login-box"></div>
+        <!-- 로그인 버튼 -->
+        <a href="#" class="login-btn">로그인</a>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="container">
+      <div class="write-btn-wrap">
+        <!-- 글쓰기 페이지 이동 처리 -->
+        <a href="#" class="write-btn">글쓰기</a>
+      </div>
+      <table class="board-table">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>날짜</th>
+            <th>조회수</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ========== 게시글 목록 예시 =========== -->
+          <tr>
+            <td class="no">1</td>
+            <td class="title">첫 번째 게시글입니다.</td>
+            <td class="author">홍길동</td>
+            <td class="date">2023-03-05</td>
+            <td class="hit">10</td>
+          </tr>
+          <tr>
+            <td class="no">2</td>
+            <td class="title">두 번째 게시글입니다.</td>
+            <td class="author">김철수</td>
+            <td class="date">2023-03-05</td>
+            <td class="hit">15</td>
+          </tr>
+          <tr>
+            <td class="no">3</td>
+            <td class="title">세 번째 게시글입니다.</td>
+            <td class="author">이영희</td>
+            <td class="date">2023-03-06</td>
+            <td class="hit">20</td>
+          </tr>
+          <!-- ========== /게시글 목록 예시 =========== -->
+        </tbody>
+      </table>
+      <div class="pagination">
+        <ul>
+          <!-- ========== 페이징 처리 예시 ============ -->
+          <li><a href="#" class="prev">&lt;</a></li>
+          <li><a href="#" class="active">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#" class="next">&gt;</a></li>
+          <!-- ========== /페이징 처리 예시 ============ -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

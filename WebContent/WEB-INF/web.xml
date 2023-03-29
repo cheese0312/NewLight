@@ -95,5 +95,14 @@
 		<url-pattern>*.nc</url-pattern>
 	</servlet-mapping>
 
-
+	<servlet>
+		<servlet-name>Qna</servlet-name>
+		<servlet-class>com.newlight.app.qna.QnAFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Qna</servlet-name>
+	<url-pattern>*.qn</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

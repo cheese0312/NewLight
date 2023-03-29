@@ -5,9 +5,20 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="qna">
+
+	<select id="selectAll" resultType="QnAVO">
+		select qna_number, qna_title, qna_content, qna_readcount, qna_writeday,
+		m.member_number,member_nickname
+		from `member` m join qna q
+		on m.member_number = q.member_number
+
+	</select>
+
 	<delete id="delete" parameterType="_int">
 		delete from qna
-		where member_number = #{membeNumber}
+		where
+		member_number = #{membeNumber}
 	</delete>
+
 
 </mapper>

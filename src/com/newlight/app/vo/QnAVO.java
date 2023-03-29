@@ -1,21 +1,15 @@
-package com.newlight.app.dto;
+package com.newlight.app.vo;
 
-//qna_number int unsigned auto_increment primary key,
-//qna_title varchar(1000) not null,
-//qna_content varchar(500) not null,
-//qna_readcount int unsigned default 0,
-//qna_writeday datetime default now(),
-//member_number int unsigned not null,
-
-public class QnADTO {
+public class QnAVO {
 	private int qnaNumber;
 	private String qnaTitle;
 	private String qnaContent;
 	private int qnaReadcount;
 	private String qnaWriteday;
 	private int memberNumber;
-
-	public QnADTO() {
+	private String memberNickname;
+	
+	public QnAVO() {
 	}
 
 	public int getQnaNumber() {
@@ -66,13 +60,20 @@ public class QnADTO {
 		this.memberNumber = memberNumber;
 	}
 
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+
 	@Override
 	public String toString() {
-		return "QnADTO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent
+		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent
 				+ ", qnaReadcount=" + qnaReadcount + ", qnaWriteday=" + qnaWriteday + ", memberNumber=" + memberNumber
-				+ "]";
+				+ ", memberNickname=" + memberNickname + "]";
 	}
-	
 	
 	
 	

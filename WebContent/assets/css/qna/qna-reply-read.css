@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* 게시글 정보 스타일 */
+.view-info {
+  margin-bottom: 20px;
+}
+
+.title-wrap > span {
+  margin-right: 20px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.info-title {
+  display: flex;
+}
+
+.title-wrap {
+  margin-right: 20px;
+}
+
+.view-info .writer {
+  font-weight: bold;
+}
+
+/* 게시글 내용 스타일 */
+.view-content {
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+/* 버튼 스타일 */
+.btn-group {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.list-btn,
+.modify-btn,
+.delete-btn {
+  color: black;
+  background-color: rgb(198, 133, 238);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.list-btn:hover,
+.modify-btn:hover,
+.delete-btn:hover {
+  background-color: rgb(255, 87, 87);
+  color: #fff;
+}
+
+.view-attach {
+  margin-bottom: 20px;
+}
+
+.view-attach > a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.view-attach > a:hover {
+  text-decoration: underline;
+}
+
+/* 첨부파일 스타일 */
+.view-attach {
+  display: flex;
+  justify-content: center;
+}
+
+.img-box {
+  width: 150px;
+  margin: 10px;
+  position: relative;
+}
+
+.img-box > img {
+  width: 100%;
+  height: 100%;
+}
+
+.download-btn {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.download-btn:hover > svg {
+  stroke: rgb(255, 87, 87);
+  fill: rgb(255, 87, 87);
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+  fill: rgb(255, 255, 255);
+  stroke-width: 1;
+  stroke: rgb(255, 255, 255);
+}
+
+/* 댓글 스타일 */
+.comment-wrap {
+  margin-top: 20px;
+}
+
+.comment-form {
+  margin: 50px 0 70px 0;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.comment-form button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: rgb(255, 87, 87);
+}
+
+.form-group > label {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+#comment-list {
+  list-style: none;
+}
+
+.comment-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.comment-writer {
+  font-weight: bold;
+}
+
+.comment-date {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.comment-content {
+  margin-top: 5px;
+}
+
+.comment-list li {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.comment-info {
+  font-size: 14px;
+  color: #999;
+}
+
+.comment-info .writer {
+  margin-right: 10px;
+}
+
+.comment-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.comment-content-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-btn-group button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.comment-btn-group button:hover {
+  background-color: rgb(255, 87, 87);
+}
+
+.none {
+  display: none;
+}
+
+.comment-list textarea {
+  width: 900px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.btn {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.list-box {
+  margin-left: 530px;
+}
+
+.footee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  resize: none;
+}
+
+#comment-input {
+  width: 640px;
+}
+
+#comment-count {
+  margin-bottom: 100px;
+}
+
+.reply-date {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  height: 80px;
+  justify-content: center;
+  flex-direction: column;
+}
