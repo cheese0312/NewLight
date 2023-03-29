@@ -16,11 +16,21 @@
 		<div class="main">
 			<div class="main-container">
 				<div class="mypage-main">
-					<div class="mypage-img">
-						<img src="../img/—Pngtree—vector business men icon_4186858.png"
-							alt="">
+					<c:choose>
+					<c:when test="${not empty mypage}">
+						<div class="mypage-img">
+						<img src="${pageContext.request.contextPath}/upload/${member.getMemberPfpFile()}">
 					</div>
-					<div class="mypage-name">닉네임(새로운빛을만들다)</div>
+					</c:when>
+					<c:otherwise>
+						<div class="mypage-img">
+						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+					</div>
+					</c:otherwise>
+				</c:choose>
+					<div class="mypage-name"> 
+						<c:out value="${memberNickname}"/> 
+					</div>
 					<div class="bin"></div>
 					<div class="editbtn">
 						<a href="#">프로필수정</a>

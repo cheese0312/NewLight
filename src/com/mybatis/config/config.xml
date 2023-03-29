@@ -8,14 +8,17 @@
 	
 	<typeAliases>
 		<typeAlias type="com.newlight.app.dto.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.newlight.app.dto.MemberFileDTO" alias="MemberFileDTO"/>
+		<typeAlias type="com.newlight.app.dto.MemberFileVO" alias="MemberFileVO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityVO" alias="CommunityVO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
-		<!-- <typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/> -->
+		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
 	</typeAliases>
 
@@ -39,7 +42,7 @@
 		<mapper resource="com/mybatis/mapper/LikesMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
-		<!-- <mapper resource="com/mybatis/mapper/MypageMapper.xml"/> -->
+		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
 	</mappers>
 	

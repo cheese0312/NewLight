@@ -13,7 +13,6 @@ public class MemberFrontController extends HttpServlet{
 		doProcess(req, resp);
 	}
 	
-	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doProcess(req, resp);

@@ -1,6 +1,7 @@
 package com.newlight.app.member;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -9,29 +10,62 @@ import javax.servlet.http.HttpServletResponse;
 import com.newlight.app.Execute;
 import com.newlight.app.dao.MemberDAO;
 import com.newlight.app.dto.MemberDTO;
+import com.newlight.app.dto.MemberFileDTO;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class JoinOkController implements Execute{
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		
-		System.out.println("joinController!! 들어옴!!");
-		
+		req.setCharacterEncoding("utf-8");
 		MemberDTO memberDTO = new MemberDTO();
 		MemberDAO memberDAO = new MemberDAO();
+		MemberFileDTO memberfileDTO = new MemberFileDTO();
+	    String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
+	    int fileSize = 1024 * 1024 * 5; //5mb
+
+		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8", new DefaultFileRenamePolicy());
 		
-		req.setCharacterEncoding("utf-8");
+		memberDTO.setMemberName(multipartReq.getParameter("memberName"));
+		memberDTO.setMemberId(multipartReq.getParameter("memberId"));
+		memberDTO.setMemberPassword(multipartReq.getParameter("memberPassword"));
+		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
+		memberDTO.setMemberWebsite(multipartReq.getParameter("memberWebsite"));
+		memberDTO.setMemberPfp(multipartReq.getParameter("memberPfp"));
+		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
+		memberDTO.setMemberBirth(multipartReq.getParameter("memberBirth"));
+		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
+		memberDTO.setMemberAddress2(multipartReq.getParameter("memberAddress2"));
 		
-		memberDTO.setMemberName(req.getParameter("memberName"));
-		memberDTO.setMemberId(req.getParameter("memberId"));
-		memberDTO.setMemberPassword(req.getParameter("memberPassword"));
-		memberDTO.setMemberNickname(req.getParameter("memberNickname"));
-		memberDTO.setMemberEmail(req.getParameter("memberEmail"));
-		memberDTO.setMemberBirth(req.getParameter("memberBirth"));
-		memberDTO.setMemberPfp(req.getParameter("memberPfp"));
-		memberDTO.setMemberAddress1(req.getParameter("memberAddress1"));
-		memberDTO.setMemberAddress2(req.getParameter("memberAddress2"));
-		memberDTO.setMemberWebsite(req.getParameter("memberWebsite"));
+		Enumeration<String> memberFilepfp = multipartReq.getFileNames();
 		
+		while(memberFilepfp.hasMoreElements()) {
+			String name = memberFilepfp.nextElement();
+			
+			String memberPfpFile = multipartReq.getOriginalFileName(name);
+			
+			if(memberPfpFile == null) {
+				continue;
+			}
+			
+			memberfileDTO.setMemberPfpFile(memberPfpFile);
+			memberDAO.insert(memberfileDTO);
+			
+		}
+		
+//		memberDTO.setMemberName(req.getParameter("memberName"));
+//		memberDTO.setMemberId(req.getParameter("memberId"));
+//		memberDTO.setMemberPassword(req.getParameter("memberPassword"));
+//		memberDTO.setMemberNickname(req.getParameter("memberNickname"));
+//		memberDTO.setMemberWebsite(req.getParameter("memberWebsite"));
+//		memberDTO.setMemberPfp(req.getParameter("memberPfp"));
+//		memberDTO.setMemberEmail(req.getParameter("memberEmail"));
+//		memberDTO.setMemberBirth(req.getParameter("memberBirth"));
+//		memberDTO.setMemberAddress1(req.getParameter("memberAddress1"));
+//		memberDTO.setMemberAddress2(req.getParameter("memberAddress2"));
+		
+
 		memberDAO.join(memberDTO);
 		
 		resp.sendRedirect("/member/login.me");

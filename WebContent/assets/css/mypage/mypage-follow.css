@@ -125,6 +125,7 @@ img {
 
 .mypage-main > .mypage-box {
   width: 65%;
+  text-align: left;
 }
 
 .creations-main {
