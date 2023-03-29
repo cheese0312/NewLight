@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- 창작물 SQL문 작성 1차 2차 나눠질 예정-->
+<!-- 창작물 SQL문 작성 1차 2차 나눠질 예정 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="creations">
-	<select id="select" resultType="_int">
-		select count(creation_number) from tbl_creations
+
+	<insert id="insert" parameterType="CreationsDTO">
+		insert into creations
+		(creation_number, creation_title, creation_content, creation_category1, creation_category2, creation_writeday, member_number)
+		values(#{creationNumber}, #{creationTitle}, #{creationContent}, #{creationCategory1}, #{creationCategory2}, #{creationWriteday}, #{memberNumber})
+	</insert>
+
+	<select id="selectAll" resultType="CreationsVO" parameterType="map">
+		select creation_number, creation_title, creation_content, creation_category1, creation_category2, m.member_number, member_id 
+		from `member` m join creations c
+		on m.member_number = c.member_number 
+		order by creation_number desc
+		limit #{startRow}, #{rowCount}
 	</select>
 	
+	<select id="select" parameterType="_int" resultType="CreationsVO">
+		select creation_number, creation_title, creation_content, creation_category1, creation_category2, creation_writeday, m.member_number, m.member_id
+		from `member` m  join creations c
+		on creation_number = #{creationNumber} and m.member_number = c.member_number
+	</select>
+
 	<delete id="delete" parameterType="_int">
-		delete from creations 
+		delete from creations
 		where member_number = #{memberNumber}
 	</delete>
+	
+	<select id="getSequence" resultType="_int">
+		select last_insert_id()
+	</select>
+	
 </mapper>
+
+
+
+
+

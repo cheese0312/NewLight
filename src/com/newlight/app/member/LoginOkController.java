@@ -39,7 +39,7 @@ public class LoginOkController implements Execute {
 		if (memberNumber == -1) {
 			path = "/member/login.me?result=false";
 		} else {
-			path = "/mypage/creationsOk.mp";
+//			path = "/main/mainNewlightOk.mi";
 			session.setAttribute("memberNumber", memberNumber);
 		}
 
