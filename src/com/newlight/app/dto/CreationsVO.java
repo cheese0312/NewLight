@@ -1,17 +1,10 @@
 package com.newlight.app.dto;
 
-//creation_number int unsigned primary key,
-//creation_title varchar(1000)not null,
-//creation_content varchar(1000)not null,
-//creation_category1 varchar(1000)not null,
-//creation_category2 varchar(1000)not null,
-//creation_writeday datetime default now(),
-//member_number int unsigned not null,
-//constraint fk_creation foreign key(member_number)
-//references member(member_number)
+import java.util.List;
 
-public class CreationsDTO {
-	
+import com.newlight.app.dto.CreationsFileDTO;
+
+public class CreationsVO {
 	int creationNumber;
 	String creationTitle;
 	String creationContent;
@@ -19,8 +12,9 @@ public class CreationsDTO {
 	String creationCategory2;
 	String creationWriteday;
 	int memberNumber;
+	List<CreationsFileDTO> files;
 	
-	public CreationsDTO() {
+	public CreationsVO() {
 		
 	}
 
@@ -80,12 +74,21 @@ public class CreationsDTO {
 		this.memberNumber = memberNumber;
 	}
 
+	public List<CreationsFileDTO> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<CreationsFileDTO> files) {
+		this.files = files;
+	}
+
 	@Override
 	public String toString() {
-		return "CreationsDTO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
+		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCategory1=" + creationCategory1
 				+ ", creationCategory2=" + creationCategory2 + ", creationWriteday=" + creationWriteday
-				+ ", memberNumber=" + memberNumber + "]";
+				+ ", memberNumber=" + memberNumber + ", files=" + files + "]";
 	}
 	
 }
+

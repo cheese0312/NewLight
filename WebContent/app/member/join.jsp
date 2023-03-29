@@ -11,9 +11,9 @@
 </head>
 <body>
 	<!-- 헤더 -->
-<%-- 	<%@include file="/app/header.jsp"%> --%>
+ 	<%@include file="/app/header.jsp"%>
 	<main>
-		<form action="${pageContext.request.contextPath}/member/joinOk.me" method=post>
+		<form action="${pageContext.request.contextPath}/member/joinOk.me" method="post">
 			<div class="main">
 				<table width="600px">
 					<tr>

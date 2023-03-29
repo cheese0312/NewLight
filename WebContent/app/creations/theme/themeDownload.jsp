@@ -8,60 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>themedownload</title>
-    <link rel="stylesheet" href="../css/themedownload.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/themedownload.css" />
   </head>
   <body>
-    <header>
-      <div class="header-box">
-        <div class="logo">
-          <img src="../img/logo2.png" alt="" />
-        </div>
-        <div class="main-header-box">
-          <div class="mian-nav-box"></div>
-          <div class="nav">
-            <div class="drop-box">
-              <div class="dropdown1">
-                <li class="dropbtn1">1차 창작물</li>
-                <li class="dropdown-content1">
-                  <a href="#">손그림</a>
-                  <a href="#">배경화면</a>
-                  <a href="#">만화</a>
-                  <a href="#">폰트</a>
-                  <a href="#">카카오톡 테마</a>
-                </li>
-              </div>
-              <div class="dropdown2">
-                <li class="dropbtn2">2차 창작물</li>
-                <li class="dropdown-content2">
-                  <a href="#">배경화면</a>
-                  <a href="#">트레이싱</a>
-                  <a href="#">카카오톡 테마</a>
-                </li>
-              </div>
-              <div class="dropdown3">
-                <li class="dropbtn3">커뮤니티</li>
-                <li class="dropdown-content3">
-                  <a href="#">배경화면</a>
-                  <a href="#">트레이싱</a>
-                  <a href="#">카카오톡 테마</a>
-                </li>
-              </div>
-              <div class="dropdown4">
-                <li class="dropbtn4">•••</li>
-                <li class="dropdown-content4">
-                  <a href="#">공지사항</a>
-                  <a href="#">문의</a>
-                </li>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="btn-box">
-          <div class="login-box"></div>
-          <a href="#" class="login-btn">로그인</a>
-        </div>
-      </div>
-    </header>
+   <%@include file="/app/header.jsp" %>
     <section>
       <div class="download-container">
         <div class="create-download">
@@ -111,6 +61,6 @@
         </div>
       </div>
     </section>
-    <footer></footer>
+   <%@include file ="/app/footer.jsp" %>
   </body>
 </html>

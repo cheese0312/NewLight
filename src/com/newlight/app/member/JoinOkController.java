@@ -27,7 +27,6 @@ public class JoinOkController implements Execute{
 		memberDTO.setMemberNickname(req.getParameter("memberNickname"));
 		memberDTO.setMemberEmail(req.getParameter("memberEmail"));
 		memberDTO.setMemberBirth(req.getParameter("memberBirth"));
-		memberDTO.setMemberPfp(req.getParameter("memberPfp"));
 		memberDTO.setMemberAddress1(req.getParameter("memberAddress1"));
 		memberDTO.setMemberAddress2(req.getParameter("memberAddress2"));
 		memberDTO.setMemberWebsite(req.getParameter("memberWebsite"));
