@@ -13,6 +13,9 @@
 	<!-- 헤더 -->
 	<%@include file="/app/header.jsp"%>
 	<hr>
+	
+	<form action="${pageContext.request.contextPath}/admin/adminOk.ad" method="post">
+	
 	<main>
 		<div class="main">
 			<div class="main-box-bin"></div>
@@ -39,20 +42,24 @@
 						</div>
 					</div>
 					<hr>
+					
+					<c:choose>
+					<c:when test="${not empty adminId}">
 					<div class="member-list">
-						<div class="member-list-name">아무개1</div>
-						<div class="member-list-creations">32개</div>
+						<div class="member-list-name"><c:out value="${admin.getMemberId()}"/></div>
+						<div class="member-list-creations"><c:out value="${admin.getCreationsCount()}"/></div>
 
 						<div class="member-list-status member-list-status1">
-							활동 가능
+							<c:out value="${member.getMemberStatus()}"/>
 							<button type="button" class="member-status-btn">X</button>
-
-
 						</div>
 					</div>
-
 					<hr>
-					<div class="member-list">
+					</c:when>
+					</c:choose>
+
+					
+					<!-- <div class="member-list">
 						<div class="member-list-name">아무개2</div>
 						<div class="member-list-creations">21개</div>
 						<div class="member-list-status member-list-status1">
@@ -70,7 +77,7 @@
 						<div class="member-list-creations">9개</div>
 						<div class="member-list-status member-list-status2">
 							활동 불가능
-							<!-- <a href="#">▼</a> -->
+							<a href="#">▼</a>
 							<button type="button" class="member-status-btn">O</button>
 
 						</div>
@@ -87,13 +94,14 @@
 
 
 						</div>
-					</div>
+					</div> -->
 
 
 				</div>
 			</div>
 		</div>
 	</main>
+	</form>
 	<!-- 푸터 -->
 	<%@include file="/app/footer.jsp"%>
 </body>

@@ -3,7 +3,7 @@
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
 	id="WebApp_ID" version="4.0">
-	<display-name>newlight</display-name>
+	<display-name>newlight2</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
@@ -43,8 +43,8 @@
 		<servlet-name>Likes</servlet-name>
 		<url-pattern>*.le</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
+	
+		<servlet>
 		<servlet-name>Follows</servlet-name>
 		<servlet-class>com.newlight.app.follows.FollowsFrontController</servlet-class>
 	</servlet>
@@ -53,8 +53,8 @@
 		<servlet-name>Follows</servlet-name>
 		<url-pattern>*.fw</url-pattern>
 	</servlet-mapping>
-
-	<servlet>
+	
+			<servlet>
 		<servlet-name>Creations</servlet-name>
 		<servlet-class>com.newlight.app.creations.CreationsFrontController</servlet-class>
 	</servlet>

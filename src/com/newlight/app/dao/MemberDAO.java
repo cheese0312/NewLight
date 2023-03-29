@@ -4,6 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
 import com.newlight.app.dto.MemberDTO;
+import com.newlight.app.dto.MemberFileDTO;
+import com.newlight.app.dto.MemberFileVO;
 
 public class MemberDAO {
 	public SqlSession sqlSession;
@@ -13,13 +15,25 @@ public class MemberDAO {
 	}
 	
 	public void join(MemberDTO memberDTO) {
+		System.out.println("MemberDAO join 들어옴!");
 		sqlSession.insert("member.join", memberDTO);
+	}
+	
+	public void insert(MemberFileDTO memberfileDTO) {
+		sqlSession.insert("pfpinsert", memberfileDTO);
+	}
+	
+	public String info(MemberFileVO memberfileVO) {
+		return sqlSession.selectOne("member.info", memberfileVO);
+	}
+	
+	public String select(MemberFileDTO memberfileDTO) {
+		return sqlSession.selectOne("member.memberpfp", memberfileDTO);
 	}
 	
 	public int login(MemberDTO memberDTO) {
 		Integer memberNumber = sqlSession.selectOne("member.login", memberDTO);
-		return memberNumber == null ? -1 : memberNumber;
-		
+		return memberNumber == null ? -1 : memberNumber;	
 	}
 	
 	public boolean checkId(String memberId) {

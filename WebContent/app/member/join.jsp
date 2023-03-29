@@ -11,9 +11,9 @@
 </head>
 <body>
 	<!-- 헤더 -->
-<%-- 	<%@include file="/app/header.jsp"%> --%>
+	<%@include file="/app/header.jsp"%>
 	<main>
-		<form action="${pageContext.request.contextPath}/member/joinOk.me" method=post>
+		<form action="${pageContext.request.contextPath}/member/joinOk.me" method=post enctype="multipart/form-data">
 			<div class="main">
 				<table width="600px">
 					<tr>
@@ -26,18 +26,18 @@
 						<col width="150">
 						<col width="*">
 					</colgroup>
-<!-- 					<tr>
+ 					<tr>
 						<td class="tle">내 프로필</td>
 						<td><label for="file">
 								<div class="btn-upload">프로필 선택</div>
-						</label> <input type="file" class="member-file"  name="memberPfp" accept=".jpg , .png">
+						</label> 
+						<input type="file" class="member-file"  name="memberPfp" accept=".jpg , .png" multiple>
 						</td>
-					</tr> -->
+					</tr>
 					<tr>
 						<td class="tle">이름</td>
 						<td class="cont"><input type="text" name="memberName" placeholder="이름을 입력하세요"
-							class="ed" required> <span class="cmt">* 공백없이 한글만
-								입력 가능</span></td>
+							class="ed" required> <span class="cmt">* 공백없이 한글만 입력 가능</span></td>
 					</tr>
 					<tr>
 						<td class="tle">아이디</td>
@@ -110,7 +110,7 @@
 		</form>
 	</main>
 	<!-- 푸터 -->
-
+	<%@include file="/app/footer.jsp"%>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/member/join.js"></script>  
 </body>

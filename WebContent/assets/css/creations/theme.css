@@ -93,7 +93,7 @@ hr {
   height: 480px;
   margin: 10px;
   padding: 15px;
-  border: 1px solid rgb(205, 205, 205);
+  /* border: 1px solid rgb(205, 205, 205); */
 }
 
 .likes ,
@@ -135,6 +135,11 @@ hr {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.creations-img {
+  /* border: 0.3px solid gray; */
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .creations-img > img {
