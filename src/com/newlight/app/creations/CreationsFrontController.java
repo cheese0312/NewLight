@@ -41,7 +41,21 @@ public class CreationsFrontController extends HttpServlet{
 //			임시 이동처리
 			req.getRequestDispatcher("/app/creations/ani/aniViewBoard.jsp").forward(req, resp);
 			break;
+		case "/creations/background1.ct" :
+			new BgOneListOkController().execute(req, resp);
+			break;
+		case "/creations/background1in.ct" :
+			new BgOneInOkController().execute(req, resp);
+			break;
+		case "/creations/handwrite.ct" :
+			new HwOneListOkController().execute(req, resp);
+			break;
+		case "/creations/handwritein.ct" :
+			new HwOneInOkController().execute(req, resp);
+			break;
+			
 		}
+	
 		
 	}
 	

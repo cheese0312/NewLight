@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reply</title>
+    <link rel="stylesheet" href="./reply.css" />
+  </head>
+  <header>
+    <div class="header-box">
+      <div class="logo">
+        <img src="../logo2.png" alt="" />
+      </div>
+      <div class="main-header-box">
+        <div class="mian-nav-box"></div>
+        <div class="nav">
+          <div class="drop-box">
+            <div class="dropdown1">
+              <li class="dropbtn1">1차 창작물</li>
+              <li class="dropdown-content1">
+                <a href="#">손그림</a>
+                <a href="#">배경화면</a>
+                <a href="#">만화</a>
+                <a href="#">폰트</a>
+                <a href="#">카카오톡 테마</a>
+              </li>
+            </div>
+            <div class="dropdown2">
+              <li class="dropbtn2">2차 창작물</li>
+              <li class="dropdown-content2">
+                <a href="#">배경화면</a>
+                <a href="#">트레이싱</a>
+                <a href="#">카카오톡 테마</a>
+              </li>
+            </div>
+            <div class="dropdown3">
+              <li class="dropbtn3">커뮤니티</li>
+              <li class="dropdown-content3">
+                <a href="#">배경화면</a>
+                <a href="#">트레이싱</a>
+                <a href="#">카카오톡 테마</a>
+              </li>
+            </div>
+            <div class="dropdown4">
+              <li class="dropbtn4">•••</li>
+              <li class="dropdown-content4">
+                <a href="#">공지사항</a>
+                <a href="#">문의</a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <div class="login-box"></div>
+        <a href="#" class="login-btn">로그인</a>
+      </div>
+    </div>
+  </header>
+  <br />
+  <br />
+  <br />
+  <!-- 
+
+
+
+
+
+라인~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+ -->
+  <div class="list-box">
+    <ul id="list">
+      <li>
+        <div>
+          <h3 class="title">게시글 제목</h3>
+          <h5 class="user-info fs-12 txt-gray">작성자 | 2023-03-19 19:15:60</h5>
+        </div>
+        <br />
+        <div>
+          <a class="list-content-back" href=""> 목록 </a>
+          <br />
+          <br />
+          <h4 class="content">게시글</h4>
+        </div>
+
+        <div class="reply-box fs-12">
+          <div class="reply-write">
+            <input type="text" id="replyUserName" style="width: 20%; height: 25px" />
+            <br />
+            <br />
+            <h4 class="content">본문 내용</h4>
+            <textarea name="reply" id="reply-content" style="width: 50%; height: 700px"></textarea>
+          </div>
+          <div class="reply-list">
+            <input class="btn" type="submit" value="첨부파일" />
+            <input class="btn" type="submit" value="등록" />
+            <input class="btn" type="button" value="취소" />
+            <p class="reply">[작성자] 댓글내용 | 2023-03-19 19:15:60</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br />
+  <br />
+  <br />
+
+  <!-- 
+
+
+
+
+
+라인~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+ -->
+  <body>
+    <div class="footee" id="form-commentInfo">
+      <div id="comment-count">댓글 <span id="count">0</span></div>
+      <textarea id="comment-input" placeholder="댓글을 입력해 주세요."></textarea>
+      <button class="btn">등록</button>
+    </div>
+    <div id="comments"></div>
+  </body>
+</html>
