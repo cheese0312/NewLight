@@ -26,17 +26,20 @@ public class CreationsFrontController extends HttpServlet{
 		System.out.println(target);
 		
 		switch(target) {
-		case "/board/kakaoBoard.jsp.nc" :
-			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+		case "/creations/CreationWrite.ct" :
+//			임시 이동처리
+			req.getRequestDispatcher("/app/main/upload.jsp").forward(req, resp);
 			break;
-		case "/board/themeDowoload.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+		case "/creations/CreationUploadOk.ct" :
+			new CreationUploadOkController().execute(req, resp);
 			break;
-		case "/board/aniBoard.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+		case "/board/aniBoard.nc" :
+//			임시 이동처리
+			req.getRequestDispatcher("/app/creations/ani/aniBoard.jsp").forward(req, resp);
 			break;
-		case "/board/aniViewBoard.jsp.nc" :
-//			req.getRequestDispatcher("/app/board/kakaoBoard.jsp").forward(req, resp);
+		case "/board/aniViewBoard.nc" :
+//			임시 이동처리
+			req.getRequestDispatcher("/app/creations/ani/aniViewBoard.jsp").forward(req, resp);
 			break;
 		}
 		

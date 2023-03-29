@@ -20,6 +20,8 @@
 		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
 		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
+		
 	</typeAliases>
 
 	<environments default="mysql">
