@@ -1,8 +1,21 @@
 * {
   margin: 0px;
   padding: 0px;
+   resize: none;
 }
 
+#comment-input {
+  width: 640px;
+}
+.reply-date {
+ display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.reply-member{
+	margin-right: 15px;
+}
 body {
   background-color: rgb(255, 255, 245);
 }
