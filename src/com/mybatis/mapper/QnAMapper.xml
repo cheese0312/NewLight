@@ -6,13 +6,25 @@
 
 <mapper namespace="qna">
 
-	<select id="selectAll" resultType="QnAVO">
-		select qna_number, qna_title, qna_content, qna_readcount, qna_writeday,
-		m.member_number,member_nickname
+	<select id="selectAll" resultType="QnAVO" parameterType="map">
+		select
+		qna_number, qna_title,
+		qna_content, qna_read_count, qna_writeday,
+		m.member_number, member_nickname
 		from `member` m join qna q
-		on m.member_number = q.member_number
-
+		on
+		m.member_number = q.member_number
+		order by qna_number desc
+		limit
+		#{startRow}, #{rowCount}
 	</select>
+
+	<insert id="insert" parameterType="QnADTO">
+		insert into qna_comment
+		(commentent_number, commentent_content, member_number, qna_number)
+		values(#{commententNumber},
+		#{commententContent},#{memberNumber},#{qnaNumber})
+	</insert>
 
 	<delete id="delete" parameterType="_int">
 		delete from qna
@@ -20,5 +32,8 @@
 		member_number = #{membeNumber}
 	</delete>
 
-
+	<select id="getTotal" resultType="_int">
+		select count(qna_number)from
+		qna q
+	</select>
 </mapper>
