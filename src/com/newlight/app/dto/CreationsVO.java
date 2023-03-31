@@ -8,10 +8,12 @@ public class CreationsVO {
 	int creationNumber;
 	String creationTitle;
 	String creationContent;
-	String creationCategory1;
-	String creationCategory2;
+	String creationCode;
+	String creationName;
 	String creationWriteday;
 	int memberNumber;
+	String memberNickname;
+	String memberPfp;
 	List<CreationsFileDTO> files;
 	
 	public CreationsVO() {
@@ -42,20 +44,20 @@ public class CreationsVO {
 		this.creationContent = creationContent;
 	}
 
-	public String getCreationCategory1() {
-		return creationCategory1;
+	public String getCreationCode() {
+		return creationCode;
 	}
 
-	public void setCreationCategory1(String creationCategory1) {
-		this.creationCategory1 = creationCategory1;
+	public void setCreationCode(String creationCode) {
+		this.creationCode = creationCode;
 	}
 
-	public String getCreationCategory2() {
-		return creationCategory2;
+	public String getCreationName() {
+		return creationName;
 	}
 
-	public void setCreationCategory2(String creationCategory2) {
-		this.creationCategory2 = creationCategory2;
+	public void setCreationName(String creationName) {
+		this.creationName = creationName;
 	}
 
 	public String getCreationWriteday() {
@@ -82,12 +84,28 @@ public class CreationsVO {
 		this.files = files;
 	}
 
+	public String getMemberNickname() {
+		return memberNickname;
+	}
+	
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
+	}
+	
+	public String getMemberPfp() {
+		return memberPfp;
+	}
+
+	public void setMemberPfp(String memberPfp) {
+		this.memberPfp = memberPfp;
+	}
+
 	@Override
 	public String toString() {
 		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
-				+ ", creationContent=" + creationContent + ", creationCategory1=" + creationCategory1
-				+ ", creationCategory2=" + creationCategory2 + ", creationWriteday=" + creationWriteday
-				+ ", memberNumber=" + memberNumber + ", files=" + files + "]";
+				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
+				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
+				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", files=" + files + "]";
 	}
 	
 }

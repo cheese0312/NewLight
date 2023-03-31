@@ -15,8 +15,8 @@ public class CreationsDTO {
 	int creationNumber;
 	String creationTitle;
 	String creationContent;
-	String creationCategory1;
-	String creationCategory2;
+	String creationCode;
+	String creationName;
 	String creationWriteday;
 	int memberNumber;
 	
@@ -48,20 +48,20 @@ public class CreationsDTO {
 		this.creationContent = creationContent;
 	}
 
-	public String getCreationCategory1() {
-		return creationCategory1;
+	public String getCreationCode() {
+		return creationCode;
 	}
 
-	public void setCreationCategory1(String creationCategory1) {
-		this.creationCategory1 = creationCategory1;
+	public void setCreationCode(String creationCode) {
+		this.creationCode = creationCode;
 	}
 
-	public String getCreationCategory2() {
-		return creationCategory2;
+	public String getCreationName() {
+		return creationName;
 	}
 
-	public void setCreationCategory2(String creationCategory2) {
-		this.creationCategory2 = creationCategory2;
+	public void setCreationName(String creationName) {
+		this.creationName = creationName;
 	}
 
 	public String getCreationWriteday() {
@@ -83,9 +83,7 @@ public class CreationsDTO {
 	@Override
 	public String toString() {
 		return "CreationsDTO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
-				+ ", creationContent=" + creationContent + ", creationCategory1=" + creationCategory1
-				+ ", creationCategory2=" + creationCategory2 + ", creationWriteday=" + creationWriteday
-				+ ", memberNumber=" + memberNumber + "]";
+				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
+				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber + "]";
 	}
-	
 }

@@ -33,7 +33,7 @@ public class JoinOkController implements Execute{
 		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
 		memberDTO.setMemberWebsite(multipartReq.getParameter("memberWebsite"));
 		memberDTO.setMemberPfp(multipartReq.getParameter("memberPfp"));
-		memberDTO.setMemberComment(multipartReq.getParameter("memberComment"));
+		memberDTO.setMemberComment(multipartReq.getParameter("memberCommnet"));
 		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
 		memberDTO.setMemberBirth(multipartReq.getParameter("memberBirth"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
@@ -53,6 +53,7 @@ public class JoinOkController implements Execute{
 			memberDTO.setMemberPfp(memberPfpFile);
 //			memberDAO.insert(memberfileDTO);	
 		}
+
 		memberDAO.join(memberDTO);
 		
 		resp.sendRedirect("/member/login.me");

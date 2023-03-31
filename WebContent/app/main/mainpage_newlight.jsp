@@ -13,6 +13,7 @@
   <body>
   <%@include file="/app/header.jsp"%>
   	<form action="${pageContext.request.contextPath}/main/mainNewlightOk.mi" method="post">
+
     <section>
        <div class="category-container">
         <div class="category-menu">
