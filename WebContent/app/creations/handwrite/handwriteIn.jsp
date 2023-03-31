@@ -40,6 +40,14 @@
         </div>
       </div>
     </div>
+           <div class="reply-date">
+          2023-03-05
+          <br />
+          <span class="reply-member">작성자</span>
+        <textarea id="comment-input" placeholder="댓글을 입력해 주세요."></textarea>
+        <button class="btn">등록</button>
+      </div>
+      </div>
   </body>
        <br>
     <br>

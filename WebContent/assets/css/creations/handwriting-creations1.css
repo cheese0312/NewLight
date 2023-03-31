@@ -3,6 +3,17 @@
   padding: 0px;
 }
 
+.creations-btn {
+display: flex;
+    justify-content: flex-end;
+    margin-right: 450px;
+}
+#upup{
+	background-color: rgb(198, 133, 238);
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
 body {
   background-color: rgb(255, 255, 245);
 }

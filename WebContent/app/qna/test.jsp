@@ -16,36 +16,33 @@
 <%@include file="/app/header.jsp"%>
 
 <body>
-<form												
-		action="${pageContext.request.contextPath}/qna/QnAListOk.qn"
-		method="post">
 	<div class="container">
 		<div class="write-btn-wrap">
 			<!-- 글쓰기 페이지 이동 처리 -->
 			<a href="${pageContext.request.contextPath}/app/qna/qnaWrite.jsp" class="write-btn">글쓰기</a>
 		</div>
-		<table class="board-table">
-			<thead>
-				<tr>
-					<th>번호</th>
-					<th>제목</th>
-					<th>작성자</th>
-					<th>날짜</th>
-					<th>조회수</th>
-				</tr>
-			</thead>
-			<tbody>
+		<div class="board-table">
+			<div>
+			
+			  	<h1>작성자</h1>
+               <h1>제목</h1>
+               <h1>댓글</h1>
+               <h1>날짜</h1>
+               <h1>조회수</h1>
+			
+			</div>
+			</div>
 				<!-- ========== 게시글 목록 예시 =========== -->
 
 				 <c:choose>
 					<c:when test="${not empty qnaList}">
 						<c:forEach var="qna" items="${qnaList}">
 							<tr>
-								<td class="no"><c:out value="${qna.getQnaNumber()}"/></td>
-								<td class="title"><c:out value="${qna.getQnaTitle()}"/></td>
-								<td class="author"><c:out value="${qna.getMemberNickname()}"/></td>
-								<td class="date"><c:out value="${qna.getQnaWriteday()}"/></td>
-								<td class="hit"><c:out value="${qna.getQnaReadCount()}"/></td>
+								<td class="no"><c:out value="${qna_getQnaNumber()}"/></td>
+								<td class="title"><c:out value="${qna_getQnaTitle()}"/></td>
+								<td class="author"><c:out value="${qna_getQnaMemberNickname()}"/></td>
+								<td class="date"><c:out value="${qna_getQnaWriteday()}"/></td>
+								<td class="hit"><c:out value="${qna_getQnaReadCount()}"/></td>
 							</tr>
 						</c:forEach>
 					</c:when>
@@ -65,38 +62,17 @@
 		<div class="pagination">
 			<ul>
 				<!-- ========== 페이징 처리 예시 ============ -->
-				<c:if test="${prev}">
-				<li><a href="${pageContext.request.contextPath}/qna/QnAListOk.qn?page=${startPage-1}" class="prev">&lt;</a></li>
-				</c:if>
-				
-				<c:forEach var="i" begin="${startPage}" end="${endPage }">
-					<c:choose>
-						<c:when test="${i == page }">
-							<li>
-								<a href="#" class="active">
-									<c:out value="${i}"/>
-								</a>
-							</li>
-						</c:when>
-						<c:otherwise>
-							<li>
-								<a href="${pageContext.request.contextPath}/qna/QnAListOk.qn?page=${i}">
-									<c:out value="${i}"/>
-								</a>
-							</li>
-						</c:otherwise>
-					</c:choose>
-					
-				</c:forEach>
-				
-				<c:if test="${next}">
-				<li><a href="${pageContext.request.contextPath}/qna/QnAListOk.qn?page=${endPage+1}" class="next">&gt;</a></li>
-				</c:if>
+				<li><a href="#" class="prev">&lt;</a></li>
+				<li><a href="#" class="active">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#" class="next">&gt;</a></li>
 				<!-- ========== /페이징 처리 예시 ============ -->
 			</ul>
 		</div>
 	</div>
-	</form>
 </body>
 <!-- 푸터 -->
 <%@include file="/app/footer.jsp"%>

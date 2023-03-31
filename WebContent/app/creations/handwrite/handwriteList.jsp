@@ -18,6 +18,9 @@
         입니다:)
       </div>
     <section>
+     <div class="creations-btn">
+     <a href="${pageContext.request.contextPath}/app/main/upload.jsp" id="upup">작품 올리기</a>
+     </div>
         <ul class="create-list">
           <div class="create-card">
             <div class="create-logo">
