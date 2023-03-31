@@ -17,6 +17,9 @@
         <div class="sun">
           <img id="moniter" src="/assets/images/creations/background-1/background-creation1 icon.png" alt="" />배경화면 페이지 입니다:)
         </div>
+       <div class="creations-btn">
+      <a href="${pageContext.request.contextPath}/app/main/upload.jsp" id="upup">작품 올리기</a>
+    </div>
         <ul class="create-list">
           <div class="create-card">
             <div class="create-logo">
@@ -197,6 +200,7 @@
           </div>
         </ul>
       </div>
+      </form>
     </section>
     <br>
     <br>

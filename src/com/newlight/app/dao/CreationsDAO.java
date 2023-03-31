@@ -25,7 +25,7 @@ public class CreationsDAO {
 	}
 	
 	public CreationsVO select(int creationNumber) {
-		return sqlSession.selectOne("creation.select", creationNumber);
+		return sqlSession.selectOne("creations.select", creationNumber);
 	}
 	
 	public void insert(CreationsDTO creationDTO) {
@@ -35,8 +35,9 @@ public class CreationsDAO {
 	public int getSequence() {
 		return sqlSession.selectOne("creations.getSequence");
 	}
-
-	public List<CreationsVO> selectAll(Map<String, Integer> creationMap){
-		return sqlSession.selectList("creation.selectAll", creationMap);
+	
+//	파일 조회해서 페이지에 뿌려주기
+	public List<CreationsVO> selectAll(){
+		return sqlSession.selectList("creations.selectAll");
 	}
 }

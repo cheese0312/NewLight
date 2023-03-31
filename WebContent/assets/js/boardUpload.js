@@ -59,7 +59,7 @@ $fileInput.on('change', function(){
 // html('')로 초기화를 시켜준다.	
 		$fileList.html('');
 		
-		if(files.length > 5){
+		if(files.length > 10){
 	//	파일이 진짜로 삭제되는지 확인하기
 			/*console.log(files);*/
 			
@@ -70,7 +70,7 @@ $fileInput.on('change', function(){
 	// 파일이 초기화 됬는지 확인하기
 			console.log(files);
 			
-			alert("파일은 최대 5개까지만 첨부 가능합니다.");
+			alert("파일은 최대 10개까지만 첨부 가능합니다.");
 			$cnt.text(files.length);
 			return;
 		}
@@ -125,7 +125,23 @@ $('.cancel-btn').on('click', () => {
 });
 
 
+let $form = $('#write-form');
+let $submit = $('.submit');
 
+console.log('!!!!!!!');
+
+$submit.on('click', function() {
+	console.log("aaaaaa");
+	console.log($('#category1').val()); 
+	
+	if($('#category1').val() == '0' || $('#category2').val() == '0'){ 
+		alert('카테고리를 선택해 주세요');
+		return;
+	}
+	
+	$form.submit();
+	
+});
 
 
 

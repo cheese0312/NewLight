@@ -41,8 +41,9 @@ public class LoginOkController implements Execute {
 		} else {
 			path = "/main/mainNewlightOk.mi";
 			session.setAttribute("memberNumber", memberNumber);
+			System.out.println(path);
 		}
-
+		
 		resp.sendRedirect(path);
 
 	}

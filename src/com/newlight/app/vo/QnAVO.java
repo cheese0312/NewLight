@@ -3,11 +3,9 @@ package com.newlight.app.vo;
 public class QnAVO {
 	private int qnaNumber;
 	private String qnaTitle;
-	private String qnaContent;
-	private int qnaReadcount;
-	private String qnaWriteday;
-	private int memberNumber;
 	private String memberNickname;
+	private String qnaWriteday;
+	private int qnaReadCount;
 	
 	public QnAVO() {
 	}
@@ -28,20 +26,12 @@ public class QnAVO {
 		this.qnaTitle = qnaTitle;
 	}
 
-	public String getQnaContent() {
-		return qnaContent;
+	public String getMemberNickname() {
+		return memberNickname;
 	}
 
-	public void setQnaContent(String qnaContent) {
-		this.qnaContent = qnaContent;
-	}
-
-	public int getQnaReadcount() {
-		return qnaReadcount;
-	}
-
-	public void setQnaReadcount(int qnaReadcount) {
-		this.qnaReadcount = qnaReadcount;
+	public void setMemberNickname(String memberNickname) {
+		this.memberNickname = memberNickname;
 	}
 
 	public String getQnaWriteday() {
@@ -52,29 +42,18 @@ public class QnAVO {
 		this.qnaWriteday = qnaWriteday;
 	}
 
-	public int getMemberNumber() {
-		return memberNumber;
+	public int getQnaReadCount() {
+		return qnaReadCount;
 	}
 
-	public void setMemberNumber(int memberNumber) {
-		this.memberNumber = memberNumber;
-	}
-
-	public String getMemberNickname() {
-		return memberNickname;
-	}
-
-	public void setMemberNickname(String memberNickname) {
-		this.memberNickname = memberNickname;
+	public void setQnaReadCount(int qnaReadCount) {
+		this.qnaReadCount = qnaReadCount;
 	}
 
 	@Override
 	public String toString() {
-		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", qnaContent=" + qnaContent
-				+ ", qnaReadcount=" + qnaReadcount + ", qnaWriteday=" + qnaWriteday + ", memberNumber=" + memberNumber
-				+ ", memberNickname=" + memberNickname + "]";
+		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", memberNickname=" + memberNickname
+				+ ", qnaWriteday=" + qnaWriteday + ", qnaReadCount=" + qnaReadCount + "]";
 	}
-	
-	
-	
+
 }

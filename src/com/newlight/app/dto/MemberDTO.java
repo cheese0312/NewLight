@@ -6,8 +6,10 @@ public class MemberDTO {
 	private String memberId;
 	private String memberPassword;
 	private String memberNickname;
+	private String memberComment;
 	private String memberWebsite;
 	private String memberPfp;
+	private String memberComment;
 	private String memberEmail;
 	private String memberBirth;
 	private String memberAddress1;
@@ -66,6 +68,14 @@ public class MemberDTO {
 		this.memberPfp = memberPfp;
 	}
 
+	public String getMemberComment() {
+		return memberComment;
+	}
+
+	public void setMemberComment(String memberComment) {
+		this.memberComment = memberComment;
+	}
+
 	public String getMemberEmail() {
 		return memberEmail;
 	}
@@ -113,14 +123,24 @@ public class MemberDTO {
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
+	
+	
+
+	public String getMemberComment() {
+		return memberComment;
+	}
+
+	public void setMemberComment(String memberComment) {
+		this.memberComment = memberComment;
+	}
 
 	@Override
 	public String toString() {
 		return "MemberDTO [memberNumber=" + memberNumber + ", memberName=" + memberName + ", memberId=" + memberId
-				+ ", memberPassword=" + memberPassword + ", memberNickname=" + memberNickname + ", memberWebsite="
-				+ memberWebsite + ", memberPfp=" + memberPfp + ", memberEmail=" + memberEmail + ", memberBirth="
-				+ memberBirth + ", memberAddress1=" + memberAddress1 + ", memberAddress2=" + memberAddress2
-				+ ", memberStatus=" + memberStatus + "]";
+				+ ", memberPassword=" + memberPassword + ", memberNickname=" + memberNickname + ", memberComment="
+				+ memberComment + ", memberWebsite=" + memberWebsite + ", memberPfp=" + memberPfp + ", memberEmail="
+				+ memberEmail + ", memberBirth=" + memberBirth + ", memberAddress1=" + memberAddress1
+				+ ", memberAddress2=" + memberAddress2 + ", memberStatus=" + memberStatus + "]";
 	}
 	
 }
