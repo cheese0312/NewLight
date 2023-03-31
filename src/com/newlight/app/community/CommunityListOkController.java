@@ -19,8 +19,6 @@ public class CommunityListOkController implements Execute {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		CommunityDAO communityDAO = new CommunityDAO();	
 		
-		
-		
 //		String temp = req.getParameter("page");
 		
 	//	int page = temp==null?1:Integer.valueOf(temp);

@@ -24,7 +24,7 @@
       <div class="author-name">
         <div class="content-mente">
         <label>작가이름</label>
-        <c:out value="${creation.getMemberId()}"/>
+        <c:out value="${creation.getMemberNickname()}"/>
         </div>
       </div>
     </div>
@@ -44,19 +44,19 @@
     <div class="category">
     <div class="category1">
       <select name="category1" id="category1">
-        <option value="카테고리">----</option>
-        <option value="1차 카테고리">1차 창작물</option>
-        <option value="2차 카테고리">2차 창작물</option>
+        <option value="0">----</option>
+        <option value="101">1차 창작물</option>
+        <option value="201">2차 창작물</option>
       </select>
     </div>
     <div class="category2">
       <select name="category2" id="category2">
-        <option value="카테고리">----</option>
-        <option value="창작물 카테고리">손그림</option>
-        <option value="창작물 카테고리">배경화면</option>
-        <option value="창작물 카테고리">카카오톡 테마</option>
-        <option value="창작물 카테고리">폰트</option>
-        <option value="창작물 카테고리">만화</option>
+        <option value="0">----</option>
+        <option value="손그림">손그림</option>
+        <option value="배경화면">배경화면</option>
+        <option value="카카오톡 테마">카카오톡 테마</option>
+        <option value="폰트">폰트</option>
+        <option value="만화">만화</option>
       </select>
     </div>
   </div>
@@ -82,7 +82,7 @@
                 </div>
              </div>
              <div class="upload-text">
-                최대 5개까지 업로드 가능
+                최대 10개까지 업로드 가능
              </div>
              <div class="upload-text">
                 파일 형식 : jpg, png
@@ -100,7 +100,7 @@
     </div>
 
     <div class="submit-btn">
-      <button type="submit">올리기</button>
+      <button type="button" class="submit">올리기</button>
       <button type="button" class="cancel-btn">취소</button>
     </div>
     </form>
@@ -110,7 +110,3 @@
   <script src="${pagetContext.request.contextPath}/assets/js/boardUpload.js"></script>
 </body>
 </html>
-
-
-
-<!-- 언니 너무 멋있어욤 -->

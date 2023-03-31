@@ -12,7 +12,7 @@
   </head>
   <body>
   <%@include file="/app/header.jsp"%>
-  
+
     <section>
        <div class="category-container">
         <div class="category-menu">

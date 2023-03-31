@@ -33,6 +33,10 @@ public class CreationsFrontController extends HttpServlet{
 		case "/creations/CreationUploadOk.ct" :
 			new CreationUploadOkController().execute(req, resp);
 			break;
+		case "/creations/CreationListOk.ct" :
+			new CreationListOkController().execute(req, resp);
+			break;
+			
 		case "/board/aniBoard.nc" :
 //			임시 이동처리
 			req.getRequestDispatcher("/app/creations/ani/aniBoard.jsp").forward(req, resp);
