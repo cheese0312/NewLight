@@ -6,6 +6,7 @@ public class MypageVO {
 	private int followeeNumber;
 	private int creationNumber;
 	private String memberNickname;
+	private String memberComment;
 	private String creationTitle;
 	private String creationContent;
 	
@@ -52,6 +53,16 @@ public class MypageVO {
 	public void setMemberNickname(String memberNickname) {
 		this.memberNickname = memberNickname;
 	}
+	
+	
+
+	public String getMemberComment() {
+		return memberComment;
+	}
+
+	public void setMemberComment(String memberComment) {
+		this.memberComment = memberComment;
+	}
 
 	public String getCreationTitle() {
 		return creationTitle;
@@ -73,7 +84,8 @@ public class MypageVO {
 	public String toString() {
 		return "MypageVO [memberNumber=" + memberNumber + ", followerNumber=" + followerNumber + ", followeeNumber="
 				+ followeeNumber + ", creationNumber=" + creationNumber + ", memberNickname=" + memberNickname
-				+ ", creationTitle=" + creationTitle + ", creationContent=" + creationContent + "]";
+				+ ", memberComment=" + memberComment + ", creationTitle=" + creationTitle + ", creationContent="
+				+ creationContent + "]";
 	}
 	
 }

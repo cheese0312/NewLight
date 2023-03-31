@@ -31,7 +31,10 @@
 					</c:otherwise>
 				</c:choose>
 					
-					<div class="mypage-name"><c:out value="${memberNickname}"/> </div>
+					<div class="mypage-box">
+      					<div class="mypage-name">${memberNickname }</div>
+      					<div class="myapge-comment">${memberComment}</div>
+    				</div>
 					<div class="bin"></div>
 					<div class="editbtn">
 						<a href="#">프로필수정</a>
@@ -64,8 +67,8 @@
 											<%-- <img src="${pageContext.request.contextPath}/upload/${follow.getMemberpfp}"/> --%>
 										</div>
 										<div class="mypage-box">
-											<div class="mypage-name"><c:out value="${follow}"/> </div>
-											<div class="mypage-content">작가 소개</div>
+											<div class="mypage-name"><c:out value="${follow.getMemberNickname()}"/> </div>
+											<div class="mypage-content"><c:out value="${follow.getMemberComment()}"/></div>
 										</div>
 										<div class="bin"></div>
 										<div class="editbtn">

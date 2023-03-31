@@ -1,6 +1,7 @@
 package com.newlight.app.mypage;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -18,35 +19,27 @@ public class MypageCreationsOkController implements Execute {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {	
 		System.out.println("mypage 진입!");
 		req.setCharacterEncoding("utf-8");
-		
-		MemberDTO memberDTO = new MemberDTO();
+
 		MypageDAO mypageDAO = new MypageDAO();
 		MypageVO mypageVO = new MypageVO();
+		int memberNumber = (Integer)req.getSession().getAttribute("memberNumber");
 		
 		HttpSession session = req.getSession();
 		
-		mypageVO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
+		mypageVO.setMemberNumber(memberNumber);
 		mypageVO.setMemberNickname(req.getParameter("memberNickname"));
+
+		mypageVO = mypageDAO.mypageinfo(memberNumber);
+
+		req.setAttribute("memberNickname", mypageVO.getMemberNickname());
+		req.setAttribute("memberComment", mypageVO.getMemberComment());
+		mypageVO.setMemberNumber(memberNumber);
+		System.out.println(memberNumber);
+		System.out.println(mypageVO);
 		
-		System.out.println((Integer)req.getSession().getAttribute("memberNumber"));
-		System.out.println(req.getParameter("memberNickname"));
-		
-		String memberNickname = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
-		System.out.println(memberNickname);
-		
-		req.setAttribute("memberNickname", memberNickname);
-//		MemberDTO memberDTO = new MemberDTO();
-//		MemberDAO memberDAO = new MemberDAO();
-//		MemberFileVO memberfileVO = new MemberFileVO();
-//		
-//		HttpSession session = req.getSession();
-//		
-//		memberDTO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
-//		
-//		String memberNickname = memberDAO.info(memberfileVO);
-//		req.setAttribute("member", memberNickname);
-//		System.out.println(req.getSession().getAttribute("memberNickname"));
-//		System.out.println(memberNickname);
+		List<MypageVO> creationList = mypageDAO.creationList(mypageVO);
+		req.setAttribute("creationList", creationList);
+		System.out.println(creationList);
 
 		req.getRequestDispatcher("/app/mypage/mypage_creations.jsp").forward(req, resp);
 		

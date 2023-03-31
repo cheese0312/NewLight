@@ -56,9 +56,9 @@
                 <li class="dropdown-content2">
 
                      <!-- 해당 페이지 링크 걸어주기 -->
-                    <a href="${pageContext.request.contextPath}/app/creations/background/background2.jsp">배경화면</a>
-                    <a href="${pageContext.request.contextPath}/app/creations/tracing/tracing2.jsp">트레이싱</a>
-                    <a href="${pageContext.request.contextPath}/app/creations/theme/theme2.jsp">카카오톡 테마</a>
+                    <a href="${pageContext.request.contextPath}/creations/background2.ct">배경화면</a>
+                    <a href="${pageContext.request.contextPath}/creations/tracing.ct">트레이싱</a>
+                    <a href="${pageContext.request.contextPath}/creations/theme2.ct">카카오톡 테마</a>
                 </li>
                 </div>
 
@@ -97,7 +97,7 @@
                 		<a href="${pageContext.request.contextPath}/member/login.me" class="login-btn">로그인</a>
                 	</c:when>
                 	<c:otherwise>
-                		<%-- <a href="${pageContext.request.contextPath}/mypage/mypage_creationsOk.mp" class="mypage-btn">내 정보</a> --%>
+                		<a href="${pageContext.request.contextPath}/mypage/creationsOk.mp" class="mypage-btn">마이 페이지</a>
                 		<a href="${pageContext.request.contextPath}/member/logoutOk.me" class="logout-btn">로그아웃</a>
                 	</c:otherwise>
                 </c:choose>

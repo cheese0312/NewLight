@@ -7,14 +7,8 @@
 <mapper namespace="member">
 
 	<insert id="join" parameterType="MemberDTO">
-		insert into `member`(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_email, member_birth, member_address1, member_address2)
-		values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2});
-	</insert>
-
-
-	<insert id="pfpinsert" parameterType="MemberFileDTO">
-		insert into member_file(member_pfp_file)
-		values(#{memberPfpFile})
+		insert into `member`(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_comment, member_email, member_birth, member_address1, member_address2)
+		values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberComment}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2});
 	</insert>
 	
 	<select id="info" parameterType="MemberFileVO" resultType="MemberFileVO">
