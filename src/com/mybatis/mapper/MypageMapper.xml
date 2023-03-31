@@ -5,25 +5,25 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="mypage">
-	<select id="mypagelikeList" parameterType="MypageVO" resultType="_int">
+<!-- 	<select id="mypagelikeList" parameterType="MypageVO" resultType="_int">
 		select  creation_number
 		from likes l join `member` m 
 		on creation_number = m.member_number 
 		where m.member_number=#{memberNumber}
-	</select>
-	
-<!-- 	<select id="mypageLikeList" parameterType = "MypageVO" resultType="_int">
-		select c.*, count(l.member_number) like_count from creations c left outer join likes l 
-		on c.creation_number = l.creation_number 
-		group by c.creation_number 
-
 	</select> -->
 	
-	<select id="mypagefollowee" parameterType="MypageVO" resultType="string">
-		select member_nickname
+	<select id="mypageLikeList" parameterType = "MypageVO" resultType="MypageVO">
+		select c.creation_number  , c.creation_title , c.member_number ,l.member_number 
+		from creations c join likes l 
+		on c.creation_number = l.creation_number 
+		where l.member_number =#{memberNumber};
+	</select>
+	
+	<select id="mypagefollowee" parameterType="MypageVO" resultType="MypageVO">
+		select m.member_nickname , m.member_comment
 		from follows f  join `member` m 
 		on f.followee_number = m.member_number 
-		where f.follower_number = #{memberNumber};
+		where f.follower_number = #{memberNumber}
 	</select>
 	
 	<select id="mypageCreations" resultType="MypageVO"  parameterType="map">
@@ -33,11 +33,16 @@
 		where m.member_number = #{memberNumber}
 	</select>
 	
-	<select id="mypageinfo" parameterType="_int" resultType="string">
-		select member_nickname
-		from `member`
-		where member_number = #{memberNumber}
+	<select id="mypagecreation" resultType="MypageVO" parameterType="MypageVO">
+		select creation_title 
+		from creations c 
+		where member_number = #{memberNumber};
 	</select>
 	
+	<select id="mypageinfo" parameterType="_int" resultType="MypageVO">
+		select member_nickname , member_comment
+		from `member`
+		where member_number = #{memberNumber}
+	</select>	
 	
 </mapper>

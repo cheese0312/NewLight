@@ -152,9 +152,9 @@ header{
 }
 
 .btn-box {
-  width: 100px;
-  display: block;
-  justify-content: center;
+	width: 15%;
+    display: block;
+    text-align: center;
 }
 
 .login-box {
@@ -162,6 +162,28 @@ header{
 }
 
 .login-btn{
+  padding: 2px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 133, 238);
+  color: black;
+  border-radius: 5px;
+  text-decoration-line: none;
+}
+
+.mypage-btn{
+  padding: 2px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 133, 238);
+  color: black;
+  border-radius: 5px;
+  text-decoration-line: none;
+}
+
+.logout-btn{
   padding: 2px;
   height: 20px;
   justify-content: center;
