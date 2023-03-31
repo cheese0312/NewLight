@@ -5,27 +5,31 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="creations">
-
+	<!-- 창작물 올리기 -->
 	<insert id="insert" parameterType="CreationsDTO">
 		insert into creations
-		(creation_number, creation_title, creation_content, creation_category1, creation_category2, creation_writeday, member_number)
-		values(#{creationNumber}, #{creationTitle}, #{creationContent}, #{creationCategory1}, #{creationCategory2}, #{creationWriteday}, #{memberNumber})
+		(creation_number, creation_title, creation_content, category_code, category_name, creation_writeday, member_number)
+		values(#{creationNumber}, #{creationTitle}, #{creationContent}, #{creationCode}, #{creationName}, #{creationWriteday}, #{memberNumber})
 	</insert>
 
-	<select id="selectAll" resultType="CreationsVO" parameterType="map">
-		select creation_number, creation_title, creation_content, creation_category1, creation_category2, m.member_number, member_id 
+	<!--  -->
+	<select id="selectAll" resultType="CreationsVO">
+		select creation_number, creation_title, creation_content, creation_writeday, 
+		creation_read_count, creation_status, m.member_number, category_code, category_name,
+		m.member_number, m.member_nickname, m.member_pfp
 		from `member` m join creations c
 		on m.member_number = c.member_number 
 		order by creation_number desc
-		limit #{startRow}, #{rowCount}
+		limit 0,9
 	</select>
 	
 	<select id="select" parameterType="_int" resultType="CreationsVO">
-		select creation_number, creation_title, creation_content, creation_category1, creation_category2, creation_writeday, m.member_number, m.member_id
+		select creation_number, creation_title, creation_content, category_code, category_name, creation_writeday, m.member_number, m.member_id
 		from `member` m  join creations c
 		on creation_number = #{creationNumber} and m.member_number = c.member_number
 	</select>
-
+	
+	<!-- 창작물 삭제  -->
 	<delete id="delete" parameterType="_int">
 		delete from creations
 		where member_number = #{memberNumber}

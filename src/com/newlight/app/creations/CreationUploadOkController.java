@@ -74,9 +74,9 @@ public class CreationUploadOkController implements Execute{
 				}else if(param.equals("creationContent")) {
 					creationDTO.setCreationContent(value);
 				}else if(param.equals("category1")) {
-					creationDTO.setCreationCategory1(value);
+					creationDTO.setCreationCode(value);
 				}else if(param.equals("category2")) {
-					creationDTO.setCreationCategory2(value);
+					creationDTO.setCreationName(value);
 				}
 				
 				if(creationDTO.getCreationTitle() == null || creationDTO.getCreationContent() == null) {continue;}

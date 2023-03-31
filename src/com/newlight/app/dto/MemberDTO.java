@@ -9,6 +9,7 @@ public class MemberDTO {
 	private String memberComment;
 	private String memberWebsite;
 	private String memberPfp;
+	private String memberComment;
 	private String memberEmail;
 	private String memberBirth;
 	private String memberAddress1;
@@ -65,6 +66,14 @@ public class MemberDTO {
 
 	public void setMemberPfp(String memberPfp) {
 		this.memberPfp = memberPfp;
+	}
+
+	public String getMemberComment() {
+		return memberComment;
+	}
+
+	public void setMemberComment(String memberComment) {
+		this.memberComment = memberComment;
 	}
 
 	public String getMemberEmail() {
