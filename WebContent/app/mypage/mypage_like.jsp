@@ -30,7 +30,10 @@
 					</div>
 					</c:otherwise>
 				</c:choose>
-					<div class="mypage-name"><c:out value="${memberNickname}"/> </div>
+					<div class="mypage-box">
+      					<div class="mypage-name">${memberNickname }</div>
+      					<div class="myapge-comment">${memberComment}</div>
+    				</div>
 					<div class="bin"></div>
 					<div class="editbtn">
 						<a href="#">프로필수정</a>
@@ -62,12 +65,12 @@
 											<img src="../img/10_징검다리를_하나_둘.jpg">
 											<div class="sub-title">
 												<a href="#"> <c:out
-														value="${creations.getCreationsTitle }" /></a>
+														value="${like.getCreationsTitle() }" /></a>
 											</div>
 											<div class="sub-author">
 												<img
 													src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
-												<a href="#"> <c:out value="${member.getMemberNickname }" />
+												<a href="#"> <c:out value="${like.getMemberNickname() }" />
 												</a>
 											</div>
 											<div class="creaions-sub">

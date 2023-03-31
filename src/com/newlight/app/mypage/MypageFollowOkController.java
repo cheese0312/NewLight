@@ -19,25 +19,24 @@ public class MypageFollowOkController implements Execute {
 		req.setCharacterEncoding("utf-8");
 		
 		MypageDAO mypageDAO = new MypageDAO();
-		MypageVO mypageVO = new MypageVO();
+		MypageVO mypageVO = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
 		
 		HttpSession session = req.getSession();
 		
 		System.out.println((Integer)req.getSession().getAttribute("memberNumber"));
-		
 		mypageVO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
 		
-		String memberNickname = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
-		System.out.println(memberNickname);
 		
-		req.setAttribute("memberNickname", memberNickname);
-		
+//		mypageVO = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
+
+		req.setAttribute("memberNickname", mypageVO.getMemberNickname());
+		req.setAttribute("memberComment", mypageVO.getMemberComment());
+
 //		session.setAttribute("memberNumber", session);
 		
-		List<String> followerList = mypageDAO.Followee(mypageVO);
+		List<MypageVO> followerList = mypageDAO.Followee(mypageVO);
 		req.setAttribute("followerList", followerList);
 		System.out.println(followerList);
-//		resp.sendRedirect("/mypage/followOk.mp");
 		
 		req.getRequestDispatcher("/app/mypage/mypage_follow.jsp").forward(req, resp);
 

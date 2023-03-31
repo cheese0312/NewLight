@@ -15,11 +15,21 @@ public class MypageDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public List<String> Followee(MypageVO mypageVO) {
+	public List<MypageVO> Followee(MypageVO mypageVO) {
 		return sqlSession.selectList("mypage.mypagefollowee", mypageVO);
 	}
 	
-	public String mypageinfo(int memberNumber) {
+	public MypageVO mypageinfo(int memberNumber) {
 		return sqlSession.selectOne("mypage.mypageinfo", memberNumber);
 	}
+	
+	public List<MypageVO> LikeList(MypageVO mypageVO){
+		return sqlSession.selectList("mypage.mypageLikeList", mypageVO);
+	}
+	
+	public List<MypageVO> creationList(MypageVO mypageVO){
+		return sqlSession.selectList("mypage.mypagecreation" , mypageVO);
+	}
+
+
 }

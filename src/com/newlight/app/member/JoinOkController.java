@@ -33,6 +33,7 @@ public class JoinOkController implements Execute{
 		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
 		memberDTO.setMemberWebsite(multipartReq.getParameter("memberWebsite"));
 		memberDTO.setMemberPfp(multipartReq.getParameter("memberPfp"));
+		memberDTO.setMemberComment(multipartReq.getParameter("memberComment"));
 		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
 		memberDTO.setMemberBirth(multipartReq.getParameter("memberBirth"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
@@ -49,23 +50,9 @@ public class JoinOkController implements Execute{
 				continue;
 			}
 			
-			memberfileDTO.setMemberPfpFile(memberPfpFile);
-			memberDAO.insert(memberfileDTO);
-			
+			memberDTO.setMemberPfp(memberPfpFile);
+//			memberDAO.insert(memberfileDTO);	
 		}
-		
-//		memberDTO.setMemberName(req.getParameter("memberName"));
-//		memberDTO.setMemberId(req.getParameter("memberId"));
-//		memberDTO.setMemberPassword(req.getParameter("memberPassword"));
-//		memberDTO.setMemberNickname(req.getParameter("memberNickname"));
-//		memberDTO.setMemberWebsite(req.getParameter("memberWebsite"));
-//		memberDTO.setMemberPfp(req.getParameter("memberPfp"));
-//		memberDTO.setMemberEmail(req.getParameter("memberEmail"));
-//		memberDTO.setMemberBirth(req.getParameter("memberBirth"));
-//		memberDTO.setMemberAddress1(req.getParameter("memberAddress1"));
-//		memberDTO.setMemberAddress2(req.getParameter("memberAddress2"));
-		
-
 		memberDAO.join(memberDTO);
 		
 		resp.sendRedirect("/member/login.me");

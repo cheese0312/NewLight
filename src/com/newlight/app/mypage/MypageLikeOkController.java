@@ -1,6 +1,7 @@
 package com.newlight.app.mypage;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,14 +28,20 @@ public class MypageLikeOkController implements Execute {
 		
 		mypageVO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
 		mypageVO.setMemberNickname(req.getParameter("memberNickname"));
+		mypageVO.setCreationTitle(req.getParameter("creationTitle"));
 		
 		System.out.println((Integer)req.getSession().getAttribute("memberNumber"));
 		System.out.println(req.getParameter("memberNickname"));
+		System.out.println(req.getParameter("creationTitle"));
 		
-		String memberNickname = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
-		System.out.println(memberNickname);
+		mypageVO = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
+
+		req.setAttribute("memberNickname", mypageVO.getMemberNickname());
+		req.setAttribute("memberComment", mypageVO.getMemberComment());
 		
-		req.setAttribute("memberNickname", memberNickname);
+		List<MypageVO> likeList = mypageDAO.LikeList(mypageVO);
+		req.setAttribute("likeList", likeList);
+		System.out.println(likeList);
 		
 		req.getRequestDispatcher("/app/mypage/mypage_like.jsp").forward(req, resp);
 

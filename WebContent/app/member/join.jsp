@@ -65,6 +65,12 @@
 							placeholder="활동 할 닉네임을 입력하세요"></td>
 					</tr>
 					<tr>
+						<td class="tle">한 줄 소개</td>
+						<td class="cont"><input class="ed" type="text"
+							name="memberComment" size="30" maxlength="50"
+							placeholder="한 줄 소개를 입력해 주세요"></td>
+					</tr>
+					<tr>
 						<td class="tle">E-mail</td>
 						<td class="cont"><input class="ed" type="text" id="reg_mb_email" name="memberEmail"
 							size=38 maxlength=100 required placeholder="이메일을 입력하세요">

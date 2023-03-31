@@ -54,6 +54,18 @@ public class CreationsFrontController extends HttpServlet{
 			new HwOneInOkController().execute(req, resp);
 			break;
 			
+		case "/creations/background2.ct":
+			new Background2OkController().execute(req,resp);
+			break;
+			
+		case "/creations/tracing.ct" :
+			new TracingOkController().execute(req,resp);
+			break;
+		
+		case "/creations/theme2.ct" :
+			new Theme2OkController().execute(req,resp);
+			break;
+			
 		}
 	
 		

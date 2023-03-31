@@ -7,21 +7,13 @@ hr {
   color: rgb(217, 217, 217);
 }
 
-.main{
+.main {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 80%;
   flex-direction: column;
   align-items: center;
-}
-
-.main-aside {
-  width: 15%;
-  height: 100%;
-  display: flex;
-
-  align-items: center;
-  color: white;
 }
 
 .main-container {
@@ -41,22 +33,30 @@ hr {
   align-items: center;
 }
 
-.img {
-  width: 300px;
-  height: 250px;
-  margin: 10px;
-  padding: 15px;
-  border: 1px solid rgb(205, 205, 205);
+.mypage-img > img {
+  width: 80px;
+  height: 80px;
 }
 
-.likes ,
+.img {
+  width: 300px;
+  height: 450px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.likes,
 .comment {
   width: 20px;
   height: 20px;
 }
 
-.mypage-name {
+.mypage-box {
+  display: block;
   width: 70%;
+}
+
+.mypage-name {
   height: 60%;
 }
 
@@ -67,6 +67,11 @@ hr {
   color: black;
   border-radius: 5px;
   padding: 2px 5px;
+}
+
+.name > a {
+  text-decoration: none;
+  color: grey;
 }
 
 section {
@@ -80,36 +85,18 @@ section {
   align-items: center;
 }
 
-.name > a {
-  text-decoration: none;
-  color: grey;
-}
-
-
-.creations-main {
-  padding: 10px 10px;
-  margin: 0 30px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  align-items: center;
-  justify-content: center;
-  color: rgb(193, 193, 193);
-  text-align: center;
-}
-
-.creations-main > section {
+.mypage-main2 > section {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
-img {
-  width: 70px;
-  height: 70px;
+.creations-img {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 .creations-img > img {
@@ -118,10 +105,61 @@ img {
   align-items: center;
 }
 
+.creations-main {
+    padding: 10px 10px;
+    /* margin-left: 60px; */
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(193, 193, 193);
+    text-align: center;
+}
+
 .creations-default {
   padding: 10px 0;
 }
 
 .creations-msg {
   padding: 10px 0;
+}
+
+.sub-author {
+  display: flex;
+  padding: 5px 5px;
+}
+
+.sub-author > img {
+  width: 50px;
+  height: 50px;
+}
+
+.sub-author > a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.creations-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.creations-sub > img {
+  width: 30px;
+  height: 30px;
+}
+
+.sub-title {
+  padding: 20px 0 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub-title > a {
+  text-decoration: none;
+  color: black;
 }
