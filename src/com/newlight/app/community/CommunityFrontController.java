@@ -42,6 +42,10 @@ public class CommunityFrontController extends HttpServlet {
 //			req.getRequestDispatcher("/app/community/communityWrite.jsp").forward(req, resp);
 			new CommunityWriteController().execute(req,resp);
 		break;
+		
+		case "/community/communityWriteOk.cm":
+			new CommunityWriteOkController().execute(req, resp);
+			break;
 		}
 
 	}

@@ -72,9 +72,8 @@
 						<!-- 드롭 박스 세트 3 -->
 						<div class="dropdown3">
 
-							<!-- 드롭 박스 버튼 -->
-							<li class="dropbtn3"><a
-								href="${pageContext.request.contextPath}/app/community/communityList.jsp">커뮤니티</a></li>
+							 <!-- 드롭 박스 버튼 -->    
+                			<li class="dropbtn3"> <a href="${pageContext.request.contextPath}/community/communityListOk.cm">커뮤니티</a></li>
 
 							<!-- 드롭 서브 메뉴 -->
 						</div>

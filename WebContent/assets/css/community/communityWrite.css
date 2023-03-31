@@ -115,6 +115,7 @@ section>.gd{
     width: 150px;
     background-color:  rgb(252, 252, 236) ;
     margin: 30px 1000px;
+    display:flex;
  }
 
  .button>button{
@@ -127,6 +128,24 @@ section>.gd{
     border-width: 0.5px;
     font-weight: bold;
  }
+ 
+  .button>.cancel-btn{
+    padding: 6px;
+    border-radius: 5.5%;
+    /* border-color: rgb(162, 68, 162); */
+    background-color: rgb(80, 123, 158);
+    border-width: 0.5px;
+    margin: 0px 6px;
+ }
+ 
+ .cancel-btn>button{
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(80, 123, 158);
+    border: none;
+   
+ }
+ 
  
  /* 이미지 업로드 스타일 */
 svg {
@@ -182,6 +201,7 @@ input[type='file'] {
    list-style-type : none;
    margin-top : 15px;
    display : flex;
+    background-color: rgb(252, 252, 236);
 }
 
 .file-list > li {
@@ -207,6 +227,7 @@ input[type='file'] {
    position : absolute;
    bottom : 0;
    right : 0;
+   z-index : 1;  
 }
 
 .btn1-box{

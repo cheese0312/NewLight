@@ -18,7 +18,7 @@
 <body>
 
      <%@include file ="/app/header2.jsp" %>
-    <form action="write-form" action="#" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/community/communityWriteOk.cm" method="post" enctype="multipart/form-data">
     <section>
         <div class="gd">
         <h1>글쓰기</h1>
@@ -26,7 +26,7 @@
         <div class="writer-sub">
             
             <div class="writer2">
-            <c:out value="${memberId}"/>
+            <c:out value="${memberNickName}"/>
             </div>
             <div class="author">님</div>
         </div>
@@ -36,7 +36,7 @@
             
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
-              <input type="text" class="title">
+              <input type="text" class="title" name="communityTitle">
               <br>
               <!-- <div class="writer-sub">
                <div class="line"></div>
@@ -45,7 +45,7 @@
             </div> -->
               <br>
               <div class="word1"> <p>내용</p></div>
-              <input type="text" class="word">
+              <input type="text" class="word" name="communityContent">
             </div>
               <br>
               <br>
@@ -83,9 +83,9 @@
         </div>
                   <div class="button">
                   <button>작성완료</button>
-                  <button>취소</button>
+                  <button type="button" class="cancel-btn">취소</button></div> 
                 </div>
-                  </div>
+                 
                   <br>
         
        

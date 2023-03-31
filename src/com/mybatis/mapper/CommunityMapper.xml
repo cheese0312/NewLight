@@ -21,5 +21,14 @@
 	<select id="getTotal" resultType="_int">
 	 select count(community_number)from community
 	</select>
+	
+	 <insert id="insert" parameterType="CommunityDTO">
+	  insert into community(community_title, community_content, member_number)
+	  values(#{communityTitle}, #{communityContent}, #{memberNumber})
+	 </insert>
+	 
+	 <select id="getSequence" resultType="_int">
+	    select last_insert_id()
+	 </select>
 </mapper>
 
