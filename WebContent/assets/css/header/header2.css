@@ -133,12 +133,12 @@ header{
   background-color: ivory
 }
 
-.btn-box {
+/**.btn-box {
   
   justify-content: center;
   align-items: center;
   margin: 10px -80px;
-}
+} **/
 
 .header-box>.btn-box{
   display: flex;

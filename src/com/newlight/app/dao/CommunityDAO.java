@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.newlight.app.dto.CommunityDTO;
 import com.newlight.app.dto.CommunityVO;
 
 public class CommunityDAO {
@@ -27,5 +28,11 @@ public class CommunityDAO {
 		return sqlSession.selectOne("community.getTotal");
 	}
 	
+	public void insert(CommunityDTO communityDTO) {
+		sqlSession.insert("community.insert", communityDTO);
+	}
 	
+	public int getSequence() {
+		return sqlSession.selectOne("community.getSequence");
+	}
 }

@@ -11,6 +11,7 @@
 		<typeAlias type="com.newlight.app.dto.MemberFileDTO" alias="MemberFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.MemberFileVO" alias="MemberFileVO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityFileDTO" alias="CommunityFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityVO" alias="CommunityVO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
@@ -47,6 +48,7 @@
 		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CommunityFileMapper.xml"/>
 	</mappers>
 	
 </configuration>
