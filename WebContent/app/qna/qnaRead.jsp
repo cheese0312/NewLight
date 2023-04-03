@@ -52,7 +52,7 @@
         <div class="view-attach">첨부 파일</div>
         <div class="btn-group">
           <!-- 각 버튼 처리 경로 js로 수정하기 -->
-          <a href="${pageContext.request.contextPath}/app/qna/qnaBoardList.jsp"
+          <a href="${pageContext.request.contextPath}/qna/QnAListOk.qn"
             ><button type="button" class="list-btn">목록</button></a
           >
           <button type="button" class="modify-btn">수정</button>
