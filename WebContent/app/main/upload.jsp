@@ -8,14 +8,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>창작물 업로드</title>
-  <link rel="stylesheet" href="../css/upload.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/upload.css">
 </head>
 <body>
+
+	<!-- 헤더 -->
+    <%@include file ="/app/header.jsp" %>
   <main>
-   
-    <div class="creations-main">
     <form id="write-form" action="${pageContext.request.contextPath}/creations/CreationUploadOk.ct" method="post"
 	enctype="multipart/form-data">
+    <div class="creations-main">
+   
       <h3>나만의 새로운 빛 만들기</h3>
     <div class="creations-author">
       <div class="author-img">
@@ -103,9 +106,12 @@
       <button type="button" class="submit">올리기</button>
       <button type="button" class="cancel-btn">취소</button>
     </div>
-    </form>
+    
   </div>
+  </form>
   </main>
+  <!-- 푸터 -->
+    <%@include file ="/app/footer.jsp" %>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="${pagetContext.request.contextPath}/assets/js/boardUpload.js"></script>
 </body>

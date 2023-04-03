@@ -34,7 +34,7 @@
 						<div class="dropdown1">
 
 							<!-- 드롭 박스 버튼 -->
-							<li class="dropbtn1">1차 창작물</li>
+							<li class="dropbtn1">별구름<img src="${pageContext.request.contextPath}/assets/images/free-icon-cloud.png"></li>
 
 							<!-- 드롭 서브 메뉴 -->
 							<li class="dropdown-content1">
@@ -56,7 +56,7 @@
 						<div class="dropdown2">
 
 							<!-- 드롭 박스 버튼 -->
-							<li class="dropbtn2">2차 창작물</li>
+							<li class="dropbtn2">별숲🌳</li> 
 
 							<!-- 드롭 서브 메뉴 -->
 							<li class="dropdown-content2">
@@ -73,7 +73,7 @@
 						<div class="dropdown3">
 
 							 <!-- 드롭 박스 버튼 -->    
-                			<li class="dropbtn3"> <a href="${pageContext.request.contextPath}/community/communityListOk.cm">커뮤니티</a></li>
+                			<li class="dropbtn3"> <a href="${pageContext.request.contextPath}/community/communityListOk.cm">별물결🌊</a></li>
 
 							<!-- 드롭 서브 메뉴 -->
 						</div>

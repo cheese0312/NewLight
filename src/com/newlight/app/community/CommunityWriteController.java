@@ -22,7 +22,7 @@ public class CommunityWriteController implements Execute {
 		if(memberNumber == null) {
 			path = "/app/member/login.jsp";
 		}else {
-			path = "/app/community/communityWrite.jsp";
+			path = "/community/communityWriteOk.cm";
 			req.setAttribute("memberId", memberDAO.getMemberId(memberNumber));
 		}
 		

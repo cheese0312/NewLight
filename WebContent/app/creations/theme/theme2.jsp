@@ -13,7 +13,7 @@
     <!-- 헤더 -->
     <%@include file ="/app/header.jsp" %>
 <hr>
-    
+    <form action="${pageContext.request.contextPath}/creations/theme2.ct" method="post">
     <!-- 메인 요소 -->
   <main>
     <div class="main">
@@ -32,93 +32,43 @@
   <!-- 창작물 메인 요소 -->
   <div class="creations-main2">
     <section>
-    <div class="img">
-    <div class="creations-img">
-      <img src="../img/IMG_0398.png" class="img-1">
-      <div class="sub-title">
-        <a href="#">징검다리를 하나, 둘</a>
-      </div>
-      <div class="sub-author">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-        <a href="#">작가 이름</a>
-      </div>
-      <div class="creaions-sub">
-      <img src="../img/free-icon-hearts-138533.png" class="likes">
-      <img src="../img/pngegg.png" class="comment">
-      </div>
-    </div>
-    </div>
-    <div class="img">
-    <div class="creations-img">
-      <img src="../img/IMG_0555.jpg" class="img-2">
-      <div class="sub-title">
-        <a href="#">징검다리를 하나, 둘</a>
-      </div>
-      <div class="sub-author">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-        <a href="#">작가 이름</a>
-      </div>
-      <div class="creaions-sub">
-      <img src="../img/free-icon-hearts-138533.png" class="likes">
-      <img src="../img/pngegg.png" class="comment">
-      </div>
-    </div>
-    </div>
-    <div class="img">
-    <div class="creations-img">
-      <img src="../img/IMG_8895.png" class="img-2">
-      <div class="sub-title">
-        <a href="#">징검다리를 하나, 둘</a>
-      </div>
-      <div class="sub-author">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-        <a href="#">작가 이름</a>
-      </div>
-      <div class="creaions-sub">
-      <img src="../img/free-icon-hearts-138533.png" class="likes">
-      <img src="../img/pngegg.png" class="comment">
-      </div>
-    </div>
-    </div>
-    <div class="img">
-    <div class="creations-img">
-      <img src="../img/IMG_9575.jpg" class="img-2">
-      <div class="sub-title">
-        <a href="#">징검다리를 하나, 둘</a>
-      </div>
-      <div class="sub-author">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-        <a href="#">작가 이름</a>
-      </div>
-      <div class="creaions-sub">
-      <img src="../img/free-icon-hearts-138533.png" class="likes">
-      <img src="../img/pngegg.png" class="comment">
-      </div>
-    </div>
-    </div>
-    <div class="img">
-    <div class="creations-img">
-      <img src="../img/IMG_9639.jpg" class="img-2">
-      <div class="sub-title">
-        <a href="#">징검다리를 하나, 둘</a>
-      </div>
-      <div class="sub-author">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-        <a href="#">작가 이름</a>
-      </div>
-      <div class="creaions-sub">
-      <img src="../img/free-icon-hearts-138533.png" class="likes">
-      <img src="../img/pngegg.png" class="comment">
-      </div>
-    </div>
-    </div>
-  </section>
-  </div>
-  </section>
-</div>
 
+						<c:choose>
+							<c:when test="${not empty creationTheme2List }">
+								<c:forEach var="theme2" items="${creationTheme2List }">
+									<div class="img">
+										<div class="creations-img">
+											<img src="../img/IMG_0398.png" class="img-1">
+											<div class="sub-title">
+												<a href="#">징검다리를 하나, 둘</a>
+											</div>
+											<div class="sub-author">
+												<img
+													src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+												<a href="#"> <c:out value="${theme2.getMemberNickname() }"></c:out> </a>
+											</div>
+											<div class="creations-sub">
+											<img
+												src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png"
+												class="likes"> <img
+												src="${pageContext.request.contextPath}/assets/images/member/pngegg.png"
+												class="comment">
+										</div>
+										</div>
+									</div>
+								</c:forEach>
+							</c:when>
+							
+							<c:otherwise>
+								<h3>... 작품이 없어요.. 😂</h3>
+							</c:otherwise>
+						</c:choose>
+    </section>
+    </div>
+  </div>
 </div>
 </main>
+</form>
     <!-- 푸터 -->
     <%@include file ="/app/footer.jsp" %>
 </body>
