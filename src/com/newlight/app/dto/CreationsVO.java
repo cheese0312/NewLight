@@ -107,5 +107,5 @@ public class CreationsVO {
 				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
 				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", files=" + files + "]";
 	}
-	
+
 }

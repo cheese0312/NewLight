@@ -44,4 +44,15 @@ public class CreationsDAO {
 	public List<CreationsVO> category2Background(CreationsVO creationsVO){
 		return sqlSession.selectList("creations.category2background", creationsVO);
 	}
+	
+//	테마별 파일조회해서 페이지에 뿌려주기
+	public List<CreationsVO> selectMenu(Map<String, String> categoryMap){
+		return sqlSession.selectList("creations.selectMenu", categoryMap);
+	}
+	
 }
+
+
+
+
+
