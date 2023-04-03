@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.newlight.app.community.CommunityWriteController;
+import com.newlight.app.community.CommunityWriteOkController;
 
 public class QnAFrontController extends HttpServlet {
 	@Override
@@ -21,22 +22,35 @@ public class QnAFrontController extends HttpServlet {
 	}
 
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("문의사항 게시판 들어왔다.");
+
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
+		
 		switch (target) {
+		case"	" :
+			System.out.println("문의사항 게시판입니다");
+			req.getRequestDispatcher("/app/qna/qnaBoardList.jsp").forward(req, resp);
+			break;
+			
 		case "/qna/QnAListOk.qn":
-			System.out.println("qnaList 들어왔다!");
+			System.out.println("qnaListOk 들어간다!");
 //			req.getRequestDispatcher("/app/qna/qnaBoardList.jsp").forward(req, resp);
 			new QnAOkController().execute(req, resp);
 			break;
+			
 		case "/qna/QnAReadOk.qn":
 			req.getRequestDispatcher("/app/qna/qnaRead.jsp").forward(req, resp);
 			break;
-		case "/qna/QnAWriteOk.qn":
+			
+		case "/qna/QnAWrite.qn":
 //			req.getRequestDispatcher("/app/qna/qnaWrite.jsp").forward(req, resp);
 			new QnAWriteController().execute(req, resp);
 			break;
+			
+		case "/qna/QnAWriteOk.qn":
+			new QnAWriteOkController().execute(req, resp);
+			break;
+			
 		}
 	}
 

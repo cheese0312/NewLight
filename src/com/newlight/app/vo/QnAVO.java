@@ -4,6 +4,7 @@ public class QnAVO {
 	private int qnaNumber;
 	private String qnaTitle;
 	private String memberNickname;
+	private String qnaContent;
 	private String qnaWriteday;
 	private int qnaReadCount;
 	
@@ -34,6 +35,14 @@ public class QnAVO {
 		this.memberNickname = memberNickname;
 	}
 
+	public String getQnaContent() {
+		return qnaContent;
+	}
+
+	public void setQnaContent(String qnaContent) {
+		this.qnaContent = qnaContent;
+	}
+
 	public String getQnaWriteday() {
 		return qnaWriteday;
 	}
@@ -53,7 +62,9 @@ public class QnAVO {
 	@Override
 	public String toString() {
 		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", memberNickname=" + memberNickname
-				+ ", qnaWriteday=" + qnaWriteday + ", qnaReadCount=" + qnaReadCount + "]";
+				+ ", qnaContent=" + qnaContent + ", qnaWriteday=" + qnaWriteday + ", qnaReadCount=" + qnaReadCount
+				+ "]";
 	}
-
+	
+	
 }

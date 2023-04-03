@@ -20,10 +20,10 @@
 	</select>
 
 	<insert id="insert" parameterType="QnADTO">
-		insert into qna_comment
-		(commentent_number, commentent_content, member_number, qna_number)
-		values(#{commententNumber},
-		#{commententContent},#{memberNumber},#{qnaNumber})
+		insert into qna(qna_title,
+		qna_content, member_number)
+		values(#{qnaTitle},#{qnaContent},#{memberNumber})
+
 	</insert>
 
 	<delete id="delete" parameterType="_int">
@@ -34,6 +34,10 @@
 
 	<select id="getTotal" resultType="_int">
 		select count(qna_number)from
-		qna q
+		qna
+	</select>
+
+	<select id="getSequence" resultType="_int">
+		select last_insert_id()
 	</select>
 </mapper>
