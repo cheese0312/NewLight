@@ -16,7 +16,7 @@ public class MemberDTO {
 	private String memberStatus;
 	
 	public MemberDTO() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public int getMemberNumber() {
@@ -35,6 +35,14 @@ public class MemberDTO {
 		this.memberName = memberName;
 	}
 
+	public String getMemberId() {
+		return memberId;
+	}
+
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+
 	public String getMemberPassword() {
 		return memberPassword;
 	}
@@ -51,6 +59,14 @@ public class MemberDTO {
 		this.memberNickname = memberNickname;
 	}
 
+	public String getMemberComment() {
+		return memberComment;
+	}
+
+	public void setMemberComment(String memberComment) {
+		this.memberComment = memberComment;
+	}
+
 	public String getMemberWebsite() {
 		return memberWebsite;
 	}
@@ -65,14 +81,6 @@ public class MemberDTO {
 
 	public void setMemberPfp(String memberPfp) {
 		this.memberPfp = memberPfp;
-	}
-
-	public String getMemberComment() {
-		return memberComment;
-	}
-
-	public void setMemberComment(String memberComment) {
-		this.memberComment = memberComment;
 	}
 
 	public String getMemberEmail() {
@@ -115,14 +123,6 @@ public class MemberDTO {
 		this.memberStatus = memberStatus;
 	}
 
-	public String getMemberId() {
-		return memberId;
-	}
-
-	public void setMemberId(String memberId) {
-		this.memberId = memberId;
-	}
-
 	@Override
 	public String toString() {
 		return "MemberDTO [memberNumber=" + memberNumber + ", memberName=" + memberName + ", memberId=" + memberId
@@ -131,7 +131,6 @@ public class MemberDTO {
 				+ memberEmail + ", memberBirth=" + memberBirth + ", memberAddress1=" + memberAddress1
 				+ ", memberAddress2=" + memberAddress2 + ", memberStatus=" + memberStatus + "]";
 	}
-	
 }
 
 

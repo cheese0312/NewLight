@@ -12,11 +12,12 @@
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/header/header.css">
 </head>
+
 <body>
 	<%@include file="/app/header.jsp"%>
 	<hr>
-
 	<!-- 메인 요소 -->
+	<form action="" method="post">
 	<main>
 		<div class="main">
 			<div class="main-box-bin"></div>
@@ -24,7 +25,9 @@
 				<div class="creations">
 					<div class="creations-bin"></div>
 					<div class="creations-title">
-						<h2>1차 창작물 - 카톡테마</h2>
+						<h2>
+							<c:out value="${title}"></c:out>
+						</h2>
 					</div>
 					<div class="creations-btn">
 						<a
@@ -41,10 +44,10 @@
 							<c:forEach var="creation" items="${creations}">
 								<div class="img">
 									<div class="creations-img">
-										<img src="../img/IMG_0398.png" class="img-1">
+										<img src="${pageContext.request.contextPath}/upload/${creationsfile.getFileSystemName()}" class="img-1">
 										<div class="sub-title">
 											<a
-												href="${pageContext.request.contextPath}/app/creations/theme/themeDownload.jsp">
+												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
 												<c:out value="${creation.getCreationTitle() }" />
 											</a>
 										</div>
@@ -53,7 +56,7 @@
 												src="../img/—Pngtree—vector business men icon_4186858.png">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
-												<c:out value="${creation.getMemberNickname() }" />
+												<c:out value="${creation.getMemberNickname()}" />
 											</a>
 										</div>
 										<div class="creaions-sub">
@@ -71,6 +74,7 @@
 			</div>
 		</div>
 	</main>
+	</form>
 	<%@include file="/app/footer.jsp"%>
 </body>
 </html>

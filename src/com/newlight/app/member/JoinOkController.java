@@ -33,7 +33,7 @@ public class JoinOkController implements Execute{
 		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
 		memberDTO.setMemberWebsite(multipartReq.getParameter("memberWebsite"));
 		memberDTO.setMemberPfp(multipartReq.getParameter("memberPfp"));
-		memberDTO.setMemberComment(multipartReq.getParameter("memberCommnet"));
+		memberDTO.setMemberComment(multipartReq.getParameter("memberComment"));
 		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
 		memberDTO.setMemberBirth(multipartReq.getParameter("memberBirth"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
