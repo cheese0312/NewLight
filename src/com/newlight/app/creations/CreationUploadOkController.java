@@ -28,12 +28,12 @@ public class CreationUploadOkController implements Execute{
 		CreationsFileDAO creationfileDAO = new CreationsFileDAO();
 		System.out.println("uploadOk컨트롤러 들어왔다!!");
 		int creationNumber = 0;
+		String path = null;
 //		creationDTO.setCreationCategory1("test");
 //		creationDTO.setCreationCategory2("test");
 		
-		
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
-		int fileSize = 1024 * 1024 * 5;
+		int fileSize = 1024 * 1024 * 20;
 		
 		MultipartParser parser = new MultipartParser(req, fileSize);
 		parser.setEncoding("UTF-8");
@@ -79,10 +79,10 @@ public class CreationUploadOkController implements Execute{
 					creationDTO.setCreationName(value);
 				}
 				
+				
 				if(creationDTO.getCreationTitle() == null || creationDTO.getCreationContent() == null) {continue;}
 				
-//				creationDTO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
-				creationDTO.setMemberNumber(1);
+				creationDTO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
 				System.out.println(creationDTO);
 				creationDAO.insert(creationDTO);
 				
@@ -91,8 +91,28 @@ public class CreationUploadOkController implements Execute{
 			
 		}
 		
-		resp.sendRedirect("/main/mainNewlightOk.mi");
+//		boolean isOne = creationDTO.getCreationCode().equals("101");
+//		String cate = creationDTO.getCreationName();
 		
+		if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("만화")) {
+			path = "/crations/aniListOk.ct";
+		}else if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("카카오톡 테마")) {
+			path = "/creations/themeOneListOk.ct";
+		}else if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("배경화면")) {
+//			path = "";
+		}else if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("손그림")) {
+//			path = "";
+		}else if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("폰트")) {
+//			path = "";
+		}else if(creationDTO.getCreationCode().equals("201") && creationDTO.getCreationName().equals("배경화면")) {
+//			path = "";
+		}else if(creationDTO.getCreationCode().equals("201") && creationDTO.getCreationName().equals("카카오톡 테마")) {
+//			path = "";
+		}else if(creationDTO.getCreationCode().equals("201") && creationDTO.getCreationName().equals("트레이싱")) {
+//			path = "";
+		}
+		
+		resp.sendRedirect(path);
 	}
 }
 

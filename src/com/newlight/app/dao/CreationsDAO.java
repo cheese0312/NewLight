@@ -40,4 +40,15 @@ public class CreationsDAO {
 	public List<CreationsVO> selectAll(){
 		return sqlSession.selectList("creations.selectAll");
 	}
+	
+//	테마별 파일조회해서 페이지에 뿌려주기
+	public List<CreationsVO> selectMenu(Map<String, String> categoryMap){
+		return sqlSession.selectList("creations.selectMenu", categoryMap);
+	}
+	
 }
+
+
+
+
+
