@@ -48,7 +48,7 @@ public class QnAOkController implements Execute {
 
 		List<QnAVO> qnaList = qnaDAO.selectAll(pageMap);
 
-//		System.out.println(qnaList.get(0).getMemberNickname());
+		System.out.println(qnaList.get(0).getMemberNickname());
 
 		req.setAttribute("qnaList", qnaList);
 		req.setAttribute("page", page);

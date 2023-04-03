@@ -13,7 +13,8 @@
 </head>
 <%@include file="/app/header.jsp"%>
 
-    <form action="write-form" action="#" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" action="#" method="post" enctype="multipart/form-data">
+    
     <section>
         <div class="gd">
         <h1>글쓰기</h1>
@@ -21,7 +22,7 @@
         
         <div class="writer-sub">
             <div class="writer2">
-            <c:out value="${memberId}"/>
+            <c:out value="${memberNickName}"/>
             </div>
             <div class="author">님</div>
         </div>
@@ -31,12 +32,12 @@
             
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
-              <input type="text" class="title">
+              <input type="text" class="title" name="qnaTitle">
               <br>
             
               <br>
               <div class="word1"> <p>내용</p></div>
-              <input type="text" class="word">
+              <input type="text" class="word" name="qnaContent">
             </div>
               <br>
               <br>
@@ -73,8 +74,8 @@
           
         </div>
                   <div class="button">
-                  <button>작성완료</button>
-                  <button>취소</button>
+                  <button type="submit" class="submit-btn">작성완료</button>
+                  <button type="button" class="cancel-btn">취소</button>
                 </div>
                   </div>
                   <br>
@@ -109,5 +110,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script
-	src="${pageContext.request.contextPath}/assets/js/member/join.js"></script>
+	src="${pageContext.request.contextPath}/assets/js/QnA/qnaWrite.js"></script>
+
 </html>
