@@ -30,10 +30,12 @@
     display: flex;
     list-style: none;
     margin: 0 40px;
+     background-color:rgb(242, 239, 239);
   }
 
   .menu>.writer{
     display: flex;
+     background-color:rgb(242, 239, 239);
   }
 
   .writer>h1{
@@ -77,6 +79,7 @@
     border: 1px solid blanchedalmond ;
     margin: 0 120px;
     font-size: 20px;
+    white-space : pre-line;
   }
 
   .big-box>.else>p{
@@ -210,7 +213,19 @@
     font-size: 19px;
     background-color:rgb(245, 245, 242);
   }
+  
+    .writer>.date{
+    background-color:rgb(242, 239, 239);
+    margin: -24px 210px;
+    width: 80px;
+    font-size: 13px;
+  }
 
+  .date>p{
+    background-color: rgb(242, 239, 239);
+  }
+
+ 
 
 
   footer{

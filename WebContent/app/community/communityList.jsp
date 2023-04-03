@@ -45,7 +45,9 @@
 									</div>
 									<div class="title">
 										<h1>
+										<a href = "${pageContext.request.contextPath}/community/communityReadOk.cm?communityNumber=${community.getCommunityNumber()}">
 											<c:out value="${community.getCommunityTitle()}" />
+											</a>
 										</h1>
 									</div>
 									<div class="comment">
