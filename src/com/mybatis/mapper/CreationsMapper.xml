@@ -39,6 +39,13 @@
 		select last_insert_id()
 	</select>
 	
+	<!-- 2차 창작물 배경화면 -->
+		<select id="category2background" parameterType="CreationsVO" resultType="CreationsVO">
+			select creation_title , member_nickname 
+			from `member` m  join creations c
+			on m.member_number = c.member_number 
+			where category_code = '201' and category_name = '배경화면'
+		</select>
 </mapper>
 
 

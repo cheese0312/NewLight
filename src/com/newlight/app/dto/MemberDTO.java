@@ -115,16 +115,6 @@ public class MemberDTO {
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
-	
-	
-
-	public String getMemberComment() {
-		return memberComment;
-	}
-
-	public void setMemberComment(String memberComment) {
-		this.memberComment = memberComment;
-	}
 
 	@Override
 	public String toString() {
