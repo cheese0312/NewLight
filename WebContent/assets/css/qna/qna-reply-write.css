@@ -218,6 +218,7 @@ input[type='file'] {
     height: 25px;
 }
 
+
 .img-cancel-btn:hover{
    background-color: rgb(255, 87, 87);
    color: #fff;

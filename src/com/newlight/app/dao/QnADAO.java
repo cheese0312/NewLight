@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.newlight.app.dto.QnADTO;
 import com.newlight.app.vo.QnAVO;
 
 public class QnADAO {
@@ -28,6 +29,12 @@ public class QnADAO {
 	
 	public int getTotal() {
 		return sqlSession.selectOne("qna.getTotal");
+	}
+	public void insert(QnADTO qnaDTO) {
+		sqlSession.insert("qna.insert", qnaDTO);
+	}
+	public int getSequence() {
+		return sqlSession.selectOne("qna.getSequence");
 	}
 
 }
