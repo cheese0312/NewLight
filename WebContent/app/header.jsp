@@ -39,15 +39,15 @@
 							<!-- 드롭 서브 메뉴 -->
 							<li class="dropdown-content1">
 								<!-- 해당 페이지 링크 걸어주기 --> <a
-								href="${pageContext.request.contextPath}/app/creations/handDrow/handDrow.jsp">손그림</a>
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=손그림">손그림</a>
 								<a
-								href="${pageContext.request.contextPath}/app/creations/background/background1.jsp">배경화면</a>
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=배경화면">배경화면</a>
 								<a
-								href="${pageContext.request.contextPath}/app/creations/ani/aniBoard.jsp">만화</a>
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=만화">만화</a>
 								<a
-								href="${pageContext.request.contextPath}/app/creations/handwrite/handwriteList.jsp">폰트</a>
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=폰트">폰트</a>
 								<a
-								href="${pageContext.request.contextPath}/creations/CreationListOk.ct">카카오톡
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=카톡테마">카카오톡
 									테마</a>
 							</li>
 						</div>
@@ -61,10 +61,10 @@
 							<!-- 드롭 서브 메뉴 -->
 							<li class="dropdown-content2">
 								<!-- 해당 페이지 링크 걸어주기 --> <a
-								href="${pageContext.request.contextPath}/creations/background2.ct">배경화면</a>
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=배경화면">배경화면</a>
 								<a
-								href="${pageContext.request.contextPath}/creations/tracing.ct">트레이싱</a>
-								<a href="${pageContext.request.contextPath}/creations/theme2.ct">카카오톡
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=트레이싱">트레이싱</a>
+								<a href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=카톡테마">카카오톡
 									테마</a>
 							</li>
 						</div>

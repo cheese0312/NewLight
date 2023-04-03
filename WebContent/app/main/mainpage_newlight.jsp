@@ -37,13 +37,13 @@
               </a>
             </li>
             <li class="menu-list">
-              <a href="${pageContext.request.contextPath}/app/creations/theme/kakaoBoard.jsp" class="menu-list-4"
+              <a href="${pageContext.request.contextPath}/app/creations/theme/kakaoThemeOne.jsp" class="menu-list-4"
                 >카톡테마
                 <img src="../img/kakao-talk.png" alt="" class="kakaotheme-img" />
               </a>
             </li>
             <li class="menu-list">
-              <a href="${pageContext.request.contextPath}/app/creations/ani/aniBoard.jsp" class="menu-list-5"
+              <a href="${pageContext.request.contextPath}/app/creations/ani/aniList.jsp" class="menu-list-5"
                 >만화
                 <img src="../img/animation.png" alt="" class="ani-img" />
               </a>
