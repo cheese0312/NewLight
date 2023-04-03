@@ -40,4 +40,8 @@ public class CreationsDAO {
 	public List<CreationsVO> selectAll(){
 		return sqlSession.selectList("creations.selectAll");
 	}
+	
+	public List<CreationsVO> category2Background(CreationsVO creationsVO){
+		return sqlSession.selectList("creations.category2background", creationsVO);
+	}
 }

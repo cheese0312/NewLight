@@ -96,6 +96,17 @@ header{
   width: 100px;
 }
 
+.dropbtn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn1 > img {
+  width: 25px;
+  height: 25px;
+}
+
 /* 드롭 다운 설정 */
 .dropdown1,
 .dropdown2,

@@ -31,12 +31,12 @@
     <section>
     
     <c:choose>
-    	<c:when test="${not empty creationBackgroundList }">
-    		<c:forEach var="background2" items="${creationBackgroundList }">
+    	<c:when test="${not empty category2backgroundList }">
+    		<c:forEach var="background2" items="${category2backgroundList }">
 									<div class="creations-img">
 										<img src="../img/10_징검다리를_하나_둘.jpg">
 										<div class="sub-title">
-											<a href="#"> <c:out value="${background2.getCretaionTitle() }"/> </a>
+											<a href="#"> <c:out value="${background2.getCreationTitle() }"/> </a>
 										</div>
 										<div class="sub-author">
 											<img
@@ -54,9 +54,9 @@
 									</c:forEach>
 								</c:when>
 								
-<%-- 								<c:otherwise>
-									
-								</c:otherwise> --%>
+ 								<c:otherwise>
+									<h3>... 작품이 없어요.. 😂</h3> 
+								</c:otherwise> 
     </c:choose>
     </section>
     </div>

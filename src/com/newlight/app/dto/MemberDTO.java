@@ -9,7 +9,6 @@ public class MemberDTO {
 	private String memberComment;
 	private String memberWebsite;
 	private String memberPfp;
-	private String memberComment;
 	private String memberEmail;
 	private String memberBirth;
 	private String memberAddress1;
@@ -122,16 +121,6 @@ public class MemberDTO {
 
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
-	}
-	
-	
-
-	public String getMemberComment() {
-		return memberComment;
-	}
-
-	public void setMemberComment(String memberComment) {
-		this.memberComment = memberComment;
 	}
 
 	@Override

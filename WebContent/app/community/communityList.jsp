@@ -21,8 +21,7 @@
 	<br />
 	<br />
 	<form
-		action="${pageContext.request.contextPath}/community/communityListOk.cm"
-		method="post">
+		action="${pageContext.request.contextPath}/community/communityListOk.cm" method="post">
 		<section>
 			<div class="big-box">
 				<div class="menu">
