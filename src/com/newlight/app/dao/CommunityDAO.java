@@ -35,4 +35,12 @@ public class CommunityDAO {
 	public int getSequence() {
 		return sqlSession.selectOne("community.getSequence");
 	}
+	
+	public CommunityVO select(int communityNumber) {
+		return sqlSession.selectOne("community.select", communityNumber);
+	}
+	
+	public void updateReadCount(int communityNumber) {
+		sqlSession.update("community.updateReadCount", communityNumber);
+	}
 }

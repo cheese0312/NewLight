@@ -16,19 +16,24 @@
 	rel="stylesheet">
 </head>
 <body>
-<%@include file="/app/header2.jsp"%>
+<%@include file="/app/header3.jsp"%>
+<form
+		action="${pageContext.request.contextPath}/community/communityReadOk.cm"
+		method="post">
 	<section>
 		<div class="big-box">
 			<div class="title">
-				<h1>우울해서 그림 한번 그려보았습니다 //</h1>
+				<h1> <c:out value="${community.getCommunityTitle()}"></c:out> </h1>
 			</div>
 			<div class="menu">
 				<div class="writer">
-					<h1>조회수</h1>
+					<h1> <c:out value="${community.getCommunityReadCount()}"/> </h1>
 					<div class="writer2">
-						<img src="../img/—Pngtree—vector business men icon_4186858.png"
-							width="48%">
+						<c:out value="${community.getMemberNickName()}"/>
 					</div>
+					<div class="date">
+                        <p> <c:out value="${community.getCommunityWriteDay()}"/> </p>
+                    </div>
 				</div>
 
 			</div>
@@ -38,7 +43,7 @@
 			</div>
 
 			<div class="else">
-				<p>코드를 치다 어깨가 빠질거 같다. 우울하다. 그래도 오리는 귀엽다</p>
+				<p> <c:out value="${community.getCommunityContent()}"/> </p>
 				<div class="comment">
 					<img src="../img/free-icon-hearts-138533.png" width="2%">10+
 					<div class="blank"></div>
@@ -208,6 +213,7 @@
 		</div>
 		<!--big-box-->
 	</section>
+	</form>
 	<br>
 	<br>
 	<br>
