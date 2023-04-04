@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>kakaoTheme</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/creations/ani.css">
+	href="${pageContext.request.contextPath}/assets/css/ani.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/header/header.css">
 </head>
@@ -44,16 +44,16 @@
 							<c:forEach var="creation" items="${creations}">
 								<div class="img">
 									<div class="creations-img">
-										<img src="${pageContext.request.contextPath}/upload/${creationsfile.getFileSystemName()}" class="img-1">
+										<img src="${pageContext.request.contextPath}/upload/${creation.getCreationSumnail()}" class="img-1">
 										<div class="sub-title">
 											<a
 												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
-												<c:out value="${creation.getCreationTitle() }" />
+												<c:out value="${creation.getCreationTitle()}" />
 											</a>
 										</div>
 										<div class="sub-author">
 											<img
-												src="../img/—Pngtree—vector business men icon_4186858.png">
+												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
 												<c:out value="${creation.getMemberNickname()}" />

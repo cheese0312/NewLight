@@ -22,7 +22,7 @@ public class JoinOkController implements Execute{
 		MemberDTO memberDTO = new MemberDTO();
 		MemberDAO memberDAO = new MemberDAO();
 		MemberFileDTO memberfileDTO = new MemberFileDTO();
-	    String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
+	    String uploadPath = req.getSession().getServletContext().getRealPath("/") + "userProfile/";
 	    int fileSize = 1024 * 1024 * 5; //5mb
 
 		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8", new DefaultFileRenamePolicy());

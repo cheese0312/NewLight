@@ -12,13 +12,14 @@ package com.newlight.app.dto;
 
 public class CreationsDTO {
 	
-	int creationNumber;
-	String creationTitle;
-	String creationContent;
-	String creationCode;
-	String creationName;
-	String creationWriteday;
-	int memberNumber;
+	private int creationNumber;
+	private String creationTitle;
+	private String creationContent;
+	private String creationCode;
+	private String creationName;
+	private String creationWriteday;
+	private int memberNumber;
+	private String creationSumnail;
 	
 	public CreationsDTO() {
 		
@@ -79,11 +80,22 @@ public class CreationsDTO {
 	public void setMemberNumber(int memberNumber) {
 		this.memberNumber = memberNumber;
 	}
+	
+	
+
+	public String getCreationSumnail() {
+		return creationSumnail;
+	}
+
+	public void setCreationSumnail(String creationSumnail) {
+		this.creationSumnail = creationSumnail;
+	}
 
 	@Override
 	public String toString() {
 		return "CreationsDTO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
-				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber + "]";
+				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
+				+ ", creationSumnail=" + creationSumnail + "]";
 	}
 }

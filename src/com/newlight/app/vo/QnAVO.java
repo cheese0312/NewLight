@@ -8,6 +8,7 @@ public class QnAVO {
 	private String qnaWriteday;
 	private int qnaReadCount;
 	
+	
 	public QnAVO() {
 	}
 
