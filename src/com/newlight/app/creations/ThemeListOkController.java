@@ -38,7 +38,9 @@ public class ThemeListOkController implements Execute{
 		req.setAttribute("creations", creations);
 		req.setAttribute("title", title);
 		
+		System.out.println("=================================");
 		System.out.println(creations);
+		System.out.println("=================================");
 		
 		if(code.equals("101")) {
 			switch(name) {
@@ -71,7 +73,7 @@ public class ThemeListOkController implements Execute{
 		
 //		손글씨+폰트+만화 / 1차 창작물 배경화면 + 2차 창작물 배경화면 + 트레이싱 / 카톡테마
 		
-		req.getRequestDispatcher("/app/creations/theme/kakaoThemeOne.jsp").forward(req, resp);
+		req.getRequestDispatcher(path).forward(req, resp);
 		
 	}
 

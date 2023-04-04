@@ -57,7 +57,7 @@
         <option value="0">----</option>
         <option value="손그림">손그림</option>
         <option value="배경화면">배경화면</option>
-        <option value="카카오톡 테마">카카오톡 테마</option>
+        <option value="카톡테마">카카오톡 테마</option>
         <option value="폰트">폰트</option>
         <option value="만화">만화</option>
       </select>
