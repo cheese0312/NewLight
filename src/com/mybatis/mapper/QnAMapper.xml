@@ -10,10 +10,11 @@
 		select
 		qna_number, qna_title,
 		qna_content, qna_read_count, qna_writeday,
-		m.member_number, member_nickname
+		member_nickname
 		from `member` m join qna q
 		on
-		m.member_number = q.member_number
+		m.member_number =
+		q.member_number
 		order by qna_number desc
 		limit
 		#{startRow}, #{rowCount}
@@ -40,4 +41,20 @@
 	<select id="getSequence" resultType="_int">
 		select last_insert_id()
 	</select>
+
+	<select id="select" resultType="QnAVO" parameterType="_int">
+		select m.member_nickname, q.qna_number, q.qna_title , q.qna_content , q.qna_read_count , q.qna_writeday
+		from `member` m join qna q 
+		on q.qna_number = #{qna_number} and m.member_number  = q.member_number
+	</select>
+
+	<update id="updateReadCount" parameterType="_int">
+		update qna
+		set qna_read_count = qna_read_count + 1
+		where qna_number = #{qnaNumber}
+	</update>
 </mapper>
+
+
+
+

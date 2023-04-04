@@ -1,5 +1,9 @@
 package com.newlight.app.vo;
 
+import java.util.List;
+
+import com.newlight.app.dto.QnAFileDTO;
+
 public class QnAVO {
 	private int qnaNumber;
 	private String qnaTitle;
@@ -7,8 +11,8 @@ public class QnAVO {
 	private String qnaContent;
 	private String qnaWriteday;
 	private int qnaReadCount;
-	
-	
+	List<QnAFileDTO> files;
+
 	public QnAVO() {
 	}
 
@@ -60,12 +64,19 @@ public class QnAVO {
 		this.qnaReadCount = qnaReadCount;
 	}
 
+	public List<QnAFileDTO> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<QnAFileDTO> files) {
+		this.files = files;
+	}
+
 	@Override
 	public String toString() {
 		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", memberNickname=" + memberNickname
 				+ ", qnaContent=" + qnaContent + ", qnaWriteday=" + qnaWriteday + ", qnaReadCount=" + qnaReadCount
-				+ "]";
+				+ ", files=" + files + "]";
 	}
-	
-	
+
 }
