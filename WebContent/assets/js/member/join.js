@@ -2,8 +2,10 @@
  * 
  */
 let $checkMsg = $('#check-id-msg');
+let $checkMsg2 = $('#check-nickname-msg');
 
 let $idInput = $('#id');
+let $nickInput = $('#nickname');
 
 $idInput.on('blur', function(){
 	if($(this).val() == ''){
@@ -19,6 +21,24 @@ $idInput.on('blur', function(){
 			data : {memberId : id},
 			success : function(result){
 					$checkMsg.text(result);
+			}
+		});
+	}
+});
+
+$nickInput.on('blur', function(){
+	if($(this).val() == ''){
+		console.log('닉네임을 입력하세요!');
+		$checkMsg2.text('닉네임을 입력하세요!');
+	}
+	else {
+		let nick = $(this).val();
+		$.ajax({
+			url : '/member/nickNameOk.me',
+			type : 'get',
+			data : {memberNickname : nick},
+			success : function(result){
+				$checkMsg2.text(result);
 			}
 		});
 	}

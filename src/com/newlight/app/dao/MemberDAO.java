@@ -40,6 +40,10 @@ public class MemberDAO {
 		return (Integer)sqlSession.selectOne("member.checkId", memberId) < 1;
 	}
 	
+	public boolean checkNickName(String memberNickname) {
+		return (Integer)sqlSession.selectOne("member.checkNickName", memberNickname) < 1;
+	}
+	
 	public void delete(int memberNumber) {
 		sqlSession.delete("member.delete", memberNumber);
 	}
