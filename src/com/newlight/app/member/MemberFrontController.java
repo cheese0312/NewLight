@@ -43,6 +43,11 @@ public class MemberFrontController extends HttpServlet{
 			new CheckIdOkController().execute(req, resp);
 			break;
 			
+		//닉네임 체크
+		case "/member/nickNameOk.me" :
+			new NickNameOkController().execute(req,resp);
+			break;
+			
 		//login 페이지 고유 주소&컨트롤러 넣어주기
 		//login.jsp 주소 넣어주기
 		case "/member/login.me" :

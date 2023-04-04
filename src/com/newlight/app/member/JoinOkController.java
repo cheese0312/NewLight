@@ -50,8 +50,7 @@ public class JoinOkController implements Execute{
 				continue;
 			}
 			
-			memberDTO.setMemberPfp(memberPfpFile);
-//			memberDAO.insert(memberfileDTO);	
+			memberDTO.setMemberPfp(memberPfpFile);	
 		}
 
 		memberDAO.join(memberDTO);

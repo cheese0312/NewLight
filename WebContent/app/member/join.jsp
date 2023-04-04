@@ -60,9 +60,11 @@
 					</tr>
 					<tr>
 						<td class="tle">닉네임</td>
-						<td class="cont"><input class="ed" type="text"
+						<td class="cont"><input class="ed" type="text" id="nickname"
 							name="memberNickname" size="30" maxlength="50"
-							placeholder="활동 할 닉네임을 입력하세요"></td>
+							placeholder="활동 할 닉네임을 입력하세요">
+							<span class="check-msg2" id="check-nickname-msg">
+							</td>
 					</tr>
 					<tr>
 						<td class="tle">한 줄 소개</td>
