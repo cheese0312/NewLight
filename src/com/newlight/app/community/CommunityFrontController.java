@@ -46,7 +46,7 @@ public class CommunityFrontController extends HttpServlet {
 		case "/community/communityWriteOk.cm":
 			new CommunityWriteOkController().execute(req, resp);
 			break;
-		case "/community/commmunityReadOk.cm":
+		case "/community/communityReadOk.cm":
 		new CommunityReadOkController().execute(req, resp);
 		break;
 		}

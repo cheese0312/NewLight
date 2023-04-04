@@ -9,11 +9,11 @@
   section{
       width: 1200px;
       margin: 0 350px;
-      height: 2200px;
+     
     }
     
     section>.big-box{
-    height: 2200px;
+    height: auto;
     border: 1px solid rgb(234, 232, 232);
     background-color: rgb(242, 239, 239);
   }
@@ -39,24 +39,38 @@
   }
 
   .writer>h1{
-    font-size: 11px;
-    margin: -10px 40px;
-    height: 15px;
-    width: 60px;
+    font-size: 15px;
+    margin: -15px 40px;
+    height: 20px;
+    width: 50px;
     border-right: 1px solid gray;
     background-color: rgb(242, 239, 239);
   }
 
+  .view-attach{
+    width:65%;
+    height:auto;
+    margin : 0 210px;
+    background-color: rgb(242, 239, 239);
+  }
+  
+  .view-attach>.img-box{
+    background-color: rgb(242, 239, 239);
+   }
   
   .writer>.writer2{
     margin: -15px -20px;
     height: 20px;
-    width: 50px;
+    width: 100px;
     background-color: rgb(242, 239, 239);
   }
   
   .writer2>img{
     background-color: rgb(242, 239, 239);
+  }
+  
+  .blank{
+  width:10%;
   }
 
   .big-box>hr{
@@ -70,21 +84,23 @@
     width: 70%;
     height: 600px;
     margin: 70px 175px;
+    background-color: rgb(242, 239, 239);
   }
 
   .big-box>.else{
     background-color: blanchedalmond;
     width: 80%;
-    height: 100px;
+   
     border: 1px solid blanchedalmond ;
-    margin: 0 120px;
+    margin: 50px 120px;
     font-size: 20px;
     white-space : pre-line;
   }
 
   .big-box>.else>p{
     background-color: blanchedalmond;
-    margin: 20px 40px;
+    margin: 40px;
+    
   }
 
   .line>hr{
@@ -96,18 +112,18 @@
   .else>.comment{
     display: flex;
     width: 50px;
-    margin: -35px 780px;
-    background-color: blanchedalmond;
+    margin: -60px 780px;
+     background-color:rgb(245, 245, 242);
 }
 
 .else>.comment>img{
     width: 35px;
-    background-color: blanchedalmond;
+    background-color:rgb(245, 245, 242);
   }
 
   .big-box>.comment2{
     border: 1px solid  rgb(245, 245, 242);
-    height: 1576px;
+   
     width: 1000px;
     margin: 98px;
   
@@ -216,14 +232,58 @@
   
     .writer>.date{
     background-color:rgb(242, 239, 239);
-    margin: -24px 210px;
+    margin: -30px 210px;
     width: 80px;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .date>p{
     background-color: rgb(242, 239, 239);
   }
+  
+  /* 첨부파일 스타일 */
+
+
+.img-box {
+  
+   margin: 10px;
+   position : relative;
+    background-color: rgb(242, 239, 239);
+}
+
+.img-box>img {
+   width: 100%;
+   
+  
+}
+
+.download-btn {
+   background-color: rgba(0, 0, 0, 0.4);
+   width: 1.5em;
+   height: 1.5em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position : absolute;
+   bottom : 0;
+   right : 0;
+   cursor: pointer;
+   border-radius : 4px;
+}
+
+.download-btn:hover > svg{
+   stroke : rgb(255, 87, 87);
+   fill: rgb(255, 87, 87);
+}
+
+svg {
+   width: 1em;
+   height: 1em;
+   fill: rgb(255,255,255);
+   
+   stroke-width: 1;
+    stroke: rgb(255, 255, 255);
+}
 
  
 

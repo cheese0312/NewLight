@@ -42,13 +42,13 @@
 
 	<select id="select" parameterType="_int"
 		resultType="CommunityVO">
-		select community_number, community_content,
+		select community_number, community_content, community_title,
 		community_read_count,
 		community_writeday,
 		m.member_number,
 		m.member_nickname
 		from `member` m join community c
-		on community_number = #{communityNumber} and m.member_number = c.community_number 
+		on community_number = #{communityNumber} and m.member_number = c.member_number 
 	</select>
 
 	<update id="updateReadCount" parameterType="_int">

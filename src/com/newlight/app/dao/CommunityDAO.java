@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
 import com.newlight.app.dto.CommunityDTO;
+import com.newlight.app.dto.CommunityFileDTO;
 import com.newlight.app.dto.CommunityVO;
 
 public class CommunityDAO {
@@ -43,4 +44,6 @@ public class CommunityDAO {
 	public void updateReadCount(int communityNumber) {
 		sqlSession.update("community.updateReadCount", communityNumber);
 	}
+	
+	
 }
