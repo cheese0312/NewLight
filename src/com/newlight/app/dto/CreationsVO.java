@@ -5,15 +5,16 @@ import java.util.List;
 import com.newlight.app.dto.CreationsFileDTO;
 
 public class CreationsVO {
-	int creationNumber;
-	String creationTitle;
-	String creationContent;
-	String creationCode;
-	String creationName;
-	String creationWriteday;
-	int memberNumber;
-	String memberNickname;
-	String memberPfp;
+	private int creationNumber;
+	private String creationTitle;
+	private String creationContent;
+	private String creationCode;
+	private String creationName;
+	private String creationWriteday;
+	private int memberNumber;
+	private String memberNickname;
+	private String memberPfp;
+	private String creationSumnail;
 	List<CreationsFileDTO> files;
 	
 	public CreationsVO() {
@@ -71,6 +72,14 @@ public class CreationsVO {
 	public int getMemberNumber() {
 		return memberNumber;
 	}
+	
+	public String getCreationSumnail() {
+		return creationSumnail;
+	}
+
+	public void setCreationSumnail(String creationSumnail) {
+		this.creationSumnail = creationSumnail;
+	}
 
 	public void setMemberNumber(int memberNumber) {
 		this.memberNumber = memberNumber;
@@ -105,7 +114,8 @@ public class CreationsVO {
 		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
 				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
-				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", files=" + files + "]";
+				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
+				+ creationSumnail + ", files=" + files + "]";
 	}
 
 }
