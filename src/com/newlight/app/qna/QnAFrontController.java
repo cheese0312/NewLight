@@ -27,10 +27,10 @@ public class QnAFrontController extends HttpServlet {
 		System.out.println(target);
 		
 		switch (target) {
-		case"	" :
-			System.out.println("문의사항 게시판입니다");
-			req.getRequestDispatcher("/app/qna/qnaBoardList.jsp").forward(req, resp);
-			break;
+//		case" " :
+//			System.out.println("문의사항 게시판입니다");
+//			req.getRequestDispatcher("/app/qna/qnaBoardList.jsp").forward(req, resp);
+//			break;
 			
 		case "/qna/QnAListOk.qn":
 			System.out.println("qnaListOk 들어간다!");
@@ -39,7 +39,8 @@ public class QnAFrontController extends HttpServlet {
 			break;
 			
 		case "/qna/QnAReadOk.qn":
-			req.getRequestDispatcher("/app/qna/qnaRead.jsp").forward(req, resp);
+//			req.getRequestDispatcher("/app/qna/qnaRead.jsp").forward(req, resp);
+			new QnAReadOkController().execute(req, resp);
 			break;
 			
 		case "/qna/QnAWrite.qn":

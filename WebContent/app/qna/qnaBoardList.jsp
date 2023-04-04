@@ -42,10 +42,12 @@
 							<c:forEach var="qna" items="${qnaList}">
 								<tr>
 									<td class="no"><c:out value="${qna.getQnaNumber()}" /></td>
-									<td class="title"><a
-										href="${pageContext.request.contextPath}/qna/QnAReadOk.qn?=${qna.getQnaNumber()}">
-											<c:out value="${qna.getQnaTitle()}" />
-									</a></td>
+									<td class="title">
+											<a
+										href="${pageContext.request.contextPath}/qna/QnAReadOk.qn?qnaNumber=${qna.getQnaNumber()}">
+										<c:out value="${qna.getQnaTitle()}" />
+										</a>
+									</td>
 									<td class="author"><c:out
 											value="${qna.getMemberNickname()}" /></td>
 									<td class="date"><c:out value="${qna.getQnaWriteday()}" /></td>
@@ -75,7 +77,7 @@
 							class="prev">&lt;</a></li>
 					</c:if>
 
-					<c:forEach var="i" begin="${startPage}" end="${endPage }">
+					<c:forEach var="i" begin="${startPage}" end="${endPage}">
 						<c:choose>
 							<c:when test="${i == page }">
 								<li><a href="#" class="active"> <c:out value="${i}" />

@@ -13,7 +13,7 @@
 </head>
 <%@include file="/app/header.jsp"%>
 
-    <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" action="#" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" method="post" enctype="multipart/form-data">
     
     <section>
         <div class="gd">
