@@ -6,4 +6,10 @@
 	insert into community_file(file_system_name, file_original_name, community_number)
 	values(#{fileSystemName}, #{fileOriginalName}, #{communityNumber})
 	</insert>
+	
+	<select id="select" parameterType="_int" resultType="CommunityFileDTO">
+	  select file_system_name, file_original_name, community_number
+	  from community_file
+	  where community_number = #{communityNumber}
+	</select>
 </mapper>

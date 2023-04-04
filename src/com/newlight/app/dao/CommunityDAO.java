@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
 import com.newlight.app.dto.CommunityDTO;
+import com.newlight.app.dto.CommunityFileDTO;
 import com.newlight.app.dto.CommunityVO;
 
 public class CommunityDAO {
@@ -35,4 +36,14 @@ public class CommunityDAO {
 	public int getSequence() {
 		return sqlSession.selectOne("community.getSequence");
 	}
+	
+	public CommunityVO select(int communityNumber) {
+		return sqlSession.selectOne("community.select", communityNumber);
+	}
+	
+	public void updateReadCount(int communityNumber) {
+		sqlSession.update("community.updateReadCount", communityNumber);
+	}
+	
+	
 }
