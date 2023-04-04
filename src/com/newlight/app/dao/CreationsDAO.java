@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
 import com.newlight.app.dto.CreationsDTO;
+import com.newlight.app.dto.CreationsFileDTO;
 import com.newlight.app.dto.CreationsVO;
 
 public class CreationsDAO {
@@ -50,6 +51,9 @@ public class CreationsDAO {
 		return sqlSession.selectList("creations.selectMenu", categoryMap);
 	}
 	
+	public void update(CreationsFileDTO creationsFileDTO) {
+		sqlSession.update("creations.update", creationsFileDTO);
+	}
 }
 
 

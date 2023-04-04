@@ -83,6 +83,7 @@ public class MemberDTO {
 		this.memberPfp = memberPfp;
 	}
 
+
 	public String getMemberEmail() {
 		return memberEmail;
 	}

@@ -36,5 +36,14 @@ public class QnADAO {
 	public int getSequence() {
 		return sqlSession.selectOne("qna.getSequence");
 	}
+	
+//	문의사항 읽기
+	public QnAVO select(int qnaNumber) {
+		return sqlSession.selectOne("qna.select", qnaNumber);
+	}
+	
+	public void updateReadCount(int qnaNumber) {
+		sqlSession.update("qna.updateReadCount", qnaNumber);
+	}
 
 }

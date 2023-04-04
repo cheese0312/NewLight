@@ -1,5 +1,7 @@
 package com.newlight.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
@@ -14,5 +16,9 @@ public class CommunityFileDAO {
 	
 	public void insert(CommunityFileDTO communityFileDTO) {
 		sqlSession.insert("communityFile.insert", communityFileDTO);
+	}
+	
+	public List<CommunityFileDTO> select(int communityNumber) {
+		return sqlSession.selectList("communityFile.select", communityNumber);
 	}
 }

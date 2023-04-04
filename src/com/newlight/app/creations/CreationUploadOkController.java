@@ -28,6 +28,7 @@ public class CreationUploadOkController implements Execute{
 		CreationsFileDAO creationfileDAO = new CreationsFileDAO();
 		System.out.println("uploadOk컨트롤러 들어왔다!!");
 		int creationNumber = 0;
+		boolean isFirst = true;
 		String path = null;
 //		creationDTO.setCreationCategory1("test");
 //		creationDTO.setCreationCategory2("test");
@@ -62,6 +63,11 @@ public class CreationUploadOkController implements Execute{
 					System.out.println(creationfileDTO);
 					creationfileDAO.insert(creationfileDTO);
 					
+					System.out.println(fileSystemName);
+					if(isFirst) {
+						creationDAO.update(creationfileDTO);
+						isFirst = false;
+					}
 				}
 			}else {
 				System.out.println("파일 아니다!!");

@@ -44,11 +44,11 @@
 							<c:forEach var="creation" items="${creations}">
 								<div class="img">
 									<div class="creations-img">
-										<img src="${pageContext.request.contextPath}/upload/${creationsfile.getFileSystemName()}" class="img-1">
+										<img src="${pageContext.request.contextPath}/upload/${creation.getsumNail()}" class="img-1">
 										<div class="sub-title">
 											<a
 												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
-												<c:out value="${creation.getCreationTitle() }" />
+												<c:out value="${creation.getCreationTitle()}" />
 											</a>
 										</div>
 										<div class="sub-author">

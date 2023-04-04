@@ -1,5 +1,7 @@
 package com.newlight.app.dao;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
@@ -13,5 +15,9 @@ public class QnAFileDAO {
 	}
 	public void insert(QnAFileDTO qnaFileDTO) {
 		sqlSession.insert("qnaFile.insert",qnaFileDTO);
+	}
+	
+	public List<QnAFileDTO> selectAll(int qnaNumber) {
+		return sqlSession.selectList("qnaFile.selectAll", qnaNumber);
 	}
 }

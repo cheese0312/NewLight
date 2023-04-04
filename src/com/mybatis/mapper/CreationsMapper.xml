@@ -8,8 +8,8 @@
 	<!-- 창작물 올리기 -->
 	<insert id="insert" parameterType="CreationsDTO">
 		insert into creations
-		(creation_number, creation_title, creation_content, category_code, category_name, creation_writeday, member_number)
-		values(#{creationNumber}, #{creationTitle}, #{creationContent}, #{creationCode}, #{creationName}, #{creationWriteday}, #{memberNumber})
+		(creation_number, creation_title, creation_content, category_code, category_name, creation_writeday, member_number , creation_sumnail)
+		values(#{creationNumber}, #{creationTitle}, #{creationContent}, #{creationCode}, #{creationName}, #{creationWriteday}, #{memberNumber} , #{creationSumnail})
 	</insert>
 
 	<!-- 메인페이지 창작물 조회하기 -->
@@ -23,11 +23,11 @@
 	
 	<!-- 카테고리 테마별 창작물 조회하기-->
 	<select id="selectMenu" resultType="CreationsVO" parameterType="map">
-		select creation_title, m.member_nickname, m.member_pfp 
-		from `member` m join creations c
-		on m.member_number = c.member_number and category_code = #{categoryCode} and category_name = #{categoryName}
+		select c.creation_number , c.creation_title , c.creation_sumnail , m.member_nickname , m.member_pfp 
+		from creations c join `member` m 
+		on c.member_number = m.member_number and category_code = #{categoryCode} and category_name = #{categoryName}
 		order by creation_number desc
-		limit 0,9
+		<!-- limit 0,9 -->
 	</select>
 	
 	<select id="select" parameterType="_int" resultType="CreationsVO">
@@ -53,6 +53,12 @@
 			on m.member_number = c.member_number 
 			where category_code = '201' and category_name = '배경화면'
 		</select>
+		
+		<update id="update" parameterType="CreationsFileDTO">
+			update creations
+			set creation_sumnail = #{fileSystemName}
+			where creation_number = #{creationNumber}
+		</update>
 </mapper>
 
 

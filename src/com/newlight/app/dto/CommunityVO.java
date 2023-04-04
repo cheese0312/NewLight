@@ -1,5 +1,7 @@
 package com.newlight.app.dto;
 
+import java.util.List;
+
 public class CommunityVO {
 	
 	private String memberNickName;
@@ -10,6 +12,7 @@ public class CommunityVO {
 	private String communityWriteDay;
 	private String communityStatus;
 	private int memberNumber;
+	private List<CommunityFileDTO> communityFiles;
 	
 	public CommunityVO() {}
 	
@@ -106,12 +109,33 @@ public class CommunityVO {
 	public void setMemberNumber(int memberNumber) {
 		this.memberNumber = memberNumber;
 	}
+	
+
+	public List<CommunityFileDTO> getCommunityFiles() {
+		return communityFiles;
+	}
+
+
+
+	public void setCommunityFiles(List<CommunityFileDTO> communityFiles) {
+		this.communityFiles = communityFiles;
+	}
+
+
 
 	@Override
 	public String toString() {
 		return "CommunityVO [memberNickName=" + memberNickName + ", communityNumber=" + communityNumber
 				+ ", communityTitle=" + communityTitle + ", communityContent=" + communityContent
 				+ ", communityReadCount=" + communityReadCount + ", communityWriteDay=" + communityWriteDay
-				+ ", communityStatus=" + communityStatus + ", memberNumber=" + memberNumber + "]";
+				+ ", communityStatus=" + communityStatus + ", memberNumber=" + memberNumber + ", communityFiles="
+				+ communityFiles + "]";
 	}
+
+
+
+	
+
+
+	
 }

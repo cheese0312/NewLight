@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,6 +16,7 @@
   <br />
   <br />
 
+  <form action="${pageContext.request.contextPath}/qna/QnAReadOk.qn" method="post">
   <body>
     <div class="container">
       <div class="view-wrap">
@@ -27,17 +28,23 @@
             <div class="title-wrap">
               <span class="writer">작성자</span>
               <!-- 임시 작성자 -->
-              <div class="content-writer">닉네임</div>
+              <div class="content-writer">
+              <c:out value="${qna.getMemberNickname()}"/>
+              </div>
             </div>
             <div class="title-wrap">
               <span class="date">작성일</span>
               <!-- 임시 작성일 -->
-              <div class="content-date">2023-03-05</div>
+              <div class="content-date">
+              	<c:out value="${qna.getQnaWriteday()}"></c:out>
+              </div>
             </div>
             <div class="title-wrap">
               <span class="hit">조회수</span>
               <!-- 임시 조회수 -->
-              <div class="content-hit">21</div>
+              <div class="content-hit">
+              <c:out value="${qna.getQnaReadCount()}"/>
+              </div>
             </div>
           </div>
           <!-- <div class="info-content">
@@ -47,14 +54,17 @@
           </div> -->
         </div>
         <!-- 임시 내용 -->
-        <div class="view-content">게시글 내용</div>
+        <div class="view-content">
+        	<c:out value="${qna.getQnaContent()}"/>
+        </div>
         <!-- 임시 첨부 파일 -->
-        <div class="view-attach">첨부 파일</div>
+        <div class="view-attach">
+        <img src="${pageContext.request.contextPath}/upload/${qna. getFiles()}">
+        </div>
         <div class="btn-group">
           <!-- 각 버튼 처리 경로 js로 수정하기 -->
-          <a href="${pageContext.request.contextPath}/qna/QnAListOk.qn"
-            ><button type="button" class="list-btn">목록</button></a
-          >
+          <%-- <a href="${pageContext.request.contextPath}/qna/QnAListOk.qn" --%>
+            <button type="button" class="list-btn">목록</button>
           <button type="button" class="modify-btn">수정</button>
           <button type="button" class="delete-btn">삭제</button>
         </div>
@@ -62,7 +72,6 @@
     </div>
     <br />
     <br />
-    <body>
       <div class="footee" id="form-commentInfo">
         <div id="comment-count">댓글<span id="count">0</span></div>
         <br />
@@ -78,7 +87,7 @@
       </div>
       <div id="comments"></div>
     </body>
-  </body>
+    </form>
   <br />
   <br />
   <br />

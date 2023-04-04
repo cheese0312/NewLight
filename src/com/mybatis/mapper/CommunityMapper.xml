@@ -7,28 +7,57 @@
 <mapper namespace="community">
 	<delete id="delete" parameterType="_int">
 		delete from community
-		where member_number = #{memberNumber}
+		where
+		member_number = #{memberNumber}
 	</delete>
-     
-     <select id="selectAll" resultType="CommunityVO" parameterType="map">
-	select community_number, m.member_nickname, community_title, community_content, community_writeday, community_read_count
-	from member m join community c 
-	on m.member_number = c.member_number
-	order by community_number desc
-	limit #{startRow}, #{rowCount}
+
+	<select id="selectAll" resultType="CommunityVO"
+		parameterType="map">
+		select community_number, m.member_nickname,
+		community_title,
+		community_content, community_writeday,
+		community_read_count
+		from member m join community c
+		on m.member_number =
+		c.member_number
+		order by community_number desc
+		limit #{startRow},
+		#{rowCount}
 	</select>
-	
+
 	<select id="getTotal" resultType="_int">
-	 select count(community_number)from community
+		select
+		count(community_number)from community
 	</select>
-	
-	 <insert id="insert" parameterType="CommunityDTO">
-	  insert into community(community_title, community_content, member_number)
-	  values(#{communityTitle}, #{communityContent}, #{memberNumber})
-	 </insert>
-	 
-	 <select id="getSequence" resultType="_int">
-	    select last_insert_id()
-	 </select>
+
+	<insert id="insert" parameterType="CommunityDTO">
+		insert into
+		community(community_title, community_content, member_number)
+		values(#{communityTitle}, #{communityContent}, #{memberNumber})
+	</insert>
+
+	<select id="getSequence" resultType="_int">
+		select last_insert_id()
+	</select>
+
+	<select id="select" parameterType="_int"
+		resultType="CommunityVO">
+		select community_number, community_content, community_title,
+		community_read_count,
+		community_writeday,
+		m.member_number,
+		m.member_nickname
+		from `member` m join community c
+		on community_number = #{communityNumber} and m.member_number = c.member_number 
+	</select>
+
+	<update id="updateReadCount" parameterType="_int">
+		update community
+		set
+		community_read_count = community_read_count + 1
+		where community_number = #{communityNumber}
+	</update>
+
 </mapper>
+
 
