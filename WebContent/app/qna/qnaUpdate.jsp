@@ -7,37 +7,45 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>문의사항 글쓰기</title>
+<title>문의사항 수정</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/qna/qna-reply-write.css" />
 </head>
 <%@include file="/app/header.jsp"%>
 
-    <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/qna/QnAUpdateOk.qn" method="post" enctype="multipart/form-data">
     <section>
-     <input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
+    <input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
         <div class="gd">
         <h1>글쓰기</h1>
-       </div>
-     
+
+        
+        <div class="writer-sub">
+        
+            <div class="writer2">
+            <c:out value="${qna.getMemberNickname()}"/>
+            </div>
+            <div class="author">님</div>
+        </div>
+    </div>
         <div class="big-box">
             
             
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
-              <input type="text" class="title" name="qnaTitle">
+              <input type="text" class="title" name="qnaTitle" value="${qna.getQnaTitle()}">
               <br>
             
               <br>
               <div class="word1"> <p>내용</p></div>
-              <input type="text" class="word" name="qnaContent">
+              <textarea type="text" class="word" name="qnaContent"><c:out value="${qna.getQnaContent()}"/></textarea>
             </div>
               <br>
               <br>
                 <div class="form-group">
                     <label for="file" class="file">파일 첨부</label>
                     <div class="image-upload-wrap">
-           <input type="file" id="file" name="communityFile" accept=".jpg, .jpeg, .png" multiple/>
+           <input type="file" id="file" name="qnaFile" accept=".jpg, .jpeg, .png" multiple/>
               <div class="image-upload-box">
                  <div class="upload-text">
                     <div class="upload-icon">
@@ -73,9 +81,9 @@
                   </div>
                   <br>
         
+    </form>
        
     </section>
-    </form>
 <br />
 <br />
 <br />
