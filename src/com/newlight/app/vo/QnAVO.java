@@ -11,9 +11,11 @@ public class QnAVO {
 	private String qnaContent;
 	private String qnaWriteday;
 	private int qnaReadCount;
+	private int memberNumber;
 	List<QnAFileDTO> files;
 
 	public QnAVO() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public int getQnaNumber() {
@@ -64,6 +66,14 @@ public class QnAVO {
 		this.qnaReadCount = qnaReadCount;
 	}
 
+	public int getMemberNumber() {
+		return memberNumber;
+	}
+
+	public void setMemberNumber(int memberNumber) {
+		this.memberNumber = memberNumber;
+	}
+
 	public List<QnAFileDTO> getFiles() {
 		return files;
 	}
@@ -76,7 +86,7 @@ public class QnAVO {
 	public String toString() {
 		return "QnAVO [qnaNumber=" + qnaNumber + ", qnaTitle=" + qnaTitle + ", memberNickname=" + memberNickname
 				+ ", qnaContent=" + qnaContent + ", qnaWriteday=" + qnaWriteday + ", qnaReadCount=" + qnaReadCount
-				+ ", files=" + files + "]";
+				+ ", memberNumber=" + memberNumber + ", files=" + files + "]";
 	}
 
 }

@@ -17,7 +17,7 @@ public class QnAWriteController implements Execute {
 		HttpSession session = req.getSession();
 		Integer memberNumber = (Integer) session.getAttribute("memberNumber");
 		String path = null;
-
+		System.out.println("글쓰기 페이지들어옴");
 		if (memberNumber == null) {
 			path = "/app/member/login.jsp";
 		} else {

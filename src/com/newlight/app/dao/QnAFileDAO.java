@@ -20,4 +20,8 @@ public class QnAFileDAO {
 	public List<QnAFileDTO> selectAll(int qnaNumber) {
 		return sqlSession.selectList("qnaFile.selectAll", qnaNumber);
 	}
+	public void delete(int qnaNumber) {
+		sqlSession.delete("qnaFile.delete",qnaNumber);
+	}
+
 }

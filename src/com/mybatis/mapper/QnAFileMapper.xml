@@ -8,10 +8,16 @@
 		(file_system_name, file_original_name, qna_number)
 		values(#{fileSystemName}, #{fileOriginalName}, #{qnaNumber})
 	</insert>
-	
-	<select id="selectAll" parameterType="_int" resultType="QnAFileDTO">
+
+	<select id="selectAll" parameterType="_int"
+		resultType="QnAFileDTO">
 		select file_system_name, file_original_name, qna_number
 		from qna_file
 		where qna_number = #{qna_number}
 	</select>
+
+	<delete id="delete" parameterType="_int">
+		delete from qna_file
+		where qna_number=#{qna_number}
+	</delete>
 </mapper>
