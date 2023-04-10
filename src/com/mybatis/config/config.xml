@@ -7,7 +7,7 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.newlight.app.dto.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.newlight.app.dto.MemberDTO" alias="MemberDTO"/> 
 		<typeAlias type="com.newlight.app.dto.MemberFileDTO" alias="MemberFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.MemberFileVO" alias="MemberFileVO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
@@ -24,7 +24,10 @@
 		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
-		
+		<typeAlias type="com.newlight.app.dto.QnACommentDTO" alias="QnACommentDTO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentDTO" alias="CommunityCommentDTO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsCommentDTO" alias="CreationsCommentDTO"/>
+		<typeAlias type="com.newlight.app.dto.MainVO" alias="MainVO"/>
 	</typeAliases>
 
 	<environments default="mysql">
@@ -41,6 +44,7 @@
 	
 	<mappers>
 		<mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/MemberFileMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
  		<mapper resource="com/mybatis/mapper/CreationsMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/FollowsMapper.xml"/>
@@ -51,6 +55,10 @@
 		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CommunityFileMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/QnACommentMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CommunityCommentMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CreationsCommentMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/MainMapper.xml"/>
 	</mappers>
 	
 </configuration>

@@ -7,14 +7,14 @@
 <mapper namespace="member">
 
 	<insert id="join" parameterType="MemberDTO">
-		insert into `member`(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_comment, member_email, member_birth, member_address1, member_address2)
-		values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberComment}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2});
+		insert into `member`(member_name, member_id, member_password, member_nickname, member_website, member_pfp, member_comment, member_email, member_birth, member_address1, member_address2, member_phonenumber)
+		values(#{memberName}, #{memberId}, #{memberPassword}, #{memberNickname}, #{memberWebsite}, #{memberPfp}, #{memberComment}, #{memberEmail}, #{memberBirth}, #{memberAddress1}, #{memberAddress2}, #{memberPhoneNumber});
 	</insert>
 
 	<insert id="pfpinsert" parameterType="MemberFileDTO">
 		insert into member_file(member_pfp_file)
 		values(#{memberPfpFile})
-	</insert>
+	</insert>  
 	
 	<select id="info" parameterType="MemberFileVO" resultType="MemberFileVO">
 		select m.member_nickname 
@@ -38,25 +38,48 @@
 	</select>
 	
 	<select id="checkNickName" parameterType="string" resultType="_int"> 
-	select count(member_nickname)
-	from `member` m 
-	where member_nickname = #{memberNickname}
+		select count(member_nickname)
+		from `member` m 
+		where member_nickname = #{memberNickname}
 	</select>
 
-	<!-- <update id="edit" parameterType="MemberDTO"> update `member` set member_name=#{memberName}, 
-		member_password=#{memberPassword}, member_nickname=#{memberNickname}, member_website=#{memberWebsite}, 
-		member_pfp=#{memberPfp}, member_email=#{memberEmail}, member_address1=#{memberAddress1}, 
-		member_address2=#{memberAddress2} where member_number=#{memberNumber}; </update> -->
-
-	<delete id="delete" parameterType="_int">
-		delete from tbl_member
+	<!-- 회원정보 수정하기 -->
+	<update id="edit" parameterType="MemberDTO">
+		update `member`
+		set member_password = #{memberPassword}, member_nickname = #{memberNickname}, member_website = #{memberWebsite}, member_pfp = #{memberPfp}, 
+		member_comment = #{memberComment}, member_email = #{memberEmail}, member_address1 = #{memberAddress1}, member_address2 = #{memberAddress2} 
+		where member_number = #{memberNumber}
+	</update>
+	
+	<select id="select" parameterType="_int" resultType="MemberDTO">
+		select member_name, member_id
+		from `member` m
+		where member_number = #{memberNumber}
+	</select>
+	<!--  -->
+	
+	<select id="getMemberId" parameterType="int" resultType="string">
+	  	select member_id
+	  	from member
+	 	where member_number = #{memberNumber}
+	</select>
+	
+	<!-- 회원탈퇴 시 프로필 사진 삭제 -->
+	<select id="selectProfile" parameterType="_int" resultType="string">
+		select member_pfp
+		from `member` m 
+		where member_number = #{memberNumber}
+	</select>
+	
+	<!-- 회원탈퇴하기 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from `member`
 		where
 		member_number= #{memberNumber};
 	</delete>
 	
-	<select id="getMemberId" parameterType="int" resultType="string">
-	  select member_id
-	  from member
-	  where member_number = #{memberNumber}
-	</select>
 </mapper>
+
+
+
+

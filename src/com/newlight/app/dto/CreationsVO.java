@@ -15,7 +15,7 @@ public class CreationsVO {
 	private String memberNickname;
 	private String memberPfp;
 	private String creationSumnail;
-	List<CreationsFileDTO> files;
+	private List<CreationsFileDTO> files;
 	
 	public CreationsVO() {
 		

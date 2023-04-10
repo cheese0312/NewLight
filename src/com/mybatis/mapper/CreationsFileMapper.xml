@@ -15,8 +15,25 @@
 		where creation_number = #{creationNumber}
 	</select>
 
-	<delete id="delete" parameterType="_int">
-		delete from creations_file
-		where creation_number = #{creationNumber}
+	<!-- 회원탈퇴 시 창작물 파일 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from creations_file f
+		where f.creation_number in (select c.creation_number 
+                          				 		from creations c
+                         				 		where member_number = #{memberNumber})
 	</delete>
+	
+	<select id="selectDelete" parameterType="_int" resultType="CreationsFileDTO">
+		select cf.file_system_name  
+		from creations c join creations_file cf 
+		on c.creation_number = cf.creation_number 
+		where member_number = #{memerNumber}
+	</select>
+	<!--  -->
+		
 </mapper>
+
+
+
+
+

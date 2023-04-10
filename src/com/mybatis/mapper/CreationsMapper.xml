@@ -13,13 +13,13 @@
 	</insert>
 
 	<!-- 메인페이지 창작물 조회하기 -->
-	<select id="selectAll" resultType="CreationsVO">
+<!-- 	<select id="selectAll" resultType="CreationsVO">
 		select creation_title, creation_read_count, category_code, category_name, m.member_nickname, m.member_pfp
 		from `member` m join creations c
 		on m.member_number = c.member_number 
 		order by creation_number desc
 		limit 0,9
-	</select>
+	</select> -->
 	
 	<!-- 카테고리 테마별 창작물 조회하기-->
 	<select id="selectMenu" resultType="CreationsVO" parameterType="map">
@@ -59,6 +59,14 @@
 			set creation_sumnail = #{fileSystemName}
 			where creation_number = #{creationNumber}
 		</update>
+		
+		<!-- 회원탈퇴 시 창작물 삭제 -->
+		<delete id="deleteMember" parameterType="_int">
+			delete from creations
+			where member_number = #{memberNumber}
+		</delete>
+		
+
 </mapper>
 
 

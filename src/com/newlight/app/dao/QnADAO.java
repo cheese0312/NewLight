@@ -45,5 +45,10 @@ public class QnADAO {
 	public void updateReadCount(int qnaNumber) {
 		sqlSession.update("qna.updateReadCount", qnaNumber);
 	}
+	
+//	회원탈퇴 시 QnA삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("qna.deleteMember", memberNumber);
+	}
 
 }

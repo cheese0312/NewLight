@@ -5,5 +5,5 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="notification">
-
+	
 </mapper>

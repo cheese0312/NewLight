@@ -14,4 +14,26 @@
 		from qna_file
 		where qna_number = #{qna_number}
 	</select>
+	
+	<!-- 회원탈퇴 시 QnA첨부파일 삭제 -->
+	<delete id="deleteMember" parameterType="_int" >
+		delete from qna_file 
+		where qna_number in (select qna_number 
+                          				 		from qna 
+                         				 		where member_number = #{memberNumber})
+	</delete>
+	
+	<select id="selectDelete" parameterType="_int" resultType="QnAFileDTO">
+		select qf.file_system_name  
+		from qna q join qna_file qf 
+		on q.qna_number = qf.qna_number 
+		where member_number = #{memberNumber}	
+	</select>
+	<!--  -->
+	
 </mapper>
+
+
+
+
+

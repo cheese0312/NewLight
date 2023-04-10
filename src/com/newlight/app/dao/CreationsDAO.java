@@ -21,10 +21,6 @@ public class CreationsDAO {
 		return sqlSession.selectOne("creations.select");
 	}
 	
-	public void delete(int memberNumber) {
-		sqlSession.delete("creations.delete", memberNumber);
-	}
-	
 	public CreationsVO select(int creationNumber) {
 		return sqlSession.selectOne("creations.select", creationNumber);
 	}
@@ -38,9 +34,9 @@ public class CreationsDAO {
 	}
 	
 //	파일 조회해서 페이지에 뿌려주기
-	public List<CreationsVO> selectAll(){
-		return sqlSession.selectList("creations.selectAll");
-	}
+//	public List<CreationsVO> selectAll(){
+//		return sqlSession.selectList("creations.selectAll");
+//	}
 	
 	public List<CreationsVO> category2Background(CreationsVO creationsVO){
 		return sqlSession.selectList("creations.category2background", creationsVO);
@@ -53,6 +49,11 @@ public class CreationsDAO {
 	
 	public void update(CreationsFileDTO creationsFileDTO) {
 		sqlSession.update("creations.update", creationsFileDTO);
+	}
+	
+//	회원탈퇴 시 창작물 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("creations.delete", memberNumber);
 	}
 }
 

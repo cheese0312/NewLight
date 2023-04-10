@@ -13,6 +13,7 @@ public class MemberDTO {
 	private String memberBirth;
 	private String memberAddress1;
 	private String memberAddress2;
+	private String memberPhoneNumber;
 	private String memberStatus;
 	
 	public MemberDTO() {
@@ -124,14 +125,24 @@ public class MemberDTO {
 		this.memberStatus = memberStatus;
 	}
 
+	public String getMemberPhoneNumber() {
+		return memberPhoneNumber;
+	}
+
+	public void setMemberPhoneNumber(String memberPhoneNumber) {
+		this.memberPhoneNumber = memberPhoneNumber;
+	}
+
 	@Override
 	public String toString() {
 		return "MemberDTO [memberNumber=" + memberNumber + ", memberName=" + memberName + ", memberId=" + memberId
 				+ ", memberPassword=" + memberPassword + ", memberNickname=" + memberNickname + ", memberComment="
 				+ memberComment + ", memberWebsite=" + memberWebsite + ", memberPfp=" + memberPfp + ", memberEmail="
 				+ memberEmail + ", memberBirth=" + memberBirth + ", memberAddress1=" + memberAddress1
-				+ ", memberAddress2=" + memberAddress2 + ", memberStatus=" + memberStatus + "]";
+				+ ", memberAddress2=" + memberAddress2 + ", memberPhoneNumber=" + memberPhoneNumber + ", memberStatus="
+				+ memberStatus + "]";
 	}
+	
 }
 
 

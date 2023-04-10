@@ -23,7 +23,11 @@ public class CreationsFileDAO {
 		return sqlSession.selectList("creationsfile.select", creationNumber);
 	}
 	
-	public void delete(int creationNumber) {
-		sqlSession.delete("creationsfile.delete", creationNumber);
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("creationsfile.deleteMember", memberNumber);
+	}
+	
+	public List<CreationsFileDTO> selectDelete(int memberNumber){
+		return sqlSession.selectList("creationsfile.selectDelete", memberNumber);
 	}
 }

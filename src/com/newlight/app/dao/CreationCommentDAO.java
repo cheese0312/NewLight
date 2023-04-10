@@ -4,20 +4,15 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
 
-public class FollowsDAO {
+public class CreationCommentDAO {
 	public SqlSession sqlSession;
 	
-	public FollowsDAO() {
+	public CreationCommentDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
-	public void delete(int memberNumber) {
-		 sqlSession.delete("follows.delete", memberNumber);
-	}
-	
-//	회원탈퇴 시 팔로우 삭제
+//	회원탈퇴 시 창작물 댓글 삭제
 	public void deleteMember(int memberNumber) {
-		sqlSession.delete("follows.deleteMember", memberNumber);
+		sqlSession.delete("creationComment.deleteMember", memberNumber);
 	}
-	
 }

@@ -53,6 +53,11 @@
 		set qna_read_count = qna_read_count + 1
 		where qna_number = #{qnaNumber}
 	</update>
+	
+	<delete id="deleteMember" parameterType="_int">
+		delete from qna
+		where member_number = #{memberNumber}
+	</delete>
 </mapper>
 
 
