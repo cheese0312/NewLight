@@ -49,4 +49,13 @@ public class CommunityDAO {
 	public void deleteMember(int memberNumber) {
 		sqlSession.delete("community.deleteMember", memberNumber);
 	}
+	
+	public void delete1(int communityNumber) {
+		sqlSession.delete("community.delete1", communityNumber);
+	}
+	
+	public void update(CommunityDTO communityDTO) {
+		sqlSession.update("community.update", communityDTO);
+	}
+	
 }

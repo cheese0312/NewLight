@@ -27,10 +27,12 @@
 		on cm.community_number = cf.community_number 
 		where member_number = #{memberNumber};
 	</select>
+	
 	<!--  -->
 	
+	<delete id="delete" parameterType="_int">
+	 delete from community_file
+	 where community_number = #{communityNumber}
+	</delete>
+	
 </mapper>
-
-
-
-

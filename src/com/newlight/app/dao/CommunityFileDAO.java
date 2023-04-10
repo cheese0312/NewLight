@@ -31,4 +31,8 @@ public class CommunityFileDAO {
 		return sqlSession.selectList("communityFile.selectDelete", memberNumber);
 	}
 	
+	public void delete(int communityNumber) {
+		sqlSession.delete("communityFile.delete", communityNumber);
+	}
+	
 }

@@ -12,15 +12,18 @@
 	</delete>
 
 	<select id="selectAll" resultType="CommunityVO"
-		parameterType="map">
-		select community_number, m.member_nickname,
+		parameterType="map">		
+		select c.community_number, m.member_nickname,
 		community_title,
 		community_content, community_writeday,
-		community_read_count
+		community_read_count,
+		count(cc.comment_number) comment_count
 		from member m join community c
-		on m.member_number =
-		c.member_number
-		order by community_number desc
+		on m.member_number = c.member_number
+		left outer join community_comment cc 
+		on c.community_number = cc.community_number
+		group by c.community_number
+		order by c.community_number desc
 		limit #{startRow},
 		#{rowCount}
 	</select>
@@ -32,8 +35,8 @@
 
 	<insert id="insert" parameterType="CommunityDTO">
 		insert into
-		community(community_title, community_content, member_number)
-		values(#{communityTitle}, #{communityContent}, #{memberNumber})
+		community(community_title, community_content, community_read_count, member_number)
+		values(#{communityTitle}, #{communityContent}, #{communityReadCount}, #{memberNumber})
 	</insert>
 
 	<select id="getSequence" resultType="_int">
@@ -63,6 +66,18 @@
 		delete from community
 		where member_number = #{memberNumber}
 	</delete>
+	<delete id="delete1" parameterType="_int">
+	  delete from community where community_number = #{communityNumber}
+	</delete>
+	
+	<update id="update" parameterType="CommunityDTO">
+	  update community
+	  set community_title = #{communityTitle}, community_content = #{communityContent}
+	  where community_number = #{communityNumber}
+	</update>
+	
+
+  
 </mapper>
 
 

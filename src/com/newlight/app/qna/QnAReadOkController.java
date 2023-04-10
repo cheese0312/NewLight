@@ -18,13 +18,12 @@ public class QnAReadOkController implements Execute {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		int qnaNumber = Integer.valueOf(req.getParameter("qnaNumber"));
 		QnADAO qnaDAO = new QnADAO();
-		QnAFileDAO qnaFileDAO = new QnAFileDAO();
-		
 		QnAVO qnaVO = qnaDAO.select(qnaNumber);
+		QnAFileDAO qnaFileDAO = new QnAFileDAO();
 		List<QnAFileDTO> qnaFileDTO = qnaFileDAO.selectAll(qnaNumber);
+		
+		
 		qnaVO.setFiles(qnaFileDTO);
-		
-		
 		qnaDAO.updateReadCount(qnaNumber);
 		req.setAttribute("qna", qnaVO);
 		

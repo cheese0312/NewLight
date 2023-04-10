@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>자유게시판</title>
+<title>문의 게시판</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/qna/qnaBoardList.css" />
 </head>
@@ -16,12 +16,11 @@
 <%@include file="/app/header.jsp"%>
 
 <body>
-	<form action="${pageContext.request.contextPath}/qna/QnAListOk.qn"
-		method="post">
+	<form action="${pageContext.request.contextPath}/qna/QnAListOk.qn" method="post">
 		<div class="container">
 			<div class="write-btn-wrap">
 				<!-- 글쓰기 페이지 이동 처리 -->
-				<a href="${pageContext.request.contextPath}/app/qna/qnaWrite.jsp"
+				<a href="${pageContext.request.contextPath}/qna/QnAWrite.qn"
 					class="write-btn">글쓰기</a>
 			</div>
 			<table class="board-table">

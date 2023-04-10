@@ -29,11 +29,5 @@
 		on c.creation_number = cf.creation_number 
 		where member_number = #{memerNumber}
 	</select>
-	<!--  -->
-		
+
 </mapper>
-
-
-
-
-

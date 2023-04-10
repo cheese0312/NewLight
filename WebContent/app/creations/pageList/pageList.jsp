@@ -59,7 +59,7 @@
 												<c:out value="${creation.getMemberNickname()}" />
 											</a>
 										</div>
-										<div class="creaions-sub">
+										<div class="creations-sub">
 											<img src="${pageContext.request.contextPath}/assets/img/icon-hearts.png" class="likes">
 											<img src="${pageContext.request.contextPath}/assets/img/reply.png" class="comment">
 										</div>

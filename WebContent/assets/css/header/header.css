@@ -203,6 +203,22 @@ header{
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-weight: bold;
+}
+
+.btn1-box>.login2-btn{
+  width: 50px;
+  padding: 2px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 133, 238);
+  color: black;
+  border-radius: 5px;
+  text-decoration-line: none;
+  text-align: center;
+  font-weight: bold;
+  
 }
 
 .category {

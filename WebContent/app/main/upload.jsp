@@ -26,8 +26,7 @@
       </div>
       <div class="author-name">
         <div class="content-mente">
-        <label>작가이름</label>
-        <c:out value="${creation.getMemberNickname()}"/>
+        <label><c:out value="${memberNickname}"/></label>
         </div>
       </div>
     </div>

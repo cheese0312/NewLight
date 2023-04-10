@@ -13,6 +13,7 @@ public class CommunityVO {
 	private String communityStatus;
 	private int memberNumber;
 	private List<CommunityFileDTO> communityFiles;
+	private String commentCount;
 	
 	public CommunityVO() {}
 	
@@ -27,32 +28,23 @@ public class CommunityVO {
 	public void setMemberNickName(String memberNickName) {
 		this.memberNickName = memberNickName;
 	}
-
-
-
-	public int getCommunityReadNum() {
+	
+	
+	public int getCommunityReadCount() {
 		return communityReadCount;
 	}
-
-
 
 	public void setCommunityReadCount(int communityReadCount) {
 		this.communityReadCount = communityReadCount;
 	}
 
-
-
 	public String getCommunityWriteDay() {
 		return communityWriteDay;
 	}
 
-
-
 	public void setCommunityWriteDay(String communityWriteDay) {
 		this.communityWriteDay = communityWriteDay;
 	}
-
-
 
 	public int getCommunityNumber() {
 		return communityNumber;
@@ -76,10 +68,6 @@ public class CommunityVO {
 
 	public void setCommunityContent(String communityContent) {
 		this.communityContent = communityContent;
-	}
-
-	public int getCommunityReadCount() {
-		return communityReadCount;
 	}
 
 	public void setCommunityReadnum(int communityReadCount) {
@@ -120,6 +108,20 @@ public class CommunityVO {
 	public void setCommunityFiles(List<CommunityFileDTO> communityFiles) {
 		this.communityFiles = communityFiles;
 	}
+	
+	
+
+
+
+	public String getCommentCount() {
+		return commentCount;
+	}
+
+
+
+	public void setCommentCount(String commentCount) {
+		this.commentCount = commentCount;
+	}
 
 
 
@@ -129,8 +131,12 @@ public class CommunityVO {
 				+ ", communityTitle=" + communityTitle + ", communityContent=" + communityContent
 				+ ", communityReadCount=" + communityReadCount + ", communityWriteDay=" + communityWriteDay
 				+ ", communityStatus=" + communityStatus + ", memberNumber=" + memberNumber + ", communityFiles="
-				+ communityFiles + "]";
+				+ communityFiles + ", commentCount=" + commentCount + "]";
 	}
+
+
+
+
 
 
 

@@ -6,4 +6,12 @@
 
 <mapper namespace="notification">
 	
+    <select id="selectAll" resultType="notificationDTO" parameterType="map">
+       select notification_number, notification_title, notification_content, notification_writeday
+		from newlight.notification
+        order by notification_number desc
+		limit #{startRow},
+		#{rowCount}
+    </select>
+    
 </mapper>

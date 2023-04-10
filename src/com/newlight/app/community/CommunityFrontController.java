@@ -49,6 +49,18 @@ public class CommunityFrontController extends HttpServlet {
 		case "/community/communityReadOk.cm":
 		new CommunityReadOkController().execute(req, resp);
 		break;
+		
+		case "/community/communityDeleteOk.cm":
+			new CommunityDeleteOkController().execute(req, resp);
+			break;
+			
+		case "/community/communityUpdate.cm":
+			new CommunityUpdateController().execute(req, resp);
+			break;
+			
+		case "/community/communityUpdateOk.cm":
+			new CommunityUpdateOkController().execute(req, resp);
+			break;
 		}
 
 	}

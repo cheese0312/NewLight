@@ -7,27 +7,44 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.newlight.app.dto.MemberDTO" alias="MemberDTO"/> 
+	
+		<!-- member -->
+		<typeAlias type="com.newlight.app.dto.MemberDTO" alias="MemberDTO"/>
 		<typeAlias type="com.newlight.app.dto.MemberFileDTO" alias="MemberFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.MemberFileVO" alias="MemberFileVO"/>
+		
+		<!-- community -->
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityFileDTO" alias="CommunityFileDTO"/>
-		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityVO" alias="CommunityVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentVO" alias="CommunityCommentVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentDTO" alias="CommunityCommentDTO"/>
+		
+		<!-- creations -->
+		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
+		<typeAlias type="com.newlight.app.dto.CreationsCommentDTO" alias="CreationsCommentDTO"/>
+		
+		<!-- follow, like -->
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
+		
+		<!-- qna -->
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.QnAFileDTO" alias="QnAFileDTO"/>
-		<typeAlias type="com.newlight.app.vo.QnAVO" alias="QnAVO"/>
-		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
-		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
-		<typeAlias type="com.newlight.app.dto.CreationsFileDTO" alias="CreationsFileDTO"/>
-		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
 		<typeAlias type="com.newlight.app.dto.QnACommentDTO" alias="QnACommentDTO"/>
-		<typeAlias type="com.newlight.app.dto.CommunityCommentDTO" alias="CommunityCommentDTO"/>
-		<typeAlias type="com.newlight.app.dto.CreationsCommentDTO" alias="CreationsCommentDTO"/>
+		<typeAlias type="com.newlight.app.vo.QnACommentVO" alias="QnACommentVO"/>
+		<typeAlias type="com.newlight.app.vo.QnAVO" alias="QnAVO"/>
+		
+		<!-- notification -->
+		<typeAlias type="com.newlight.app.dto.NotificationDTO" alias="NotificationDTO"/>
+		
+		<!-- mypage -->
+		<typeAlias type="com.newlight.app.dto.MypageVO" alias="MypageVO"/>
+		
 		<typeAlias type="com.newlight.app.dto.MainVO" alias="MainVO"/>
+		
 	</typeAliases>
 
 	<environments default="mysql">
@@ -43,22 +60,39 @@
 	</environments>
 	
 	<mappers>
+		<!-- member -->
 		<mapper resource="com/mybatis/mapper/MemberMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/MemberFileMapper.xml"/>
+		
+		<!-- community -->
 		<mapper resource="com/mybatis/mapper/CommunityMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CommunityFileMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CommunityCommentMapper.xml"/>
+		
+		<!-- creations -->
  		<mapper resource="com/mybatis/mapper/CreationsMapper.xml"/>
+ 		<mapper resource="com/mybatis/mapper/CreationCommentMapper.xml"/>
+ 		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
+ 		
+ 		<!-- follow, like -->
 		<mapper resource="com/mybatis/mapper/FollowsMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/LikesMapper.xml"/>
+		
+		<!-- qna -->
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/QnAFileMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/CommunityFileMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/QnACommentMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/CommunityCommentMapper.xml"/>
-		<mapper resource="com/mybatis/mapper/CreationsCommentMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/QnAFileMapper.xml"/>
+		
+		<!-- notification -->
+		<mapper resource="com/mybatis/mapper/NotificationMapper.xml"/>
+		
+		<!-- mypage -->
+		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
+		
 		<mapper resource="com/mybatis/mapper/MainMapper.xml"/>
 	</mappers>
 	
 </configuration>
+
+
+

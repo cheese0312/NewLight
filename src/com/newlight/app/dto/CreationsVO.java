@@ -10,11 +10,15 @@ public class CreationsVO {
 	private String creationContent;
 	private String creationCode;
 	private String creationName;
-	private String creationWriteday;
+	private String commentWritedate;
 	private int memberNumber;
 	private String memberNickname;
 	private String memberPfp;
 	private String creationSumnail;
+	private int commentNumber;
+	private String commentContent;
+	private String likeCount;
+	private String commentCount;
 	private List<CreationsFileDTO> files;
 	
 	public CreationsVO() {
@@ -105,8 +109,48 @@ public class CreationsVO {
 		return memberPfp;
 	}
 
+	public int getCommentNumber() {
+		return commentNumber;
+	}
+
+	public void setCommentNumber(int commentNumber) {
+		this.commentNumber = commentNumber;
+	}
+
+	public String getCommentContent() {
+		return commentContent;
+	}
+
+	public void setCommentContent(String commentContent) {
+		this.commentContent = commentContent;
+	}
+
+	public String getCommentWritedate() {
+		return commentWritedate;
+	}
+
+	public void setCommentWritedate(String commentWritedate) {
+		this.commentWritedate = commentWritedate;
+	}
+
 	public void setMemberPfp(String memberPfp) {
 		this.memberPfp = memberPfp;
+	}
+
+	public String getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(String likeCount) {
+		this.likeCount = likeCount;
+	}
+
+	public String getCommentCount() {
+		return commentCount;
+	}
+
+	public void setCommentCount(String commentCount) {
+		this.commentCount = commentCount;
 	}
 
 	@Override
@@ -115,7 +159,9 @@ public class CreationsVO {
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
 				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
 				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
-				+ creationSumnail + ", files=" + files + "]";
+				+ creationSumnail + ", files=" + files + ", commentNumber=" + commentNumber + ", commentContent="
+				+ commentContent + ", commentWritedate=" + commentWritedate + ", likeCount=" + likeCount
+				+ ", commentCount=" + commentCount + "]";
 	}
 
 }

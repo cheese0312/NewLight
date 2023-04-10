@@ -77,9 +77,17 @@
 		where
 		member_number= #{memberNumber};
 	</delete>
+
+	<select id="getMemberId" parameterType="int" resultType="string">
+	  select member_id
+	  from member
+	  where member_number = #{memberNumber}
+	</select>
+
+	<select id="getMemberNickName" parameterType="_int" resultType="String">
+	  select member_nickname
+	  from member
+	  where member_number = #{memberNumber}
+	</select>
 	
 </mapper>
-
-
-
-

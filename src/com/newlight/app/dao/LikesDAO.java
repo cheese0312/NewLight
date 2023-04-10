@@ -27,5 +27,13 @@ public class LikesDAO {
 	public void deleteMemeber(int memberNumber) {
 		sqlSession.delete("likes.deleteMember", memberNumber);
 	}
+	
+	public int likeCount(int creationNumber) {
+		return sqlSession.selectOne("likes.likecount" , creationNumber);
+	}
+	
+	public void likeDelete(int creaitonNumber) {
+		sqlSession.delete("likes.likeDelete" , creaitonNumber);
+	}
 
 }

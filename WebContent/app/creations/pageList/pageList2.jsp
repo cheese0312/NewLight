@@ -44,10 +44,10 @@
 							<c:forEach var="creation" items="${creations}">
 								<div class="img">
 									<div class="creations-img">
-										<img src="${pageContext.request.contextPath}/upload/${creationsfile.getFileSystemName()}" class="img-1">
+										<img src="${pageContext.request.contextPath}/upload/${creation.getCreationSumnail()}" class="img-1">
 										<div class="sub-title">
 											<a
-												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
+												href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${creation.getCreationNumber()}">
 												<c:out value="${creation.getCreationTitle() }" />
 											</a>
 										</div>
@@ -59,7 +59,7 @@
 												<c:out value="${creation.getMemberNickname()}" />
 											</a>
 										</div>
-										<div class="creaions-sub">
+										<div class="creations-sub">
 											<img src="${pageContext.request.contextPath}/assets/img/icon-hearts.png" class="likes">
 											<img src="${pageContext.request.contextPath}/assets/img/reply.png" class="comment">
 										</div>

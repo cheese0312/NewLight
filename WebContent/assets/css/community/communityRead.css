@@ -123,7 +123,7 @@
 
   .big-box>.comment2{
     border: 1px solid  rgb(245, 245, 242);
-   
+     background-color: rgb(242, 239, 239);
     width: 1000px;
     margin: 98px;
   
@@ -144,7 +144,7 @@
 
   .comment2>.hello{
     border: 1px solid rgb(245, 245, 242);
-    height: 110px;
+    
     background-color:rgb(245, 245, 242);
     display: block;
     justify-content: space-between;
@@ -194,7 +194,7 @@
 .comment-btn{
  background-color:rgb(245, 245, 242); ;
  display: flex;
- width: 50%;
+ width: 80%;
 }
 
   .comment-btn>button{
@@ -283,6 +283,113 @@ svg {
    
    stroke-width: 1;
     stroke: rgb(255, 255, 255);
+}
+
+.big-box>.remove{
+  width: 200px;
+   padding: 0 10px;
+   margin: 30px 900px;
+  background-color: rgb(242, 239, 239);
+}
+
+.remove>button{
+  border-radius: 10%;
+  border-color: burlywood;
+  border: 1px solid burlywood;
+  font-weight: bold;
+}
+
+.remove>.list{
+  font-size: 17px;
+  background-color: burlywood;
+}
+
+.remove > .list:hover {
+  cursor: pointer;
+}
+
+.remove > .delete:hover {
+  cursor: pointer;
+}
+
+.remove > .edit:hover {
+  cursor: pointer;
+}
+
+.remove>.edit{
+  font-size: 17px;
+  background-color: burlywood;
+}
+
+.comment-btn>.comment-modify-ready:hover{
+	cursor : pointer;
+}
+
+.comment-btn>.comment-delete:hover{
+	cursor : pointer;
+}
+
+.comment-btn>.comment-modify:hover{
+	cursor : pointer;
+}
+
+.btn>.go:hover{
+	cursor:pointer;
+}
+
+.remove>.delete{
+  font-size: 17px;
+  background-color: burlywood;
+}
+
+  .comment-write{
+    background-color: rgb(242, 239, 239);
+  }
+
+ .comment-box{
+  border: 1px solid black;
+  height: 100px;
+  width: 80%;
+  margin: 0 50px;
+  background-color: rgb(242, 239, 239);
+ }
+ 
+  .go{
+  border-radius: 10%;
+  margin: 15px 50px;
+  border: 1px solid burlywood;
+  background-color: burlywood;
+  font-weight: bold;
+  font-size: 17px;
+ 
+ }
+
+
+ .btn{
+  background-color: rgb(242, 239, 239);
+  margin-bottom: 10px;
+ }
+ 
+ .none{
+ display : none;
+ }
+ 
+ .hello textarea {
+   width: 800px;
+   height: 40px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   resize: none;
+}
+
+.comment-write textarea {
+	   width: 900px;
+   height: 100px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   resize: none;
 }
 
  

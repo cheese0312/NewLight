@@ -44,6 +44,14 @@ public class MemberDAO {
 		return (Integer)sqlSession.selectOne("member.checkNickName", memberNickname) < 1;
 	}
 	
+	public void delete(int memberNumber) {
+		sqlSession.delete("member.delete", memberNumber);
+	}
+	
+	public String getMemberNickName(int memberNumber) {
+		return sqlSession.selectOne("member.getMemberNickName", memberNumber);
+	}
+	
 	public String getMemberId(int memberNumber) {
 		return sqlSession.selectOne("member.getMemberId", memberNumber);
 	}
@@ -65,5 +73,5 @@ public class MemberDAO {
 	public void deleteMember(int memberNumber) {
 		sqlSession.delete("member.deleteMember", memberNumber);
 	}
-
+	
 }

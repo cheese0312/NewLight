@@ -61,24 +61,32 @@
 								<c:choose>
 									<c:when test="${not empty creationList}">
 										<c:forEach var="creations" items="${creationList}">
-												<div class="img">
-													<div class="creations-img">
-														<img src="../img/10_징검다리를_하나_둘.jpg">
-														<div class="sub-title">
-															<a href="#">${creations.getCreationTitle()}</a>
+											<div class="img">
+												<div class="creations-img">
+													<img src="${pageContext.request.contextPath}/upload/${creations.getCreationSumnail()}">
+													<div class="sub-title">
+														<a href="#"> <c:out value="${creations.getCreationTitle()}"/> </a>
+													</div>
+													<div class="sub-author">
+														<img
+															src="../img/—Pngtree—vector business men icon_4186858.png">
+														<a href="#"> <c:out value="${memberNickname }"/> </a>
+													</div>
+													<div class="creations-sub">
+													<div class="creation-like">
+														<img
+															src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+														<c:out value="${creations.getLikeCount()}" />
 														</div>
-														<div class="sub-author">
-															<img
-																src="../img/—Pngtree—vector business men icon_4186858.png">
-															<a href="#">${memberNickname }</a>
-														</div>
-														<div class="creations-sub">
-															<img src="../img/free-icon-hearts-138533.png"
-																class="likes"> <img src="../img/pngegg.png"
-																class="comment">
-														</div>
+														<div class="creation-comment">
+														<c:out value="${creations.getCommentCount()}" />
+														<img
+															src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+														
+													</div>
 													</div>
 												</div>
+											</div>
 										</c:forEach>
 									</c:when>
 									<c:otherwise>

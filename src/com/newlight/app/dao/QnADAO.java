@@ -19,7 +19,6 @@ public class QnADAO {
 
 	public void delete(int memberNumber) {
 		sqlSession.delete("qna.delete", memberNumber);
-
 	}
 	
 //	문의사항 목록
@@ -51,4 +50,9 @@ public class QnADAO {
 		sqlSession.delete("qna.deleteMember", memberNumber);
 	}
 
+// 문의사항 수정
+	public void update (QnADTO qnaDTO) {
+		sqlSession.update("qna.update", qnaDTO);
+	}
+	
 }

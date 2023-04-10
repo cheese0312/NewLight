@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>헤더</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header/header2.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/header/header.css">
 </head>
 <body>
 
@@ -21,35 +21,46 @@
             <div class="nav">
             <div class="drop-box">
             <div class="dropdown1">
-                <li class="dropbtn1">1차 창작물</li>
-                <li class="dropdown-content1">
-                    <a href="${pageContext.request.contextPath}/app/creations/handDrow/handDrow.jsp">손그림</a>
-                    <a href="#">배경화면</a>
-                    <a href="#">만화</a>
-                    <a href="#">폰트</a>
-                    <a href="#">카카오톡 테마</a>
-                </li>
+             	<li class="dropbtn1">별구름<img src="${pageContext.request.contextPath}/assets/images/free-icon-cloud.png"></li>
+
+							<!-- 드롭 서브 메뉴 -->
+							<li class="dropdown-content1">
+								<!-- 해당 페이지 링크 걸어주기 --> <a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=손그림">손그림</a>
+								<a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=배경화면">배경화면</a>
+								<a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=만화">만화</a>
+								<a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=폰트">폰트</a>
+								<a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=101&categoryName=카톡테마">카카오톡
+									테마</a>
+							</li>
                 </div>
                 <div class="dropdown2">
-                <li class="dropbtn2">2차 창작물</li>
-                <li class="dropdown-content2">
-                    <a href="#">배경화면</a>
-                    <a href="#">트레이싱</a>
-                    <a href="#">카카오톡 테마</a>
-                </li>
+                				<li class="dropbtn2">별숲🌳</li> 
+
+							<!-- 드롭 서브 메뉴 -->
+							<li class="dropdown-content2">
+								<!-- 해당 페이지 링크 걸어주기 --> <a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=배경화면">배경화면</a>
+								<a
+								href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=트레이싱">트레이싱</a>
+								<a href="${pageContext.request.contextPath}/creations/pageListOk.ct?categoryCode=201&categoryName=카톡테마">카카오톡
+									테마</a>
+							</li>
                 </div>
                 <div class="dropdown3">
-               <li class="dropbtn3"> <a href="${pageContext.request.contextPath}/community/communityListOk.cm">커뮤니티</a></li>
-                <li class="dropdown-content3">
-                 
-                </li>
+              <li class="dropbtn3"> <a href="${pageContext.request.contextPath}/community/communityListOk.cm">별물결🌊</a></li>
                 </div>
                 <div class="dropdown4">
                 <li class="dropbtn4">•••</li>
-                <li class="dropdown-content4">
-                    <a href="#">공지사항</a>
-                    <a href="#">문의</a>
-                </li>
+              	<li class="dropdown-content4">
+								<!-- 해당 페이지 링크 걸어주기 --> <a
+								href="${pageContext.request.contextPath}/app/admin/announcement.jsp">공지사항</a>
+								<a href="${pageContext.request.contextPath}/qna/QnAListOk.qn">문의</a>
+							</li>
                 </div>
             </div>
             </div>
@@ -62,7 +73,7 @@
                 	<c:otherwise>
                 		<%-- <a href="${pageContext.request.contextPath}/mypage/mypage_creationsOk.mp" class="mypage-btn">내 정보</a> --%>
                 		<a href="${pageContext.request.contextPath}/member/logoutOk.me" class="logout-btn">로그아웃</a>
-                
+                		
                 	</c:otherwise>
                 </c:choose>
            <%--      <a href="#" class="login-btn">로그아웃</a>

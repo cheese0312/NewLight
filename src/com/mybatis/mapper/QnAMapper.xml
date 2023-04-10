@@ -30,8 +30,10 @@
 	<delete id="delete" parameterType="_int">
 		delete from qna
 		where
-		member_number = #{membeNumber}
+		qna_number = #{qnaNumber}
+		
 	</delete>
+	
 
 	<select id="getTotal" resultType="_int">
 		select count(qna_number)from
@@ -43,21 +45,33 @@
 	</select>
 
 	<select id="select" resultType="QnAVO" parameterType="_int">
-		select m.member_nickname, q.qna_number, q.qna_title , q.qna_content , q.qna_read_count , q.qna_writeday
-		from `member` m join qna q 
-		on q.qna_number = #{qna_number} and m.member_number  = q.member_number
+		select
+		m.member_nickname, q.qna_number, q.qna_title , q.qna_content ,
+		q.qna_read_count , q.qna_writeday, q.member_number
+		from `member` m join qna q
+		on
+		q.qna_number = #{qna_number} and m.member_number = q.member_number
 	</select>
 
 	<update id="updateReadCount" parameterType="_int">
 		update qna
-		set qna_read_count = qna_read_count + 1
+		set
+		qna_read_count = qna_read_count + 1
 		where qna_number = #{qnaNumber}
 	</update>
 	
+	<!-- 회원탈퇴 시 QnA등록글 삭제 -->
 	<delete id="deleteMember" parameterType="_int">
 		delete from qna
 		where member_number = #{memberNumber}
 	</delete>
+
+   <update id="update" parameterType="QnADTO">
+     update qna
+     set qna_title = #{qnaTitle}, qna_content = #{qnaContent}
+     where qna_number = #{qnaNumber}
+   </update>
+   
 </mapper>
 
 

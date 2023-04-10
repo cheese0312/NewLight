@@ -18,7 +18,7 @@ public class CreationUploadController implements Execute{
 		CreationsDAO creationDAO = new CreationsDAO();
 		
 		
-		req.setAttribute("creation", creationDAO.select(creationNumber));
+		req.setAttribute("creation", creationDAO.select2(creationNumber));
 		
 		req.getRequestDispatcher("/app/creations/theme/upload.jsp").forward(req, resp);
 	}

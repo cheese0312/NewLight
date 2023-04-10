@@ -18,12 +18,14 @@ public class CommunityWriteController implements Execute {
 		HttpSession session = req.getSession();
 		Integer memberNumber = (Integer)session.getAttribute("memberNumber");
 		String path = null;
+		System.out.println("========================");
+		System.out.println(memberDAO.getMemberNickName(memberNumber));
 		
 		if(memberNumber == null) {
 			path = "/app/member/login.jsp";
 		}else {
-			path = "/community/communityWriteOk.cm";
-			req.setAttribute("memberId", memberDAO.getMemberId(memberNumber));
+			path = "/app/community/communityWrite.jsp";
+			req.setAttribute("memberNickName", memberDAO.getMemberNickName(memberNumber));
 		}
 		
 		req.getRequestDispatcher(path).forward(req, resp);

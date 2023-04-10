@@ -86,9 +86,9 @@ section {
 }
 
 
-.creations-main {
+/* .creations-main {
   padding: 10px 10px;
-  /* margin-left: 60px; */
+  margin-left: 60px;
   margin: 20px 30px;
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +126,7 @@ img {
 .mypage-main > .mypage-box {
   width: 65%;
   text-align: left;
-}
+} */
 
 .creations-main {
   padding: 10px 10px;

@@ -9,6 +9,17 @@
 		delete from likes
 		where member_number = #{memberNumber}
 	</delete>
+	
+	<select id="likecount" parameterType="_int" resultType="_int">
+		select count(creation_number)
+		from likes l 
+		where creation_number = #{creationNumber};
+	</select>
+	
+	<delete id="likeDelete" parameterType="_int">
+	delete from likes
+	where creation_number=#{creationNumber}
+	</delete>
 
 	<!-- 회원탈퇴 시 좋아요 삭제 -->
 	<delete id="deleteMember" parameterType="_int">

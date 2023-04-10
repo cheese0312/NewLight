@@ -9,12 +9,18 @@ package com.newlight.app.dto;
 //constraint fk_qna_comments foreign key(qna_number)
 //references qna(qna_number)
 
+=======
+
+//comment_number int unsigned auto_increment primary key,
+//comment_content varchar(500),
+//member_number int unsigned,
+//qna_number int unsigned,
 public class QnACommentDTO {
 	private int commentNumber;
 	private String commentContent;
 	private int memberNumber;
+	private String qna_comment_Writeday;
 	private int qnaNumber;
-	private String qnaCommnetWriteday;
 
 	public QnACommentDTO() {
 		
@@ -44,6 +50,14 @@ public class QnACommentDTO {
 		this.memberNumber = memberNumber;
 	}
 
+	public String getQna_comment_Writeday() {
+		return qna_comment_Writeday;
+	}
+
+	public void setQna_comment_Writeday(String qna_comment_Writeday) {
+		this.qna_comment_Writeday = qna_comment_Writeday;
+	}
+
 	public int getQnaNumber() {
 		return qnaNumber;
 	}
@@ -52,19 +66,13 @@ public class QnACommentDTO {
 		this.qnaNumber = qnaNumber;
 	}
 
-	public String getQnaCommnetWriteday() {
-		return qnaCommnetWriteday;
-	}
 
-	public void setQnaCommnetWriteday(String qnaCommnetWriteday) {
-		this.qnaCommnetWriteday = qnaCommnetWriteday;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "QnACommentDTO [commentNumber=" + commentNumber + ", commentContent=" + commentContent
-				+ ", memberNumber=" + memberNumber + ", qnaNumber=" + qnaNumber + ", qnaCommnetWriteday="
-				+ qnaCommnetWriteday + "]";
+				+ ", memberNumber=" + memberNumber + ", qna_comment_Writeday=" + qna_comment_Writeday + ", qnaNumber="
+				+ qnaNumber + "]";
 	}
-	
+
 }

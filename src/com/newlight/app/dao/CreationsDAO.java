@@ -21,7 +21,11 @@ public class CreationsDAO {
 		return sqlSession.selectOne("creations.select");
 	}
 	
-	public CreationsVO select(int creationNumber) {
+	public void delete(int memberNumber) {
+		sqlSession.delete("creations.delete", memberNumber);
+	}
+	
+	public CreationsVO select2(int creationNumber) {
 		return sqlSession.selectOne("creations.select", creationNumber);
 	}
 	
@@ -55,6 +59,52 @@ public class CreationsDAO {
 	public void deleteMember(int memberNumber) {
 		sqlSession.delete("creations.delete", memberNumber);
 	}
+	
+//	각 창작물 페이지 뿌려주기
+	public CreationsVO creationContent(int creationNumber){
+		return sqlSession.selectOne("creations.creationContent" , creationNumber);
+	}
+	
+//	댓글 갯수 뿌려주기
+	public int creationComment(int creationNumber) {
+		return sqlSession.selectOne("creations.creationComment" , creationNumber);
+	}
+	
+//	댓글 리스트 뿌려주기
+	public List<CreationsVO> commentList(int creationNumber){
+		return sqlSession.selectList("creations.commentList" , creationNumber);
+	}
+	
+//	댓글 작성하기
+	public void commentInsert(CreationsVO creationsVO) {
+		sqlSession.insert("creationsComment.commentInsert", creationsVO);
+	}
+	
+//	댓글 수정하기
+	public void commentUpdate(CreationsVO creationsVO) {
+		sqlSession.update("creationsComment.commentUpdate" , creationsVO);
+	}
+	
+//	댓글 삭제하기
+	public void commentDelete(int commentNumber) {
+		sqlSession.delete("creationsComment.commentDelete" , commentNumber);
+	}
+	
+//	댓글 전체 삭제
+	public void creationCommentDelete(int creationNumber) {
+		sqlSession.delete("creationsComment.creationDelete" , creationNumber);
+	}
+	
+//	창작물 수정하기
+	public void creationUpdate (CreationsVO creationsVO) {
+		sqlSession.update("creations.creationUpdate" , creationsVO);
+	}
+	
+//	 창작물 삭제하기
+	public void creationDelete(int creationNumber) {
+		sqlSession.delete("creations.creationDelete" , creationNumber);
+	}
+	
 }
 
 

@@ -105,4 +105,35 @@
 	<url-pattern>*.qn</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>CommunityFile</servlet-name>
+		<servlet-class>com.newlight.app.communityFile.CommunityFileFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>CommunityFile</servlet-name>
+	<url-pattern>*.comf</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CommunityComment</servlet-name>
+		<servlet-class>com.newlight.app.communityComment.CommunityCommentFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>CommunityComment</servlet-name>
+	<url-pattern>*.cc</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreationComment</servlet-name>
+		<servlet-class>com.newlight.app.creationscomment.CreationCommentFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>CreationComment</servlet-name>
+	<url-pattern>*.cc1</url-pattern>
+
+	</servlet-mapping>
+	
 </web-app>

@@ -7,26 +7,19 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>reply</title>
+<title>문의사항 글쓰기</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/qna/qna-reply-write.css" />
 </head>
 <%@include file="/app/header.jsp"%>
 
     <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" method="post" enctype="multipart/form-data">
-    
     <section>
+     <input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
         <div class="gd">
         <h1>글쓰기</h1>
-
-        
-        <div class="writer-sub">
-            <div class="writer2">
-            <c:out value="${memberNickName}"/>
-            </div>
-            <div class="author">님</div>
-        </div>
-    </div>
+       </div>
+     
         <div class="big-box">
             
             
@@ -74,7 +67,7 @@
           
         </div>
                   <div class="button">
-                  <button type="submit" class="submit-btn">작성완료</button>
+                  <button>작성완료</button>
                   <button type="button" class="cancel-btn">취소</button>
                 </div>
                   </div>

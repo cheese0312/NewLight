@@ -8,7 +8,7 @@ public class QnAFileDTO {
 	private int qnaNumber;
 
 	public QnAFileDTO() {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getFileSystemName() {

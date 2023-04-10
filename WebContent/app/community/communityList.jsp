@@ -51,8 +51,8 @@
 									</div>
 									<div class="comment">
 										<h1>
-											3
-											<%-- <c:out value="${community.getCommunityContent()}" /> --%>
+											
+										 <c:out value="${community.getCommentCount()}" /> 
 										</h1>
 									</div>
 									<div class="date">
@@ -62,7 +62,7 @@
 									</div>
 									<div class="cnt">
 										<h1>
-											<c:out value="${community.getCommunityReadNum()}" />
+											<c:out value="${community.getCommunityReadCount()}" />
 										</h1>
 									</div>
 								</div>
