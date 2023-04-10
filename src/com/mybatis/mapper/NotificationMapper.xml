@@ -4,7 +4,8 @@
 <!-- 공지 SQL문 작성 1차 2차 나눠질 예정-->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="notification" >
+<mapper namespace="notification">
+	
     <select id="selectAll" resultType="notificationDTO" parameterType="map">
        select notification_number, notification_title, notification_content, notification_writeday
 		from newlight.notification
@@ -12,4 +13,5 @@
 		limit #{startRow},
 		#{rowCount}
     </select>
+    
 </mapper>

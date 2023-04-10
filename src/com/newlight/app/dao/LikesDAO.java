@@ -23,6 +23,11 @@ public class LikesDAO {
 		sqlSession.delete("like.delete", memberNumber);
 	}
 	
+//	회원탈퇴 시 좋아요 삭제
+	public void deleteMemeber(int memberNumber) {
+		sqlSession.delete("likes.deleteMember", memberNumber);
+	}
+	
 	public int likeCount(int creationNumber) {
 		return sqlSession.selectOne("likes.likecount" , creationNumber);
 	}

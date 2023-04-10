@@ -20,6 +20,15 @@ public class QnAFileDAO {
 	public List<QnAFileDTO> selectAll(int qnaNumber) {
 		return sqlSession.selectList("qnaFile.selectAll", qnaNumber);
 	}
+	
+//	회원탈퇴 시 QnAFile 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("qnaFile.deleteMember", memberNumber);
+	}
+	
+	public List<QnAFileDTO> selectDelete(int memberNumber){
+		return sqlSession.selectList("qnaFile.selectDelete", memberNumber);
+	}
 	public void delete(int qnaNumber) {
 		sqlSession.delete("qnaFile.delete",qnaNumber);
 	}

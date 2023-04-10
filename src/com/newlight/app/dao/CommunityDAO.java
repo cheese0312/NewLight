@@ -45,6 +45,11 @@ public class CommunityDAO {
 		sqlSession.update("community.updateReadCount", communityNumber);
 	}
 	
+//	회원탈퇴 시 커뮤니티 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("community.deleteMember", memberNumber);
+	}
+	
 	public void delete1(int communityNumber) {
 		sqlSession.delete("community.delete1", communityNumber);
 	}
@@ -52,4 +57,5 @@ public class CommunityDAO {
 	public void update(CommunityDTO communityDTO) {
 		sqlSession.update("community.update", communityDTO);
 	}
+	
 }

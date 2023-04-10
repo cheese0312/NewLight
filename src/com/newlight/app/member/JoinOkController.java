@@ -23,7 +23,7 @@ public class JoinOkController implements Execute{
 		MemberDAO memberDAO = new MemberDAO();
 		MemberFileDTO memberfileDTO = new MemberFileDTO();
 	    String uploadPath = req.getSession().getServletContext().getRealPath("/") + "userProfile/";
-	    int fileSize = 1024 * 1024 * 5; //5mb
+	    int fileSize = 1024 * 1024 * 20; //5mb
 
 		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8", new DefaultFileRenamePolicy());
 		
@@ -38,6 +38,7 @@ public class JoinOkController implements Execute{
 		memberDTO.setMemberBirth(multipartReq.getParameter("memberBirth"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
 		memberDTO.setMemberAddress2(multipartReq.getParameter("memberAddress2"));
+		memberDTO.setMemberPhoneNumber(multipartReq.getParameter("memberPhoneNumber"));
 		
 		Enumeration<String> memberFilepfp = multipartReq.getFileNames();
 		
@@ -58,3 +59,5 @@ public class JoinOkController implements Execute{
 		resp.sendRedirect("/member/login.me");
 	}
 }
+
+

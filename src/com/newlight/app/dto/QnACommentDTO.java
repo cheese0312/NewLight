@@ -1,4 +1,15 @@
 package com.newlight.app.dto;
+//comment_number int unsigned primary key,
+//comment_content varchar(500) not null,
+//member_number int unsigned,
+//qna_number int unsigned,
+//qna_writeday datetime default now(),
+//constraint fk_qna_comment foreign key(member_number)
+//references `member`(member_number),
+//constraint fk_qna_comments foreign key(qna_number)
+//references qna(qna_number)
+
+=======
 
 //comment_number int unsigned auto_increment primary key,
 //comment_content varchar(500),
@@ -12,6 +23,7 @@ public class QnACommentDTO {
 	private int qnaNumber;
 
 	public QnACommentDTO() {
+		
 	}
 
 	public int getCommentNumber() {
@@ -54,6 +66,8 @@ public class QnACommentDTO {
 		this.qnaNumber = qnaNumber;
 	}
 
+
+	
 	@Override
 	public String toString() {
 		return "QnACommentDTO [commentNumber=" + commentNumber + ", commentContent=" + commentContent

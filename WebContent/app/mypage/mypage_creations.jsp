@@ -37,7 +37,7 @@
 						</div>
 						<div class="bin"></div>
 						<div class="editbtn">
-							<a href="#">프로필수정</a>
+							<a href="${pageContext.request.contextPath}/mypage/mypageEdit.me">프로필수정</a>
 						</div>
 
 					</div>

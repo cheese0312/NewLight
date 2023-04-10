@@ -1,66 +1,59 @@
 package com.newlight.app.dto;
-//comment_number int unsigned primary key auto_increment,
+<<<<<<< HEAD
+
+//comment_number int unsigned,
 //comment_content varchar(500) not null,
-//comment_date datetime default now(),
-//community_number int unsigned not null,
+//community_number int not null,
 //member_number int unsigned not null,
+//constraint fk_community_comment foreign key(member_number)
+//references `member`(member_number)
+
 public class CommunityCommentDTO {
-   private int commentNumber;
-   private String commentContent;
-   private String commentDate;
-   private int communityNumber;
-   private int memberNumber;
-   
-   public CommunityCommentDTO() {
-	// TODO Auto-generated constructor stub
-}
+	private int commentNumber;
+	private String commentContent;
+	private int communityNumber;
+	private int memberNumber;
+	
+	public CommunityCommentDTO() {
+		
+	}
 
-public int getCommentNumber() {
-	return commentNumber;
-}
+	public int getCommentNumber() {
+		return commentNumber;
+	}
 
-public void setCommentNumber(int commentNumber) {
-	this.commentNumber = commentNumber;
-}
+	public void setCommentNumber(int commentNumber) {
+		this.commentNumber = commentNumber;
+	}
 
-public String getCommentContent() {
-	return commentContent;
-}
+	public String getCommentContent() {
+		return commentContent;
+	}
 
-public void setCommentContent(String commentContent) {
-	this.commentContent = commentContent;
-}
+	public void setCommentContent(String commentContent) {
+		this.commentContent = commentContent;
+	}
 
-public String getCommentDate() {
-	return commentDate;
-}
+	public int getCommunityNumber() {
+		return communityNumber;
+	}
 
-public void setCommentDate(String commentDate) {
-	this.commentDate = commentDate;
-}
+	public void setCommunityNumber(int communityNumber) {
+		this.communityNumber = communityNumber;
+	}
 
-public int getCommunityNumber() {
-	return communityNumber;
-}
+	public int getMemberNumber() {
+		return memberNumber;
+	}
 
-public void setCommunityNumber(int communityNumber) {
-	this.communityNumber = communityNumber;
-}
+	public void setMemberNumber(int memberNumber) {
+		this.memberNumber = memberNumber;
+	}
 
-public int getMemberNumber() {
-	return memberNumber;
-}
-
-public void setMemberNumber(int memberNumber) {
-	this.memberNumber = memberNumber;
-}
-
-@Override
-public String toString() {
-	return "CommunityCommentDTO [commentNumber=" + commentNumber + ", commentContent=" + commentContent
-			+ ", commentDate=" + commentDate + ", communityNumber=" + communityNumber + ", memberNumber=" + memberNumber
-			+ "]";
-}
-   
-   
+	@Override
+	public String toString() {
+		return "CommunityCommentDTO [commentNumber=" + commentNumber + ", commentContent=" + commentContent
+				+ ", communityNumber=" + communityNumber + ", memberNumber=" + memberNumber + "]";
+	}
+	
 }

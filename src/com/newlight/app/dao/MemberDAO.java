@@ -56,8 +56,22 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.getMemberId", memberNumber);
 	}
 	
-	public String getMemberNickname(int memberNumber) {
-		return sqlSession.selectOne("member.getMemberNickname", memberNumber);
+	public void edit(MemberDTO memberDTO) {
+		sqlSession.update("member.edit", memberDTO);
+	}
+	
+	public MemberDTO selectOne(int memberNumber) {
+		return sqlSession.selectOne("member.select", memberNumber);
+	}
+	
+//	회원탈퇴 시 멤버프로필사진 삭제
+	public String selectProfile(int memberNumber) {
+		return sqlSession.selectOne("member.selectProfile", memberNumber);
+	}
+	
+//	회원탈퇴하기
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("member.deleteMember", memberNumber);
 	}
 	
 }

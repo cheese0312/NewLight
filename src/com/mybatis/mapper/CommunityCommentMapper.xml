@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
+<mapper namespace="communityComment">
 <!-- 커뮤니티 SQL작성 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-<mapper namespace="communityComment">
+	<!-- 회원탈퇴 시 커뮤니티댓글 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from community_comment
+		where member_number = #{memberNumber}
+	</delete>
+
 	<select id="selectAll" parameterType="_int" resultType="CommunityCommentVO">
 	  select comment_number, comment_content, comment_date, community_number, 
 	  c.member_number, member_nickname
@@ -33,5 +39,3 @@
      where comment_number = #{commentNumber}
    </update>
 </mapper>
-
-

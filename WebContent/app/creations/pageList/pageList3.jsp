@@ -44,7 +44,7 @@
 							<c:forEach var="creation" items="${creations}">
 								<div class="img">
 									<div class="creations-img">
-										<img src="${pageContext.request.contextPath}/upload/${creation.getsumNail()}" class="img-1">
+										<img src="${pageContext.request.contextPath}/upload/${creation.getCreationSumnail()}" class="img-1">
 										<div class="sub-title">
 											<a
 												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
@@ -53,7 +53,7 @@
 										</div>
 										<div class="sub-author">
 											<img
-												src="../img/—Pngtree—vector business men icon_4186858.png">
+												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
 												<c:out value="${creation.getMemberNickname()}" />

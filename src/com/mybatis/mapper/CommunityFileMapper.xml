@@ -13,8 +13,26 @@
 	  where community_number = #{communityNumber}
 	</select>
 	
+	<!-- 회원탈퇴 시 커뮤니티파일 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+			delete from community_file 
+			where community_number  in (select community_number 
+                          				 		from community 
+                         				 		where member_number = #{memberNumber})
+	</delete>
+	
+ 	<select id="selectDelete" parameterType="_int" resultType="CommunityFileDTO">
+		select cf.file_system_name  
+		from community cm join community_file cf
+		on cm.community_number = cf.community_number 
+		where member_number = #{memberNumber};
+	</select>
+	
+	<!--  -->
+	
 	<delete id="delete" parameterType="_int">
 	 delete from community_file
 	 where community_number = #{communityNumber}
 	</delete>
+	
 </mapper>

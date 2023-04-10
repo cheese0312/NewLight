@@ -41,6 +41,11 @@
 							class="ed" required> <span class="cmt">* 공백없이 한글만 입력 가능</span></td>
 					</tr>
 					<tr>
+						<td class="tle">핸드폰 번호</td>
+						<td class="cont"><input type="text" name="memberPhoneNumber" placeholder="핸드폰번호을 입력하세요"
+							class="ed" required> <span class="cmt">- 공백없이 숫자만 입력 가능</span></td>
+					</tr>
+					<tr>
 						<td class="tle">아이디</td>
 						<td class="cont">
 							<div class="col-md-4">

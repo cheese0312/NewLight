@@ -61,6 +61,11 @@
 		where community_number = #{communityNumber}
 	</update>
 	
+	<!-- 회원탈퇴 시 커뮤니티 글 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from community
+		where member_number = #{memberNumber}
+	</delete>
 	<delete id="delete1" parameterType="_int">
 	  delete from community where community_number = #{communityNumber}
 	</delete>

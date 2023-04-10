@@ -1,9 +1,7 @@
 package com.newlight.app.dao;
 
 import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
-
 import com.mybatis.config.MyBatisConfig;
 import com.newlight.app.dto.QnACommentDTO;
 import com.newlight.app.vo.QnACommentVO;
@@ -13,6 +11,11 @@ public class QnACommentDAO {
 
 	public QnACommentDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
+	}
+	
+//	회원탈퇴 시 QnA댓글 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("qnaComment.deleteMember", memberNumber);
 	}
 
 	public List<QnACommentVO> selectAll(int qnaNumber) {
@@ -31,4 +34,5 @@ public class QnACommentDAO {
 		sqlSession.update("comment.update", qnaCommentDTO);
 
 	}
+	
 }

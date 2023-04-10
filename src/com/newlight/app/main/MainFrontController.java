@@ -27,10 +27,13 @@ public class MainFrontController extends HttpServlet{
 		
 		switch(target) {
 		case "/main/mainNewlightOk.mi" :
+			System.out.println("mainpage 들어왔다!!");
 //			임시 이동처리
-			req.getRequestDispatcher("/app/main/mainpage_newlight.jsp").forward(req, resp);
+//			req.getRequestDispatcher("/app/main/mainpage_newlight.jsp").forward(req, resp);
+			new MainController().execute(req, resp);
 			break;
-		case "2" :
+		case "/main/mainpageListOk.mi" :
+			new MainpageListOkControlller().execute(req, resp);
 			break;
 		}
 		

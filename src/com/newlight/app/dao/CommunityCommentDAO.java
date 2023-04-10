@@ -1,5 +1,8 @@
 package com.newlight.app.dao;
 
+import org.apache.ibatis.session.SqlSession;
+
+import com.mybatis.config.MyBatisConfig;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -15,6 +18,10 @@ public class CommunityCommentDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 	
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("communityComment.deleteMember", memberNumber);
+	}
+
 	public List<CommunityCommentVO> selectAll(int communityNumber){
 		return sqlSession.selectList("communityComment.selectAll", communityNumber);
 	}
@@ -35,4 +42,5 @@ public class CommunityCommentDAO {
 	public void update(CommunityCommentDTO communityCommentDTO) {
 		sqlSession.update("communityComment.update", communityCommentDTO);	
 	}
+	
 }

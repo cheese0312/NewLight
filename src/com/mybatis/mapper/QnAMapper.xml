@@ -59,12 +59,19 @@
 		qna_read_count = qna_read_count + 1
 		where qna_number = #{qnaNumber}
 	</update>
+	
+	<!-- 회원탈퇴 시 QnA등록글 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from qna
+		where member_number = #{memberNumber}
+	</delete>
 
    <update id="update" parameterType="QnADTO">
      update qna
      set qna_title = #{qnaTitle}, qna_content = #{qnaContent}
      where qna_number = #{qnaNumber}
    </update>
+   
 </mapper>
 
 

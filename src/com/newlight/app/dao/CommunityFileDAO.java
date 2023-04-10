@@ -22,7 +22,17 @@ public class CommunityFileDAO {
 		return sqlSession.selectList("communityFile.select", communityNumber);
 	}
 	
+//	회원탈퇴 시 커뮤니티파일 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("communityFile.deleteMember", memberNumber);
+	}
+	
+	public List<CommunityFileDTO> selectDelete(int memberNumber) {
+		return sqlSession.selectList("communityFile.selectDelete", memberNumber);
+	}
+	
 	public void delete(int communityNumber) {
 		sqlSession.delete("communityFile.delete", communityNumber);
 	}
+	
 }

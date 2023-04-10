@@ -10,17 +10,16 @@ public class CreationsVO {
 	private String creationContent;
 	private String creationCode;
 	private String creationName;
-	private String creationWriteday;
+	private String commentWritedate;
 	private int memberNumber;
 	private String memberNickname;
 	private String memberPfp;
 	private String creationSumnail;
-	List<CreationsFileDTO> files;
 	private int commentNumber;
 	private String commentContent;
-	private String commentWritedate;
 	private String likeCount;
 	private String commentCount;
+	private List<CreationsFileDTO> files;
 	
 	public CreationsVO() {
 		

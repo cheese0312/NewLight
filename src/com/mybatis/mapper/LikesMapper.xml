@@ -21,4 +21,9 @@
 	where creation_number=#{creationNumber}
 	</delete>
 
+	<!-- 회원탈퇴 시 좋아요 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from likes
+		where member_number = #{memberNumber}
+	</delete>
 </mapper>
