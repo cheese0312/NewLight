@@ -9,18 +9,22 @@ import javax.servlet.http.HttpServletResponse;
 import com.newlight.app.Execute;
 import com.newlight.app.dao.CreationsDAO;
 
-public class CreationUploadController implements Execute{
-	
+public class CreationUpdateController implements Execute {
+
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("***");
 		int creationNumber = Integer.valueOf(req.getParameter("creationNumber"));
-		CreationsDAO creationDAO = new CreationsDAO();
 		
+		CreationsDAO creationsDAO = new CreationsDAO();
 		
-		req.setAttribute("creation", creationDAO.select2(creationNumber));
+		req.setAttribute("creations", creationsDAO.select2(creationNumber));
 		
-		req.getRequestDispatcher("/app/creations/theme/upload.jsp").forward(req, resp);
+		System.out.println(creationNumber);
+		System.out.println("============================");
+		
+		req.getRequestDispatcher("/app/main/uploadUpdate.jsp").forward(req, resp);
+//		resp.sendRedirect("/creations/creationUpdate.ct");
+
 	}
 
 }

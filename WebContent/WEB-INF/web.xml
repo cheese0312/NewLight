@@ -105,4 +105,14 @@
 	<url-pattern>*.qn</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>CreationComment</servlet-name>
+		<servlet-class>com.newlight.app.creationscomment.CreationCommentFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>CreationComment</servlet-name>
+	<url-pattern>*.cc1</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

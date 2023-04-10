@@ -15,10 +15,10 @@
 	<!-- 헤더 -->
     <%@include file ="/app/header.jsp" %>
   <main>
-    <form id="write-form" action="${pageContext.request.contextPath}/creations/CreationUploadOk.ct" method="post"
+    <form id="write-form" action="${pageContext.request.contextPath}/creations/creationUpdateOk.ct" method="post"
 	enctype="multipart/form-data">
     <div class="creations-main">
-   
+   	<input type="hidden" name="creationNumber" value="${creations.getCreationNumber()}" >
       <h3>나만의 새로운 빛 만들기</h3>
     <div class="creations-author">
       <div class="author-img">
@@ -26,7 +26,7 @@
       </div>
       <div class="author-name">
         <div class="content-mente">
-        <label><c:out value="${memberNickname}"/></label>
+        <label><c:out value="${creations.getMemberNickname()}"/></label>
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="content-mente">
       <label>제목을 입력하세요 :)</label>
       </div>
-      <input type="text" value="${creation.getCreationTitle()}" name="creationTitle">
+      <input type="text" value="${creations.getCreationTitle()}" name="creationTitle">
     </div>
     <div class="creations-option">
       <div class="category-name">
@@ -67,7 +67,7 @@
       <div class="content-mente">
       <label> 창작물 소개를 적어주세요 :) </label>
     </div>
-      <textarea name="creationContent" id="creations-content" cols="70" rows="12"><c:out value="${creation.getCreationContent()}"/></textarea>
+      <textarea name="creationContent" id="creations-content" cols="70" rows="12"><c:out value="${creations.getCreationContent()}"/></textarea>
     </div>
 
     <div class="form-group">

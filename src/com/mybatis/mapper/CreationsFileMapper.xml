@@ -19,4 +19,5 @@
 		delete from creations_file
 		where creation_number = #{creationNumber}
 	</delete>
+
 </mapper>

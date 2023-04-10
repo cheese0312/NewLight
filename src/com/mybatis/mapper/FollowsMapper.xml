@@ -5,10 +5,8 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="follows">
-<!-- 	<insert id="follow" parameterType="FollowsDTO">
-		insert into follows(follower_number, followee_number)
-		values(#{followerNumber}, #{followeeNumber})
-	</insert> -->
+	
+
 	<delete id="delete" parameterType="_int">
 		delete from follows
 		where follower_number = #{memberNumber} or followee_number = #{memberNumber}

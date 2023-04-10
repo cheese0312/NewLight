@@ -1,5 +1,7 @@
 package com.newlight.app.dto;
 
+import java.util.List;
+
 public class MypageVO {
 	private int memberNumber;
 	private int followerNumber;
@@ -9,6 +11,10 @@ public class MypageVO {
 	private String memberComment;
 	private String creationTitle;
 	private String creationContent;
+	private String creationSumnail;
+	List<CreationsFileDTO> files;
+	private String likeCount;
+	private String commentCount;
 	
 	public MypageVO() {
 		// TODO Auto-generated constructor stub
@@ -53,8 +59,6 @@ public class MypageVO {
 	public void setMemberNickname(String memberNickname) {
 		this.memberNickname = memberNickname;
 	}
-	
-	
 
 	public String getMemberComment() {
 		return memberComment;
@@ -80,12 +84,45 @@ public class MypageVO {
 		this.creationContent = creationContent;
 	}
 
+	public String getCreationSumnail() {
+		return creationSumnail;
+	}
+
+	public void setCreationSumnail(String creationSumnail) {
+		this.creationSumnail = creationSumnail;
+	}
+
+	public List<CreationsFileDTO> getFiles() {
+		return files;
+	}
+
+	public void setFiles(List<CreationsFileDTO> files) {
+		this.files = files;
+	}
+
+	public String getLikeCount() {
+		return likeCount;
+	}
+
+	public void setLikeCount(String likeCount) {
+		this.likeCount = likeCount;
+	}
+
+	public String getCommentCount() {
+		return commentCount;
+	}
+
+	public void setCommentCount(String commentCount) {
+		this.commentCount = commentCount;
+	}
+
 	@Override
 	public String toString() {
 		return "MypageVO [memberNumber=" + memberNumber + ", followerNumber=" + followerNumber + ", followeeNumber="
 				+ followeeNumber + ", creationNumber=" + creationNumber + ", memberNickname=" + memberNickname
 				+ ", memberComment=" + memberComment + ", creationTitle=" + creationTitle + ", creationContent="
-				+ creationContent + "]";
+				+ creationContent + ", creationSumnail=" + creationSumnail + ", files=" + files + ", likeCount="
+				+ likeCount + ", commentCount=" + commentCount + "]";
 	}
 	
 }

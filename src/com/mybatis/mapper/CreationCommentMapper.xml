@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="creationsComment">
+	<!-- 댓글 생성 -->
+	<insert id="commentInsert" parameterType="CreationsVO">
+		insert into creations_comment
+		(comment_content, member_number, creation_number)
+		values(#{commentContent} , #{memberNumber} , #{creationNumber})
+	</insert>
+	
+	<update id="commentUpdate" parameterType="CreationsVO">
+	update creations_comment
+	set comment_content=#{commentContent}
+	where comment_number=#{commentNumber}
+	</update>
+	
+	<delete id="commentDelete" parameterType="_int">
+	delete from creations_comment
+	where comment_number=#{commentNumber}
+	</delete>
+	
+	<delete id="creationDelete" parameterType="_int">
+	delete from creations_comment
+	where creation_number=#{creationNumber}
+	</delete>
+
+</mapper>
