@@ -22,7 +22,7 @@ hr {
   flex-wrap: wrap;
   align-items: center;
   width: 900px;
-  height: 900px;
+  height: auto;
   align-content: center;
 }
 
@@ -78,11 +78,31 @@ section {
   width: 100%;
 }
 
-.click {
-  width: 100%;
+.click{
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  text-align: left;
+  padding-left: 20px;
+} 
+
+.creations-like {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creations-like > img{
+  width: 20px;
+  height: 20px;
+}
+
+.creations-comment {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creations-comment > img{
+  width: 22px;
+  height: 22px;
 }
 
 .mypage-main2 > section {
@@ -148,9 +168,20 @@ section {
   padding: 10px;
 }
 
-.creations-sub > img {
-  width: 30px;
-  height: 30px;
+.creation-like ,
+.creation-comment {
+	display: flex;
+    align-items: center;
+}
+
+.creation-like > img {
+  width: 20px;
+  height: 20px;
+}
+
+.creation-comment > img {
+	width: 20px;
+  height: 20px;
 }
 
 .sub-title {

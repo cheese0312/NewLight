@@ -56,4 +56,8 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.getMemberId", memberNumber);
 	}
 	
+	public String getMemberNickname(int memberNumber) {
+		return sqlSession.selectOne("member.getMemberNickname", memberNumber);
+	}
+	
 }

@@ -27,49 +27,36 @@ public class CreationsFrontController extends HttpServlet{
 		
 		switch(target) {
 		case "/creations/CreationWrite.ct" :
-//			임시 이동처리
-			req.getRequestDispatcher("/app/main/upload.jsp").forward(req, resp);
+			new CreationWriteOkController().execute(req,resp);
 			break;
+			
 		case "/creations/CreationUploadOk.ct" :
 			new CreationUploadOkController().execute(req, resp);
 			break;
+			
 		case "/creations/pageListOk.ct" :
 			new ThemeListOkController().execute(req, resp);
 			break;
-		case "/crations/aniListOk.ct" :
-			new ThemeListOkController().execute(req, resp);
-			break;
-		case "/board/aniViewBoard.nc" :
-//			임시 이동처리
-			req.getRequestDispatcher("/app/creations/ani/aniView.jsp").forward(req, resp);
+			
+		//창작물 보기 처리	
+		case "/creations/creationRead.ct" :
+			new CreationReadOkController().execute(req, resp);
 			break;
 			
-///////////////////////////////////////////////////////////////
-		case "/creations/background1.ct" :
-			new BgOneListOkController().execute(req, resp);
-			break;
-		case "/creations/background1in.ct" :
-			new BgOneInOkController().execute(req, resp);
-			break;
-		case "/creations/handwrite.ct" :
-			new HwOneListOkController().execute(req, resp);
-			break;
-		case "/creations/handwritein.ct" :
-			new HwOneInOkController().execute(req, resp);
+		//창작물 수정 처리
+		case "/creations/creationUpdate.ct" :
+			new CreationUpdateController().execute(req, resp);
 			break;
 			
-		case "/creations/background2.ct":
-			new Background2OkController().execute(req,resp);
+		case "/creations/creationUpdateOk.ct" :
+			new CreationUpdateOkController().execute(req, resp);
 			break;
 			
-		case "/creations/tracing.ct" :
-			new TracingOkController().execute(req,resp);
+//		창작물 삭제 처리
+		case "/creations/creationDeleteOk.ct" :
+			new CreationDeleteOkController().execute(req,resp);
 			break;
-		
-		case "/creations/theme2.ct" :
-			new Theme2OkController().execute(req,resp);
-			break;
-			
+
 		}
 	
 		
