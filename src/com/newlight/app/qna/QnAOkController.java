@@ -17,7 +17,7 @@ public class QnAOkController implements Execute {
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		QnADAO qnaDAO = new QnADAO();
-		System.out.println(qnaDAO);
+//		System.out.println(qnaDAO);
 
 		String temp = req.getParameter("page");
 
@@ -48,7 +48,6 @@ public class QnAOkController implements Execute {
 
 		List<QnAVO> qnaList = qnaDAO.selectAll(pageMap);
 
-		System.out.println(qnaList.get(0).getMemberNickname());
 
 		req.setAttribute("qnaList", qnaList);
 		req.setAttribute("page", page);

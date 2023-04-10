@@ -31,6 +31,8 @@
 		<!-- qna -->
 		<typeAlias type="com.newlight.app.dto.QnADTO" alias="QnADTO"/>
 		<typeAlias type="com.newlight.app.dto.QnAFileDTO" alias="QnAFileDTO"/>
+		<typeAlias type="com.newlight.app.dto.QnACommentDTO" alias="QnACommentDTO"/>
+		<typeAlias type="com.newlight.app.vo.QnACommentVO" alias="QnACommentVO"/>
 		<typeAlias type="com.newlight.app.vo.QnAVO" alias="QnAVO"/>
 		
 		<!-- notification -->
@@ -73,6 +75,7 @@
 		
 		<!-- qna -->
 		<mapper resource="com/mybatis/mapper/QnAMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/QnACommentMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/QnAFileMapper.xml"/>
 		
 		<!-- notification -->
