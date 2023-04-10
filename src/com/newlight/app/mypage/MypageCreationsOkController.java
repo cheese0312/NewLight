@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.newlight.app.Execute;
+import com.newlight.app.dao.CreationsDAO;
+import com.newlight.app.dao.CreationsFileDAO;
 import com.newlight.app.dao.MypageDAO;
+import com.newlight.app.dto.CreationsFileDTO;
+import com.newlight.app.dto.CreationsVO;
 import com.newlight.app.dto.MemberDTO;
 import com.newlight.app.dto.MypageVO;
 
@@ -23,6 +27,7 @@ public class MypageCreationsOkController implements Execute {
 		MypageDAO mypageDAO = new MypageDAO();
 		MypageVO mypageVO = new MypageVO();
 		int memberNumber = (Integer)req.getSession().getAttribute("memberNumber");
+
 		
 		HttpSession session = req.getSession();
 		

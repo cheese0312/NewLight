@@ -59,4 +59,10 @@
 	  from member
 	  where member_number = #{memberNumber}
 	</select>
+	
+	<select id="getMemberNickname" parameterType="_int" resultType="string">
+		select member_nickname
+		from member
+		where member_number = #{memberNumber}
+	</select>
 </mapper>

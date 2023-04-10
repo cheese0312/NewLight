@@ -26,12 +26,11 @@ public class CreationUploadOkController implements Execute{
 		CreationsDAO creationDAO = new CreationsDAO();
 		CreationsFileDTO creationfileDTO = new CreationsFileDTO();
 		CreationsFileDAO creationfileDAO = new CreationsFileDAO();
+
 		System.out.println("uploadOk컨트롤러 들어왔다!!");
 		int creationNumber = 0;
 		boolean isFirst = true;
 		String path = null;
-//		creationDTO.setCreationCategory1("test");
-//		creationDTO.setCreationCategory2("test");
 		
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		int fileSize = 1024 * 1024 * 20;
