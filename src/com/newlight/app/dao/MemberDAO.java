@@ -48,6 +48,10 @@ public class MemberDAO {
 		sqlSession.delete("member.delete", memberNumber);
 	}
 	
+	public String getMemberNickName(int memberNumber) {
+		return sqlSession.selectOne("member.getMemberNickName", memberNumber);
+	}
+	
 	public String getMemberId(int memberNumber) {
 		return sqlSession.selectOne("member.getMemberId", memberNumber);
 	}

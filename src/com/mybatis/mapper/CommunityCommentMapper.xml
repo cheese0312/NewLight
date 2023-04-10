@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 커뮤니티 SQL작성 -->
+<!-- SQL문 작성 , DB이름 추가 -->
+
+<mapper namespace="communityComment">
+	<select id="selectAll" parameterType="_int" resultType="CommunityCommentVO">
+	  select comment_number, comment_content, comment_date, community_number, 
+	  c.member_number, member_nickname
+	  from member m join community_comment c
+	  on community_number = #{communityNumber} and m.member_number = c.member_number
+	</select>
+  
+   <insert id="insert" parameterType="CommunityCommentDTO">
+      insert into community_comment(comment_content, community_number, member_number)
+      values(#{commentContent}, #{communityNumber}, #{memberNumber})
+   </insert>
+   
+   <delete id="delete" parameterType="_int">
+  	delete from community_comment
+  	where community_number = #{communityNumber}
+   </delete> 
+   
+      <delete id="deleteComment" parameterType="_int">
+  	delete from community_comment
+  	where comment_number = #{commentNumber}
+   </delete>
+   
+   <update id="update" parameterType="communityCommentDTO">
+     update community_comment
+     set comment_content = #{commentContent}
+     where comment_number = #{commentNumber}
+   </update>
+</mapper>
+
+

@@ -12,4 +12,9 @@
 	  from community_file
 	  where community_number = #{communityNumber}
 	</select>
+	
+	<delete id="delete" parameterType="_int">
+	 delete from community_file
+	 where community_number = #{communityNumber}
+	</delete>
 </mapper>

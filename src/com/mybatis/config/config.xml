@@ -14,6 +14,8 @@
 		<typeAlias type="com.newlight.app.dto.CommunityFileDTO" alias="CommunityFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityVO" alias="CommunityVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentVO" alias="CommunityCommentVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentDTO" alias="CommunityCommentDTO"/>
 		<typeAlias type="com.newlight.app.dto.CreationsVO" alias="CreationsVO"/>
 		<typeAlias type="com.newlight.app.dto.FollowsDTO" alias="FollowsDTO"/>
 		<typeAlias type="com.newlight.app.dto.LikesDTO" alias="LikesDTO"/>
@@ -51,6 +53,7 @@
 		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CreationsFileMapper.xml"/>
 		<mapper resource="com/mybatis/mapper/CommunityFileMapper.xml"/>
+		<mapper resource="com/mybatis/mapper/CommunityCommentMapper.xml"/>
 	</mappers>
 	
 </configuration>
