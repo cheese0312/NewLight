@@ -16,6 +16,8 @@
 		<typeAlias type="com.newlight.app.dto.CommunityDTO" alias="CommunityDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityFileDTO" alias="CommunityFileDTO"/>
 		<typeAlias type="com.newlight.app.dto.CommunityVO" alias="CommunityVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentVO" alias="CommunityCommentVO"/>
+		<typeAlias type="com.newlight.app.dto.CommunityCommentDTO" alias="CommunityCommentDTO"/>
 		
 		<!-- creations -->
 		<typeAlias type="com.newlight.app.dto.CreationsDTO" alias="CreationsDTO"/>

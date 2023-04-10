@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/admin/announcement.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/notification/notification.css">
 <title>공지사항</title>
 </head>
 <body>
@@ -77,15 +77,41 @@
 </div> 
 <br/>
 </section>
-<div class="button">
-    <button><span><</span></button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>></button>
-</div>
+		<div class="pagination">
+					<ul>
+						<!-- ========== 페이징 처리 예시 ============ -->
+						<c:if test="${prev}">
+							<li><a
+								href="${pageContext.request.contextPath}/community/communityListOk.cm?page=${startPage-1}"
+								class="prev">&lt;</a></li>
+						</c:if>
+						
+						<c:forEach var="i" begin="${startPage}" end="${endPage}">
+						
+						<c:choose>
+							<c:when test="${i == page}">
+						<li><a href="${pageContext.request.contextPath}/community/communityListOk.cm?page=${i}" class="active">
+								<c:out value="${i}"/>
+								</a></li>
+							</c:when>
+							<c:otherwise>
+							<li>
+							<a href="${pageContext.request.contextPath}/community/communityListOk.cm?page=${i}">
+							<c:out value="${i}"/>
+							</a></li>
+							</c:otherwise>
+						</c:choose>
+						</c:forEach>
+
+						<c:if test="${next}">
+							<li><a
+								href="${pageContext.request.contextPath}/community/communityListOk.cm?page=${endPage+1}"
+								class="next">&gt;</a></li>
+						</c:if>
+
+						<!-- ========== /페이징 처리 예시 ============ -->
+					</ul>
+				</div>
 
 <footer>
 
