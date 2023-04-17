@@ -21,6 +21,14 @@ section>.gd{
   justify-content: space-between;
 }
 
+textarea{
+	font-size : 15px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
   .gd>h1{
    margin: 20px 400px;
    padding: 10px 0;

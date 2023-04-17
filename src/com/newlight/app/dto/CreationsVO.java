@@ -65,7 +65,7 @@ public class CreationsVO {
 	public void setCreationName(String creationName) {
 		this.creationName = creationName;
 	}
-
+	
 	public int getMemberNumber() {
 		return memberNumber;
 	}

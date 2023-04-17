@@ -42,7 +42,19 @@
 		<!-- limit 0,9 -->
 	</select>
    <!-- 메인페이지 창작물 조회하기 -->
-   
+<!--    <select id="selectAll" resultType="CreationsVO">
+      select creation_title, creation_read_count, category_code, category_name, m.member_nickname, m.member_pfp
+   <select id="selectAll" resultType="CreationsVO">
+      select creation_title,
+      creation_read_count, category_code, category_name, m.member_nickname,
+      m.member_pfp
+      from `member` m join creations c
+      on m.member_number =
+      c.member_number
+      order by creation_number desc
+      limit 0,9
+   </select> -->
+
    <!-- 카테고리 테마별 창작물 조회하기 -->
    <select id="selectMenu" resultType="CreationsVO"
       parameterType="map">
@@ -129,6 +141,14 @@
       where creation_number = #{creationNumber}
    </update>
    
+   <!-- 2차 창작물 배경화면 -->
+      <select id="category2background" parameterType="CreationsVO" resultType="CreationsVO">
+         select creation_title , member_nickname 
+         from `member` m  join creations c
+         on m.member_number = c.member_number 
+         where category_code = '201' and category_name = '배경화면'
+      </select>
+      
       <!-- 회원탈퇴 시 창작물 삭제 -->
       <delete id="deleteMember" parameterType="_int">
          delete from creations
