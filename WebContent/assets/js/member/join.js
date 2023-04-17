@@ -10,7 +10,7 @@ let $nickInput = $('#nickname');
 $idInput.on('blur', function(){
 	if($(this).val() == ''){
 		console.log('아이디 입력하세요!');
-		$checkMsg.text('아이디를 입력하세요!');
+		$checkMsg.text('* 아이디를 입력하세요!');
 	}
 	else {
 		let id = $(this).val();
@@ -27,8 +27,8 @@ $idInput.on('blur', function(){
 
 $nickInput.on('blur', function(){
 	if($(this).val() == ''){
-		console.log('닉네임을 입력하세요!');
-		$checkMsg2.text('닉네임을 입력하세요!');
+		console.log('* 닉네임을 입력하세요!');
+		$checkMsg2.text('* 닉네임을 입력하세요!');
 	}
 	else {
 		let nick = $(this).val();
@@ -53,19 +53,51 @@ let $pwInput = $('#password');
 
 $pwInput.on('blur', function(){
 	if(regex.test($(this).val())){
-		$checkPwMsg.text('사용 가능한 비밀번호입니다.');
+		$checkPwMsg.html('<br/> *사용 가능한 비밀번호입니다.');
 	}else{
-		$checkPwMsg.html('사용 불가능한 비밀번호입니다. <br/> 영어, 숫자, 특수문자를 포함한 8글자 이상으로 작성해주세요.');
+		$checkPwMsg.html('<br/> * 사용 불가능한 비밀번호입니다.');
 	}
 });
 
-
-$("button").on('click' , function(){
-	if(!$checkMsg.includes("중") && $checkMsg2.includes("중") && $checkPwMsg.includes("불")){
+$(".myButton").on('click' , function(){
+	if(!$checkMsg.val().includes("중") && $checkMsg2.val().includes("중") && $checkPwMsg.val().includes("불")){
 		$("form").submit();
 	}
-	else {
+	else{
 		alert('중복된 아이디 또는 닉네임 & 비밀번호를 다시 확인해주세요');
 		console.log('안돼!');
 	}
 });
+
+
+$("#file").on('change' , function(){
+	let fileName = $('#file').val();
+	$('.upload-name').val(fileName);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

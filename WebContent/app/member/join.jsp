@@ -29,10 +29,10 @@
 					</colgroup>
  					<tr>
 						<td class="tle">내 프로필</td>
-						<td><label for="file">
-								<div class="btn-upload">프로필 선택</div>
-						</label> 
-						<input type="file" class="member-file"  name="memberPfp" accept=".jpg , .png" multiple>
+						<td class="cont" id="myPfp">
+      					<input class="ed upload-name" placeholder="첨부파일">
+						<label for="file" class="btn-upload">프로필 선택</label>
+					      <input type="file" id="file" name="memberFile" accept=".jpg, .jpeg, .png" >
 						</td>
 					</tr>
 					<tr>
@@ -43,7 +43,7 @@
 					<tr>
 						<td class="tle">핸드폰 번호</td>
 						<td class="cont"><input type="text" name="memberPhoneNumber" placeholder="핸드폰번호을 입력하세요"
-							class="ed" required> <span class="cmt">- 공백없이 숫자만 입력 가능</span></td>
+							class="ed" required> <span class="cmt">* 공백없이 숫자만 입력 가능</span></td>
 					</tr>
 					<tr>
 						<td class="tle">아이디</td>
@@ -60,6 +60,7 @@
 						<td class="tle">비밀번호</td>
 						<td class="cont"><input class=ed type=password name="memberPassword" id="password"
 							size=20 maxlength="20" required placeholder="비밀번호를 입력하세요">
+							<span class="cmt">* 영어, 숫자, 특수문자를 포함한 8글자 이상</span>
 							<span class="check-msg" id="check-pw-msg"></span>
 							</td>
 					</tr>

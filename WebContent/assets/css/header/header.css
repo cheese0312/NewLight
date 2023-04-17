@@ -162,6 +162,11 @@ header{
   background-color: ivory
 }
 
+.dropbtn3 > a {
+	color: black;
+	text-decoration: none;
+}
+
 .btn-box {
 	width: 15%;
     display: block;
