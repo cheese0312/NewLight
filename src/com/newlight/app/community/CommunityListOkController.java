@@ -19,8 +19,10 @@ public class CommunityListOkController implements Execute {
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		System.out.println("List controller 들어왔음돠.");
 		CommunityDAO communityDAO = new CommunityDAO();
+		//System.out.println(communityDAO);
 		
 		String temp = req.getParameter("page");
+		//System.out.println(temp);
 		
 		int page = temp==null?1:Integer.valueOf(temp);
 		
@@ -51,7 +53,7 @@ public class CommunityListOkController implements Execute {
 		 
 		List<CommunityVO> communityList = communityDAO.selectAll(pageMap);
 		
-		System.out.println(communityList.get(0).getMemberNickName());
+		//System.out.println(communityList.get(0).getMemberNickName());
 		
 		req.setAttribute("communityList", communityList);
 		req.setAttribute("page", page);

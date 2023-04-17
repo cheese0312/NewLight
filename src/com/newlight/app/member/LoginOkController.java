@@ -39,10 +39,12 @@ public class LoginOkController implements Execute {
 		if (memberNumber == -1) {
 			path = "/member/login.me?result=false";
 		} else {
-			path = "/main/mainNewlightOk.mi";
+			path = "/main/mainpageListOk.mi";
 			session.setAttribute("memberNumber", memberNumber);
 			System.out.println(path);
 		}
+		
+		session.setAttribute("memberId", memberId);
 		
 		resp.sendRedirect(path);
 

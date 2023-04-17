@@ -26,7 +26,7 @@ public class CreationWriteOkController implements Execute {
 			path ="/member/login.me";
 		} else {
 			path = "/app/main/upload.jsp";
-			req.setAttribute("memberNickname", memberDAO.getMemberNickname(memberNumber));
+			req.setAttribute("memberNickname", memberDAO.getMemberNickName(memberNumber));
 		}
 		
 		req.getRequestDispatcher(path).forward(req, resp);

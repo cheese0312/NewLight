@@ -18,11 +18,11 @@
 <body>
 	<!-- 헤더 -->
     <%@include file ="/app/header2.jsp" %>
-	<br />
-	<br />
+
 	<form
 		action="${pageContext.request.contextPath}/community/communityListOk.cm" method="post">
 		<section>
+		
 			<div class="big-box">
 				<div class="menu">
 					<h1>작성자</h1>
@@ -117,13 +117,11 @@
 				</div>
 		
 	</form>
-	<footer> 
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-	    <br>
-		<hr>
-	</footer>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+<%@include file ="/app/footer.jsp" %>
 </body>
 </html>

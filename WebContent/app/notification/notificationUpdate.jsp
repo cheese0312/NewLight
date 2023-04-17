@@ -18,25 +18,28 @@
 <body>
 
      <%@include file ="/app/header3.jsp" %>
-    <form action="${pageContext.request.contextPath}/community/communityWriteOk.cm" method="post" enctype="multipart/form-data">
+    <form action="${pageContext.request.contextPath}/notification/notificationUpdateOk.nc" method="post" >
+    
+    <input type="hidden" name="notificationNumber" value="${notification.getNotificationNumber()}">
+    
     <section>
         <div class="gd">
         <h1>글쓰기</h1>
 
-        <div class="writer-sub">
+      <%--   <div class="writer-sub">
             
             <div class="writer2">
             <c:out value="${memberNickName}"/>
             </div>
             <div class="author">님</div>
-        </div>
+        </div> --%>
     </div>
         <div class="big-box">
             
             
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
-              <input type="text" class="title" name="communityTitle">
+              <input type="text" class="title" name="notificationTitle" value="${notification.getNotificationTitle()}" required />
               <br>
               <!-- <div class="writer-sub">
                <div class="line"></div>
@@ -45,12 +48,12 @@
             </div> -->
               <br>
               <div class="word1"> <p>내용</p></div>
-               <!-- <input type="text" class="word" name="communityContent"> --> 
-              <textarea  class="word" name="communityContent"></textarea> 
+             <!--  <input type="text" class="word" name="communityContent"> -->
+              <textarea type="text" class="word" name="notificationContent"><c:out value="${notification.getNotificationContent()}"/></textarea>
             </div>
               <br>
               <br>
-                <div class="form-group">
+  <!--               <div class="form-group">
                     <label for="file" class="file">파일 첨부</label>
                     <div class="image-upload-wrap">
            <input type="file" id="file" name="communityFile" accept=".jpg, .jpeg, .png" multiple/>
@@ -78,10 +81,10 @@
                 <ul class="file-list">
                    
                 </ul>
-             </div>
+             </div> 
           
           
-        </div>
+        </div>-->
                   <div class="button">
                   <button>작성완료</button>
                   <button type="button" class="cancel-btn">취소</button></div> 
@@ -94,6 +97,6 @@
     </form>
        <%@include file ="/app/footer.jsp" %>
        <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
-       <script src="${pageContext.request.contextPath}/assets/js/community/communityWrite.js"></script>
+       <script src="${pageContext.request.contextPath}/assets/js/notification/notificationWrite.js"></script> 
 </body>
 </html>

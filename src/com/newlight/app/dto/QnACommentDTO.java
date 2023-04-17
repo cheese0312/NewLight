@@ -9,7 +9,7 @@ package com.newlight.app.dto;
 //constraint fk_qna_comments foreign key(qna_number)
 //references qna(qna_number)
 
-=======
+
 
 //comment_number int unsigned auto_increment primary key,
 //comment_content varchar(500),
