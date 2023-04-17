@@ -7,6 +7,7 @@ public class NotificationDTO {
    private String notificationTitle;
    private String notificationContent;
    private String notificationWriteDay;
+   private int memberNumber;
 
    public NotificationDTO() {
 	// TODO Auto-generated constructor stub
@@ -24,8 +25,8 @@ public String getNotificationTitle() {
 	return notificationTitle;
 }
 
-public void setNotificationTitle(String notificationTitle) {
-	this.notificationTitle = notificationTitle;
+public void setNotificationTitle(String string) {
+	this.notificationTitle = string;
 }
 
 public String getNotificationContent() {
@@ -44,10 +45,22 @@ public void setNotificationWriteDay(String notificationWriteDay) {
 	this.notificationWriteDay = notificationWriteDay;
 }
 
+
+public int getMemberNumber() {
+	return memberNumber;
+}
+
+public void setMemberNumber(int memberNumber) {
+	this.memberNumber = memberNumber;
+}
+
 @Override
 public String toString() {
 	return "NotificationDTO [notificationNumber=" + notificationNumber + ", notificationTitle=" + notificationTitle
-			+ ", notificationContent=" + notificationContent + ", notificationWriteDay=" + notificationWriteDay + "]";
+			+ ", notificationContent=" + notificationContent + ", notificationWriteDay=" + notificationWriteDay
+			+ ", memberNumber=" + memberNumber + "]";
 }
+
+
    
 }

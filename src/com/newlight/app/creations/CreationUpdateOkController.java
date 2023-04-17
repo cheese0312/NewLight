@@ -96,7 +96,7 @@ public class CreationUpdateOkController implements Execute {
 						temp.delete();
 					}
 				}
-				creationsFileDAO.delete(creationNumber);
+				creationsFileDAO.deleteMember(creationNumber);
 			}
 		}
 		

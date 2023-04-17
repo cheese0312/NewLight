@@ -31,10 +31,10 @@ public class CommunityWriteOkController implements Execute {
       int  communityNumber = 0;
       
       System.out.println("ok컨트롤러 들어왔다!!!!");
-      System.out.println(req.getParameter("boardTitle"));
+      System.out.println(req.getParameter("communityTitle"));
       
       String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
-      int fileSize = 1024 * 1024 * 5; //5mb
+      int fileSize = 1024 * 1024 * 20; //5mb
       
       System.out.println(uploadPath);
       

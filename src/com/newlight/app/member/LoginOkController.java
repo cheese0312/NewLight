@@ -41,7 +41,8 @@ public class LoginOkController implements Execute {
 
 		if (memberNumber == -1) {
 			path = "/member/login.me?result=false";
-		} else if(memberStatus == "N") {
+		}
+		else if(memberStatus == "N") {
 			path = "/member/login.me?result2=false";
 		} else if(memberStatus == null) {
 			path = "/member/login.me?result=false";
@@ -52,8 +53,6 @@ public class LoginOkController implements Execute {
 			System.out.println(path);
 		}
 		
-		System.out.println(memberStatus);
-
 		session.setAttribute("memberId", memberId);
 		
 		resp.sendRedirect(path);

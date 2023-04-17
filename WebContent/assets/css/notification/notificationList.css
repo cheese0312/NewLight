@@ -23,10 +23,10 @@
 section{
     border: 1px solid black;
     width: 70%;
-    height: 700px;
+    
     margin: 300px;
     margin-top: 10px;
-   background-color: ivory;
+  
 }
 
 
@@ -38,9 +38,15 @@ section>.largetitle{
 }
 
 section>.box{
-    border-bottom: 3px solid purple;
+    border-bottom: 4px solid #6c9cc2;
     width: 80%;
     margin: -40px 110px;
+}
+
+section>.box1{
+    border-bottom: 3px solid purple;
+    width: 80%;
+    margin: 3px 110px;
 }
 
 section>.grap>.first{
@@ -54,22 +60,25 @@ section>.grap>.first{
 }
 
 .first>h2{
-    margin: 5px 15px;
+    margin: 5px 30px;
    margin-top: 1px;
+   font-size : 17px;
+   width : 80px;
 
 }
 
 .first>h1{
     margin:0 400px;
     margin-top: 1px;
-    margin-left: 80px;
+    margin-left: 50px;
+     font-size :17px;
 }
 
 section>.grap>.other{
     border-bottom: 1px solid gray;
-    height: 25px;
+    height: 50px;
     width: 80%;
-    margin: 0 110px;
+    margin: 10px 110px;
     display: flex;
     font-size: 11px;
     justify-content: space-between;
@@ -80,12 +89,16 @@ section>.grap>.other{
    margin-top: -7px;
    width: 50%;
   margin-left: 20px;
+  display: flex;
+    align-items: center;
 }
 
 .other>h4{
     margin:0 10px;
     margin-top: -5px;
-    
+      display: flex;
+    align-items: center;
+    font-size: 13px;
 }
 
 
@@ -107,6 +120,53 @@ section>.grap>.other{
   border-color: black;
   background-color: ivory;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-right : 80px;
+  margin-bottom : 30px;
+}
+
+.pagination > ul {
+  display: flex;
+  list-style: none;
+  /* background-color: rgb(238, 231, 231); */
+}
+
+.pagination a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #6c9cc2;
+  border-color: #6c9cc2 ;
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+.grap>.other2{
+	font-weight : bold;
+	margin: 300px 0;
+	font-size : 20px;
+}
+
+
+
 
 footer{
     height: 200px;

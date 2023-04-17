@@ -64,7 +64,7 @@ public class CreationsVO {
 	public void setCreationName(String creationName) {
 		this.creationName = creationName;
 	}
-
+	
 	public int getMemberNumber() {
 		return memberNumber;
 	}
@@ -149,11 +149,12 @@ public class CreationsVO {
 	public String toString() {
 		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
-				+ creationName + ", memberNumber=" + memberNumber
-				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
-				+ creationSumnail + ", files=" + files + ", commentNumber=" + commentNumber + ", commentContent="
-				+ commentContent + ", commentWritedate=" + commentWritedate + ", likeCount=" + likeCount
-				+ ", commentCount=" + commentCount + "]";
+				+ creationName + ", commentWritedate=" + commentWritedate + ", memberNumber=" + memberNumber
+                + ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
+				+ creationSumnail + ", commentNumber=" + commentNumber + ", commentContent=" + commentContent
+				+ ", likeCount=" + likeCount + ", commentCount=" + commentCount + ", files=" + files + "]";
 	}
+
+
 
 }

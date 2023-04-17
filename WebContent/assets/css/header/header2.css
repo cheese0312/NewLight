@@ -4,37 +4,33 @@
 }
 
 body > hr {
-  width: 100%;
+  width: 80%;
   margin-top: 20px;
   margin-bottom: 30px;
- 
-  
 }
 
 main {
-  width: 95%;
+  width: 100%;
   display: block;
-  /* padding-left: 150px; */
-  /* display: flex;
-  justify-content: center; */
 }
 
 header{
   width: 100%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
 }
 
 .header-box {
   display: flex;
   justify-content: center;
   height: 150px;
-  width: 1500px;
-  margin: 0 250px;
-
+  width: 100%;
 }
 
 .main-header-box{
@@ -51,29 +47,33 @@ header{
 .logo > img {
   width: 230px;
   height: 100px;
+  margin-left : -300px;
 }
 
+/* 네비 설정 */
 .nav{
   align-items: center;
   text-align: center;
   width: 100%;
   height: 40%;
   padding-top: 40px;
+  margin-left : -30px;
 }
-/* position 주기 */
+
+/* 드롭 박스 설정 */
 .drop-box {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  margin : 0 -30px;
 }
 
+/* 드롭 버튼 설정 */
 .dropbtn1 ,
 .dropbtn2 ,
-.dropbtn3 ,
-.dropbtn4 {
+.dropbtn3{
   color: black;
-  /* padding: 16px; */
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -81,16 +81,45 @@ header{
   width: 150px;
 }
 
+/* .dropbtn3 {
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  list-style: none;
+  width: 140px;
+} */
 
+.dropbtn4 {
+  color: black;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  list-style: none;
+  width: 100px;
+}
+
+.dropbtn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropbtn1 > img {
+  width: 25px;
+  height: 25px;
+}
+
+/* 드롭 다운 설정 */
 .dropdown1,
 .dropdown2,
 .dropdown3,
 .dropdown4 {
   display: inline-block;
-  /* height: 150px; */
   position: relative;
 }
 
+/* 드롭 서브 메뉴 설정 */
 .dropdown-content1 ,
 .dropdown-content2 ,
 .dropdown-content3 ,
@@ -102,6 +131,7 @@ header{
   position: absolute;
 }
 
+/* 드롭 서브 메뉴 링크 설정 */
 .dropdown-content1 > a,
 .dropdown-content2 > a,
 .dropdown-content3 > a,
@@ -112,6 +142,7 @@ header{
   display: block;
 }
 
+/* 드롭 서브 메뉴 마우스 이벤트 */
 .dropdown-content1 > a:hover,
 .dropdown-content2 > a:hover,
 .dropdown-content3 > a:hover,
@@ -126,6 +157,7 @@ header{
   display: block;
 }
 
+/* 드롭 다운 버튼 마우스 이벤트 */
 .dropdown1:hover .dropbtn1,
 .dropdown2:hover .dropbtn2,
 .dropdown3:hover .dropbtn3,
@@ -133,49 +165,49 @@ header{
   background-color: ivory
 }
 
-/**.btn-box {
-  
-  justify-content: center;
-  align-items: center;
-  margin: 10px -80px;
-} **/
-
-.header-box>.btn-box{
-  display: flex;
-  width: 400px;
-  padding : 2px;
+.btn-box {
+	width: 15%;
+    display: block;
+    text-align: center;
 }
 
-.btn1-box>.logout-btn{
-  margin-right: 6px;
-  width: 70px;
-  height: 25px;
+.login-box {
+  height: 10%;
+}
+
+.login-btn{
+  padding: 2px;
+  height: 20px;
   justify-content: center;
   align-items: center;
   background-color: rgb(198, 133, 238);
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
-  text-align: center;
-  font-weight: bold;
-  padding: 2px;
 }
 
-.btn1-box>.login-btn{
-  margin-right: 6px;
-  width: 70px;
-  height: 25px;
+.mypage-btn{
+  padding: 2px;
+  height: 20px;
   justify-content: center;
   align-items: center;
   background-color: rgb(198, 133, 238);
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
-  text-align: center;
-  font-weight: bold;
-  padding: 2px;
 }
 
+.logout-btn{
+  padding: 2px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(198, 133, 238);
+  color: black;
+  border-radius: 5px;
+  text-decoration-line: none;
+  font-weight: bold;
+}
 
 .btn1-box>.login2-btn{
   width: 50px;
@@ -196,8 +228,4 @@ header{
   color: gray;
   text-decoration-line: none;
   cursor: pointer;
-}
-
-.header-box>.logo{
-  margin: 0 20px;
 }

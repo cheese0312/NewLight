@@ -58,7 +58,7 @@
                 <li class="dropbtn4">•••</li>
               	<li class="dropdown-content4">
 								<!-- 해당 페이지 링크 걸어주기 --> <a
-								href="${pageContext.request.contextPath}/app/admin/announcement.jsp">공지사항</a>
+								href="${pageContext.request.contextPath}/notification/notificationListOk.nc">공지사항</a>
 								<a href="${pageContext.request.contextPath}/qna/QnAListOk.qn">문의</a>
 							</li>
                 </div>
