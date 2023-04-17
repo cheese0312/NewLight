@@ -34,7 +34,7 @@
 				<div class="small-box">
 
 					<c:choose>
-						<c:when test="${not empty communityList }">
+						<c:when test="${not empty communityList}">
 							<c:forEach var="community" items="${communityList}">
 								<div class="table">
 									<div class="name">
