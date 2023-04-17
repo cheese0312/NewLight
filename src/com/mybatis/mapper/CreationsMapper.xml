@@ -16,7 +16,6 @@
    </insert>
 
    <!-- 메인페이지 창작물 조회하기 -->
-   
 <!--    <select id="selectAll" resultType="CreationsVO">
       select creation_title, creation_read_count, category_code, category_name, m.member_nickname, m.member_pfp
    <select id="selectAll" resultType="CreationsVO">
@@ -29,7 +28,7 @@
       order by creation_number desc
       limit 0,9
    </select> -->
-   
+
    <!-- 카테고리 테마별 창작물 조회하기 -->
    <select id="selectMenu" resultType="CreationsVO"
       parameterType="map">
@@ -45,7 +44,7 @@
    <select id="select" parameterType="_int"
       resultType="CreationsVO">
       select creation_number, creation_title, creation_content,
-      category_code, category_name, m.member_number,
+      category_code, category_name, creation_writeday, m.member_number,
       m.member_id , m.member_nickname
       from `member` m join creations c
       on
@@ -67,7 +66,7 @@
    <!-- 창작물 보기 -->
    <select id="creationContent" parameterType="_int"
       resultType="CreationsVO">
-      select c.creation_number, c.creation_title , c.creation_content , c.creation_writedate ,
+      select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
       c.creation_read_count , m.member_nickname , m.member_number
       from creations c join `member` m
       on c.member_number = m.member_number
@@ -106,6 +105,7 @@
       where creation_number = #{creationNumber}
    </update>
    
+<<<<<<< HEAD
    <!-- 2차 창작물 배경화면 -->
       <select id="category2background" parameterType="CreationsVO" resultType="CreationsVO">
          select creation_title , member_nickname 
@@ -114,6 +114,8 @@
          where category_code = '201' and category_name = '배경화면'
       </select>
       
+=======
+>>>>>>> a17c7578e2b2a593373bb3e5978cce90201091af
       <!-- 회원탈퇴 시 창작물 삭제 -->
       <delete id="deleteMember" parameterType="_int">
          delete from creations

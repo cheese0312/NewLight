@@ -120,9 +120,13 @@ main {
   font-size: 15px;
 }
 
-.creations-like > img{
+.creations-like  img{
   width: 15px;
   height: 15px;
+}
+
+.creations-like a {
+	text-decoration: none;
 }
 
 .creations-comment {
@@ -235,5 +239,9 @@ main {
 
 .comment-img-box {
   width: 8%;
+}
+
+.none {
+	display : none;
 }
 

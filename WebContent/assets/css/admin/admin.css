@@ -115,3 +115,7 @@ hr {
   border: 0px solid;
   border-radius: 5px;
 }
+
+.none {
+	display : none;
+}

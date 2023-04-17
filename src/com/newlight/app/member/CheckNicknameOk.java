@@ -23,7 +23,7 @@ public class CheckNicknameOk implements Execute{
 		
 		System.out.println(result);
 		
-		out.print(result? "사용 가능한 닉네임입니다." : "중복된 닉네임입니다.");
+		out.print(result? "* 사용 가능한 닉네임입니다." : "* 중복된 닉네임입니다.");
 		out.close();
 	}
 

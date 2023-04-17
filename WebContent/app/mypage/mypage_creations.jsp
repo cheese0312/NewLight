@@ -13,24 +13,15 @@
 	<%@include file="/app/header.jsp"%>
 	<form action="${pageContext.request.contextPath}/mypage/creationsOk.mp"
 		method="post">
+		
 		<main>
 			<div class="main">
 				<div class="main-container">
 					<div class="mypage-main">
-						<c:choose>
-							<c:when test="${not empty mypage}">
 								<div class="mypage-img">
 									<img
-										src="${pageContext.request.contextPath}/upload/${member.getMemberPfpFile()}">
+										src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
 								</div>
-							</c:when>
-							<c:otherwise>
-								<div class="mypage-img">
-									<img
-										src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
-								</div>
-							</c:otherwise>
-						</c:choose>
 						<div class="mypage-box">
 							<div class="mypage-name">${memberNickname}</div>
 							<div class="myapge-comment">${memberComment}</div>
@@ -58,9 +49,10 @@
 						</div>
 						<div class="mypage-main2">
 							<section>
+							<c:if test=""></c:if>
 								<c:choose>
 									<c:when test="${not empty creationList}">
-										<c:forEach var="creations" items="${creationList}">
+										<c:forEach var="creations" items="${mypageLikeCount}">
 											<div class="img">
 												<div class="creations-img">
 													<img src="${pageContext.request.contextPath}/upload/${creations.getCreationSumnail()}">
@@ -69,8 +61,8 @@
 													</div>
 													<div class="sub-author">
 														<img
-															src="../img/—Pngtree—vector business men icon_4186858.png">
-														<a href="#"> <c:out value="${memberNickname }"/> </a>
+															src="${pageContext.request.contextPath}/userProfile/${creations.getMemberPfp()}">
+														<a href="#"> <c:out value="${creations.getMemberNickname()}"/> </a>
 													</div>
 													<div class="creations-sub">
 													<div class="creation-like">

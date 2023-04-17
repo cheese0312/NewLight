@@ -17,8 +17,10 @@
 
 			<!-- 로고 이미지 -->
 			<div class="logo">
-				<img
+				 <a href="${pageContext.request.contextPath}/main/mainpageListOk.mi">
+				 <img
 					src="${pageContext.request.contextPath}/assets/images/logo/logo2.png">
+					</a>
 			</div>
 			<!-- 헤더 메인 박스 -->
 			<div class="main-header-box">
@@ -89,6 +91,9 @@
 								<!-- 해당 페이지 링크 걸어주기 --> 
 								<a href="${pageContext.request.contextPath}/notification/notificationListOk.nc">공지사항</a>
 								<a href="${pageContext.request.contextPath}/qna/QnAListOk.qn">문의</a>
+								<c:if test="${sessionScope.memberId == 'admin'}">
+								<a href="${pageContext.request.contextPath}/admin/adminOk.ad">회원관리</a>
+								</c:if>
 							</li>
 						</div>
 					</div>

@@ -20,6 +20,38 @@
 	delete from likes
 	where creation_number=#{creationNumber}
 	</delete>
+	
+	<!-- 좋아요 생성 -->
+	<insert id="insert" parameterType="LikesDTO">
+		insert into likes
+		(creation_number, member_number)
+		values(#{creationNumber}, #{memberNumber})
+	</insert>
+	
+	<!-- 좋아요 삭제 -->
+	<delete id="likedelete" parameterType="LikesDTO">
+		delete from likes
+		where creation_number=#{creationNumber} and member_number=#{memberNumber}
+	</delete>
+	
+	<!-- 좋아요 클릭 -->
+	<select id="getLikeCount" parameterType="LikesDTO" resultType="_int">
+	select count(creation_number) 
+	from likes l
+	where creation_number = #{creationNumber} and member_number =#{memberNumber}
+	</select>
+	
+	<!-- 좋아요 누른 게시물 리스트 -->
+	<select id="getLikeList" parameterType="CreationsVO" resultType="CreationsVO">
+		select j.creation_number , j.member_nickname , j.creation_title , j.creation_sumnail
+		from (
+		select m.member_nickname , m.member_pfp , c.creation_number ,c.creation_title , c.creation_sumnail 
+		from `member` m join creations c
+		on m.member_number = c.member_number
+		) j left outer join likes l 
+		on j.creation_number = l.creation_number 
+		where l.member_number = #{memberNumber}
+	</select>
 
 	<!-- 회원탈퇴 시 좋아요 삭제 -->
 	<delete id="deleteMember" parameterType="_int">

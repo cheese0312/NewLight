@@ -45,6 +45,8 @@
 		
 		<typeAlias type="com.newlight.app.dto.MainVO" alias="MainVO"/>
 		
+		<typeAlias type="com.newlight.app.dto.AdminVO" alias="AdminVO"/>
+		
 	</typeAliases>
 
 	<environments default="mysql">
@@ -90,6 +92,9 @@
 		<mapper resource="com/mybatis/mapper/MypageMapper.xml"/>
 		
 		<mapper resource="com/mybatis/mapper/MainMapper.xml"/>
+		
+		<!-- admin -->
+		<mapper resource="com/mybatis/mapper/AdminMapper.xml"/>
 	</mappers>
 	
 </configuration>

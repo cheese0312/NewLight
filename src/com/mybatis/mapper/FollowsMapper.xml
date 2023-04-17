@@ -6,14 +6,24 @@
 
 <mapper namespace="follows">
 
-	<delete id="delete" parameterType="_int">
+	<delete id="delete" parameterType="FollowsDTO">
 		delete from follows
-		where follower_number = #{memberNumber} or followee_number = #{memberNumber}
+		where follower_number = #{followerNumber} and followee_number = #{followeeNumber}
 	</delete>
+	
+	<insert id="insert" parameterType="FollowsDTO">
+		insert into follows
+		(follower_number, followee_number)
+		values(#{followerNumber}, #{followeeNumber})
+	</insert>
 
 	<delete id="deleteMember" parameterType="_int">
 		delete from follows
 		where follower_number = #{memberNumber} or followee_number = #{memberNumber}
 	</delete>
 	
+	<select id="getFollowCount" parameterType="FollowsDTO" resultType="_int">
+		select count(follower_number) from follows f 
+		where follower_number  = #{followerNumber} and followee_number = #{followeeNumber}
+	</select>
 </mapper>
