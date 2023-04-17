@@ -96,7 +96,6 @@ $("#file").on('change' , function(){
 
 
 
->>>>>>> newlight/main
 
 
 

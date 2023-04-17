@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="creationsComment">
+<mapper namespace="creationComment">
 	<!-- 댓글 생성 -->
 	<insert id="commentInsert" parameterType="CreationsVO">
 		insert into creations_comment
@@ -26,6 +26,12 @@
 	</delete>
 	
 	<!-- 회원탈퇴 시 창작물 댓글 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from creations_comment
+		where member_number = #{memberNumber}
+	</delete>
+	
+		<!-- 회원탈퇴 시 창작물 댓글 삭제 -->
 	<delete id="deleteMember" parameterType="_int">
 		delete from creations_comment
 		where member_number = #{memberNumber}

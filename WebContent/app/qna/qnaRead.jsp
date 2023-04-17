@@ -22,9 +22,8 @@
 		<div class="container">
 			<div class="view-wrap">
 				<div class="view-title">
-					<h3>게시글 제목</h3>
-					<br>
-					<c:out value="${qna.getQnaTitle()}" />
+					<h3><c:out value="${qna.getQnaTitle()}" /></h3>
+					<hr>
 					<br> 
 					<br>
 				</div>
@@ -38,6 +37,7 @@
 								<c:out value="${qna.getMemberNickname()}" />
 							</div>
 						</div>
+						
 						<div class="title-wrap">
 							<span class="date">작성일</span>
 							<!-- 임시 작성일 -->
