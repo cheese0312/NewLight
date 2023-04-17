@@ -30,4 +30,8 @@ public class CreationsFileDAO {
 	public List<CreationsFileDTO> selectDelete(int memberNumber){
 		return sqlSession.selectList("creationsfile.selectDelete", memberNumber);
 	}
+	
+	public void delete(int creationNumber) {
+		sqlSession.delete("creationsfile.delete" , creationNumber);
+	}
 }

@@ -27,7 +27,7 @@ public class CheckIdOkController implements Execute{
 		
 		PrintWriter out = resp.getWriter();
 				
-		out.print(result?"사용 가능한 아이디입니다." : "중복된 아이디입니다.");
+		out.print(result?"* 사용 가능한 아이디입니다." : "* 중복된 아이디입니다.");
 		out.close();
 	}
 }

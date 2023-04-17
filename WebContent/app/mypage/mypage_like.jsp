@@ -16,20 +16,10 @@
 		<div class="main">
 			<div class="main-container">
 				<div class="mypage-main">
-					<c:choose>
-					<c:when test="${not empty memberPfp}">
-						<div class="mypage-img">
-						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
-							alt="">
-					</div>
-					</c:when>
-					<c:otherwise>
-						<div class="mypage-img">
-						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
-							alt="">
-					</div>
-					</c:otherwise>
-				</c:choose>
+					<div class="mypage-img">
+									<img
+										src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
+								</div>
 					<div class="mypage-box">
       					<div class="mypage-name">${memberNickname }</div>
       					<div class="myapge-comment">${memberComment}</div>
@@ -54,18 +44,18 @@
 						</div>
 
 					</div>
-
+					<div class="mypage-main2">
+							<section>
 					<c:choose>
 						<c:when test="${not empty likeList}">
 							<c:forEach var="like" items="${likeList}">
 								<div class="creations-main">
-
 									<div class="img">
-										<div class="creaions-img">
-											<img src="../img/10_징검다리를_하나_둘.jpg">
+										<div class="creations-img">
+										
+											<img src="${pageContext.request.contextPath}/upload/${like.getCreationSumnail()}">
 											<div class="sub-title">
-												<a href="#"> <c:out
-														value="${like.getCreationsTitle() }" /></a>
+												<a href="#"> <c:out value="${like.getCreationTitle() }" /></a>
 											</div>
 											<div class="sub-author">
 												<img
@@ -73,9 +63,18 @@
 												<a href="#"> <c:out value="${like.getMemberNickname() }" />
 												</a>
 											</div>
-											<div class="creaions-sub">
-												<img src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png" class="likes">
-												<img src="${pageContext.request.contextPath}/assets/images/member/pngegg.png" class="comment">
+											<div class="creations-sub">
+												<div class="creations-like">
+														<img
+															src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+														<c:out value="${like.getLikeCount()}" />
+														</div>
+														<div class="creations-comment">
+														<c:out value="${like.getCommentCount()}" />
+														<img
+															src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+														
+													</div>
 											</div>
 										</div>
 									</div>
@@ -98,6 +97,8 @@
 						</c:otherwise>
 					</c:choose>
 				</section>
+			</div>
+			</section>
 			</div>
 		</div>
 	</main>

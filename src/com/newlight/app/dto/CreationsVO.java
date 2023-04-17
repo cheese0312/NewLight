@@ -65,14 +65,6 @@ public class CreationsVO {
 		this.creationName = creationName;
 	}
 
-	public String getCreationWriteday() {
-		return creationWriteday;
-	}
-
-	public void setCreationWriteday(String creationWriteday) {
-		this.creationWriteday = creationWriteday;
-	}
-
 	public int getMemberNumber() {
 		return memberNumber;
 	}
@@ -157,7 +149,7 @@ public class CreationsVO {
 	public String toString() {
 		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
-				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
+				+ creationName + ", memberNumber=" + memberNumber
 				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
 				+ creationSumnail + ", files=" + files + ", commentNumber=" + commentNumber + ", commentContent="
 				+ commentContent + ", commentWritedate=" + commentWritedate + ", likeCount=" + likeCount

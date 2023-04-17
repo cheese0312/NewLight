@@ -44,7 +44,7 @@ header{
   width: 100%;
 }
 
-.logo > img {
+.logo  img {
   width: 230px;
   height: 100px;
 }
@@ -160,6 +160,11 @@ header{
 .dropdown3:hover .dropbtn3,
 .dropdown4:hover .dropbtn4 {
   background-color: ivory
+}
+
+.dropbtn3 > a {
+	color: black;
+	text-decoration: none;
 }
 
 .btn-box {

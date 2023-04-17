@@ -100,8 +100,8 @@
 }
 
 .btn-upload {
-  width: 100px;
-  height: 30px;
+  width: 90px;
+  height: 25px;
   background-color: #f0f7fa;
   border: 0px solid gainsboro;
   border-radius: 5px;
@@ -109,6 +109,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  margin: 0 0 0 5px;
 }
 
 .btn-upload:hover {
@@ -116,7 +117,16 @@
   color : black;
 }
 
-.member-file {
- /*  display: none; */
-  /* visibility: hidden; */
+input[type='file']{
+  display: none;
+}
+
+#myPfp{
+  display: flex;
+}
+
+.check-msg , 
+.check-msg2 {
+	font-size : 8px;
+	color : red;
 }

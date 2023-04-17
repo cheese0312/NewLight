@@ -7,6 +7,10 @@ hr {
   color: rgb(217, 217, 217);
 }
 
+section {
+  width: 100%;
+}
+
 .main {
   display: flex;
   justify-content: space-between;
@@ -38,19 +42,6 @@ hr {
   height: 80px;
 }
 
-.img {
-  width: 300px;
-  height: 450px;
-  margin: 10px;
-  padding: 15px;
-}
-
-.likes,
-.comment {
-  width: 20px;
-  height: 20px;
-}
-
 .mypage-box {
   display: block;
   width: 70%;
@@ -69,10 +60,13 @@ hr {
   padding: 2px 5px;
 }
 
-.name > a {
-  text-decoration: none;
-  color: grey;
+
+.likes,
+.comment {
+  width: 20px;
+  height: 20px;
 }
+
 
 section {
   width: 100%;
@@ -84,6 +78,77 @@ section {
   text-align: left;
   padding-left: 20px;
 } 
+
+.name > a {
+  text-decoration: none;
+  color: grey;
+}
+
+.mypage-main2 > section {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.img {
+  width: 300px;
+  height: 450px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.creations-img {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.creations-img > img {
+  width: 300px;
+  height: 230px;
+  align-items: center;
+}
+
+.sub-author {
+  display: flex;
+  padding: 5px 5px;
+}
+
+.sub-author > img {
+  width: 50px;
+  height: 50px;
+}
+
+.sub-author > a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.sub-title {
+  padding: 20px 0 10px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub-title > a {
+  text-decoration: none;
+  color: black;
+}
+
+.creations-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.creation-like ,
+.creation-comment {
+	display: flex;
+    align-items: center;
+}
 
 .creations-like {
   padding: 0 10px;
@@ -103,26 +168,6 @@ section {
 .creations-comment > img{
   width: 22px;
   height: 22px;
-}
-
-.mypage-main2 > section {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.creations-img {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.creations-img > img {
-  width: 300px;
-  height: 230px;
-  align-items: center;
 }
 
 .creations-main {
@@ -146,33 +191,11 @@ section {
   padding: 10px 0;
 }
 
-.sub-author {
-  display: flex;
-  padding: 5px 5px;
-}
 
-.sub-author > img {
-  width: 50px;
-  height: 50px;
-}
 
-.sub-author > a {
-  padding: 5px;
-  text-decoration: none;
-  color: black;
-}
 
-.creations-sub {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
 
-.creation-like ,
-.creation-comment {
-	display: flex;
-    align-items: center;
-}
+
 
 .creation-like > img {
   width: 20px;
@@ -184,13 +207,3 @@ section {
   height: 20px;
 }
 
-.sub-title {
-  padding: 20px 0 10px 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.sub-title > a {
-  text-decoration: none;
-  color: black;
-}

@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.newlight.app.Execute;
+import com.newlight.app.dao.CreationsDAO;
+import com.newlight.app.dao.LikesDAO;
 import com.newlight.app.dao.MypageDAO;
+import com.newlight.app.dto.CreationsVO;
+import com.newlight.app.dto.LikesDTO;
 import com.newlight.app.dto.MemberDTO;
 import com.newlight.app.dto.MypageVO;
 
@@ -17,32 +21,40 @@ public class MypageLikeOkController implements Execute {
 
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		req.setCharacterEncoding("utf-8");
+		int memberNumber = (Integer)req.getSession().getAttribute("memberNumber");
 		
-		MemberDTO memberDTO = new MemberDTO();
+		req.setCharacterEncoding("utf-8");
+
 		MypageDAO mypageDAO = new MypageDAO();
 		MypageVO mypageVO = new MypageVO();
 		
-		HttpSession session = req.getSession();
+		CreationsVO creationsVO = new CreationsVO();
+		CreationsDAO creationsDAO = new CreationsDAO();
+		
+		LikesDAO likesDAO = new LikesDAO();
 		
 		mypageVO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
 		mypageVO.setMemberNickname(req.getParameter("memberNickname"));
-		mypageVO.setCreationTitle(req.getParameter("creationTitle"));
 		
-		System.out.println((Integer)req.getSession().getAttribute("memberNumber"));
-		System.out.println(req.getParameter("memberNickname"));
-		System.out.println(req.getParameter("creationTitle"));
+		mypageVO.setCreationTitle(req.getParameter("creationTitle"));
+		mypageVO.setCreationSumnail(req.getParameter("creationSumnail"));
+		
 		
 		mypageVO = mypageDAO.mypageinfo((Integer)req.getSession().getAttribute("memberNumber"));
-
+		
+		req.setAttribute("memberPfp", mypageVO.getMemberPfp());
 		req.setAttribute("memberNickname", mypageVO.getMemberNickname());
 		req.setAttribute("memberComment", mypageVO.getMemberComment());
 		
+//		--------------------------------------------------------------------------------------------------------------------------
+		
+		creationsVO.setMemberNumber(memberNumber);
+		
+		mypageVO.setMemberNumber(memberNumber);
+
 		List<MypageVO> likeList = mypageDAO.LikeList(mypageVO);
 		req.setAttribute("likeList", likeList);
-		System.out.println(likeList);
-		
+
 		req.getRequestDispatcher("/app/mypage/mypage_like.jsp").forward(req, resp);
 
 	}
