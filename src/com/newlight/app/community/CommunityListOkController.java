@@ -51,7 +51,6 @@ public class CommunityListOkController implements Execute {
 		 
 		List<CommunityVO> communityList = communityDAO.selectAll(pageMap);
 		
-//		System.out.println(communityList.get(0).getMemberNickName());
 		
 		req.setAttribute("communityList", communityList);
 		req.setAttribute("page", page);

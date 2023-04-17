@@ -15,6 +15,7 @@ public class MypageVO {
 	List<CreationsFileDTO> files;
 	private String likeCount;
 	private String commentCount;
+	private String memberPfp;
 	
 	public MypageVO() {
 		// TODO Auto-generated constructor stub
@@ -116,13 +117,21 @@ public class MypageVO {
 		this.commentCount = commentCount;
 	}
 
+	public String getMemberPfp() {
+		return memberPfp;
+	}
+
+	public void setMemberPfp(String memberPfp) {
+		this.memberPfp = memberPfp;
+	}
+
 	@Override
 	public String toString() {
 		return "MypageVO [memberNumber=" + memberNumber + ", followerNumber=" + followerNumber + ", followeeNumber="
 				+ followeeNumber + ", creationNumber=" + creationNumber + ", memberNickname=" + memberNickname
 				+ ", memberComment=" + memberComment + ", creationTitle=" + creationTitle + ", creationContent="
 				+ creationContent + ", creationSumnail=" + creationSumnail + ", files=" + files + ", likeCount="
-				+ likeCount + ", commentCount=" + commentCount + "]";
+				+ likeCount + ", commentCount=" + commentCount + ", memberPfp=" + memberPfp + "]";
 	}
 	
 }

@@ -18,6 +18,8 @@
 		<section>
 			<div class="info-container">
 				<div class="info-menu">
+					<form
+						action="${pageContext.request.contextPath}/mypage/mypageEdit.me" method="post">
 						<fieldset>
 							<div class="info-people">
 								<img

@@ -134,7 +134,7 @@
 	<url-pattern>*.cc1</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>CreationsFile</servlet-name>
 		<servlet-class>com.newlight.app.creationsFile.CreationFileFrontController</servlet-class>
 	</servlet>
@@ -142,6 +142,16 @@
 	<servlet-mapping>
 	<servlet-name>CreationsFile</servlet-name>
 	<url-pattern>*.ccmf</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>com.newlight.app.admin.AdminFrontController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>*.ad</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

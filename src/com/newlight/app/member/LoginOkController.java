@@ -22,6 +22,7 @@ public class LoginOkController implements Execute {
 		String memberPassword = req.getParameter("memberPassword");
 
 		int memberNumber = 0;
+		String memberStatus = "";
 
 		String path = null;
 		String remember = req.getParameter("remember");
@@ -33,16 +34,27 @@ public class LoginOkController implements Execute {
 
 		memberNumber = memberDAO.login(memberDTO);
 		System.out.println(memberNumber);
+		
+		memberStatus = memberDAO.login2(memberDTO);
 
 		HttpSession session = req.getSession();
 
 		if (memberNumber == -1) {
 			path = "/member/login.me?result=false";
-		} else {
+		} else if(memberStatus == "N") {
+			path = "/member/login.me?result2=false";
+		} else if(memberStatus == null) {
+			path = "/member/login.me?result=false";
+		}
+		else {
 			path = "/main/mainpageListOk.mi";
 			session.setAttribute("memberNumber", memberNumber);
 			System.out.println(path);
 		}
+		
+		System.out.println(memberStatus);
+
+		session.setAttribute("memberId", memberId);
 		
 		resp.sendRedirect(path);
 

@@ -35,4 +35,9 @@ public class CreationsFileDAO {
 	public List<CreationsFileDTO> aniList(int creationNumber) {
 		return sqlSession.selectList("creationsfile.aniList", creationNumber);
 	}
+
+	public void delete(int creationNumber) {
+		sqlSession.delete("creationsfile.delete" , creationNumber);
+	}
+	
 }

@@ -35,9 +35,18 @@
 							<span> <c:out value="${creation.getMemberNickname()}" />
 							</span>
 						</div>
-						<div class="follow-btn">
-							<a href="#">팔로우 ✔</a>
-						</div>
+						<c:if
+							test="${sessionScope.memberNumber !=  creation.getMemberNumber()}">
+							<div class="follow-btn"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ✔</a>
+							</div>
+							<div class="follow-btn none"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ➕</a>
+							</div>
+						</c:if>
+
 					</div>
 					<div class="creations-main">
 						<div class="creations-main-content">
@@ -65,6 +74,8 @@
 								</div>
 							</c:forEach>
 						</div>
+
+						</div>
 						<div class="creations-comment-content">
 							<span> <c:out value="${creation.getCreationContent()}" />
 							</span>
@@ -72,15 +83,40 @@
 					</div>
 					<div class="click-main">
 						<div class="click">
-							<div class="creations-like">
-								<img
-									src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
-								<c:out value="${likeCount }" />
+							<div class="creations-like"
+								data-likeNumber="${creation.getCreationNumber()}">
+								<c:if
+									test="${sessionScope.memberNumber !=  creation.getCreationNumber()}">
+									
+									<c:choose>
+										<c:when test="${isLike == 0}">
+											<a href="#" class="likeplus"> <img
+												src="${pageContext.request.contextPath}/assets/images/member/IMG_1993.png">
+											</a>
+										</c:when>
+										<c:otherwise>
+											<a href="#" class="likeplus"> <img
+												src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+											</a>
+										</c:otherwise>
+									</c:choose>
+									
+								</c:if>
+								<span class="likeCount"> <c:out value="${likeCount }" />
+								</span>
+
 							</div>
+							<%-- <div class="creations-like none" data-likeNumber="${creation.getCreationNumber()}">
+            <a href="#" class="likeplus">
+             <img src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+            </a>
+            <c:out value="${likeCount }"/>
+          </div> --%>
+
 							<div class="creations-comment">
 								<img
 									src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
-								<c:out value="${creationComment }" />
+								<span><c:out value="${creationComment }" /></span>
 							</div>
 						</div>
 

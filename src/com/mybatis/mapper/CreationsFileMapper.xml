@@ -30,10 +30,16 @@
 		where member_number = #{memerNumber}
 	</select>
 	
-		<!-- 만화 리스트 뿌려주기 -->
+	<!-- 만화 리스트 뿌려주기 -->
 	<select id="aniList" parameterType="_int" resultType="CreationsFileDTO">
 		select file_system_name from creations_file cf 
 		where creation_number = #{creationNumber}
 	</select>
+	
+	<!-- 파일 삭제 -->
+	<delete id="delete" parameterType="CreationsFileDTO">
+		delete from creations_file
+		where creation_number = #{creationNumber}
+	</delete>
 
 </mapper>
