@@ -15,53 +15,53 @@ import com.newlight.app.dto.CommunityVO;
 
 public class CommunityListOkController implements Execute {
 
-	@Override
-	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		System.out.println("List controller 들어왔음돠.");
-		CommunityDAO communityDAO = new CommunityDAO();
-		
-		String temp = req.getParameter("page");
-		
-		int page = temp==null?1:Integer.valueOf(temp);
-		
-		int rowCount = 5;
-		int pageCount = 5;
-		
-		int startRow = (page-1)*rowCount;
-		
-		Map<String, Integer> pageMap = new HashMap<>();
-		pageMap.put("startRow", startRow);
-		pageMap.put("rowCount", rowCount);
-		
-		int total = communityDAO.getTotal();
-		
-		int endPage = (int)(Math.ceil(page/(double)pageCount)*pageCount);
-		
-		int startPage = endPage - (pageCount-1);
-		 
-		int realEndPage = (int)Math.ceil(total/(double)rowCount);
-		
-		boolean prev = startPage > 1;
-		
-		endPage = endPage > realEndPage ? realEndPage : endPage;
-		
-		boolean next = endPage != realEndPage;
-		
-	
-		 
-		List<CommunityVO> communityList = communityDAO.selectAll(pageMap);
-		
-		System.out.println(communityList.get(0).getMemberNickName());
-		
-		req.setAttribute("communityList", communityList);
-		req.setAttribute("page", page);
-		req.setAttribute("startPage", startPage);
-		req.setAttribute("endPage", endPage);
-		req.setAttribute("prev", prev);
-		req.setAttribute("next", next);
-		
-		req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
+   @Override
+   public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+      System.out.println("List controller 들어왔음돠.");
+      CommunityDAO communityDAO = new CommunityDAO();
+      
+      String temp = req.getParameter("page");
+      
+      int page = temp==null?1:Integer.valueOf(temp);
+      
+      int rowCount = 5;
+      int pageCount = 5;
+      
+      int startRow = (page-1)*rowCount;
+      
+      Map<String, Integer> pageMap = new HashMap<>();
+      pageMap.put("startRow", startRow);
+      pageMap.put("rowCount", rowCount);
+      
+      int total = communityDAO.getTotal();
+      
+      int endPage = (int)(Math.ceil(page/(double)pageCount)*pageCount);
+      
+      int startPage = endPage - (pageCount-1);
+       
+      int realEndPage = (int)Math.ceil(total/(double)rowCount);
+      
+      boolean prev = startPage > 1;
+      
+      endPage = endPage > realEndPage ? realEndPage : endPage;
+      
+      boolean next = endPage != realEndPage;
+      
+   
+       
+      List<CommunityVO> communityList = communityDAO.selectAll(pageMap);
+      
+//      System.out.println(communityList.get(0).getMemberNickName());
+      
+      req.setAttribute("communityList", communityList);
+      req.setAttribute("page", page);
+      req.setAttribute("startPage", startPage);
+      req.setAttribute("endPage", endPage);
+      req.setAttribute("prev", prev);
+      req.setAttribute("next", next);
+      
+      req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
 
-	}
+   }
 
 }

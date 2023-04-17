@@ -15,7 +15,7 @@ public class QnACommentDAO {
 	
 //	회원탈퇴 시 QnA댓글 삭제
 	public void deleteMember(int memberNumber) {
-		sqlSession.delete("qnaComment.deleteMember", memberNumber);
+		sqlSession.delete("comment.deleteMember", memberNumber);
 	}
 
 	public List<QnACommentVO> selectAll(int qnaNumber) {

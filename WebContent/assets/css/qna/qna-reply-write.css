@@ -2,6 +2,7 @@
   /*   margin: 10px;
     padding: 10px 0; */
     background-color: rgb(255, 255, 245);
+    resize: none;
   }
   
   section>.big-box{
@@ -79,6 +80,7 @@ section>.gd{
  .small-box>.word1{
   background-color: rgb(252, 252, 236) ;
   margin: 0 110px;
+  
 }
 
 .small-box>.word1>p{

@@ -1,3 +1,4 @@
+
 package com.newlight.app.member;
 
 import java.io.IOException;
@@ -16,19 +17,21 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 public class EditOkController implements Execute {
+
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDTO memberDTO = new MemberDTO();
 		MemberDAO memberDAO = new MemberDAO();
 		MemberFileDTO memberfileDTO = new MemberFileDTO();
-		
+
 		req.setCharacterEncoding("utf-8");
-		
+
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "userProfile/";
 		int fileSize = 1024 * 1024 * 5;
-		
-		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8", new DefaultFileRenamePolicy());
-		
+
+		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8",
+				new DefaultFileRenamePolicy());
+
 		memberDTO.setMemberPassword(multipartReq.getParameter("memberPassword"));
 		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
 		memberDTO.setMemberWebsite(multipartReq.getParameter("memberWebsite"));
@@ -37,29 +40,24 @@ public class EditOkController implements Execute {
 		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
 		memberDTO.setMemberAddress2(multipartReq.getParameter("memberAddress2"));
-		
+
 		Enumeration<String> memberFilepfp = multipartReq.getFileNames();
-		
-		while(memberFilepfp.hasMoreElements()) {
+
+		while (memberFilepfp.hasMoreElements()) {
 			String name = memberFilepfp.nextElement();
-			
+
 			String memberPfpFile = multipartReq.getOriginalFileName(name);
-			
-			if(memberPfpFile == null) {
+
+			if (memberPfpFile == null) {
 				continue;
 			}
-			
-			memberDTO.setMemberPfp(memberPfpFile);	
+
+			memberDTO.setMemberPfp(memberPfpFile);
 		}
-		
+
 		memberDAO.edit(memberDTO);
-		
+
 		resp.sendRedirect("/mypage/mypageEditOk.mp");
 	}
-	
+
 }
-
-
-
-
-

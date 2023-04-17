@@ -29,25 +29,27 @@
 							</div>
 							<div class="info-name">
 								<label for="id-change">이름 </label> <input type="text" name="id"
-									id="id-chnage" required value="${memberDTO.getMemberName()}" readonly/>
+									id="id-chnage" required value="${memberDTO.getMemberName()}"
+									readonly />
 							</div>
 							<div class="info-id">
 								<label for="id-change">아이디 </label> <input type="text" name="id"
-									id="id-chnage" required value="${memberDTO.getMemberId()}" readonly/>
+									id="id-chnage" required value="${memberDTO.getMemberId()}"
+									readonly />
 							</div>
 							<div class="info-pw">
 								<label for="pw-change">비밀번호 </label> <input type="password"
-									name="password" id="pw-change" required />
-								<span class="check-msg" id="check-pw-msg"></span>
+									name="password" id="pw-change" required /> <span
+									class="check-msg" id="check-pw-msg"></span>
 							</div>
 							<div class="info-phone">
-								<label for="id-change">핸드폰 번호 </label> <input type="text" name="id"
-									id="id-chnage" required />
+								<label for="id-change">핸드폰 번호 </label> <input type="text"
+									name="id" id="id-chnage" required />
 							</div>
 							<div class="info-nickname">
 								<label for="nickname-change">닉네임(0/300) </label> <input
-									type="text" name="nickname" id="nickname-change" required />
-								<span class="check-msg" id="check-nickname-msg"></span>
+									type="text" name="nickname" id="nickname-change" required /> <span
+									class="check-msg" id="check-nickname-msg"></span>
 							</div>
 							<div class="info-selfy">
 								<label for="selfy-change">한 줄 소개(0/800)</label> <input
@@ -68,10 +70,8 @@
 										href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
 										취소</a>
 								</button>
-								<button>
-									<a
-										href="${pageContext.request.contextPath}/mypage/creationsOk.mp">저장</a>
-								</button>
+								
+								<button>저장</button>
 							</div>
 						</fieldset>
 					</form>
@@ -80,8 +80,10 @@
 		</section>
 	</form>
 	<footer></footer>
-	<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src ="${pageContext.request.contextPath}/assets/js/member/checkNickname.js"></script>
-	<script src="${pageContext.request.contextPath}/assets/js/member/delete.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/assets/js/member/checkNickname.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/assets/js/member/delete.js"></script>
 </body>
 </html>

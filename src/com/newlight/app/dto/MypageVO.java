@@ -15,9 +15,13 @@ public class MypageVO {
 	List<CreationsFileDTO> files;
 	private String likeCount;
 	private String commentCount;
-	
+	private String memberPassword;
+	private String memberWebsite;
+	private String memberPfp;
+	private String memberPhonenumber;
+
 	public MypageVO() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public int getMemberNumber() {
@@ -116,13 +120,47 @@ public class MypageVO {
 		this.commentCount = commentCount;
 	}
 
+	public String getMemberPassword() {
+		return memberPassword;
+	}
+
+	public void setMemberPassword(String memberPassword) {
+		this.memberPassword = memberPassword;
+	}
+
+	public String getMemberWebsite() {
+		return memberWebsite;
+	}
+
+	public void setMemberWebsite(String memberWebsite) {
+		this.memberWebsite = memberWebsite;
+	}
+
+	public String getMemberPfp() {
+		return memberPfp;
+	}
+
+	public void setMemberPfp(String memberPfp) {
+		this.memberPfp = memberPfp;
+	}
+
+	public String getMemberPhonenumber() {
+		return memberPhonenumber;
+	}
+
+	public void setMemberPhonenumber(String memberPhonenumber) {
+		this.memberPhonenumber = memberPhonenumber;
+	}
+
 	@Override
 	public String toString() {
 		return "MypageVO [memberNumber=" + memberNumber + ", followerNumber=" + followerNumber + ", followeeNumber="
 				+ followeeNumber + ", creationNumber=" + creationNumber + ", memberNickname=" + memberNickname
 				+ ", memberComment=" + memberComment + ", creationTitle=" + creationTitle + ", creationContent="
 				+ creationContent + ", creationSumnail=" + creationSumnail + ", files=" + files + ", likeCount="
-				+ likeCount + ", commentCount=" + commentCount + "]";
+				+ likeCount + ", commentCount=" + commentCount + ", memberPassword=" + memberPassword
+				+ ", memberWebsite=" + memberWebsite + ", memberPfp=" + memberPfp + ", memberPhonenumber="
+				+ memberPhonenumber + "]";
 	}
-	
+
 }

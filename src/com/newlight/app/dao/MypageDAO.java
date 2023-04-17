@@ -30,6 +30,7 @@ public class MypageDAO {
 	public List<MypageVO> creationList(MypageVO mypageVO){
 		return sqlSession.selectList("mypage.mypagecreation" , mypageVO);
 	}
-
+	
+	 
 
 }
