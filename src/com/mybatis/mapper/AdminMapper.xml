@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- admin SQL문 작성 -->
+<!-- SQL문 작성 , DB이름 추가 -->
+
+<mapper namespace="admin">
+	<select id="memberList" parameterType="AdminVO" resultType="AdminVO">
+		select m.member_number , m.member_name  , m.member_status , count(c.creation_number) creation_count
+		from `member` m left outer join creations c
+		on m.member_number = c.member_number
+		group by m.member_number
+	</select>
+	
+	<update id="statusUpdate" parameterType="AdminVO">
+		update `member`
+		set member_status= #{memberStatus}
+		where member_number= #{memberNumber}
+	</update>
+
+
+</mapper>

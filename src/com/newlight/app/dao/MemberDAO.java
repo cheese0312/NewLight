@@ -15,7 +15,6 @@ public class MemberDAO {
 	}
 	
 	public void join(MemberDTO memberDTO) {
-		System.out.println("MemberDAO join 들어옴!");
 		sqlSession.insert("member.join", memberDTO);
 	}
 	
@@ -34,6 +33,11 @@ public class MemberDAO {
 	public int login(MemberDTO memberDTO) {
 		Integer memberNumber = sqlSession.selectOne("member.login", memberDTO);
 		return memberNumber == null ? -1 : memberNumber;	
+	}
+	
+	public String login2(MemberDTO memberDTO) {
+		String memberStatus = sqlSession.selectOne("member.login2" , memberDTO);
+		return (memberStatus != null && memberStatus.equals("Y") ? "Y" : "N");
 	}
 	
 	public boolean checkId(String memberId) {

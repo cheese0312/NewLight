@@ -6,6 +6,7 @@ import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
 
 import com.mybatis.config.MyBatisConfig;
+import com.newlight.app.dto.CreationsVO;
 import com.newlight.app.dto.LikesDTO;
 
 public class LikesDAO {
@@ -23,11 +24,6 @@ public class LikesDAO {
 		sqlSession.delete("like.delete", memberNumber);
 	}
 	
-//	회원탈퇴 시 좋아요 삭제
-	public void deleteMemeber(int memberNumber) {
-		sqlSession.delete("likes.deleteMember", memberNumber);
-	}
-	
 	public int likeCount(int creationNumber) {
 		return sqlSession.selectOne("likes.likecount" , creationNumber);
 	}
@@ -35,5 +31,32 @@ public class LikesDAO {
 	public void likeDelete(int creaitonNumber) {
 		sqlSession.delete("likes.likeDelete" , creaitonNumber);
 	}
+	
+//	좋아요 생성
+	public void insert(LikesDTO likesDTO) {
+		sqlSession.insert("likes.insert" , likesDTO);
+	}
+	
+//	좋아요 삭제
+	public void likedelete(LikesDTO likesDTO) {
+		sqlSession.delete("likes.likedelete" , likesDTO);
+	}
+	
+//	좋아요 리스트
+	public int getLikeCount(LikesDTO likesDTO) {
+		return sqlSession.selectOne("likes.getLikeCount" , likesDTO);
+	}
+	
+//	좋아요 게시물 리스트
+	public List<CreationsVO> getLikeList(CreationsVO creationsVO) {
+		return sqlSession.selectList("likes.getLikeList" , creationsVO);
+	}
+	
+//	회원탈퇴 시 좋아요 삭제
+	public void deleteMemeber(int memberNumber) {
+		sqlSession.delete("likes.deleteMember", memberNumber);
+	}
+	
+
 
 }

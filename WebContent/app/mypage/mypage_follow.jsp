@@ -16,21 +16,9 @@
 		<div class="main">
 			<div class="main-container">
 				<div class="mypage-main">
-				<c:choose>
-					<c:when test="${not empty memberPfp}">
-						<div class="mypage-img">
-						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
-							alt="">
+					<div class="mypage-img">
+						<img src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
 					</div>
-					</c:when>
-					<c:otherwise>
-						<div class="mypage-img">
-						<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
-							alt="">
-					</div>
-					</c:otherwise>
-				</c:choose>
-					
 					<div class="mypage-box">
       					<div class="mypage-name">${memberNickname }</div>
       					<div class="myapge-comment">${memberComment}</div>
@@ -60,7 +48,7 @@
 						<c:when test="${not empty followerList}">
 							<c:forEach var="follow" items="${followerList}">
 								<div class="creations-main">
-									<div class="mypage-main">
+									<div class="mypage-main2">
 										<div class="mypage-img">
 										<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png"
 							alt="">
@@ -71,9 +59,16 @@
 											<div class="mypage-content"><c:out value="${follow.getMemberComment()}"/></div>
 										</div>
 										<div class="bin"></div>
-										<div class="editbtn">
-											<a href="#">팔로우 ✔</a>
+										<c:if test="${sessionScope.memberNumber != follow.getMemberNumber() }">
+										<div class="editbtn1" data-memberNumber="${follow.getMemberNumber() }">
+											<a href="#" class="follower" >팔로우 ✔</a>
 										</div>
+										
+										<div class="editbtn1 none" data-memberNumber="${follow.getMemberNumber() }">
+											<a href="#" class="follower" >팔로우 ➕</a>
+										</div>
+										</c:if>
+									</div>
 									</div>
 									<hr>
 							</c:forEach>
@@ -103,5 +98,12 @@
 	</main>
 	<!-- 푸터 -->
 	<%@include file="/app/footer.jsp"%>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		let memberNumber = "${sessionScope.memberNumber}";
+	</script>
+	<script
+		src="${pagetContext.request.contextPath}/assets/js/mypage/follow.js">
+	</script>
 </body>
 </html>

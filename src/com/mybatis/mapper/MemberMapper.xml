@@ -29,6 +29,14 @@
 		where member_id = #{memberId} and
 		member_password = #{memberPassword}
 	</select>
+	
+	<select id="login2" parameterType="MemberDTO" resultType="string">
+		select
+		member_status
+		from member
+		where member_id = #{memberId} and
+		member_password = #{memberPassword}
+	</select>
 
 	<select id="checkId" parameterType="string" resultType="_int">
 		select
@@ -58,7 +66,7 @@
 	</select>
 	<!--  -->
 	
-	<select id="getMemberId" parameterType="int" resultType="string">
+	<select id="getMemberId" parameterType="_int" resultType="string">
 	  	select member_id
 	  	from member
 	 	where member_number = #{memberNumber}
@@ -78,11 +86,11 @@
 		member_number= #{memberNumber};
 	</delete>
 
-	<select id="getMemberId" parameterType="int" resultType="string">
+<!-- 	<select id="getMemberId" parameterType="_int" resultType="string">
 	  select member_id
 	  from member
 	  where member_number = #{memberNumber}
-	</select>
+	</select> -->
 
 	<select id="getMemberNickName" parameterType="_int" resultType="String">
 	  select member_nickname

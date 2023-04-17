@@ -29,5 +29,11 @@
 		on c.creation_number = cf.creation_number 
 		where member_number = #{memerNumber}
 	</select>
+	
+	<!-- 파일 삭제 -->
+	<delete id="delete" parameterType="CreationsFileDTO">
+		delete from creations_file
+		where creation_number = #{creationNumber}
+	</delete>
 
 </mapper>

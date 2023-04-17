@@ -6,28 +6,38 @@
 
 <mapper namespace="mypage">
 	<select id="mypageLikeList" parameterType = "MypageVO" resultType="MypageVO">
-		select c.creation_number  , c.creation_title , c.member_number ,l.member_number 
-		from creations c join likes l 
-		on c.creation_number = l.creation_number 
-		where l.member_number =#{memberNumber};
+		select creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
+		from (
+			select c.creation_number, creation_title , creation_sumnail, member_nickname, member_pfp ,
+				count(l.creation_number) like_count
+			from creations c
+			join `member` m 
+			on c.member_number = m.member_number 
+			join likes l 
+			on l.member_number =#{memberNumber} and c.creation_number = l.creation_number 
+			group by c.creation_number
+		) j left outer join creations_comment cc 
+		on j.creation_number = cc.creation_number 
+		group by j.creation_number
 	</select>
 	
 	<select id="mypagefollowee" parameterType="MypageVO" resultType="MypageVO">
-		select m.member_nickname , m.member_comment
+		select m.member_number, m.member_nickname , m.member_comment , f.follower_number , f.followee_number
 		from follows f  join `member` m 
 		on f.followee_number = m.member_number 
 		where f.follower_number = #{memberNumber}
 	</select>
 	
 	<select id="mypageCreations" resultType="MypageVO"  parameterType="map">
-		select c.creation_title , m.member_nickname 
-		from likes l join creations c join `member` m 
-		on l.creation_number = c.creation_number = m.member_number 
+		select *
+		from `member` m join creations c 
+		on m.member_number = c.member_number 
 		where m.member_number = #{memberNumber}
 	</select>
 	
 	<select id="mypagecreation" resultType="MypageVO" parameterType="MypageVO">
-		select j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count  from (
+		select  j.creation_number, j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count
+		from (
 			select c.*, count(l.creation_number) like_count
 			from creations c 
 			left outer join likes l 
@@ -39,9 +49,25 @@
 	</select>
 	
 	<select id="mypageinfo" parameterType="_int" resultType="MypageVO">
-		select member_nickname , member_comment
+		select member_nickname , member_comment , member_pfp
 		from `member`
 		where member_number = #{memberNumber}
 	</select>	
+	
+	<select id="mypageLikeCount" parameterType="MypageVO" resultType="MypageVO">
+		select creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
+		from (
+			select c.creation_number, creation_title , creation_sumnail, member_nickname, member_pfp ,
+				count(l.creation_number) like_count
+			from creations c
+			join `member` m 
+			on c.member_number = #{memberNumber} and c.member_number = m.member_number 
+			left outer join likes l 
+			on c.creation_number = l.creation_number 
+			group by c.creation_number
+		) j left outer join creations_comment cc 
+		on j.creation_number = cc.creation_number 
+		group by j.creation_number
+	</select>
 	
 </mapper>
