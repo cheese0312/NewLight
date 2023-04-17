@@ -6,7 +6,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>kakaoTheme</title>
+<title>Creations</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/ani.css">
 <link rel="stylesheet"
@@ -47,7 +47,7 @@
 										<img src="${pageContext.request.contextPath}/upload/${creation.getCreationSumnail()}" class="img-1">
 										<div class="sub-title">
 											<a
-												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
+												href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${creation.getCreationNumber()}">
 												<c:out value="${creation.getCreationTitle()}" />
 											</a>
 										</div>

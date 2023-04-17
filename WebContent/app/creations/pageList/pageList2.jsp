@@ -6,7 +6,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>kakaoTheme</title>
+<title>Creations</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/creations/background.css">
 <link rel="stylesheet"
@@ -53,7 +53,7 @@
 										</div>
 										<div class="sub-author">
 											<img
-												src="../img/—Pngtree—vector business men icon_4186858.png">
+												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
 												<c:out value="${creation.getMemberNickname()}" />

@@ -27,10 +27,10 @@ public class CommunityFrontController extends HttpServlet {
 		System.out.println(target);
 
 		switch (target) {
-		case "/community/communityList.cm" :
-			System.out.println("커뮤니티 페이지 들어옴!");
-			req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
-			break;
+//		case "/community/communityList.cm" :
+//			System.out.println("커뮤니티 페이지 들어옴!");
+//			req.getRequestDispatcher("/app/community/communityList.jsp").forward(req, resp);
+//			break;
 			
 		case "/community/communityListOk.cm":
 			System.out.println("communityListOk 들어간다!");

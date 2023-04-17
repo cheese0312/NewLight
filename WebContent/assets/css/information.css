@@ -258,3 +258,10 @@ textarea {
 	border: 0;
 	cursor: pointer;
 }
+
+.pfp-input {
+  display: none;
+}
+
+
+

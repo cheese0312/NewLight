@@ -48,13 +48,13 @@
 						<c:forEach var="content" items="${main}">
 							<div class="create-card">
 								<div class="create-logo">
-									<a href="#" class="themeList"> <img
+									<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}" class="themeList"> <img
 										src="${pageContext.request.contextPath}/upload/${content.getCreationSumnail()}"
 										alt="" class="create-card-img" />
 									</a>
 									<div class="create-title">
 										<h4>
-											<a href="${pageContext.request.contextPath}/creation<%-- /detail?creationNumber=${content.get} --%>">
+											<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}">
 											<c:out value="${content.getCreationTitle() }" />
 											</a>
 										</h4>

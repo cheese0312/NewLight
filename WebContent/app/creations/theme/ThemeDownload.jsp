@@ -12,6 +12,7 @@
   </head>
   <body>
    <%@include file="/app/header.jsp" %>
+   <form action="${pageContext.request.contextPath}/creations/creationRead.ct"></form>
     <section>
       <div class="download-container">
         <div class="create-download">
@@ -30,12 +31,12 @@
                   <div class="download-btn-wrap">
                     <div class="theme-down-box">
                       <div class="donwload-icon">
-                        <img src="../img/folder.png" alt="" />
+                        <img src="${pageContext.request.contextPath}/assets/img/folder.png" alt="" />
                       </div>
                       <div class="donwload-name">구버전 아이메세지 분홍.htheme</div>
                       <div class="donwload-icon2">
-                        <a href="#">
-                          <img src="../img/themedownload.png" alt="" />
+                        <a href="${pageContext.request.contextPath}/creationsfile/download.ccmf?fileSystemName=${file.getFileSystemName()}&fileOriginalName=${file.getFileOriginalName()}">
+                          <img src="${pageContext.request.contextPath}/assets/img/themedownload.png" alt="" />
                         </a>
                       </div>
                     </div>

@@ -105,6 +105,11 @@ public class CreationsDAO {
 		sqlSession.delete("creations.creationDelete" , creationNumber);
 	}
 	
+//	creationRead페이징 처리
+	public CreationsVO creationRead(int creationNumber) {
+		return sqlSession.selectOne("creations.creationRead", creationNumber);
+	}
+	
 }
 
 

@@ -27,7 +27,7 @@
 							<c:otherwise>
 								<div class="mypage-img">
 									<img
-										src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+										src="${pageContext.request.contextPath}/userProfile/${member.getMemberPfp()}">
 								</div>
 							</c:otherwise>
 						</c:choose>

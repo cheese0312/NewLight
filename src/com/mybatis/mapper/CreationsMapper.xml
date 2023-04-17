@@ -30,14 +30,6 @@
 		limit 0,9
 	</select> -->
 	
-	<!-- 카테고리 테마별 창작물 조회하기-->
-	<select id="selectMenu" resultType="CreationsVO" parameterType="map">
-		select c.creation_number , c.creation_title , c.creation_sumnail , m.member_nickname , m.member_pfp 
-		from creations c join `member` m 
-		on c.member_number = m.member_number and category_code = #{categoryCode} and category_name = #{categoryName}
-=======
-	</select>
-
 	<!-- 카테고리 테마별 창작물 조회하기 -->
 	<select id="selectMenu" resultType="CreationsVO"
 		parameterType="map">
@@ -72,11 +64,11 @@
 		select last_insert_id()
 	</select>
 
-	<!-- 창작물 보기 -->
+	<!-- 창작물 보기, 메인페이지에서 창작물 게시글 진입 -->
 	<select id="creationContent" parameterType="_int"
 		resultType="CreationsVO">
 		select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
-		c.creation_read_count , m.member_nickname , m.member_number
+		c.creation_read_count , m.member_nickname , m.member_number, m.member_pfp
 		from creations c join `member` m
 		on c.member_number = m.member_number
 		where c.creation_number = #{creationNumber}
@@ -122,24 +114,23 @@
 			where category_code = '201' and category_name = '배경화면'
 		</select>
 		
-		<update id="update" parameterType="CreationsFileDTO">
-			update creations
-			set creation_sumnail = #{fileSystemName}
-			where creation_number = #{creationNumber}
-		</update>
-		
 		<!-- 회원탈퇴 시 창작물 삭제 -->
 		<delete id="deleteMember" parameterType="_int">
 			delete from creations
 			where member_number = #{memberNumber}
 		</delete>
-		
 
-	<!-- 창작물 삭제 -->
-	<delete id="creationDelete" parameterType="_int">
-	delete from creations
-	where creation_number=#{creationNumber}
-	</delete>
+		<!-- 창작물 삭제 -->
+		<delete id="creationDelete" parameterType="_int">
+			delete from creations
+			where creation_number=#{creationNumber}
+		</delete>
+		
+		<!-- creationRead 페이징처리 -->
+		<select id="creationRead" parameterType="_int" resultType="CreationsVO">
+			select category_name from creations c 
+			where creation_number = #{creationNumber}
+		</select>
 	
 </mapper>
 

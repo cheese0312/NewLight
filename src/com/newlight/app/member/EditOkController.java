@@ -25,9 +25,12 @@ public class EditOkController implements Execute {
 		req.setCharacterEncoding("utf-8");
 		
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "userProfile/";
-		int fileSize = 1024 * 1024 * 5;
+		int fileSize = 1024 * 1024 * 20;
 		
+//		폼 데이터 오류 부분
 		MultipartRequest multipartReq = new MultipartRequest(req, uploadPath, fileSize, "utf-8", new DefaultFileRenamePolicy());
+		
+		memberDTO.setMemberNumber((Integer)req.getSession().getAttribute("memberNumber"));
 		
 		memberDTO.setMemberPassword(multipartReq.getParameter("memberPassword"));
 		memberDTO.setMemberNickname(multipartReq.getParameter("memberNickname"));
@@ -37,6 +40,9 @@ public class EditOkController implements Execute {
 		memberDTO.setMemberEmail(multipartReq.getParameter("memberEmail"));
 		memberDTO.setMemberAddress1(multipartReq.getParameter("memberAddress1"));
 		memberDTO.setMemberAddress2(multipartReq.getParameter("memberAddress2"));
+		memberDTO.setMemberPhoneNumber(multipartReq.getParameter("memberPhoneNumber"));
+		
+//		System.out.println(memberDTO);
 		
 		Enumeration<String> memberFilepfp = multipartReq.getFileNames();
 		
@@ -54,7 +60,7 @@ public class EditOkController implements Execute {
 		
 		memberDAO.edit(memberDTO);
 		
-		resp.sendRedirect("/mypage/mypageEditOk.mp");
+		resp.sendRedirect("/mypage/creationsOk.mp");
 	}
 	
 }

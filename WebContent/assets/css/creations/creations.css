@@ -237,3 +237,53 @@ main {
   width: 8%;
 }
 
+/* 다운로드버튼 */
+
+.download-btn-wrap {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.theme-down-box {
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  padding: 12px 40px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  width: 350px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.folder-icon {
+  bottom: 17px;
+  display: flex;
+}
+
+.folder-icon > img {
+  width: 20px;
+  height: 20px;
+}
+
+.donwload-name {
+  font-size: 12px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.donwload-icon2 {
+  left: 530px;
+  bottom: 17px;
+}
+
+a > img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+
+
+

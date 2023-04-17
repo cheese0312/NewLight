@@ -10,6 +10,7 @@ public class CreationsVO {
 	private String creationContent;
 	private String creationCode;
 	private String creationName;
+	private String categoryName;
 	private String commentWritedate;
 	private int memberNumber;
 	private String memberNickname;
@@ -63,14 +64,6 @@ public class CreationsVO {
 
 	public void setCreationName(String creationName) {
 		this.creationName = creationName;
-	}
-
-	public String getCreationWriteday() {
-		return creationWriteday;
-	}
-
-	public void setCreationWriteday(String creationWriteday) {
-		this.creationWriteday = creationWriteday;
 	}
 
 	public int getMemberNumber() {
@@ -152,16 +145,24 @@ public class CreationsVO {
 	public void setCommentCount(String commentCount) {
 		this.commentCount = commentCount;
 	}
+	
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
 
 	@Override
 	public String toString() {
 		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
 				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
-				+ creationName + ", creationWriteday=" + creationWriteday + ", memberNumber=" + memberNumber
-				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail="
-				+ creationSumnail + ", files=" + files + ", commentNumber=" + commentNumber + ", commentContent="
-				+ commentContent + ", commentWritedate=" + commentWritedate + ", likeCount=" + likeCount
-				+ ", commentCount=" + commentCount + "]";
+				+ creationName + ", categoryName=" + categoryName + ", commentWritedate=" + commentWritedate
+				+ ", memberNumber=" + memberNumber + ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp
+				+ ", creationSumnail=" + creationSumnail + ", commentNumber=" + commentNumber + ", commentContent="
+				+ commentContent + ", likeCount=" + likeCount + ", commentCount=" + commentCount + ", files=" + files
+				+ "]";
 	}
 
 }

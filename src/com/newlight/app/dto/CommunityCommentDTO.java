@@ -1,5 +1,4 @@
 package com.newlight.app.dto;
-<<<<<<< HEAD
 
 //comment_number int unsigned,
 //comment_content varchar(500) not null,

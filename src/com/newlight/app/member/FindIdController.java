@@ -1,4 +1,4 @@
-package com.newlight.app.communityComment;
+package com.newlight.app.member;
 
 import java.io.IOException;
 
@@ -7,16 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.newlight.app.Execute;
-import com.newlight.app.dao.CommunityCommentDAO;
 
-public class CommunityCommentDeleteOkController implements Execute {
-
+public class FindIdController implements Execute{
+	
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		
-		int commentNumber = Integer.parseInt(req.getParameter("commentNumber"));
-		
-		new CommunityCommentDAO().deleteComment(commentNumber);
+		req.getRequestDispatcher("/app/member/findId.jsp").forward(req, resp);
 	}
 
 }

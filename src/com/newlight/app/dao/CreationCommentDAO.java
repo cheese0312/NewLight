@@ -13,6 +13,6 @@ public class CreationCommentDAO {
 	
 //	회원탈퇴 시 창작물 댓글 삭제
 	public void deleteMember(int memberNumber) {
-		sqlSession.delete("creationComment.deleteMember", memberNumber);
+		sqlSession.delete("creationsComment.deleteMember", memberNumber);
 	}
 }

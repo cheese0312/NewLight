@@ -17,5 +17,5 @@
 			group by j.creation_number
 			order by j.creation_number desc
 	</select>
-
+	
 </mapper>

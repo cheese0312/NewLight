@@ -11,6 +11,7 @@ import com.newlight.app.Execute;
 import com.newlight.app.dao.CreationsDAO;
 import com.newlight.app.dao.CreationsFileDAO;
 import com.newlight.app.dao.LikesDAO;
+import com.newlight.app.dto.CreationsDTO;
 import com.newlight.app.dto.CreationsFileDTO;
 import com.newlight.app.dto.CreationsVO;
 import com.newlight.app.dto.LikesDTO;
@@ -25,6 +26,7 @@ public class CreationReadOkController implements Execute {
 		CreationsVO creationsVO = creationsDAO.creationContent(creationNumber);
 		CreationsFileDAO creationsFileDAO = new CreationsFileDAO();
 		List<CreationsFileDTO> creationsFiles = creationsFileDAO.select(creationNumber);
+		CreationsDTO creationsDTO = new CreationsDTO();
 		
 		int creationComment = creationsDAO.creationComment(creationNumber);
 		
@@ -42,7 +44,21 @@ public class CreationReadOkController implements Execute {
 		req.setAttribute("creationComment", creationComment);
 		req.setAttribute("commentList", commentList);
 		
-		req.getRequestDispatcher("/app/creations/background/creation.jsp").forward(req, resp);
+		List<CreationsFileDTO> files = creationsFileDAO.aniList(creationNumber);
+		
+		System.out.println(files);
+		req.setAttribute("files", files);
+		
+		CreationsVO checkPath = creationsDAO.creationRead(creationNumber);
+		String path = null;
+		
+		if(checkPath.getCategoryName().equals("만화")) {
+			path = "/app/creations/background/aniView.jsp";
+		}else {
+			path = "/app/creations/background/creation.jsp";
+		}
+			
+		req.getRequestDispatcher(path).forward(req, resp);
 
 	}
 

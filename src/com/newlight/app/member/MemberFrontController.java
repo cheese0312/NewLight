@@ -69,7 +69,8 @@ public class MemberFrontController extends HttpServlet{
 			System.out.println("mypageEdit 들어왔다!!!");
 			new EditController().execute(req, resp);
 			break;
-		case "/mypage/mypageEditOk.mp" :
+	   //회원정보 수정 완료 컨트롤러
+		case "/mypage/mypageEditOk.me" :
 			new EditOkController().execute(req, resp);
 			break;
 		case "/mypage/checkNicknameOk.me" :
@@ -80,6 +81,22 @@ public class MemberFrontController extends HttpServlet{
 			System.out.println("dddd");
 			new DeleteOkController().execute(req, resp);
 			break;
+		//회원 ID찾기
+		case "/member/memberFindId.me" :
+//			System.out.println("아이디찾기 들어왔다!!!");
+			new FindIdController().execute(req, resp);
+			break;
+		case "/member/memberFindIdOk.me" :
+			new FindIdOkController().execute(req, resp);
+			break;
+		//회원 PW찾기
+		case "/member/memberFindPw.me" :
+		new  FindPwController().execute(req, resp);
+		break;
+		case "/member/memberFindPwOk.me" :
+			System.out.println("비밀번호 찾는다~");
+		new FindPwOkController().execute(req, resp);
+		break;
 		}
 	}
 	

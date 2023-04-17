@@ -16,7 +16,7 @@ public class EditController implements Execute{
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
-		System.out.println("111111");
+//		System.out.println("111111");
 		MemberDTO memberDTO = new MemberDTO();
 		HttpSession session = req.getSession();
 		
