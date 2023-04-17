@@ -6,6 +6,7 @@ let $listBtn = $('.list-btn');
 let $editBtn = $('.edit-btn');
 let $deleteBtn = $('.delete-btn');
 
+
 let creationNumber = $listBtn.data('creationnumber');
 
 $listBtn.on('click', () => {
@@ -150,6 +151,99 @@ $('.comment-border').on('click', '.comment-delete' , function(){
 		}
 	})
 })
+
+
+//팔로우 처리
+let $followBtn = $('.follow-btn');
+
+$followBtn.on('click', function(e){
+	e.preventDefault();
+	
+	let number = $(this).data('membernumber');
+	let target = this;
+	$.ajax({
+		url: '/follows/followOk.fw',
+		type : 'get',
+		data : {memberNumber : number},
+		success : function(result) {
+			let $parent1 = $(target).closest('.creations-info');
+			let $children1 = $parent1.find('.follow-btn');
+			
+			
+			if(result == 0){
+					$children1.eq(0).show();
+					$children1.eq(1).hide();
+			}else{
+					$children1.eq(0).hide();
+					$children1.eq(1).show();
+			}
+			
+		}
+	});
+})
+
+
+
+//좋아요 처리
+let $likeBtn = $('.creations-like');
+$likeBtn.on('click' , function(e){
+	e.preventDefault();
+	
+	let likeNumber= $(this).data('likenumber');
+	let liketarget= this;
+	
+	console.log(likeNumber);
+	
+	$.ajax({
+		url : '/likes/likeOk.le',
+		type : 'get',
+		data : {creationNumber : likeNumber},
+		success : function(result1){
+			let $parent2 = $(liketarget).closest('.click-main');
+			let $children2 = $parent2.find('.likeplus');
+			let likeCnt = parseInt($('.likeCount').text().trim());
+						
+			if(result1 == 0) {
+				$children2.find('img').attr('src', '/assets/images/member/free-icon-hearts-138533.png');
+				/*$children2.eq(1).show();
+				$children2.eq(0).hide();*/
+				$('.likeCount').text(likeCnt+1);
+			} else {
+				$children2.find('img').attr('src', '/assets/images/member/IMG_1993.png');
+				/*$children2.eq(0).show();
+				$children2.eq(1).hide();*/
+				$('.likeCount').text(likeCnt-1);
+			}
+			
+			
+		}
+	});
+	
+});
+
+
+//댓글 갯수 처리
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

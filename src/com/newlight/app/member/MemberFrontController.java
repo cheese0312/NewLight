@@ -69,12 +69,15 @@ public class MemberFrontController extends HttpServlet{
 			System.out.println("mypageEdit 들어왔다!!!");
 			new EditController().execute(req, resp);
 			break;
+			
 		case "/mypage/mypageEditOk.mp" :
 			new EditOkController().execute(req, resp);
 			break;
+			
 		case "/mypage/checkNicknameOk.me" :
 			new CheckNicknameOk().execute(req, resp);
 			break;
+			
 		//회원 탈퇴 주소&컨트롤러 넣어주기
 		case "/member/memberDeleteOk.me" :
 			System.out.println("dddd");

@@ -24,6 +24,9 @@ public class FollowsFrontController extends HttpServlet{
 		System.out.println(target); 
 		
 		switch(target) {
+		case "/follows/followOk.fw" :
+			new FollowOkController().execute(req,resp);
+			break;
 
 			
 		}

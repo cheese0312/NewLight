@@ -44,17 +44,29 @@
 					<hr>
 					
 					<c:choose>
-					<c:when test="${not empty adminId}">
+					<c:when test="${not empty memberList}">
+					<c:forEach var="admin" items="${memberList }">
+					<c:if test="${admin.getMemberName() != '관리자' }">
 					<div class="member-list">
-						<div class="member-list-name"><c:out value="${admin.getMemberId()}"/></div>
-						<div class="member-list-creations"><c:out value="${admin.getCreationsCount()}"/></div>
+						<div class="member-list-name"><c:out value="${admin.getMemberName()}"/></div>
+						<div class="member-list-creations"><c:out value="${admin.getCreationCount()}"/></div>
 
 						<div class="member-list-status member-list-status1">
-							<c:out value="${member.getMemberStatus()}"/>
-							<button type="button" class="member-status-btn">X</button>
+							<span class="status"><c:out value="${admin.getMemberStatus()}"/></span>
+							<span class="btn">
+								<c:if test="${admin.getMemberStatus() eq 'Y'}">
+									<button type="button" class="member-status-btn" data-status="N" data-number="${admin.getMemberNumber() }">X</button>
+								</c:if>
+								<c:if test="${admin.getMemberStatus() eq 'N'}">
+									<button type="button" class="member-status-btn" data-status="Y" data-number="${admin.getMemberNumber()}">Y</button>
+								</c:if>
+							</span>
 						</div>
 					</div>
+					
 					<hr>
+					</c:if>
+					</c:forEach>
 					</c:when>
 					</c:choose>
 
@@ -104,5 +116,9 @@
 	</form>
 	<!-- 푸터 -->
 	<%@include file="/app/footer.jsp"%>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script
+		src="${pagetContext.request.contextPath}/assets/js/admin/admin.js">
+	</script>
 </body>
 </html>
