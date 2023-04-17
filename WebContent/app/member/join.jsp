@@ -58,7 +58,8 @@
 					</tr>
 					<tr>
 						<td class="tle">비밀번호</td>
-						<td class="cont"><input class=ed type=password name="memberPassword" id="password"
+						<td class="cont">
+						<input class=ed type=password name="memberPassword" id="password"
 							size=20 maxlength="20" required placeholder="비밀번호를 입력하세요">
 							<span class="check-msg" id="check-pw-msg"></span>
 							</td>
@@ -118,7 +119,7 @@
 
 				<div class="mg_t20">
 					<div class="join-btn"></div>
-					<input type="submit" class="myButton" value="회원가입">
+					<input type="button" class="myButton" value="회원가입">
 				</div>
 			</div>
 		</form>
