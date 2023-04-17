@@ -118,7 +118,7 @@
 
 				<div class="mg_t20">
 					<div class="join-btn"></div>
-					<input type="submit" class="myButton" value="회원가입">
+					<input type="button" class="myButton" value="회원가입">
 				</div>
 			</div>
 		</form>

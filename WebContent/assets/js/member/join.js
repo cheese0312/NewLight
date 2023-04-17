@@ -14,7 +14,6 @@ $idInput.on('blur', function(){
 	}
 	else {
 		let id = $(this).val();
-		console.log(id);
 			$.ajax({
 			url : '/member/checkIdOk.me',
 			type : 'get',
@@ -57,5 +56,16 @@ $pwInput.on('blur', function(){
 		$checkPwMsg.text('사용 가능한 비밀번호입니다.');
 	}else{
 		$checkPwMsg.html('사용 불가능한 비밀번호입니다. <br/> 영어, 숫자, 특수문자를 포함한 8글자 이상으로 작성해주세요.');
+	}
+});
+
+
+$("button").on('click' , function(){
+	if(!$checkMsg.includes("중") && $checkMsg2.includes("중") && $checkPwMsg.includes("불")){
+		$("form").submit();
+	}
+	else {
+		alert('중복된 아이디 또는 닉네임 & 비밀번호를 다시 확인해주세요');
+		console.log('안돼!');
 	}
 });
