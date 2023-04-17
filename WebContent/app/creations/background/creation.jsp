@@ -29,7 +29,7 @@
 					<div class="creations-info">
 						<div class="creations-img">
 							<img
-								src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+								src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 						</div>
 						<div class="creations-author">
 							<span> <c:out value="${creation.getMemberNickname()}" />
@@ -53,7 +53,28 @@
 							<c:forEach var="creationFile" items="${creation.getFiles()}">
 								<img
 									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}">
+
+								<div class="download-btn-wrap">
+									<div class="theme-down-box">
+										<div class="folder-icon">
+											<img
+												src="${pageContext.request.contextPath}/assets/img/folder.png"
+												alt="" />
+											<div class="donwload-name">구버전 아이메세지 분홍.htheme</div>
+										</div>
+										<div class="download-icon">
+											<a
+												href="${pageContext.request.contextPath}/creationFile/download.ccmf?fileSystemName=${creationFile.getFileSystemName()}&fileOriginalName=${creationFile.getFileOriginalName()}"
+												class=""> <img
+												src="${pageContext.request.contextPath}/assets/img/download.png"
+												alt="" />
+											</a>
+										</div>
+									</div>
+								</div>
 							</c:forEach>
+						</div>
+
 						</div>
 						<div class="creations-comment-content">
 							<span> <c:out value="${creation.getCreationContent()}" />

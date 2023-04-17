@@ -60,6 +60,7 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.getMemberId", memberNumber);
 	}
 	
+//	회원정보 수정하기
 	public void edit(MemberDTO memberDTO) {
 		sqlSession.update("member.edit", memberDTO);
 	}
@@ -76,6 +77,16 @@ public class MemberDAO {
 //	회원탈퇴하기
 	public void deleteMember(int memberNumber) {
 		sqlSession.delete("member.deleteMember", memberNumber);
+	}
+	
+//	Id찾기
+	public String findId(MemberDTO memberDTO) {
+		return sqlSession.selectOne("member.findId", memberDTO);
+	}
+	
+//	pw찾기
+	public String findPw(MemberDTO memberDTO) {
+		return sqlSession.selectOne("member.findPw", memberDTO);
 	}
 	
 }

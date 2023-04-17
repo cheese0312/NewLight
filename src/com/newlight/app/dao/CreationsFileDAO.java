@@ -31,7 +31,13 @@ public class CreationsFileDAO {
 		return sqlSession.selectList("creationsfile.selectDelete", memberNumber);
 	}
 	
+//	만화 리스트 뿌려주기
+	public List<CreationsFileDTO> aniList(int creationNumber) {
+		return sqlSession.selectList("creationsfile.aniList", creationNumber);
+	}
+
 	public void delete(int creationNumber) {
 		sqlSession.delete("creationsfile.delete" , creationNumber);
 	}
+	
 }

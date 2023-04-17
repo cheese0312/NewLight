@@ -46,6 +46,7 @@ public class DeleteOkController implements Execute{
 		
 		
 		HttpSession session = req.getSession();
+		System.out.println(session.getAttribute("memberNumber"));
 		int memberNumber = (Integer)session.getAttribute("memberNumber");
 				
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
@@ -82,14 +83,13 @@ public class DeleteOkController implements Execute{
 //		실제 프로필 이미지 파일 삭제 처리
 		String pfpName = memberDAO.selectProfile(memberNumber);
 		
-		File file = new File(profilePath, pfpName);
-		
-		if(file.exists()) {
-			file.delete();
+		if(pfpName != null) {
+			File file = new File(profilePath, pfpName);
+			
+			if(file.exists()) {
+				file.delete();
+			}
 		}
-		
-		
-		System.out.println("ddddd");
 		
 		qcDAO.deleteMember(memberNumber);
 		qnaFileDAO.deleteMember(memberNumber);
@@ -104,7 +104,7 @@ public class DeleteOkController implements Execute{
 		creationDAO.deleteMember(memberNumber);
 		memberDAO.deleteMember(memberNumber);
 		
-		req.getRequestDispatcher("/main/mainNewlightOk.mi").forward(req, resp);
+		resp.sendRedirect("/main/mainpageListOk.mi");
 		
 	}
 }

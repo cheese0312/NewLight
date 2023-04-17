@@ -60,7 +60,7 @@
 	</update>
 	
 	<select id="select" parameterType="_int" resultType="MemberDTO">
-		select member_name, member_id
+		select member_name, member_id, member_pfp
 		from `member` m
 		where member_number = #{memberNumber}
 	</select>
@@ -91,5 +91,20 @@
 	  from member
 	  where member_number = #{memberNumber}
 	</select>
+	
+	<!-- ID 찾기 -->
+	<select id="findId" parameterType="MemberDTO" resultType="string">
+		select member_id from `member` m 
+		where member_name = #{memberName} and member_phonenumber = #{memberPhoneNumber}
+	</select>
+	<!--  -->
+	
+	<!-- PW 찾기 -->
+	<select id="findPw" parameterType="MemberDTO" resultType="string">
+		select member_password  from `member` m 
+		where member_id = #{memberId} and member_name = #{memberName} and member_phonenumber = #{memberPhoneNumber}
+	</select>
+	<!--  -->
+	
 	
 </mapper>

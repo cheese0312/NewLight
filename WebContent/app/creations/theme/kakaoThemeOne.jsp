@@ -47,13 +47,13 @@
 										<img src="${pageContext.request.contextPath}/upload/${creationsfile.getFileSystemName()}" class="img-1">
 										<div class="sub-title">
 											<a
-												href="${pageContext.request.contextPath}/app/creations/theme/ThemeDownload.jsp">
+												href="${pageContext.request.contextPath}/creations/creationRead.ct">
 												<c:out value="${creation.getCreationTitle() }" />
 											</a>
 										</div>
 										<div class="sub-author">
 											<img
-												src="../img/—Pngtree—vector business men icon_4186858.png">
+												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
 												<c:out value="${creation.getMemberNickname()}" />

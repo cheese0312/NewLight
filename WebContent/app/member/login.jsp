@@ -26,7 +26,9 @@
                 <ul id="ullog">
                   <li id="lilogb"><a href="${pageContext.request.contextPath}/member/join.me">회원가입</a></li>
                   |
-                  <li id="lilog"><a href="#">아이디/</a> <a href="#">비밀번호 찾기</a></li>
+                  <li id="lilog">
+                  <a href="${pageContext.request.contextPath}/member/memberFindId.me">아이디/</a> 
+                  <a href="${pageContext.request.contextPath}/member/memberFindPw.me">비밀번호 찾기</a></li>
                 </ul>
               </p>
             </form:form>
