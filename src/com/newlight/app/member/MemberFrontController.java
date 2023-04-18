@@ -63,15 +63,15 @@ public class MemberFrontController extends HttpServlet {
 		case "/member/logoutOk.me":
 			new LogoutOkController().execute(req, resp);
 			break;
-
+			
 		// 회원 정보 수정 주소&컨트롤러 넣어주기
 		case "/mypage/mypageEdit.me":
 			System.out.println("mypageEdit 들어왔다!!!");
 			new EditController().execute(req, resp);
 			break;
-			
+		
 		// 회원정보 수정 완료 컨트롤러
-		case "/mypage/mypageEditOk.mp":
+		case "/mypage/mypageEditOk.me":
 			new EditOkController().execute(req, resp);
 			break;
 

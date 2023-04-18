@@ -17,12 +17,11 @@
   <article class="fullpadding">
   <article class="idfind">
     <h2>아이디 찾기</h2>
-<span class="small">- 회원정보에 저장된 생년월일, 휴대폰/전화번호 이메일 주소로 아이디를 찾을 수 있습니다.<br>
-- 아이핀으로 가입하신 회원님은 아이디를 분실하셨을 경우, 아이핀 인증을 이용하여 확인하실 수 있습니다.</span>
+<span class="small">- 회원정보에 저장된 아이디 휴대폰/전화번호 이름으로 아이디를 찾을 수 있습니다.<br></span>
 <div>
   <div class="tabs">
   <ul class="tabs-nav">
-    <li><a href="#tab-2">휴대폰</a></li>
+    <li><a href="#tab-2" id="id">휴대폰</a></li>
   </ul>
   <div class="tabs-stage">
     <div id="tab-2">
