@@ -96,11 +96,11 @@ public class CreationUpdateOkController implements Execute {
 						temp.delete();
 					}
 				}
-				creationsFileDAO.deleteMember(creationNumber);
+				creationsFileDAO.delete(creationNumber);
 			}
 		}
 		
-		resp.sendRedirect("/main/mainNewlightOk.mi");
+		resp.sendRedirect("/main/mainpageListOk.mi");
 
 	}
 

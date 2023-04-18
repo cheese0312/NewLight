@@ -117,7 +117,7 @@ public class CreationUploadOkController implements Execute{
 //			path = "";
 		}
 		
-		resp.sendRedirect(path);
+		resp.sendRedirect("/main/mainpageListOk.mi");
 	}
 }
 

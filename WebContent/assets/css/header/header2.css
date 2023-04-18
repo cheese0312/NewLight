@@ -180,10 +180,11 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-weight : bold;
 }
 
 .mypage-btn{
@@ -191,10 +192,11 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-weight : bold;
 }
 
 .logout-btn{
@@ -202,7 +204,7 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
@@ -215,7 +217,7 @@ header{
   height: 25px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;

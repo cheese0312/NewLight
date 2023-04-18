@@ -1,6 +1,10 @@
 /* 전체 배경화면 색상 */
 * {
-  background-color: rgb(255, 255, 245);
+  background-color: #fffff8;
+}
+@font-face {
+  font-family: "Hyemin";
+  src: url("/assets/fonts/Hyemin.ttf");
 }
 
 body > hr {
@@ -70,6 +74,7 @@ header{
 .dropbtn1 ,
 .dropbtn2 ,
 .dropbtn3{
+	  font-family: "Hyemin";
   color: black;
   font-size: 16px;
   border: none;
@@ -88,6 +93,7 @@ header{
 } */
 
 .dropbtn4 {
+  font-family: "Hyemin";
   color: black;
   font-size: 16px;
   border: none;
@@ -133,6 +139,7 @@ header{
 .dropdown-content2 > a,
 .dropdown-content3 > a,
 .dropdown-content4 > a {
+  font-family: "Hyemin";
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -182,10 +189,11 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-weight : bold;
 }
 
 .mypage-btn{
@@ -193,10 +201,11 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-weight : bold;
 }
 
 .logout-btn{
@@ -204,11 +213,10 @@ header{
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
-  font-weight: bold;
 }
 
 .btn1-box>.login2-btn{
@@ -217,7 +225,7 @@ header{
   height: 25px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(198, 133, 238);
+  background-color: #B4AEE8;
   color: black;
   border-radius: 5px;
   text-decoration-line: none;

@@ -77,22 +77,22 @@ public class CreationsDAO {
 	
 //	댓글 작성하기
 	public void commentInsert(CreationsVO creationsVO) {
-		sqlSession.insert("creationsComment.commentInsert", creationsVO);
+		sqlSession.insert("creationComment.commentInsert", creationsVO);
 	}
 	
 //	댓글 수정하기
 	public void commentUpdate(CreationsVO creationsVO) {
-		sqlSession.update("creationsComment.commentUpdate" , creationsVO);
+		sqlSession.update("creationComment.commentUpdate" , creationsVO);
 	}
 	
 //	댓글 삭제하기
 	public void commentDelete(int commentNumber) {
-		sqlSession.delete("creationsComment.commentDelete" , commentNumber);
+		sqlSession.delete("creationComment.commentDelete" , commentNumber);
 	}
 	
 //	댓글 전체 삭제
 	public void creationCommentDelete(int creationNumber) {
-		sqlSession.delete("creationsComment.creationDelete" , creationNumber);
+		sqlSession.delete("creationComment.creationDelete" , creationNumber);
 	}
 	
 //	창작물 수정하기
