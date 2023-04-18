@@ -16,8 +16,7 @@
 		method="post">
 		<hr>
 		<main>
-			<input type="hidden" name="creationNumber"
-				value="${creation.getCreationNumber()}">
+			<input type="hidden" name="creationNumber" value="${creation.getCreationNumber()}">
 			<div class="main">
 				<div class="main-box-bin"></div>
 				<div class="creations-background-title">
@@ -60,7 +59,7 @@
 											<img
 												src="${pageContext.request.contextPath}/assets/img/folder.png"
 												alt="" />
-											<div class="donwload-name">구버전 아이메세지 분홍.htheme</div>
+											<div class="donwload-name">구버전 아이메세지 분홍.theme</div>
 										</div>
 										<div class="download-icon">
 											<a
@@ -75,12 +74,13 @@
 							</c:forEach>
 						</div>
 
-						</div>
+						
 						<div class="creations-comment-content">
 							<span> <c:out value="${creation.getCreationContent()}" />
 							</span>
 						</div>
 					</div>
+					
 					<div class="click-main">
 						<div class="click">
 							<div class="creations-like"
@@ -106,6 +106,7 @@
 								</span>
 
 							</div>
+							
 							<%-- <div class="creations-like none" data-likeNumber="${creation.getCreationNumber()}">
             <a href="#" class="likeplus">
              <img src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
@@ -138,61 +139,27 @@
 							</div>
 
 						</div>
+						</div>
 					</div>
-				</div>
+				
 
 				<div class="comment">
 					<div class="comment-input">
 						<input type="hidden" name="creationNumber"
 							value="${creation.getMemberNumber() }">
 						<div class="comment-text">
-							<textarea name="commentContent" id="content"
-								placeholder="댓글 내용을 입력하세요."></textarea>
+							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 						</div>
 						<div class="comment-ok-btn">
-							<button type="button" class="comment-submit">작성</button>
+							<button type="button" class="comment-submit commnet-btn-ok">작성</button>
 						</div>
 					</div>
 
 					<div class="comment-border">
-						<%-- 	<c:choose>
-          		<c:when test="${not empty commentList}">
-          			<c:forEach var="commentList" items="${commentList}">
-          				<div class="comment-main">
-				            <div class="comment-img-box">
-				          <div class="comment-img">
-				            <img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
-				          </div>
-				        </div>
-				          <div class="comment-box">
-				            
-				            <div class="comment-member">
-				              <c:out value="${commentList.getMemberNickname() }"/>
-				              <div class="comment-content">
-				               <c:out value="${commentList.getCommentContent()}"/> 
-				              </div>
-				            </div>
-				            <div class="comment-writeday">
-				             <c:out value="${commentList.getCommentWritedate()}"/> 
-				            </div>
-				            </div>
-				            
-				            <div class="comment-btn">
-				              <button type="button">수정</button>
-				              <button type="button">삭제</button>
-				            </div>
-				          </div>
-          			</c:forEach>
-          			
-          		</c:when>
-          		
-          		<c:otherwise>
-          			<h4>현재 작성된 댓글이 없습니다.</h4>
-          		</c:otherwise>
-          	</c:choose> --%>
+
 					</div>
 				</div>
-			</div>
+				</div>
 		</main>
 	</form>
 	<!-- 푸터 -->

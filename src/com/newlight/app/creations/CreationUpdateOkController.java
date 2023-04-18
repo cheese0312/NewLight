@@ -100,7 +100,7 @@ public class CreationUpdateOkController implements Execute {
 			}
 		}
 		
-		resp.sendRedirect("/main/mainNewlightOk.mi");
+		resp.sendRedirect("/main/mainpageListOk.mi");
 
 	}
 

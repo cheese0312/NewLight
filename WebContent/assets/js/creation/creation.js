@@ -46,7 +46,7 @@ function showComment(comments){
 		<div class="comment-main">
 				            <div class="comment-img-box">
 				          <div class="comment-img">
-				            <img src="/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+				            <img src="/userProfile/${comment.memberPfp}">
 				          </div>
 				        </div>
 				          <div class="comment-box">
@@ -65,12 +65,12 @@ function showComment(comments){
 			text += 
 			`
 			<div class="comment-btn">
-				              <button type="button" class="comment-update">수정</button>
-				              <button type="button" class="comment-delete"  data-number="${comment.commentNumber}">삭제</button>
+				              <button type="button" class="comment-update commnet-btn-ok">수정</button>
+				              <button type="button" class="comment-delete commnet-btn-ok"  data-number="${comment.commentNumber}">삭제</button>
 				            
 	</div>
 			<div class="comment-btn none">
-							<button type="button" class="comment-modify" data-number="${comment.commentNumber}">수정 완료 </button>
+							<button type="button" class="comment-modify commnet-btn-ok" data-number="${comment.commentNumber}">수정 완료 </button>
 		</div>		          
 				</div>
 			`

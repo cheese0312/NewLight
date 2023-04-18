@@ -5,46 +5,46 @@
 <!-- SQL문 작성 , DB이름 추가 -->
 
 <mapper namespace="notification">
-	
+   
     <select id="selectAll" resultType="notificationDTO" parameterType="map">
        select notification_number, notification_title, notification_content, notification_writeday
-		from newlight.notification
+      from newlight.notification
         order by notification_number desc
-		limit #{startRow},
-		#{rowCount}
+      limit #{startRow},
+      #{rowCount}
     </select>
     
     <select id="getTotal" resultType="_int">
-		select
-		count(notification_number)from notification
-	</select>
-	
-		<select id="select" parameterType="_int"
-		resultType="NotificationDTO">
-		select notification_number, notification_content, notification_title,
-		notification_writeday
-		from newlight.notification
-		where notification_number = #{notificationNumber}
-	</select>
-	
-		<insert id="insert" parameterType="NotificationDTO">
-		insert into
-		notification(notification_title, notification_content, member_number)
-		values(#{notificationTitle}, #{notificationContent}, #{memberNumber})
-	</insert>
-	
-	<delete id="delete" parameterType="_int">
-	  delete from notification where notification_number = #{notificationNumber}
-	</delete>
-	
-	<update id="update" parameterType="CommunityDTO">
-	  update notification
-	  set notification_title = #{notificationTitle}, notification_content = #{notificationContent}
-	  where notification_number = #{notificationNumber}
-	</update>
-	
-<!-- 		<select id="getSequence" resultType="_int">
-		select last_insert_id()
-	</select> -->
+      select
+      count(notification_number)from notification
+   </select>
+   
+      <select id="select" parameterType="_int"
+      resultType="NotificationDTO">
+      select notification_number, notification_content, notification_title,
+      notification_writeday
+      from newlight.notification
+      where notification_number = #{notificationNumber}
+   </select>
+   
+      <insert id="insert" parameterType="NotificationDTO">
+      insert into
+      notification(notification_title, notification_content, member_number)
+      values(#{notificationTitle}, #{notificationContent}, #{memberNumber})
+   </insert>
+   
+   <delete id="delete" parameterType="_int">
+     delete from notification where notification_number = #{notificationNumber}
+   </delete>
+   
+   <update id="update" parameterType="CommunityDTO">
+     update notification
+     set notification_title = #{notificationTitle}, notification_content = #{notificationContent}
+     where notification_number = #{notificationNumber}
+   </update>
+   
+<!--       <select id="getSequence" resultType="_int">
+      select last_insert_id()
+   </select> -->
     
 </mapper>
