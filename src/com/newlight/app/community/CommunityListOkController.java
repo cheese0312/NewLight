@@ -26,7 +26,7 @@ public class CommunityListOkController implements Execute {
       
       int page = temp==null?1:Integer.valueOf(temp);
       
-      int rowCount = 5;
+      int rowCount = 6;
       int pageCount = 5;
       
       int startRow = (page-1)*rowCount;

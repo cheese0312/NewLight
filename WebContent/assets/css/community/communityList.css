@@ -316,6 +316,8 @@ section>.big-box{
   margin-top: -170px;
   margin-right : 80px;
    background-color: white;
+   width: 500px;
+    margin: -100px 710px;
 }
 
 .pagination > ul {
