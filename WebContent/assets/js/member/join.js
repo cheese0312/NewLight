@@ -60,7 +60,7 @@ $pwInput.on('blur', function(){
 });
 
 $(".myButton").on('click' , function(){
-	if(!$checkMsg.val().includes("중") && $checkMsg2.val().includes("중") && $checkPwMsg.val().includes("불")){
+	if(!$checkMsg.val().includes("중") && !$checkMsg2.val().includes("중") && !$checkPwMsg.val().includes("불")){
 		$("form").submit();
 	}
 	else{
