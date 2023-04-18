@@ -69,35 +69,7 @@ $(".myButton").on('click' , function(){
 	}
 });
 
-
 $("#file").on('change' , function(){
 	let fileName = $('#file').val();
 	$('.upload-name').val(fileName);
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
