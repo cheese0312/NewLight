@@ -60,21 +60,25 @@
                                           <a href="#"> <c:out value="${creations.getCreationTitle()}"/> </a>
                                        </div>
                                        <div class="sub-author">
+                                       <div class="sub-author-img">
                                           <img
                                              src="${pageContext.request.contextPath}/userProfile/${creations.getMemberPfp()}">
+                                             </div>
+                                             <div class="sub-author-name">
                                           <a href="#"> <c:out value="${creations.getMemberNickname()}"/> </a>
+                                          </div>
                                        </div>
                                        <div class="creations-sub">
                                        <div class="creation-like">
                                           <img
                                              src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
-                                          <c:out value="${creations.getLikeCount()}" />
+                                          <span class="count"><c:out value="${creations.getLikeCount()}" /></span>
                                           </div>
                                           <div class="creation-comment">
-                                          <c:out value="${creations.getCommentCount()}" />
+                                          
                                           <img
                                              src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
-                                          
+                                          <span class="count"><c:out value="${creations.getCommentCount()}" /></span>
                                        </div>
                                        </div>
                                     </div>

@@ -40,7 +40,7 @@ public class CreationDeleteOkController implements Execute {
 			}
 		}
 		
-		creationsFileDAO.deleteMember(creationNumber);
+		creationsFileDAO.delete(creationNumber);
 		creationsDAO.creationDelete(creationNumber);
 		
 		resp.sendRedirect("/main/mainpageListOk.mi");

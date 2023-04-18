@@ -49,36 +49,39 @@
 					<c:choose>
 						<c:when test="${not empty likeList}">
 							<c:forEach var="like" items="${likeList}">
-								<div class="creations-main">
+								<!-- <div class="creations-main"> -->
 									<div class="img">
 										<div class="creations-img">
-										
 											<img src="${pageContext.request.contextPath}/upload/${like.getCreationSumnail()}">
 											<div class="sub-title">
 												<a href="#"> <c:out value="${like.getCreationTitle() }" /></a>
 											</div>
 											<div class="sub-author">
+											<div class="sub-author-img">
 												<img
 													src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+												</div>
+												<div class="sub-author-name">
 												<a href="#"> <c:out value="${like.getMemberNickname() }" />
 												</a>
+												</div>
 											</div>
 											<div class="creations-sub">
-												<div class="creations-like">
+												<div class="creation-like">
 														<img
 															src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
-														<c:out value="${like.getLikeCount()}" />
+														<span class="count"><c:out value="${like.getLikeCount()}" /></span>
 														</div>
-														<div class="creations-comment">
-														<c:out value="${like.getCommentCount()}" />
+														<div class="creation-comment">
+														
 														<img
 															src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
-														
+														<span class="count"><c:out value="${like.getCommentCount()}" /></span>
 													</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								<!-- </div> -->
 							</c:forEach>
 						</c:when>
 						<c:otherwise>
