@@ -2,7 +2,6 @@ package com.newlight.app.dao;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.mybatis.config.MyBatisConfig;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;

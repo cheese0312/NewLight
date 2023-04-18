@@ -208,6 +208,7 @@ margin-right: 10px;
    background: #eee;
    border: 1px solid #cecfd5;
    display: block;
+
 }
  a {
   color: #eee;
@@ -303,9 +304,6 @@ color: #fff;
 }
 .tabs-nav2 li:first-child a {
   border-right: 0;
-
-}
-.tabs-nav2 li:last-child a {
 
 }
 .tabs-nav>a {

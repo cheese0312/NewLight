@@ -30,7 +30,7 @@
             
               <br>
               <div class="word1"> <p>내용</p></div>
-              <input type="text" class="word" name="qnaContent">
+              <textarea type="text" class="word" name="qnaContent"></textarea>
             </div>
               <br>
               <br>
