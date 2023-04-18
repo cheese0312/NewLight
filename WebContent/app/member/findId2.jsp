@@ -17,7 +17,7 @@
         <h2>아이디 찾기</h2>
         <span class="findId-msg">회원님의 아이디는<c:out value= "${memberId}"/>입니다.</span>
         <div>
-          <button class="okbtn">확인</button>
+          <a href="${pageContext.request.contextPath}/member/login.me"><button class="okbtn">확인</button></a>
         </div>
       </article>
     </article>
