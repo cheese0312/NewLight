@@ -16,10 +16,7 @@
    </insert>
 
 	<!-- 메인페이지 창작물 조회하기 -->
-	
-<!-- 	<select id="selectAll" resultType="CreationsVO">
-		select creation_title, creation_read_count, category_code, category_name, m.member_nickname, m.member_pfp
-	<select id="selectAll" resultType="CreationsVO">
+	<select id="selectAll" resultType="CreationsVO" parameterType="CreationsVO">
 		select creation_title,
 		creation_read_count, category_code, category_name, m.member_nickname,
 		m.member_pfp
@@ -28,35 +25,20 @@
 		c.member_number
 		order by creation_number desc
 		limit 0,9
-	</select> -->
+	</select>
 	
 	<!-- 카테고리 테마별 창작물 조회하기 -->
-	<select id="selectMenu" resultType="CreationsVO"
-		parameterType="map">
+	<select id="selectMenu" resultType="CreationsVO" parameterType="map">
 		select c.creation_number , c.creation_title , c.creation_sumnail ,
 		m.member_nickname , m.member_pfp
 		from creations c join `member` m
 		on c.member_number = m.member_number and category_code = #{categoryCode}
 		and category_name = #{categoryName}
 		order by creation_number desc
-		<!-- limit 0,9 -->
+		limit 0,9
 	</select>
-   
 
-   <!-- 카테고리 테마별 창작물 조회하기 -->
-   <select id="selectMenu" resultType="CreationsVO"
-      parameterType="map">
-      select c.creation_number , c.creation_title , c.creation_sumnail ,
-      m.member_nickname , m.member_pfp
-      from creations c join `member` m
-      on c.member_number = m.member_number and category_code = #{categoryCode}
-      and category_name = #{categoryName}
-      order by creation_number desc
-      <!-- limit 0,9 -->
-   </select>
-
-   <select id="select" parameterType="_int"
-      resultType="CreationsVO">
+   <select id="select" parameterType="_int" resultType="CreationsVO">
       select creation_number, creation_title, creation_content,
       category_code, category_name, creation_writeday, m.member_number,
       m.member_id , m.member_nickname
@@ -78,40 +60,37 @@
    </select>
 
    <!-- 창작물 보기 -->
-   <select id="creationContent" parameterType="_int"
-      resultType="CreationsVO">
-      select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
-      c.creation_read_count , m.member_nickname , m.member_number
+   <select id="creationContent" parameterType="_int" resultType="CreationsVO">
+      select 
+      c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
+      c.creation_read_count , m.member_nickname , m.member_number , m.member_pfp
       from creations c join `member` m
       on c.member_number = m.member_number
       where c.creation_number = #{creationNumber}
    </select>
 
 	<!-- 창작물 보기, 메인페이지에서 창작물 게시글 진입 -->
-	<select id="creationContent" parameterType="_int"
-		resultType="CreationsVO">
+<!-- 	<select id="creationContent" parameterType="_int" resultType="CreationsVO">
 		select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
 		c.creation_read_count , m.member_nickname , m.member_number, m.member_pfp
 		from creations c join `member` m
 		on c.member_number = m.member_number
 		where c.creation_number = #{creationNumber}
-	</select>
+	</select> -->
 	
    
    <!-- 카테고리 테마별 창작물 조회하기 -->
-   <select id="selectMenu" resultType="CreationsVO"
-      parameterType="map">
+<!--    <select id="selectMenu" resultType="CreationsVO" parameterType="map">
       select c.creation_number , c.creation_title , c.creation_sumnail ,
       m.member_nickname , m.member_pfp
       from creations c join `member` m
       on c.member_number = m.member_number and category_code = #{categoryCode}
       and category_name = #{categoryName}
       order by creation_number desc
-      <!-- limit 0,9 -->
-   </select>
+      limit 0,9
+   </select> -->
 
-   <select id="select" parameterType="_int"
-      resultType="CreationsVO">
+<!--    <select id="select" parameterType="_int" resultType="CreationsVO">
       select creation_number, creation_title, creation_content,
       category_code, category_name, creation_writeday, m.member_number,
       m.member_id , m.member_nickname
@@ -121,26 +100,16 @@
       c.member_number
    </select>
 
-   <!-- 창작물 삭제 -->
+   창작물 삭제
    <delete id="delete" parameterType="_int">
       delete from creations
       where
       member_number = #{memberNumber}
-   </delete>
+   </delete> -->
 
-   <select id="getSequence" resultType="_int">
+<!--    <select id="getSequence" resultType="_int">
       select last_insert_id()
-   </select>
-
-   <!-- 창작물 보기 -->
-   <select id="creationContent" parameterType="_int"
-      resultType="CreationsVO">
-      select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
-      c.creation_read_count , m.member_nickname , m.member_number
-      from creations c join `member` m
-      on c.member_number = m.member_number
-      where c.creation_number = #{creationNumber}
-   </select>
+   </select> -->
 
    <!-- 창작물 댓글 갯수 -->
    <select id="creationComment" parameterType="_int" resultType="_int">
@@ -151,7 +120,7 @@
 
    <!-- 창작물 댓글 리스트 -->
    <select id="commentList" parameterType="_int" resultType="CreationsVO">
-      select cc.comment_number, cc.comment_content, cc.comment_writedate , cc.creation_number, m.member_nickname , m.member_number 
+      select cc.comment_number, cc.comment_content, cc.comment_writedate , cc.creation_number, m.member_nickname , m.member_number , m.member_pfp 
       from creations_comment cc join `member` m
       on cc.member_number = m.member_number
       where creation_number = #{creationNumber}
@@ -173,52 +142,24 @@
       set creation_sumnail = #{fileSystemName}
       where creation_number = #{creationNumber}
    </update>
-   
-   <!-- 2차 창작물 배경화면 -->
-      <select id="category2background" parameterType="CreationsVO" resultType="CreationsVO">
-         select creation_title , member_nickname 
-         from `member` m  join creations c
-         on m.member_number = c.member_number 
-         where category_code = '201' and category_name = '배경화면'
-      </select>
       
-      <!-- 회원탈퇴 시 창작물 삭제 -->
-      <delete id="deleteMember" parameterType="_int">
-         delete from creations
-         where member_number = #{memberNumber}
-      </delete>
+     <!-- 회원탈퇴 시 창작물 삭제 -->
+     <delete id="deleteMember" parameterType="_int">
+        delete from creations
+        where member_number = #{memberNumber}
+     </delete>
 
-	<update id="update" parameterType="CreationsFileDTO">
-		update creations
-		set creation_sumnail = #{fileSystemName}
-		where creation_number = #{creationNumber}
-	</update>
+	<!-- 창작물 삭제 -->
+	<delete id="creationDelete" parameterType="_int">
+		delete from creations
+		where creation_number=#{creationNumber}
+	</delete>
 	
-	<!-- 2차 창작물 배경화면 -->
-		<select id="category2background" parameterType="CreationsVO" resultType="CreationsVO">
-			select creation_title , member_nickname 
-			from `member` m  join creations c
-			on m.member_number = c.member_number 
-			where category_code = '201' and category_name = '배경화면'
-		</select>
-		
-		<!-- 회원탈퇴 시 창작물 삭제 -->
-		<delete id="deleteMember" parameterType="_int">
-			delete from creations
-			where member_number = #{memberNumber}
-		</delete>
-
-		<!-- 창작물 삭제 -->
-		<delete id="creationDelete" parameterType="_int">
-			delete from creations
-			where creation_number=#{creationNumber}
-		</delete>
-		
-		<!-- creationRead 페이징처리 -->
-		<select id="creationRead" parameterType="_int" resultType="CreationsVO">
-			select category_name from creations c 
-			where creation_number = #{creationNumber}
-		</select>
+	<!-- creationRead 페이징처리 -->
+	<select id="creationRead" parameterType="_int" resultType="CreationsVO">
+		select category_name from creations c 
+		where creation_number = #{creationNumber}
+	</select>
 	
    
 </mapper>

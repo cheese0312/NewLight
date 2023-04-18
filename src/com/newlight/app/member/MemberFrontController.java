@@ -71,7 +71,7 @@ public class MemberFrontController extends HttpServlet {
 			break;
 			
 		// 회원정보 수정 완료 컨트롤러
-		case "/mypage/mypageEditOk.mp":
+		case "/mypage/mypageEditOk.me":
 			new EditOkController().execute(req, resp);
 			break;
 
