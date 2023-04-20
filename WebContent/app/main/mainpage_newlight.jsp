@@ -21,24 +21,37 @@
 			<div class="category-container">
 				<div class="category-menu">
 					<ul class="menu">
-						<li class="menu-list"><a href="#" class="menu-list-1">손글씨(Font)
-								<img src="../img/handpen.png" alt="" class="handpen-img" />
+						<div class="category-menu-1">
+							<li class="menu-list"><a
+								href="/creations/pageListOk.ct?categoryCode=101&categoryName=손그림"
+								class="menu-list-1"><strong class="font-name">손글씨(Font)</strong>
+									<img
+									src="${pageContext.request.contextPath}/assets/img/fontCategory.png"
+									alt="" class="handpen-img" /> </a></li>
+						</div>
+						<li class="menu-list"><a
+							href="/creations/pageListOk.ct?categoryCode=101&categoryName=배경화면"
+							class="menu-list-2"> <strong class="background-name">배경화면</strong><img
+								src="${pageContext.request.contextPath}/assets/img/backgroundCategory.png"
+								alt="" class="background-img" />
 						</a></li>
-						<li class="menu-list"><a href="#" class="menu-list-2">배경화면
-								<img src="../img/display.png" alt="" class="display-img" />
-						</a></li>
-						<li class="menu-list"><a href="#" class="menu-list-3">아이콘
-								<img src="../img/iconsmile-menu.png" alt="" class="icon-img" />
-						</a></li>
+						<li class="menu-list"><a
+							href="/creations/pageListOk.ct?categoryCode=201&categoryName=트레이싱"
+							class="menu-list-3"><strong class="tracing-name">트레이싱</strong>
+								<img
+								src="${pageContext.request.contextPath}/assets/img/tracingCategory.png"
+								alt="" class="tracing-img" /> </a></li>
 						<li class="menu-list"><a
 							href="${pageContext.request.contextPath}/app/creations/theme/kakaoThemeOne.jsp"
-							class="menu-list-4">카톡테마 <img src="../img/kakao-talk.png"
-								alt="" class="kakaotheme-img" />
-						</a></li>
+							class="menu-list-4"><strong class="kakao-name">카톡테마</strong>
+								<img
+								src="${pageContext.request.contextPath}/assets/img/kakao-talk.png"
+								alt="" class="kakaotheme-img" /> </a></li>
 						<li class="menu-list"><a
-							href="${pageContext.request.contextPath}/app/creations/ani/aniList.jsp"
-							class="menu-list-5">만화 <img src="../img/animation.png" alt=""
-								class="ani-img" />
+							href="/creations/pageListOk.ct?categoryCode=101&categoryName=만화"
+							class="menu-list-5"> <strong class="animation-name">애니메이션</strong><img
+								src="${pageContext.request.contextPath}/assets/img/animationCategory-removebg-preview.png"
+								alt="" class="ani-img" />
 						</a></li>
 					</ul>
 				</div>
@@ -96,15 +109,18 @@
 						 <c:if test="${content.categoryName== '손그림' || content.categoryName== '카톡테마' || content.categoryName== '폰트' || content.categoryName== '만화' }">
 							<div class="create-card">
 								<div class="create-logo">
-									<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}" class="themeList"> <img
+									<a
+										href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}"
+										class="themeList"> <img
 										src="${pageContext.request.contextPath}/upload/${content.getCreationSumnail()}"
 										alt="" class="create-card-img" />
 									</a>
 									<div class="creation-main">
 									<div class="create-title">
 										<h4>
-											<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}">
-											<c:out value="${content.getCreationTitle() }" />
+											<a
+												href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}">
+												<c:out value="${content.getCreationTitle() }" />
 											</a>
 										</h4>
 									</div>
