@@ -16,7 +16,8 @@
 <%@include file="/app/header.jsp"%>
 
 <body>
-	<form action="${pageContext.request.contextPath}/qna/QnAListOk.qn" method="post">
+	<form action="${pageContext.request.contextPath}/qna/QnAListOk.qn"
+		method="post">
 		<div class="container">
 			<div class="write-btn-wrap">
 				<!-- 글쓰기 페이지 이동 처리 -->
@@ -41,12 +42,10 @@
 							<c:forEach var="qna" items="${qnaList}">
 								<tr>
 									<td class="no"><c:out value="${qna.getQnaNumber()}" /></td>
-									<td class="title">
-											<a
+									<td class="title"><a
 										href="${pageContext.request.contextPath}/qna/QnAReadOk.qn?qnaNumber=${qna.getQnaNumber()}">
-										<c:out value="${qna.getQnaTitle()}" />
-										</a>
-									</td>
+											<c:out value="${qna.getQnaTitle()}" />
+									</a></td>
 									<td class="author"><c:out
 											value="${qna.getMemberNickname()}" /></td>
 									<td class="date"><c:out value="${qna.getQnaWriteday()}" /></td>

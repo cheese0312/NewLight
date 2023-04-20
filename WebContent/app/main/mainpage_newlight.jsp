@@ -10,6 +10,7 @@
 <title>newlight</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/main.css" />
+	
 </head>
 <body>
 	<%@include file="/app/header.jsp"%>
@@ -165,6 +166,7 @@
 			</div>
 		</section>
 	</form>
+	
 	<%@include file="/app/footer.jsp"%>
 </body>
 </html>
