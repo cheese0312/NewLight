@@ -57,7 +57,7 @@
                                     <div class="creations-img">
                                        <img src="${pageContext.request.contextPath}/upload/${creations.getCreationSumnail()}">
                                        <div class="sub-title">
-                                          <a href="#"> <c:out value="${creations.getCreationTitle()}"/> </a>
+                                          <a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${creations.getCreationNumber()}"> <c:out value="${creations.getCreationTitle()}"/> </a>
                                        </div>
                                        <div class="sub-author">
                                        <div class="sub-author-img">

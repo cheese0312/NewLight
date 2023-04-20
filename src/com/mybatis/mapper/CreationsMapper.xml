@@ -78,7 +78,6 @@
       where c.creation_number = #{creationNumber}
    </select> -->
    
->>>>>>> work/sj7
    
    <!-- 카테고리 테마별 창작물 조회하기 -->
 <!--    <select id="selectMenu" resultType="CreationsVO" parameterType="map">
