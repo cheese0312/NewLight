@@ -10,6 +10,7 @@
 <title>aniview</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/aniview.css" />
+	
 </head>
 <body>
 	<%@include file="/app/header.jsp"%>

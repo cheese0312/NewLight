@@ -11,6 +11,7 @@
 	href="${pageContext.request.contextPath}/assets/css/ani.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/header/header.css">
+	
 </head>
 <!-- 손그림+폰트+만화 처리 화면 -->
 <body>

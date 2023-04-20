@@ -11,6 +11,7 @@
 	href="${pageContext.request.contextPath}/assets/css/creations/background.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/header/header.css">
+	
 </head>
 <!-- 1차,2차 배경화면 + 트레이싱 처리 화면 -->
 <body>
