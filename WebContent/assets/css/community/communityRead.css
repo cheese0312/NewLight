@@ -1,7 +1,7 @@
 * {
     /* margin: 10px;
     padding: 10px 0; */
-    background-color: rgb(255, 255, 245);
+    background-color: #fffcfc;
   }
   
 
@@ -14,28 +14,21 @@
     
     section>.big-box{
     height: auto;
-    border: 1px solid rgb(234, 232, 232);
-    background-color: rgb(242, 239, 239);
   }
 
   .big-box>.title{
     margin: 30px 80px;
   }
 
-  .title>h1{
-    background-color: rgb(242, 239, 239);
-  }
 
   .big-box>.menu{
     display: flex;
     list-style: none;
     margin: 0 40px;
-     background-color:rgb(242, 239, 239);
   }
 
   .menu>.writer{
     display: flex;
-     background-color:rgb(242, 239, 239);
   }
 
   .writer>h1{
@@ -44,29 +37,20 @@
     height: 20px;
     width: 50px;
     border-right: 1px solid gray;
-    background-color: rgb(242, 239, 239);
+   
   }
 
   .view-attach{
     width:65%;
-    height:auto;
     margin : 0 210px;
-    background-color: rgb(242, 239, 239);
+   /*  border : 1px solid; */
   }
   
-  .view-attach>.img-box{
-    background-color: rgb(242, 239, 239);
-   }
   
   .writer>.writer2{
     margin: -15px -20px;
     height: 20px;
     width: 100px;
-    background-color: rgb(242, 239, 239);
-  }
-  
-  .writer2>img{
-    background-color: rgb(242, 239, 239);
   }
   
   .blank{
@@ -84,21 +68,18 @@
     width: 70%;
     height: 600px;
     margin: 70px 175px;
-    background-color: rgb(242, 239, 239);
   }
 
-  .big-box>.else{
-    background-color: blanchedalmond;
-    width: 80%;
-   
-    border: 1px solid blanchedalmond ;
-    margin: 50px 120px;
-    font-size: 20px;
+  .view-attach>.else{
+    background-color: #fffcfc;
+    border: 1px solid #fffcfc;
+   /*  margin: 50px 120px */;
+    font-size: 17px;
     white-space : pre-line;
   }
 
   .big-box>.else>p{
-    background-color: blanchedalmond;
+    background-color: #fffcfc;
     margin: 40px;
     
   }
@@ -113,17 +94,17 @@
     display: flex;
     width: 50px;
     margin: -60px 780px;
-     background-color:rgb(245, 245, 242);
+     background-color:#fffcfc;
 }
 
 .else>.comment>img{
     width: 35px;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
   .big-box>.comment2{
-    border: 1px solid  rgb(245, 245, 242);
-     background-color: rgb(242, 239, 239);
+    border: 1px solid  #fffcfc;
+     background-color: #fffcfc;
     width: 1000px;
     margin: 98px;
   
@@ -143,9 +124,9 @@
   }
 
   .comment2>.hello{
-    border: 1px solid rgb(245, 245, 242);
+    border: 1px solid #fffcfc;
     
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
     display: block;
     justify-content: space-between;
   }
@@ -154,7 +135,6 @@
     font-size: 13px;
     margin: 10px 30px;
     display: flex;
-    background-color:rgb(245, 245, 242);
     width: 90%;
   }
 
@@ -162,21 +142,20 @@
     border-right: 1px solid gray;
     width: 20px;
     height: 20px;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
   .date>.fuck{
     margin: 1px 16px;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
   .date>p3{
     margin: 2px -1px;
-    background-color:rgb(245, 245, 242);
   }
 
   .fuck>p1{
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
     
   }
 
@@ -184,15 +163,15 @@
     height: 0px;
     width: 300%;
     margin: 20px 15px;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
   .delete>p2{
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
 .comment-btn{
- background-color:rgb(245, 245, 242); ;
+ background-color:#fffcfc;
  display: flex;
  width: 80%;
 }
@@ -200,7 +179,7 @@
   .comment-btn>button{
     border-radius: 10%;
     margin: 15px 5px;
-    border: 1px solid burlywood;
+    border: 1px solid #fffcfc;
     background-color: burlywood;
     font-weight: bold;
     font-size: 13.5px;
@@ -210,14 +189,14 @@
   .commtent-sub {
     display: flex;
     justify-content: space-between;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
   }
 
  
   .comment2>.hello2{
-    border: 1px solid rgb(245, 245, 242);
+    border: 1px solid #fffcfc;
     height: 99.5px;
-    background-color:rgb(245, 245, 242);
+    background-color:#fffcfc;
     margin: -10px 0;
 
   }
@@ -227,40 +206,36 @@
     width: 50%;
     margin: 50px 450px;
     font-size: 19px;
-    background-color:rgb(245, 245, 242);
   }
   
     .writer>.date{
-    background-color:rgb(242, 239, 239);
     margin: -30px 210px;
     width: 80px;
     font-size: 15px;
   }
-
+  
   .date>p{
-    background-color: rgb(242, 239, 239);
+   width : 150px;
   }
+
   
   /* 첨부파일 스타일 */
 
 
 .img-box {
-  
    margin: 10px;
    position : relative;
-    background-color: rgb(242, 239, 239);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .img-box>img {
-   width: 100%;
-   
-  
+   width: 65%;
+   margin : 0 130px;
 }
 
 .download-btn {
-   background-color: rgba(0, 0, 0, 0.4);
-   width: 1.5em;
-   height: 1.5em;
+   width: 8.5em;
+   height: 30.5em;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -272,36 +247,44 @@
 }
 
 .download-btn:hover > svg{
-   stroke : rgb(255, 87, 87);
-   fill: rgb(255, 87, 87);
+   stroke : #B4AEE8;
+   fill: #B4AEE8;
 }
 
 svg {
-   width: 1em;
-   height: 1em;
+   width: 2em; 
+   height:-5em;
    fill: rgb(255,255,255);
-   
    stroke-width: 1;
-    stroke: rgb(255, 255, 255);
+    stroke: rgb(150, 147, 147);
 }
 
 .big-box>.remove{
   width: 200px;
-   padding: 0 10px;
-   margin: 30px 900px;
-  background-color: rgb(242, 239, 239);
+   padding: 0 20px;
+   margin: 0 900px;
 }
 
 .remove>button{
   border-radius: 10%;
-  border-color: burlywood;
-  border: 1px solid burlywood;
-  font-weight: bold;
+  border-color: #fffcfc;
+  border: 1px solid #fffcfc;
+}
+
+.edit:hover {
+ color: #B4AEE8;
+}
+
+.list:hover {
+ color: #B4AEE8;
+}
+
+.delete:hover {
+ color: #B4AEE8;
 }
 
 .remove>.list{
   font-size: 17px;
-  background-color: burlywood;
 }
 
 .remove > .list:hover {
@@ -318,7 +301,6 @@ svg {
 
 .remove>.edit{
   font-size: 17px;
-  background-color: burlywood;
 }
 
 .comment-btn>.comment-modify-ready:hover{
@@ -339,11 +321,11 @@ svg {
 
 .remove>.delete{
   font-size: 17px;
-  background-color: burlywood;
+  margin: 0 -10px;
 }
 
   .comment-write{
-    background-color: rgb(242, 239, 239);
+    background-color: #fffcfc;
   }
 
  .comment-box{
@@ -351,14 +333,13 @@ svg {
   height: 100px;
   width: 80%;
   margin: 0 50px;
-  background-color: rgb(242, 239, 239);
  }
  
   .go{
   border-radius: 10%;
   margin: 15px 50px;
-  border: 1px solid burlywood;
-  background-color: burlywood;
+  border: 1px solid #B4AEE8;
+  background-color: #B4AEE8;
   font-weight: bold;
   font-size: 17px;
  
@@ -366,7 +347,7 @@ svg {
 
 
  .btn{
-  background-color: rgb(242, 239, 239);
+  background-color: #fffcfc;
   margin-bottom: 10px;
  }
  

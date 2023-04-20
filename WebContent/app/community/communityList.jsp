@@ -17,55 +17,72 @@
 </head>
 <body>
 	<!-- 헤더 -->
-    <%@include file ="/app/header2.jsp" %>
+    <%@include file ="/app/header.jsp" %>
 
 	<form
 		action="${pageContext.request.contextPath}/community/communityListOk.cm" method="post">
 		<section>
-		
+		 <div class="writer-btn">
+                     <c:choose>
+                	<c:when test="${not empty sessionScope.memberNumber}">
+                		<a href="${pageContext.request.contextPath}/community/communityWrite.cm" class="">글쓰기</a>
+                	</c:when>
+                </c:choose>
+        </div>
+                
 			<div class="big-box">
-				<div class="menu">
-					<h1>작성자</h1>
-					<h1>제목</h1>
-					<h1>댓글</h1>
-					<h1>날짜</h1>
-					<h1>조회수</h1>
-				</div>
+				<ul class="menu">
+                <li class="writer">
+                    <h1>작성자</h1>
+                </li>
+                <li class="title1">
+                    <h1>제목</h1>
+                </li>
+                <li class="commen1">
+                    <h1>댓글</h1>
+                </li>
+                <li class="day">
+                    <h1>날짜</h1>
+                </li>
+                <li class="count">
+                    <h1>조회수</h1>
+                </li>
+            </ul>
 				<div class="small-box">
 
 					<c:choose>
 						<c:when test="${not empty communityList}">
 							<c:forEach var="community" items="${communityList}">
-								<div class="table">
-									<div class="name">
+								<ul class="table">
+									<li class="name">
 										<h1>
 											<c:out value="${community.getMemberNickName()}" />
 										</h1>
-									</div>
-									<div class="title">
+									</li>
+									<li class="title">
 										<h1>
 										<a href = "${pageContext.request.contextPath}/community/communityReadOk.cm?communityNumber=${community.getCommunityNumber()}">
 											<c:out value="${community.getCommunityTitle()}" />
 											</a>
 										</h1>
-									</div>
-									<div class="comment">
+									</li>
+									<li class="comment">
 										<h1>
 											
 										 <c:out value="${community.getCommentCount()}" /> 
 										</h1>
-									</div>
-									<div class="date">
+									</li>
+									<li class="date">
 										<h1>
 											<c:out value="${community.getCommunityWriteDay()}" />
 										</h1>
-									</div>
-									<div class="cnt">
+									</li>
+									<li class="cnt">
 										<h1>
 											<c:out value="${community.getCommunityReadCount()}" />
 										</h1>
-									</div>
-								</div>
+									</li>
+								</ul>
 
 							</c:forEach>
 						</c:when>
@@ -122,6 +139,6 @@
 	<br>
 	<br>
 	<br>
-<%@include file ="/app/footer.jsp" %>
+
 </body>
 </html>

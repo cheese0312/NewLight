@@ -95,7 +95,7 @@
       on c.member_number = m.member_number
       where c.creation_number = #{creationNumber}
    </select> -->
-   
+
    <!-- 카테고리 테마별 창작물 조회하기 -->
 <!--    <select id="selectMenu" resultType="CreationsVO" parameterType="map">
       select c.creation_number , c.creation_title , c.creation_sumnail ,

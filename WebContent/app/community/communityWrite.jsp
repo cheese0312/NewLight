@@ -17,7 +17,7 @@
 </head>
 <body>
 
-     <%@include file ="/app/header3.jsp" %>
+     <%@include file ="/app/header.jsp" %>
     <form action="${pageContext.request.contextPath}/community/communityWriteOk.cm" method="post" enctype="multipart/form-data">
     <section>
         <div class="gd">
