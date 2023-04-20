@@ -121,7 +121,7 @@ $fileInput.on('change', function(){
 
 // 글쓰기 작성 취소 이벤트처리하기
 $('.cancel-btn').on('click', () => {
-	window.location.href = '/board/boardListOk.bo';
+	window.location.href = '/main/mainpageListOk.mi';
 });
 
 

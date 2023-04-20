@@ -19,17 +19,9 @@
 	enctype="multipart/form-data">
     <div class="creations-main">
    	<input type="hidden" name="creationNumber" value="${creations.getCreationNumber()}" >
-      <h3>나만의 새로운 빛 만들기</h3>
-    <div class="creations-author">
-      <div class="author-img">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
+   	<div class="main-title">
+      <h3>나만의 새로운 빛 만들기 - <label><c:out value="${creations.getMemberNickname()}"/></label></h3>
       </div>
-      <div class="author-name">
-        <div class="content-mente">
-        <label><c:out value="${creations.getMemberNickname()}"/></label>
-        </div>
-      </div>
-    </div>
     
     <div class="creations-title">
       <div class="content-mente">

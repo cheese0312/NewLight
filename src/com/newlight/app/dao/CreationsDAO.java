@@ -37,10 +37,6 @@ public class CreationsDAO {
 		return sqlSession.selectOne("creations.getSequence");
 	}
 	
-//	파일 조회해서 페이지에 뿌려주기
-//	public List<CreationsVO> selectAll(){
-//		return sqlSession.selectList("creations.selectAll");
-//	}
 	
 	public List<CreationsVO> category2Background(CreationsVO creationsVO){
 		return sqlSession.selectList("creations.category2background", creationsVO);
@@ -108,6 +104,12 @@ public class CreationsDAO {
 //	creationRead페이징 처리
 	public CreationsVO creationRead(int creationNumber) {
 		return sqlSession.selectOne("creations.creationRead", creationNumber);
+	}
+	
+	
+//	창작물 카테고리별로 뿌려주기
+	public List<CreationsVO> selectMenu2 (Map<String, String> categoryMap){
+		return sqlSession.selectList("creations.selectMenu2" , categoryMap);
 	}
 	
 }

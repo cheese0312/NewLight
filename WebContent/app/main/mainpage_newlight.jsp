@@ -44,14 +44,63 @@
 				</div>
 				<div class="category-create-container">
 					<ul class="create-list">
-						<!--  -->
 						<c:forEach var="content" items="${main}">
+						<c:if test="${content.getCategoryName() == '배경화면' || content.categoryName== '트레이싱' }">
+						<div class="img">
+									<div class="creations-img">
+										<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}" class="themeList"> 
+										<img src="${pageContext.request.contextPath}/upload/${content.getCreationSumnail()}" class="creation-img" />
+										</a>
+										<div class="creation-main">
+										<div class="sub-title">
+											<h4>
+											<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}">
+											<c:out value="${content.getCreationTitle() }" />
+											</a>
+										</h4>
+										</div>
+										<div class="create-people">
+										<a
+											href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
+											<div class="create-img">
+											<img
+											src="${pageContext.request.contextPath}/userProfile/${content.getMemberPfp()}"
+											alt="" class="create-people-img" /> 
+											</div>
+											<div class="create-name">
+											<c:out
+												value="${content.getMemberNickname() }" />
+										</div>
+										</a>
+									</div>
+										<div class="icon-box">
+										<a href="#" class="a__inline-block"> 
+										<div class="icon-like">
+										<img
+											src="${pageContext.request.contextPath}/assets/img/icon-hearts.png" class="like-icon-img" /> 
+											<span class="count"><c:out value="${content.getLikeCount() }" /></span>
+											</div> 
+										</a> 
+										<a href="${pageContext.request.contextPath}" class="a__inline-block">
+										<div class="icon-comment">
+										<img
+											src="${pageContext.request.contextPath}/assets/img/reply.png" alt="" class="reply-icon-img" /> 
+											<span class="count"><c:out value="${content.getCommentCount() }" /></span>
+											</div>
+											 </a>
+									</div>
+									</div>
+									</div>
+								</div>
+						</c:if>
+						 <c:if test="${content.categoryName== '손그림' || content.categoryName== '카톡테마' || content.categoryName== '폰트' || content.categoryName== '만화' }">
 							<div class="create-card">
 								<div class="create-logo">
 									<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}" class="themeList"> <img
 										src="${pageContext.request.contextPath}/upload/${content.getCreationSumnail()}"
 										alt="" class="create-card-img" />
 									</a>
+									<div class="creation-main">
 									<div class="create-title">
 										<h4>
 											<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${content.getCreationNumber()}">
@@ -62,26 +111,39 @@
 									<div class="create-people">
 										<a
 											href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
+											<div class="create-img">
 											<img
 											src="${pageContext.request.contextPath}/userProfile/${content.getMemberPfp()}"
-											alt="" class="create-people-img" /> <c:out
+											alt="" class="create-people-img" /> 
+											</div>
+											<div class="create-name">
+											<c:out
 												value="${content.getMemberNickname() }" />
+										</div>
 										</a>
 									</div>
 									<div class="icon-box">
-										<a href="#" class="a__inline-block"> <img
+										<a href="#" class="a__inline-block"> 
+										<div class="icon-like">
+										<img
 											src="${pageContext.request.contextPath}/assets/img/icon-hearts.png" alt=""
-											class="like-icon-img" /> <c:out
-												value="${content.getLikeCount() }" />
-										</a> <a href="${pageContext.request.contextPath}" class="a__inline-block"><img
-											src="${pageContext.request.contextPath}/assets/img/reply.png" alt="" class="reply-icon-img" /> <c:out
-												value="${content.getCommentCount() }" /> </a>
+											class="like-icon-img" /> 
+											<span class="count"><c:out value="${content.getLikeCount() }" /></span>
+											</div> 
+										</a> 
+										<a href="${pageContext.request.contextPath}" class="a__inline-block">
+										<div class="icon-comment">
+										<img
+											src="${pageContext.request.contextPath}/assets/img/reply.png" alt="" class="reply-icon-img" /> 
+											<span class="count"><c:out value="${content.getCommentCount() }" /></span>
+											</div>
+											 </a>
+									</div>
 									</div>
 								</div>
 							</div>
+							</c:if>
 						</c:forEach>
-
-						<!--  -->
 					</ul>
 				</div>
 			</div>

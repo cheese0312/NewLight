@@ -23,57 +23,79 @@
 						action="${pageContext.request.contextPath}/mypage/mypageEdit.me"
 						method="post">
 						<fieldset>
-							<div class="info-people">
+							<div class="info-people info">
 								<img
 									src="${pageContext.request.contextPath}/userProfile/${memberDTO.getMemberPfp()}"
 									alt="" class="info-people-img" />
 								<button type="button" class="pfp-btn">사진 변경</button>
 								<input type="file" class="pfp-input" name="memberPfp">
+							
 							</div>
-							<div class="info-name">
+							<div class="info-name info">
 								<label for="id-change">이름 </label> <input type="text"
 									name="memberName" id="id-chnage" required
 									value="${memberDTO.getMemberName()}" readonly />
+									<span></span>
 							</div>
-							<div class="info-id">
+							<div class="info-id info">
 								<label for="id-change">아이디 </label> <input type="text"
 									name="memberId" id="id-chnage" required
 									value="${memberDTO.getMemberId()}" readonly />
+									<span></span>
 							</div>
 							<div class="info-pw">
 								<label for="pw-change">비밀번호 </label> <input type="password"
-									name="memberPassword" id="pw-change" required /> <span
+									name="memberPassword" id="pw-change" required /> 
+									<span></span>
+									<div class="info-pw-sub">
+									<span
 									class="check-msg" id="check-pw-msg"></span>
+									</div>
 							</div>
-							<div class="info-phone">
+							
+							<div class="info-phone info">
 								<label for="id-change">핸드폰 번호 </label> <input type="text"
 									name="memberPhoneNumber" id="id-chnage" required />
+									<span></span>
 							</div>
-							<div class="info-nickname">
-								<label for="nickname-change">닉네임(0/300) </label> <input
+							<div class="info-nickname info">
+								<label for="nickname-change">닉네임
+								<span class="count">(0/300)</span> 
+								 </label> <input
 									type="text" name="memberNickname" id="nickname-change" required />
+								<span></span>
+								<div class="info-pw-sub">
 								<span class="check-msg" id="check-nickname-msg"></span>
+								</div>
 							</div>
-							<div class="info-selfy">
-								<label for="selfy-change">한 줄 소개(0/800)</label> <input
+							<div class="info-selfy info">
+								<label for="selfy-change">
+								한 줄 소개
+								<span class="count">(0/800)</span>
+								</label> <input
 									type="text" name="memberComment" id="selfy-change" required />
+									<span></span>
 							</div>
-							<div class="info-address1">
+							<div class="info-address1 info">
 								<label for="address1-change">주소</label> <input type="text"
 									name="memberAddress1" id="address1-change" required />
+									<span></span>
 							</div>
-							<div class="info-address2">
+							<div class="info-address2 info">
 								<label for="address2-change">상세주소</label> <input type="text"
 									name="memberAddress2" id="address2-change" required />
+									<span></span>
 							</div>
-							<div class="info-email">
+							<div class="info-email info">
 								<label for="email-change">이메일</label> <input type="text"
 									name="memberEmail" id="email-change" required />
+									<span></span>
 							</div>
-							<div class="info-website">
+							<div class="info-website info">
 								<label for="website-change">웹 사이트</label> <input type="text"
 									name="memberWebsite" id="web-change" placeholder="http://"
 									required />
+									<span></span>
 							</div>
 							<div class="user-delete">
 								<a

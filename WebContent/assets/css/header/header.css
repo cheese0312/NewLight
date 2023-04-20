@@ -1,7 +1,8 @@
 /* 전체 배경화면 색상 */
 * {
- background-color : #fffcfc;
+  background-color : #fffcfc;
 }
+
 @font-face {
   font-family: "Hyemin";
   src: url("/assets/fonts/Hyemin.ttf");
@@ -102,6 +103,13 @@ header{
   width: 100px;
 }
 
+.dropbtn1:hover,
+.dropbtn2:hover,
+.dropbtn3 > a:hover,
+.dropbtn4:hover {
+	color : #ce97fa;
+}
+
 .dropbtn1 {
   display: flex;
   justify-content: center;
@@ -132,6 +140,7 @@ header{
   max-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   position: absolute;
+  z-index : 2;
 }
 
 /* 드롭 서브 메뉴 링크 설정 */
@@ -152,6 +161,7 @@ header{
 .dropdown-content3 > a:hover,
 .dropdown-content4 > a:hover {
   background-color: #f1f1f1;
+  color : #ce97fa;
 }
 
 .dropdown1:hover .dropdown-content1,
@@ -166,7 +176,7 @@ header{
 .dropdown2:hover .dropbtn2,
 .dropdown3:hover .dropbtn3,
 .dropdown4:hover .dropbtn4 {
-  background-color: ivory
+  background-color: #fffcfc;
 }
 
 .dropbtn3 > a {
@@ -185,53 +195,60 @@ header{
 }
 
 .login-btn{
-  padding: 2px;
+  padding: 5px;
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: #B4AEE8;
+  /* background: #9055A2; */
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
-  font-weight : bold;
+  font-family: "Hyemin";
 }
 
+.login-btn:hover,
+.mypage-btn:hover,
+.logout-btn:hover{
+	color : #c071ff;
+}
+
+
 .mypage-btn{
-  padding: 2px;
+  padding: 5px;
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: #B4AEE8;
+  /* background: #d6ecfa; */
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
-  font-weight : bold;
+  font-family: "Hyemin";
 }
 
 .logout-btn{
-  padding: 2px;
+  padding: 5px;
   height: 20px;
   justify-content: center;
   align-items: center;
-  background-color: #B4AEE8;
+  /* background: #D499B9; */
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
+  font-family: "Hyemin";
 }
 
 .btn1-box>.login2-btn{
   width: 50px;
-  padding: 2px;
+  padding: 5px;
   height: 25px;
   justify-content: center;
   align-items: center;
-  background-color: #B4AEE8;
+  /* background: #d6ecfa; */
   color: black;
   border-radius: 5px;
   text-decoration-line: none;
   text-align: center;
-  font-weight: bold;
-  
+  font-family: "Hyemin";
 }
 
 .category {
