@@ -16,7 +16,7 @@
 	rel="stylesheet">
 </head>
 <body>
-	<%@include file="/app/header3.jsp"%>
+	<%@include file="/app/header.jsp"%>
 	<form
 		action="${pageContext.request.contextPath}/community/communityReadOk.cm"
 		method="post">
@@ -62,15 +62,15 @@
 							</a>
 						</div>
 					</c:forEach>
-				</div>
-				
-				<%--  <input type="hidden" name="commentNumber" value="${communityComment.getCommentNumber()}"> --%>
 				<div class="else">
 					<p>
 						<c:out value="${community.getCommunityContent()}" />
 					</p>
 
 				</div>
+				</div>
+				
+				<%--  <input type="hidden" name="commentNumber" value="${communityComment.getCommentNumber()}"> --%>
 				<div class="remove">
 					<c:if
 						test="${sessionScope.memberNumber == community.getMemberNumber()}">
@@ -81,7 +81,7 @@
 						data-communitynumber="${community.getCommunityNumber()}">목록</button>
 				</div>
 				<div class="line">
-					<hr>
+					
 				</div>
 
 				<div class="comment2">
@@ -118,16 +118,6 @@
 					</div>
 					<!-- </div> -->
 
-
-
-
-
-
-
-					<div class="hello2">
-						<h1>댓글 더 보기</h1>
-
-					</div>
 
 				</div>
 			</div>
