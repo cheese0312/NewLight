@@ -67,10 +67,13 @@ hr {
 .creations-btn  > a {
   padding: 10px 7px;
   border-radius: 5px;
-  background-color: rgb(215, 215, 215);
   align-items: end;
   text-decoration: none;
-  color: black;
+  color : black;
+}
+
+.creations-btn > a:hover {
+	color : #ce97fa;
 }
 
 .main-container {
@@ -179,4 +182,41 @@ hr {
 .sub-title > a {
   text-decoration: none;
   color: black;
+}
+
+.creations-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  /* background: black; */
+}
+
+.creation-like ,
+.creation-comment {
+	display: flex;
+    align-items: center;
+}
+
+.creation-like {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creation-like > img{
+  width: 20px;
+  height: 20px;
+}
+
+.creation-comment {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creation-comment > img{
+  width: 22px;
+  height: 22px;
+}
+
+.count {
+	margin : 0 5px;
 }

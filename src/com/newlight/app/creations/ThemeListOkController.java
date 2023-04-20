@@ -24,13 +24,12 @@ public class ThemeListOkController implements Execute{
 		String name = req.getParameter("categoryName");
 		
 		List<CreationsVO> creations = null;
-		System.out.println(creations);
 		
 		Map<String, String> cateMap = new HashMap<String, String>();
 		cateMap.put("categoryCode", code);
 		cateMap.put("categoryName", name);
 		
-		String title = code.equals("101") ? "1차 창작물" : "2차 창작물";
+		String title = code.equals("101") ? "별구름" : "별숲";
 		title += " - "+name;
 		
 		creations = creationsDAO.selectMenu(cateMap);
@@ -38,9 +37,7 @@ public class ThemeListOkController implements Execute{
 		req.setAttribute("creations", creations);
 		req.setAttribute("title", title);
 		
-		System.out.println("=================================");
-		System.out.println(creations);
-		System.out.println("=================================");
+		
 		
 		if(code.equals("101")) {
 			switch(name) {
@@ -66,12 +63,11 @@ public class ThemeListOkController implements Execute{
 			
 		}
 		
+		List<CreationsVO> creationsList = creationsDAO.selectMenu2(cateMap);
+		System.out.println(creationsList);
+		req.setAttribute("creationsList", creationsList);
 		
-//		if(code.equals("101") && name.equals("손그림") || name.equals("만화") || name.equals("폰트")) {
-//			path = "/app/creations/pageList/pageList.jsp";
-//		}else if() {}
-		
-//		손글씨+폰트+만화 / 1차 창작물 배경화면 + 2차 창작물 배경화면 + 트레이싱 / 카톡테마
+
 		
 		req.getRequestDispatcher(path).forward(req, resp);
 		

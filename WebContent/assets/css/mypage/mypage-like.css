@@ -58,13 +58,17 @@ section {
   height: 60%;
 }
 
-.editbtn > a {
+.editbtn > a{
   width: 80px;
-  background-color: rgb(213, 213, 213);
+  /* background-color: rgb(213, 213, 213); */
   text-decoration: none;
   color: black;
   border-radius: 5px;
   padding: 2px 5px;
+}
+
+.editbtn > a:hover {
+	color : #ce97fa;
 }
 
 .likes ,
@@ -83,6 +87,10 @@ section {
 .name > a {
   text-decoration: none;
   color: grey;
+}
+
+.name > a:hover{
+	color : #ce97fa;
 }
 
 .mypage-main2 > section {
