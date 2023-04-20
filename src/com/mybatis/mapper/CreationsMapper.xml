@@ -54,8 +54,6 @@
 			order by j.creation_number desc;
    </select>
    
-   
-
    <select id="select" parameterType="_int" resultType="CreationsVO">
       select creation_number, creation_title, creation_content,
       category_code, category_name, creation_writeday, m.member_number,

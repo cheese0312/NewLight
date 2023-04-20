@@ -80,7 +80,7 @@
 					</div>
 				</div>
 
-				<div class="comment">
+				<!-- <div class="comment">
 					<div class="comment-input">
 						<div class="comment-text">
 							<textarea name="content" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
@@ -153,11 +153,30 @@
 							</div>
 						</div>
 					</div>
+				</div> -->
+				<div class="comment">
+					<div class="comment-input">
+						<input type="hidden" name="creationNumber"
+							value="${creation.getMemberNumber() }">
+						<div class="comment-text">
+							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
+						</div>
+						<div class="comment-ok-btn">
+							<button type="button" class="comment-submit commnet-btn-ok">작성</button>
+						</div>
+					</div>
+
+					<div class="comment-border">
+
+					</div>
 				</div>
 			</div>
 	</form>
 	<%@include file="/app/footer.jsp"%>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		let memberNumber = "${sessionScope.memberNumber}";
+	</script>
 	<script src="${pagetContext.request.contextPath}/assets/js/creation/creation.js"></script>
 	<script src="${pageContext.request.contextPath}/assets/js/anislide.js"></script>
 </body>
