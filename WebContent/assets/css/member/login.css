@@ -4,7 +4,218 @@
   border: 0.3px solid rgb(215, 215, 215);
   position: relative;
   z-index: 1;
-  /* background: #ffffff; */
+  /* background: black; */
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.login-form {
+	/* background : black; */
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #ce97fa;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #c57dfe;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #ce97fa;
+  text-decoration: none;
+}
+
+#ullog {
+  list-style-type: none;
+  margin-left: 5px;
+  padding: 5px;
+  font-family: 굴림;
+  font-size: 12px;
+  align-items: center;
+  /* background: black; */
+}
+
+#lilog {
+  display: inline;
+  margin: 0px 0px 0px 0px;
+  padding: 0 0 0 0;
+  border: 1;
+  font-family: 굴림;
+  font-size: 12px;
+}
+
+#lilogb {
+  display: inline;
+  margin: 2px;
+  padding: 0 0 0 0;
+  border: 1;
+  font-family: 굴림;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration-line: none;
+  color: black;
+}
+
+#lilogb a:hover,
+#lilog a:hover {
+	color : #c57dfe;
+}
+
+/* .form {
+  display: flex;
+  justify-content: center;
+  border: 0.3px solid rgb(215, 215, 215);
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.2), 0 5px 5px 0 rgba(255, 255, 255 , 0.24);
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 10px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #6c9cc2;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #7eb7e5;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #7eb7e5;
+  text-decoration: none;
+}
+
+#ullog {
+  list-style-type: none;
+  margin-left: 5px;
+  padding: 5px;
+  font-family: 굴림;
+  font-size: 12px;
+  align-items: center;
+}
+
+#lilog {
+  display: inline;
+  margin: 0px 0px 0px 0px;
+  padding: 0 0 0 0;
+  border: 1;
+  font-family: 굴림;
+  font-size: 12px;
+}
+
+#lilogb {
+  display: inline;
+  margin: 2px;
+  padding: 0 0 0 0;
+  border: 1;
+  font-family: 굴림;
+  font-size: 12px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  padding-inline-start: 0;
+}
+
+a {
+  text-decoration-line: none;
+  color: #6c9cc2;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  border: 0.3px solid rgb(215, 215, 215);
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -104,7 +315,7 @@ a {
   border: 0.3px solid rgb(215, 215, 215);
   position: relative;
   z-index: 1;
-  /* background: #ffffff; */
+  background: #ffffff;
   max-width: 360px;
   margin: 0 auto 100px;
   padding: 45px;
@@ -198,203 +409,4 @@ a {
   text-decoration-line: none;
   color: #6c9cc2;
 }
-.form {
-  display: flex;
-  justify-content: center;
-  border: 0.3px solid rgb(215, 215, 215);
-  position: relative;
-  z-index: 1;
-  /* background: #ffffff; */
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
-
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #6c9cc2;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-
-.form button:hover,
-.form button:active,
-.form button:focus {
-  background: #7eb7e5;
-}
-
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #7eb7e5;
-  text-decoration: none;
-}
-
-#ullog {
-  list-style-type: none;
-  margin-left: 5px;
-  padding: 5px;
-  font-family: 굴림;
-  font-size: 12px;
-  align-items: center;
-}
-
-#lilog {
-  display: inline;
-  margin: 0px 0px 0px 0px;
-  padding: 0 0 0 0;
-  border: 1;
-  font-family: 굴림;
-  font-size: 12px;
-}
-
-#lilogb {
-  display: inline;
-  margin: 2px;
-  padding: 0 0 0 0;
-  border: 1;
-  font-family: 굴림;
-  font-size: 12px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  padding-inline-start: 0;
-}
-
-a {
-  text-decoration-line: none;
-  color: #6c9cc2;
-}
-.form {
-  display: flex;
-  justify-content: center;
-  border: 0.3px solid rgb(215, 215, 215);
-  position: relative;
-  z-index: 1;
-  /* background: #ffffff; */
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
-
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 10px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-.form button {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  outline: 0;
-  background: #6c9cc2;
-  width: 100%;
-  border: 0;
-  padding: 15px;
-  color: #ffffff;
-  font-size: 14px;
-  -webkit-transition: all 0.3 ease;
-  transition: all 0.3 ease;
-  cursor: pointer;
-}
-
-.form button:hover,
-.form button:active,
-.form button:focus {
-  background: #7eb7e5;
-}
-
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #7eb7e5;
-  text-decoration: none;
-}
-
-#ullog {
-  list-style-type: none;
-  margin-left: 5px;
-  padding: 5px;
-  font-family: 굴림;
-  font-size: 12px;
-  align-items: center;
-}
-
-#lilog {
-  display: inline;
-  margin: 0px 0px 0px 0px;
-  padding: 0 0 0 0;
-  border: 1;
-  font-family: 굴림;
-  font-size: 12px;
-}
-
-#lilogb {
-  display: inline;
-  margin: 2px;
-  padding: 0 0 0 0;
-  border: 1;
-  font-family: 굴림;
-  font-size: 12px;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  padding-inline-start: 0;
-}
-
-a {
-  text-decoration-line: none;
-  color: #6c9cc2;
-}
+ */

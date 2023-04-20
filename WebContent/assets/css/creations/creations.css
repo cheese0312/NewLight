@@ -123,6 +123,12 @@ main {
   padding: 0 5px;
 }
 
+.edit-btn > a:hover,
+.delete-btn > a:hover,
+.list-btn > a:hover {
+	color : #ce97fa;
+}
+
 .creations-like {
   padding: 0 10px;
   font-size: 15px;
@@ -158,16 +164,24 @@ main {
 }
 
 .comment-input {
-  display: flex;
+/*   display: flex;
   width: 90%;
   padding-left: 50px;
   padding-bottom: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  display: flex;
+    width: 90%;
+    padding-left: 50px;
+    padding-bottom: 20px;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .comment-text {
   width: 90%;
+  padding: 0 50px;
 }
 
 .comment  textarea {
@@ -198,7 +212,7 @@ main {
 .comment-border {
   border: 1px solid gray;
   width: 95%;
-  border-radius: 7px;
+  /* border-radius: 7px; */
 }
 
 .comment-box {
@@ -271,6 +285,7 @@ main {
 .folder-icon {
   bottom: 17px;
   display: flex;
+  background : white;
 }
 
 .folder-icon > img {
@@ -282,6 +297,7 @@ main {
   font-size: 12px;
   text-align: center;
   margin-left: 5px;
+  background : white;
 }
 
 .donwload-icon2 {
@@ -289,9 +305,14 @@ main {
   bottom: 17px;
 }
 
-a > img {
+.download-icon > a {
+	background : white;
+}
+
+.download-icon img {
   width: 20px;
   height: 20px;
+  background: white;
 }
 
 .none {
@@ -299,12 +320,15 @@ a > img {
 }
 
 .commnet-btn-ok {
-  background-color: lightblue;
-  border: none;
-  border-radius: 7px;
+  /* background-color: white; */
+  border: 1px solid #e3dede;
+  border-radius: 12px;
   cursor: pointer;
+  color : #e3dede;
+  font-weight : bold;
 }
 
 .commnet-btn-ok:hover {
-  background-color: rgb(153, 192, 205);
+	border : 1px solid #8221ce;
+  color: #8221ce;
 }

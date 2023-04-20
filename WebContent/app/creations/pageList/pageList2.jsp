@@ -41,7 +41,7 @@
 					<section>
 						<!--  -->
 						<%-- <c:when test="${not empty kakaoBoard}"> --%>
-							<c:forEach var="creation" items="${creations}">
+							<c:forEach var="creation" items="${creationsList}">
 								<div class="img">
 									<div class="creations-img">
 										<img src="${pageContext.request.contextPath}/upload/${creation.getCreationSumnail()}" class="img-1">
@@ -52,17 +52,30 @@
 											</a>
 										</div>
 										<div class="sub-author">
+										<div class="sub-author-img">
 											<img
 												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
+											</div>
+											<div class="sub-author-name">
 											<a
 												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
 												<c:out value="${creation.getMemberNickname()}" />
 											</a>
+											</div>
 										</div>
 										<div class="creations-sub">
-											<img src="${pageContext.request.contextPath}/assets/img/icon-hearts.png" class="likes">
-											<img src="${pageContext.request.contextPath}/assets/img/reply.png" class="comment">
-										</div>
+                                       <div class="creation-like">
+                                          <img
+                                             src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+                                          <span class="count"><c:out value="${creation.getLikeCount()}" /></span>
+                                          </div>
+                                          <div class="creation-comment">
+                                          
+                                          <img
+                                             src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+                                          <span class="count"><c:out value="${creation.getCommentCount()}" /></span>
+                                       </div>
+                                       </div>
 									</div>
 								</div>
 							</c:forEach>

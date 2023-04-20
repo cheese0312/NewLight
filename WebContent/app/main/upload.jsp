@@ -18,18 +18,8 @@
     <form id="write-form" action="${pageContext.request.contextPath}/creations/CreationUploadOk.ct" method="post"
 	enctype="multipart/form-data">
     <div class="creations-main">
-   
-      <h3>나만의 새로운 빛 만들기</h3>
-    <div class="creations-author">
-      <div class="author-img">
-        <img src="../img/—Pngtree—vector business men icon_4186858.png">
-      </div>
-      <div class="author-name">
-        <div class="content-mente">
-        <label><c:out value="${memberNickname}"/></label>
-        </div>
-      </div>
-    </div>
+    <div class="creations-sub-main">
+      <h3>나만의 새로운 빛 만들기 - <label><c:out value="${memberNickname}"/></label></h3>
     
     <div class="creations-title">
       <div class="content-mente">
@@ -105,7 +95,7 @@
       <button type="button" class="submit">올리기</button>
       <button type="button" class="cancel-btn">취소</button>
     </div>
-    
+    </div>
   </div>
   </form>
   </main>

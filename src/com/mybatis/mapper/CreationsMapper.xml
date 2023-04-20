@@ -37,6 +37,24 @@
       order by creation_number desc
       limit 0,9
    </select>
+   
+      <!-- 카테고리 테마별 창작물 조회하기 -->
+   <select id="selectMenu2" resultType="CreationsVO" parameterType="map">
+      		select count(cc.comment_number ) comment_count, j.* from (
+			select count(l.member_number) like_count, m.member_nickname, m.member_pfp , c.* from creations c join
+			`member` m 
+			on c.member_number = m.member_number
+			left outer join likes l 
+			on c.creation_number = l.creation_number
+			where c.category_code = #{categoryCode} and c.category_name = #{categoryName}
+			group by c.creation_number
+			) j left outer join creations_comment cc 
+			on j.creation_number = cc.creation_number 
+			group by j.creation_number
+			order by j.creation_number desc;
+   </select>
+   
+   
 
    <select id="select" parameterType="_int" resultType="CreationsVO">
       select creation_number, creation_title, creation_content,
@@ -77,8 +95,6 @@
       on c.member_number = m.member_number
       where c.creation_number = #{creationNumber}
    </select> -->
-   
->>>>>>> work/sj7
    
    <!-- 카테고리 테마별 창작물 조회하기 -->
 <!--    <select id="selectMenu" resultType="CreationsVO" parameterType="map">

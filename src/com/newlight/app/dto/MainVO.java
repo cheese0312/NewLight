@@ -12,6 +12,8 @@ public class MainVO {
 	private String creationTitle;
 	private int commentCount;
 	private int likeCount;
+	private String categoryName;
+	private String categoryCode;
 
 	public MainVO() {
 
@@ -89,12 +91,29 @@ public class MainVO {
 		this.likeCount = likeCount;
 	}
 
+	public String getCategoryName() {
+		return categoryName;
+	}
+
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
+
+	public String getCategoryCode() {
+		return categoryCode;
+	}
+
+	public void setCategoryCode(String categoryCode) {
+		this.categoryCode = categoryCode;
+	}
+
 	@Override
 	public String toString() {
 		return "MainVO [creationNumber=" + creationNumber + ", memberNickname=" + memberNickname + ", memberPfp="
 				+ memberPfp + ", creationSumnail=" + creationSumnail + ", memberNumber=" + memberNumber
 				+ ", commentNumber=" + commentNumber + ", creationTitle=" + creationTitle + ", commentCount="
-				+ commentCount + ", likeCount=" + likeCount + "]";
+				+ commentCount + ", likeCount=" + likeCount + ", categoryName=" + categoryName + ", categoryCode="
+				+ categoryCode + "]";
 	}
 
 }
