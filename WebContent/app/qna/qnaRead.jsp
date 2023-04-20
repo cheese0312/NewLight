@@ -95,8 +95,8 @@
                   value="${qna.getQnaNumber()}">
                <div class="form-group">
                   <textarea name="content" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
-               </div>
                <button type="button" class="submit-btn">댓글 작성</button>
+               </div>
             </form>
          </div>
          

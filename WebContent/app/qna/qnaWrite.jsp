@@ -65,13 +65,14 @@
              </div>
           
           
-        </div>
                   <div class="button">
                   <button>작성완료</button>
+                  <br>
                   <button type="button" class="cancel-btn">취소</button>
                 </div>
                   </div>
                   <br>
+        </div>
         
        
     </section>
