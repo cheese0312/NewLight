@@ -46,7 +46,6 @@ body {
   .view-attach{
     width:65%;
     margin : 0 210px;
-   /*  border : 1px solid; */
   }
   
   
@@ -76,7 +75,6 @@ body {
   .view-attach>.else{
     background-color: #fffcfc;
     border: 1px solid #fffcfc;
-   /*  margin: 50px 120px */;
     font-size: 17px;
     white-space : pre-line;
   }
@@ -113,19 +111,6 @@ body {
   
   }
 
-  .small-box{
-    margin: 0px;
-    background-color:blanchedalmond;
-    height: 75px;
-    display: flex;
-  }
-  
-  .small-box>h1{
-    margin: 21px 95px;
-    background-color: blanchedalmond;
-    
-  }
-
   .comment2>.hello{
     border: 1px solid #fffcfc;
     
@@ -141,11 +126,11 @@ body {
     width: 90%;
   }
 
-  .date>.none{
+  .date>.none1{
     border-right: 1px solid gray;
     width: 20px;
     height: 20px;
-    background-color:#fffcfc;
+    
   }
 
   .date>.fuck{
@@ -177,22 +162,23 @@ body {
  background-color:#fffcfc;
  display: flex;
  width: 80%;
+ margin: 0 -150px;
 }
 
   .comment-btn>button{
-    border-radius: 10%;
-    margin: 15px 5px;
-    border: 1px solid #fffcfc;
-    background-color: burlywood;
+    border-radius: 12px;
+    margin: 15px 2px;
+    border: 1px solid #e4dfdf;
     font-weight: bold;
     font-size: 13.5px;
-  
+    color: #e4dfdf;
   }
 
   .commtent-sub {
     display: flex;
     justify-content: space-between;
     background-color:#fffcfc;
+    margin: -25px 0px 45px 15px;
   }
 
  
@@ -255,7 +241,7 @@ body {
 }
 
 svg {
-   width: 2em; 
+   width: 1.5em; 
    height:-5em;
    fill: rgb(255,255,255);
    stroke-width: 1;
@@ -274,32 +260,23 @@ svg {
   border: 1px solid #fffcfc;
 }
 
-.edit:hover {
- color: #B4AEE8;
-}
-
-.list:hover {
- color: #B4AEE8;
-}
-
-.delete:hover {
- color: #B4AEE8;
-}
-
 .remove>.list{
   font-size: 17px;
 }
 
 .remove > .list:hover {
   cursor: pointer;
+   color: #B4AEE8;
 }
 
 .remove > .delete:hover {
   cursor: pointer;
+   color: #B4AEE8;
 }
 
 .remove > .edit:hover {
   cursor: pointer;
+   color: #B4AEE8;
 }
 
 .remove>.edit{
@@ -308,18 +285,26 @@ svg {
 
 .comment-btn>.comment-modify-ready:hover{
 	cursor : pointer;
+	color : #B4AEE8;
+	border-color : #B4AEE8;
 }
 
 .comment-btn>.comment-delete:hover{
 	cursor : pointer;
+	color : #B4AEE8;
+	border-color : #B4AEE8;
 }
 
 .comment-btn>.comment-modify:hover{
 	cursor : pointer;
+	color : #B4AEE8;
+	border-color : #B4AEE8;
 }
 
 .btn>.go:hover{
 	cursor:pointer;
+	color: #B4AEE8;
+	border-color: #B4AEE8;
 }
 
 .remove>.delete{
@@ -339,19 +324,21 @@ svg {
  }
  
   .go{
-  border-radius: 10%;
+  border-radius: 12px;
   margin: 15px 50px;
-  border: 1px solid #B4AEE8;
-  background-color: #B4AEE8;
+  border: 1px solid #e4dfdf;
   font-weight: bold;
   font-size: 17px;
- 
+  color: #e4dfdf;
+  width : 50px;
  }
+ 
 
 
  .btn{
   background-color: #fffcfc;
   margin-bottom: 10px;
+  margin: 0 900px;
  }
  
  .none{
@@ -375,8 +362,6 @@ svg {
    border-radius: 5px;
    resize: none;
 }
-
- 
 
 
   footer{
