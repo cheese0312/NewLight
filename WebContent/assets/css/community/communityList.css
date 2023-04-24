@@ -1,171 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color : #fffcfc;
+* {
+	margin: 0;
+	padding: 0;
+	background-color: #fffcfc;
 }
 
-.writer-btn{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin: 50px 340px;
+.writer-btn {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	margin: 50px 340px;
 }
 
-.writer-btn>a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
+.writer-btn>a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
 }
 
 .writer-btn a:hover {
-  border-color: #B4AEE8;
-  color: #B4AEE8;
+	border-color: #B4AEE8;
+	color: #B4AEE8;
 }
 
-.big-box{
-    /* border: 1px solid rgb(231, 228, 228); */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    align-content: center;
-    margin : 70px 0;
+.big-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+	margin: 70px 0;
 }
 
-.big-box>.menu{
-    display: flex;
-    font-size: 10px;
-   justify-content: space-around;
-    align-items: center;
-    height: 30px;
-    border-bottom: 1px solid #B4AEE8;
-    width: 65%;
-    list-style-type: none;
+.big-box>.menu {
+	display: flex;
+	font-size: 10px;
+	justify-content: space-around;
+	align-items: center;
+	height: 60px;
+	border-bottom: 3px solid #B4AEE8;
+	width: 65%;
+	list-style-type: none;
 }
 
-
-.small-box{
-    margin: 20px 0;
-    /* border: 1px solid rgb(231, 228, 228); */
-    height: 300px;
-    width: 65%;
+.small-box {
+	margin: 20px 0;
+	height: 300px;
+	width: 65%; 
 }
 
-.small-box>.table{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* border: 1px solid rgb(231, 228, 228); */
-    list-style-type: none;
-    border-bottom: 1px solid rgb(231, 228, 228);
-    height : 40px;
-    width : 100%;
+.small-box>.table {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+	border-bottom: 1px solid rgb(231, 228, 228);
+	height: 40px;
+	width: 100%;
 }
 
-
-.table>.name{
-    text-align: center;
-    /* border: 1px solid rgb(231, 228, 228); */
-    width: 198px;
-    height: 30px;
+.table>.name {
+	text-align: center;
+	width: 198px;
 }
 
-.name>h1{
-	font-size : 13px;
+.name>h1 {
+	font-size: 13px;
 }
 
-.table>.title{
-    text-align: center;
-    width: 198px;
-    /* border: 1px solid rgb(231, 228, 228); */
-    height: 30px;
+.table>.title {
+	text-align: center;
+	width: 198px;
 }
 
-.title>h1{
-	font-size : 13px;
+.title>h1 {
+	font-size: 13px;
 }
 
-.table>.comment{
-    width: 192px;
-    text-align: center;
-    /* border: 1px solid rgb(231, 228, 228); */
-    height: 30px;
+.table>.comment {
+	width: 192px;
+	text-align: center;
 }
 
-.comment>h1{
-	font-size : 13px;
+.comment>h1 {
+	font-size: 13px;
 }
 
-.table>.date{
-    text-align: center;
-    width: 196px;
-    /* border: 1px solid rgb(231, 228, 228); */
-    height: 30px;
+.table>.date {
+	text-align: center;
+	width: 196px;
 }
 
-.date>h1{
-	font-size : 13px;
+.date>h1 {
+	font-size: 13px;
 }
 
-.table>.cnt{
-    width: 200px;
-    text-align: center;
-    /* border: 1px solid rgb(231, 228, 228); */
+.table>.cnt {
+	width: 200px;
+	text-align: center;
 }
 
-.cnt>h1{
-	font-size : 13px;
+.cnt>h1 {
+	font-size: 13px;
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right : 80px;
-   background-color : #fffcfc;
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 80px;
+	background-color: #fffcfc;
 }
 
-.pagination > ul {
-  display: flex;
-  list-style: none;
-  /* background-color: rgb(238, 231, 231); */
-   background-color: white;
+.pagination>ul {
+	display: flex;
+	list-style: none;
+	background-color: white;
 }
 
 .pagination a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  margin: 0 5px;
-  border-radius: 5px;
-  border: 1px solid rgb(231, 228, 228);
-  transition: background-color 0.3s ease, color 0.3s ease;
-   background-color: white;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+	border: 1px solid rgb(231, 228, 228);
+	transition: background-color 0.3s ease, color 0.3s ease;
+	background-color: white;
 }
 
 .pagination a:hover {
-  background-color: #B4AEE8;
-  border-color: #B4AEE8;
-  color: black;
+	background-color: #B4AEE8;
+	border-color: #B4AEE8;
+	color: black;
 }
 
 .pagination .active {
-  background-color: rgb(231, 228, 228);
-  border-color: rgb(231, 228, 228);
-  color: #fff;
+	background-color: rgb(231, 228, 228);
+	border-color: rgb(231, 228, 228);
+	color: #fff;
 }
 
-
-
-.small-box>.table2{
-	font-size : 15px;
-	
+.small-box>.table2 {
+	font-size: 15px;
 }
 
-a{
-	text-decoration : none;
-	color : black;
+a {
+	text-decoration: none;
+	color: black;
 }
-

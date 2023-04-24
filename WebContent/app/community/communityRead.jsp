@@ -90,15 +90,12 @@
                     </textarea>
 					</div>
 					<div class="btn">
-						<button class="go" type=button>댓글 등록</button>
-					</div>
-					<div class="small-box">
-						<h1>댓글</h1>
+						<button class="go" type=button>등록</button>
 					</div>
 					<div class="hello">
 						<div class="date">
 							<p3>estherk773</p3>
-							<div class="none"></div>
+							<div class="none-none"></div>
 							<div class="fuck">
 								<p1>2023-03-20</p1>
 							</div>

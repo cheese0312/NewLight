@@ -21,12 +21,9 @@
 } */
 
 section{
-    border: 1px solid black;
     width: 70%;
-    
     margin: 300px;
     margin-top: 10px;
-  
 }
 
 
@@ -38,7 +35,7 @@ section>.largetitle{
 }
 
 section>.box{
-    border-bottom: 4px solid #6c9cc2;
+    border-bottom: 4px solid #B4AEE8;
     width: 80%;
     margin: -40px 110px;
 }
@@ -51,7 +48,7 @@ section>.box1{
 
 section>.grap>.first{
     display: flex;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #eae9e9;
     width: 80%;
     margin: 0 110px;
     font-size: 10px;
@@ -75,8 +72,8 @@ section>.grap>.first{
 }
 
 section>.grap>.other{
-    border-bottom: 1px solid gray;
-    height: 50px;
+    border-bottom: 1px solid #eae9e9;
+    height: 30px;
     width: 80%;
     margin: 10px 110px;
     display: flex;
@@ -91,6 +88,11 @@ section>.grap>.other{
   margin-left: 20px;
   display: flex;
     align-items: center;
+}
+
+h3>a{
+	text-decoration: none;
+	color: black;
 }
 
 .other>h4{
@@ -143,19 +145,19 @@ section>.grap>.other{
   padding: 10px;
   margin: 0 5px;
   border-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid rgb(231, 228, 228);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagination a:hover {
-  background-color: #6c9cc2;
-  border-color: #6c9cc2 ;
-  color: #fff;
+  background-color: #B4AEE8;
+  border-color: #B4AEE8;
+  color: black;
 }
 
 .pagination .active {
-  background-color: #333;
-  border-color: #333;
+  background-color: rgb(231, 228, 228);
+  border-color: rgb(231, 228, 228);
   color: #fff;
 }
 
