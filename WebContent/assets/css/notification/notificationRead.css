@@ -21,16 +21,16 @@ header{
 }
 
 h1{
-    font-size: 30px;
-    margin: 20px 330px;
+    font-size: 25px;
+    margin: 20px 400px;
 }
 
 .big-box{
-    border-top: 5px solid rgb(40, 125, 185);
+    border-top: 5px solid #B4AEE8;
     height: 800px;
-    width: 70%;
-    margin: 0 300px;
-    border-bottom: 5px solid rgb(40, 125, 185);
+    width: 60%;
+    margin: 0 400px;
+    border-bottom: 5px solid #B4AEE8;
 }
 
 .title{
@@ -41,8 +41,8 @@ h1{
 }
 
 .title>h1{
-    margin: 10px 40px;
-    font-size: 20px;
+    margin: 10px 2px;
+    font-size: 17px;
 }
 
 .date>p{
@@ -62,41 +62,41 @@ h1{
 .big-box>.remove{
   width: 200px;
    padding: 0 10px;
-   margin: 30px 1290px;
+   margin: 30px 1050px;
  
 }
 
 .remove>button{
   border-radius: 10%;
-  border-color:  rgb(40, 125, 185);
-  border: 1px solid  rgb(40, 125, 185);
+  border: 1px solid  #fffcfc;
   font-weight: bold;
+  color: gray;
 }
 
 .remove>.list{
   font-size: 17px;
-  background-color: rgb(40, 125, 185);
 }
 
 .remove > .list:hover {
   cursor: pointer;
+  color: #B4AEE8;
 }
 
 .remove > .delete:hover {
   cursor: pointer;
+  color: #B4AEE8;
 }
 
 .remove > .edit:hover {
   cursor: pointer;
+  color: #B4AEE8;
 }
 
 .remove>.edit{
   font-size: 17px;
-  background-color:  rgb(40, 125, 185);
 }
 .remove>.delete{
   font-size: 17px;
-  background-color:  rgb(40, 125, 185);
 }
 
 

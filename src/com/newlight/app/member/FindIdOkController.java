@@ -1,6 +1,7 @@
 package com.newlight.app.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 
 import javax.servlet.ServletException;
@@ -35,6 +36,8 @@ public class FindIdOkController implements Execute {
 		String memberId = memberDAO.findId(memberDTO);
 
 		System.out.println(memberId);
+		
+		
 
 		if (memberId == null) {
 			path = "/app/member/findId.jsp";

@@ -222,15 +222,17 @@ function newColour() {
 <div>
   <div class="tabs2">
   <ul class="tabs-nav2">
-    <li><a href="#tab-4"  id="id">휴대폰</a></li>
+    <li><a href="#tab-4"  id="findPw">휴대폰</a></li>
   </ul>
   <div class="tabs-stage2">
     <div id="tab-4">
-      아이디&nbsp; <input class="txt Id" type="text" placeholder="" name="memberId"> <br>
-           성명&nbsp;&nbsp;&nbsp;&nbsp; <input class="txt name" type="text" placeholder=""  name="memberName"> <br>
-        휴대폰&nbsp;&nbsp;<input type="tel" class="phone" placeholder=""maxlength="3" name="memberPhoneNumber"> -
-           <input type="tel" class="phone" placeholder=""maxlength="4" name="memberPhoneNumber"> -
-           <input type="tel" class="phone" placeholder=""maxlength="4" name="memberPhoneNumber">
+      <label class="user-id">아이디 </label> <input class="txt Id" type="text" id="id" placeholder="아이디를 입력해주세요" name="memberId">
+      <span class="check-msg" id="check-id-msg"></span> <br>
+            <label class="user-name">이름</label><input class="txt name" id="name" type="text" placeholder="이름을 입력해주세요"  name="memberName">
+            <span class="check-msg" id="check-name-msg"></span>
+             <br>
+        <label class="user-phone">휴대폰 번호</label> <input type="tel" class="phone" id="phone" placeholder="휴대폰 번호를 입력하세요"maxlength="11" name="memberPhoneNumber">
+        <span class="check-msg" id="check-phone-msg"></span>
               <button class="okbtn" type="button">확인</button>
     </div>
   </div>

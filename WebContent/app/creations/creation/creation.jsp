@@ -64,7 +64,7 @@
 											<img
 												src="${pageContext.request.contextPath}/assets/img/folder.png"
 												alt="" />
-											<div class="donwload-name">구버전 아이메세지 분홍.theme</div>
+											<div class="donwload-name"><c:out value="${creationFile.getFileSystemName()}"></c:out></div>
 										</div>
 										<div class="download-icon">
 											<a
