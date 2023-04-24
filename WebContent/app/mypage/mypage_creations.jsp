@@ -59,6 +59,7 @@
 							<div class="mypage-main2">
 								<section>
 
+
 									<c:choose>
 										<c:when test="${not empty creationList}">
 											<c:forEach var="creations" items="${mypageLikeCount}">

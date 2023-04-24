@@ -178,7 +178,7 @@ header {
 
 .header-left h1 {
 	font-size: 2rem;
-	font-weight: bold;
+	font-family: "Hyemin";
 }
 
 .header-right {
@@ -195,7 +195,7 @@ header {
 .header a {
 	color: #333;
 	text-decoration: none;
-	font-weight: bold;
+font-family: "Hyemin";
 	padding: 10px 20px;
 	border-radius: 30px;
 	border: 1px solid #333;
@@ -227,7 +227,7 @@ header {
 
 .board-table th {
 	text-align: left;
-	font-weight: bold;
+	font-family: "Hyemin";
 	/* background-color: #f0f0f0; */
 }
 
@@ -279,7 +279,7 @@ header {
 .pagination a {
 	color: #333;
 	text-decoration: none;
-	font-weight: bold;
+	font-family: "Hyemin";
 	padding: 10px;
 	margin: 0 5px;
 	border-radius: 5px;
@@ -312,11 +312,12 @@ header {
 	border: none;
 	transition: background-color 0.3s ease, color 0.3s ease;
 	text-decoration: none;
+	font-family: "Hyemin";
 	padding: 10px 20px;
 }
 
 .write-btn:hover {
-	background-color: rgb(255, 87, 87);
+	background-color:#ce97fa;
 	color: #fff;
 }
 

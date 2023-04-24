@@ -22,11 +22,15 @@ body {
 	padding: 20px;
 }
 
-h1 {
+h4 {
 	margin-bottom: 30px;
 	font-size: 2rem;
-	font-weight: bold;
+	font-family: "Hyemin";
+   animation-name: delay;
+   animation-duration: 2s;
+   animation-delay: 0s;
 }
+
 
 /* 게시글 정보 스타일 */
 .view-info {
@@ -48,7 +52,7 @@ h1 {
 }
 
 .view-info .writer {
-	font-weight: bold;
+	font-family: "Hyemin";
 }
 
 /* 게시글 내용 스타일 */
@@ -74,6 +78,7 @@ h1 {
 	transition: background-color 0.3s ease, color 0.3s ease;
 	cursor: pointer;
 	margin-right: 10px;
+	font-family: "Hyemin";
 }
 
 .list-btn:hover, .edit-btn:hover, .delete-btn:hover {
@@ -88,7 +93,7 @@ h1 {
 .view-attach>a {
 	color: #333;
 	text-decoration: none;
-	font-weight: bold;
+	font-family: "Hyemin";
 	margin-right: 10px;
 }
 
@@ -196,7 +201,7 @@ svg {
 }
 
 .comment-writer {
-	font-weight: bold;
+	font-family: "Hyemin";
 }
 
 .comment-date {
@@ -332,10 +337,14 @@ textarea {
 	background-color: rgb(198, 133, 238);
 	color: black;
 	cursor: pointer;
+	font-family: "Hyemin";
 }
 
 .comment-form button:hover {
 	background-color: rgb(198, 133, 238);
+	background: #ce97fa;
+    color: #fff;
+    border-radius: 5px;
 }
 
 .form-group>label {
@@ -355,7 +364,7 @@ textarea {
 }
 
 .comment-writer {
-	font-weight: bold;
+	font-family: "Hyemin";
 }
 
 .comment-date {
@@ -389,7 +398,6 @@ textarea {
 	margin-top: 10px;
 }
 
-
 .comment-btn-group button {
 	margin-top: 10px;
 	padding: 5px 10px;
@@ -397,6 +405,7 @@ textarea {
 	border-radius: 5px;
 	background-color: rgb(198, 133, 238);
 	color: black;
+	font-family: "Hyemin";
 	cursor: pointer;
 }
 
@@ -416,3 +425,73 @@ textarea {
 	border-radius: 5px;
 	resize: none;
 }
+
+
+
+
+.view-title span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+}
+
+.view-title span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.view-title span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+.view-title span:nth-of-type(1)::before,
+.view-title span:nth-of-type(1)::after{
+    animation-delay: 1s;
+}
+
+.view-title span:nth-of-type(2)::before,
+.view-title span:nth-of-type(2)::after{
+    animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+@keyframes delay {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+
+
+@keyframes color {
+    0%   {color: lightblue;}
+    25%  {color: mistyrose;}
+    50%  {color: khaki;}
+    100% {color: black;}
+}
+
+
