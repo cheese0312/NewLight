@@ -58,10 +58,10 @@
 							<div class="prev">&lt</div>
 							<div class="next">&gt</div>
 						</div>
+					</div>
 						<div class="creations-comment-content">
 							 <span> <c:out value="${creation.getCreationContent()}" /> </span> 
 						</div>
-					</div>
 					<div class="click-main">
 						<div class="click">
 							<div class="creations-like">
@@ -95,7 +95,7 @@
 							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 						</div>
 						<div class="comment-ok-btn">
-							<button type="button" class="comment-submit commnet-btn-ok">작성</button>
+							<button type="button" class="comment-submit commnet-btn-ok">등록</button>
 						</div>
 					</div>
 

@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(255, 255, 245);
+  background-color: #fffcfc;
   margin: 0;
   padding: 0;
 }
@@ -285,5 +285,40 @@ li {
   position: absolute;
   top: 140px;
   cursor: pointer;
-  color: black;
+  color: #e3dede;
+  background-color: transparent !important;
+}
+
+.prev:hover{
+	color: #8221ce;
+}
+
+.next:hover{
+	color: #8221ce;
+}
+
+.edit-btn > a:hover,
+.delete-btn > a:hover,
+.list-btn > a:hover{
+	color: #ce97fa;
+}
+
+.creations-img{
+	width: 80px;
+    height: 80px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.commnet-btn-ok{
+	border: 1px solid #e3dede;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #e3dede;
+    font-weight: bold;
+}
+
+.commnet-btn-ok:hover{
+	border: 1px solid #8221ce;
+    color: #8221ce;
 }
