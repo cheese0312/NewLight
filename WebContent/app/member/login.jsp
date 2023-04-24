@@ -13,7 +13,7 @@
 var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
 var minisize=16; // smallest size of hearts in pixels
 var maxisize=28; // biggest size of hearts in pixels
-var hearts=66; // maximum number of hearts on screen
+var hearts=60; // maximum number of hearts on screen
 var over_or_under="over"; // set to "over" for hearts to always be on top, or "under" to allow them to float behind other objects
 
 /*****************************
@@ -81,7 +81,7 @@ function herzle() {
     }
   }
   for (c=0; c<hearts; c++) if (herzy[c]!==false) blow_me_a_kiss(c);
-  setTimeout("herzle()", 40);
+  setTimeout("herzle()", 120);
 }
 
 document.onmousedown=pucker;
@@ -113,8 +113,8 @@ function break_my_heart(i) {
   herz[i].firstChild.nodeValue=String.fromCharCode(9676);
   herz[i].style.fontWeight='bold';
   herzy[i]=false;
-  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 60*(t-herzs[i]));
-  setTimeout('herz['+i+'].style.visibility="hidden";', 60*(t-herzs[i]));
+  for (t=herzs[i]; t<=maxisize; t++) setTimeout('herz['+i+'].style.fontSize="'+t+'px"', 90*(t-herzs[i]));
+  setTimeout('herz['+i+'].style.visibility="hidden";', 90*(t-herzs[i]));
 }
 
 document.onmousemove=mouse;

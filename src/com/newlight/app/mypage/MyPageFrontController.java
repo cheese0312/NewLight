@@ -23,18 +23,6 @@ public class MyPageFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getContextPath().length());
 		System.out.println(target);
 
-		switch (target) {
-		case "/mypage/creationsOk.mp":
-			new MypageCreationsOkController().execute(req, resp);
-			break;
-
-		case "/mypage/followOk.mp":
-			new MypageFollowOkController().execute(req, resp);
-			break;
-
-		case "/mypage/likeOk.mp":
-			System.out.println(target);
-
 			switch (target) {
 			case "/mypage/creationsOk.mp":
 				System.out.println("마이페이지 내 작품 들어갈 예정!");
@@ -56,4 +44,3 @@ public class MyPageFrontController extends HttpServlet {
 
 		}
 	}
-}

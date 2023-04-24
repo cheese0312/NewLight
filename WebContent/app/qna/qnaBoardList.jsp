@@ -46,8 +46,8 @@
 										href="${pageContext.request.contextPath}/qna/QnAReadOk.qn?qnaNumber=${qna.getQnaNumber()}">
 											<c:out value="${qna.getQnaTitle()}" />
 									</a></td>
-									<td class="author"><c:out
-											value="${qna.getMemberNickname()}" /></td>
+									<td class="author"><a href="${pageContext.request.contextPath}/mypage/creationsOk.mp"><c:out
+											value="${qna.getMemberNickname()}" /></a></td>
 									<td class="date"><c:out value="${qna.getQnaWriteday()}" /></td>
 									<td class="hit"><c:out value="${qna.getQnaReadCount()}" /></td>
 								</tr>

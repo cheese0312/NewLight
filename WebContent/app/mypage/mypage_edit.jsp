@@ -303,7 +303,7 @@ function newColour() {
 							<div class="cencel-save">
 								<button>
 									<a
-										href="${pageContext.request.contextPath}/mypage/creationsOk.mp" style="background-color:rgb(198, 133, 238);">
+										href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
 										취소</a>
 								</button>
 								<button>저장</button>

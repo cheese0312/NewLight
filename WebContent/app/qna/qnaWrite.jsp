@@ -17,7 +17,7 @@
     <section>
      <input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
         <div class="gd">
-        <h1>글쓰기</h1>
+        <h3>문의사항 글쓰기</h3>
        </div>
      
         <div class="big-box">

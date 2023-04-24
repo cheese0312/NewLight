@@ -23,7 +23,7 @@
                               src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
                         </div>
                   <div class="mypage-box">
-                     <div class="mypage-name">${memberNickname}</div>
+                     <div class="mypage-name"><span>${memberNickname}</div>
                      <div class="myapge-comment">${memberComment}</div>
                   </div>
                   <div class="bin"></div>

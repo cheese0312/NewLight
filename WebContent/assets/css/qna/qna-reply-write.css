@@ -6,12 +6,9 @@
 }
 
 section>.big-box {
-	width: 65%;
 	height: 100%;
-	border-top: 3px solid rgb(80, 123, 158);
-	margin: 20px 390px;
-	border-bottom: 3px solid rgb(80, 123, 158);
-	background-color: rgb(252, 252, 236);
+	border-top: 3px solid #ce97fa;
+	border-bottom: 3px solid #ce97fa;
 }
 
 section>.gd {
@@ -19,17 +16,12 @@ section>.gd {
 	justify-content: space-between;
 }
 
-.gd>h1 {
-	margin: 20px 400px;
-	padding: 10px 0;
-	margin-bottom: -20px;
-}
 
 .writer-sub {
 	display: flex;
-	margin: 10px 450px;
-	padding: 10px 10px;
-	margin-bottom: -20px;
+    /* margin: 10px 450px; */
+    padding: 10px 10px;
+    /* margin-bottom: -20px;*/
 }
 
 .writer-sub>.author {
@@ -43,8 +35,10 @@ section>.gd {
 }
 
 .big-box>.small-box {
-	margin: 20px 40px;
-	background-color: rgb(252, 252, 236);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .small-box>.line {
@@ -54,42 +48,30 @@ section>.gd {
 }
 
 .small-box>.text1 {
-	background-color: rgb(252, 252, 236);
 	margin-top: 50px;
 }
 
 .small-box>.text1>p {
-	background-color: rgb(252, 252, 236);
-	margin: 20px 110px;
+	margin-right: 850px;
 	font-weight: bold;
 }
 
 .small-box>.title {
-	margin: 0 110px;
 	width: 900px;
 	height: 30px;
-	background-color: rgb(252, 252, 236);
 	border-color: rgb(80, 123, 158);
 	border-width: 1px;
 	border-radius: 5px;
 }
 
-.small-box>.word1 {
-	background-color: rgb(252, 252, 236);
-	margin: 0 110px;
-}
-
 .small-box>.word1>p {
-	background-color: rgb(252, 252, 236);
-	margin-top: 0 110px;
 	font-weight: bold;
+	margin-right: 850px;
 }
 
 .small-box>.word {
-	margin: 0 110px;
 	width: 900px;
 	height: 500px;
-	background-color: rgb(252, 252, 236);
 	border-color: rgb(80, 123, 158);
 	border-width: 1px;
 	border-radius: 5px;
@@ -97,17 +79,14 @@ section>.gd {
 
 .big-box>.form-group {
 	margin: 10px 140px;
-	background-color: rgb(252, 252, 236);
 }
 
 .form-group>.file {
 	margin: 20px 25px;
-	background-color: rgb(252, 252, 236);
 }
 
 .big-box>.button {
 	width: 150px;
-	background-color: rgb(252, 252, 236);
 	margin: 30px 1000px;
 }
 
@@ -121,9 +100,9 @@ section>.gd {
 	border-radius: 5.5%;
 	font-size: 17px;
 	border: none;
-	background-color:#ce97fa;
+	background-color: #ce97fa;
 	border-width: 0.5px;
-	font-weight: bold;
+	font-family: "Hyemin";
 	cursor: pointer;
 }
 
@@ -136,7 +115,6 @@ svg {
 
 .image-upload-wrap {
 	border: 1px solid rgb(240, 240, 240);
-	background-color: white;
 	padding: 13px;
 	position: relative;
 }
@@ -189,7 +167,6 @@ input[type='file'] {
 	width: 145px;
 	height: 100px;
 	margin-right: 10px;
-	background-color: rgb(252, 252, 236);
 }
 
 .show-img-box {
@@ -217,6 +194,6 @@ input[type='file'] {
 }
 
 .img-cancel-btn:hover {
-	background-color: rgb(255, 87, 87);
+	background-color: #ce97fa;
 	color: #fff;
 }
