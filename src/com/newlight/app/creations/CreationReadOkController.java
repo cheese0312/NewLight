@@ -67,6 +67,7 @@ public class CreationReadOkController implements Execute {
 		req.getRequestDispatcher(path).forward(req, resp);
 		req.setAttribute("isLike", isLike);
 		System.out.println(creationsVO);
+		
 		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
 
 	}

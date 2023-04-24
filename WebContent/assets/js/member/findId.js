@@ -2,6 +2,33 @@
  * 
  */
 
+let $checkMsg = $('#check-name-msg');
+let $checkMsg2 = $('#check-phone-msg');
+
+let $nameInput = $('#name');
+let $phoneInput = $('#phone');
+
+/*console.log('$nameInput');*/
+
+$nameInput.on('blur', function(){
+	if($(this).val() == ''){
+		console.log('가입 시 등록한 이름을 입력해주세요.');
+		$checkMsg.text('가입 시 등록한 이름을 입력해주세요.');
+		}
+		else{
+		$checkMsg.text('');
+	}
+});
+
+$phoneInput.on('blur', function(){
+	if($(this).val() == ''){
+		$checkMsg2.text('가입 시 등록한 휴대폰 번호를 입력해주세요.')
+	}
+	else{
+		$checkMsg2.text('');
+	}
+});
+
 let $okBtn = $('.okbtn');
 
 let $memberName = $('.name');
