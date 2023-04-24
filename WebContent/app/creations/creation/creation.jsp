@@ -32,7 +32,7 @@
 								src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 								</c:if>
 								<c:if test="${empty creation.getMemberPfp()}">
-								<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+								<img src="${pageContext.request.contextPath}/assets/img/member/people.png">
 								</c:if>
 						</div>
 						<div class="creations-author">
@@ -96,12 +96,12 @@
 									<c:choose>
 										<c:when test="${isLike == 0}">
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/images/member/IMG_1993.png">
+												src="${pageContext.request.contextPath}/assets/img/member/IMG_1993.png">
 											</a>
 										</c:when>
 										<c:otherwise>
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+												src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
 											</a>
 										</c:otherwise>
 									</c:choose>
@@ -114,7 +114,7 @@
 							
 							<div class="creations-comment">
 								<img
-									src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+									src="${pageContext.request.contextPath}/assets/img/member/reply.png">
 								<span><c:out value="${creationComment }" /></span>
 							</div>
 						</div>

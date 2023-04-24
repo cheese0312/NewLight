@@ -51,7 +51,7 @@ function showComment(comments){
 							if(comment.memberPfp){
 								text += `<img src="/userProfile/${comment.memberPfp}">`;
 							}else{
-								text += `<img src="/assets/images/member/—Pngtree—vector business men icon_4186858.png">`;
+								text += `<img src="/assets/img/member/peoply.png">`;
 							}
 							
 				            text +=`<img src="/userProfile/${comment.memberPfp}">
