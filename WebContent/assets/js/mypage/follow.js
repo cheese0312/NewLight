@@ -32,4 +32,4 @@ $followBtn.on('click' , function(e){
 			}
 		}
 	});
-});
+})

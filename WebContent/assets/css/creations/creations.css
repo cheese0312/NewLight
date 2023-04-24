@@ -1,5 +1,16 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
 *{
   background-color: rgb(255, 255, 245);
+}
+
+body {
+	font-family: 'GmarketSansMedium';
 }
 
 hr {
@@ -68,14 +79,20 @@ main {
 .follow-btn {
   padding-top: 20px;
   text-align: center;
+  color : gray;
 }
 
 .follow-btn > a {
   padding: 5px 7px;
-  background-color: rgb(220, 220, 220);
+  /* background-color: rgb(220, 220, 220); */
+  /* border : 1px solid gray; */
   border-radius: 5px;
   text-decoration: none;
   color: black;
+}
+
+.follow-btn > a:hover{
+	color : #ce97fa;
 }
 
 .creations-main {
@@ -130,8 +147,11 @@ main {
 }
 
 .creations-like {
-  padding: 0 10px;
-  font-size: 15px;
+	display: flex;
+    padding: 0px 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .creations-like  img{
@@ -141,16 +161,21 @@ main {
 
 .creations-like a {
 	text-decoration: none;
+	padding: 0 5px;
 }
 
 .creations-comment {
-  padding: 0 10px;
-  font-size: 15px;
+	display: flex;
+    padding: 0px 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .creations-comment > img{
   width: 17px;
   height: 17px;
+  padding: 0 5px;
 }
 
 .comment {
@@ -177,11 +202,13 @@ main {
     align-items: flex-end;
     justify-content: center;
     flex-direction: column;
+    font-family: 'GmarketSansMedium';
 }
 
 .comment-text {
   width: 90%;
   padding: 0 50px;
+  font-family: 'GmarketSansMedium';
 }
 
 .comment  textarea {
@@ -191,6 +218,7 @@ main {
    border: 1px solid #ccc;
    border-radius: 5px;
    resize: none;
+   font-family: 'GmarketSansMedium';
 }
 
 .comment-ok-btn {
@@ -202,6 +230,8 @@ main {
 .comment-ok-btn > button {
   width: 58px;
   height: 30px;
+  font-family: 'GmarketSansMedium';
+  font-weight: normal;
 }
 
 .comment-main{
@@ -244,6 +274,8 @@ main {
 
 .comment-btn > button {
   margin: 0 5px;
+  font-family: 'GmarketSansMedium';
+  font-weight: normal;
 }
 
 .comment-img > img {

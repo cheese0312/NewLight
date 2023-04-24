@@ -1,9 +1,21 @@
-*{
-  background-color: rgb(255, 255, 245);
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
-hr {
+body {
+	font-family: 'GmarketSansMedium';
+}
+
+.mypage-main-hr {
   width: 85%;
+  color: rgb(217, 217, 217);
+}
+
+.mypage-main-hr2 {
+  width: 80%;
   color: rgb(217, 217, 217);
 }
 
@@ -64,6 +76,17 @@ section {
   align-items: center;
 }
 
+.mypage-main-sub{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mypage-main-sub > hr {
+	width : 90%;
+}
+
 .img {
   width: 300px;
   height: 250px;
@@ -120,6 +143,7 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 22px;
 }
 
 .name > a {

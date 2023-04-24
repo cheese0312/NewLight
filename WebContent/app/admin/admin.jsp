@@ -52,13 +52,28 @@
 						<div class="member-list-creations"><c:out value="${admin.getCreationCount()}"/></div>
 
 						<div class="member-list-status member-list-status1">
-							<span class="status"><c:out value="${admin.getMemberStatus()}"/></span>
+							
+							<c:if test="${admin.getMemberStatus() eq 'Y' }">
+							<span class="status none">
+								<c:out value="${admin.getMemberStatus()}" />		
+							</span>	
+							<span class="statusM statusY">활동 가능</span> 
+							</c:if>
+							
+							<c:if test="${admin.getMemberStatus() eq 'N' }">
+							<span class="status none">
+							<c:out value="${admin.getMemberStatus()}" />
+							</span>
+							<span class="statusM statusN">활동 불가능</span>
+							</c:if>
+							
+							
 							<span class="btn">
 								<c:if test="${admin.getMemberStatus() eq 'Y'}">
-									<button type="button" class="member-status-btn" data-status="N" data-number="${admin.getMemberNumber() }">X</button>
+									<button type="button" class="member-status-btn" data-status="N" data-number="${admin.getMemberNumber() }">활동 불가능</button>
 								</c:if>
 								<c:if test="${admin.getMemberStatus() eq 'N'}">
-									<button type="button" class="member-status-btn" data-status="Y" data-number="${admin.getMemberNumber()}">Y</button>
+									<button type="button" class="member-status-btn" data-status="Y" data-number="${admin.getMemberNumber()}">활동 가능</button>
 								</c:if>
 							</span>
 						</div>

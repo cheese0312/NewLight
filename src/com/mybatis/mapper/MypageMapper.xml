@@ -22,7 +22,7 @@
    </select>
    
    <select id="mypagefollowee" parameterType="MypageVO" resultType="MypageVO">
-      select m.member_number, m.member_nickname , m.member_comment , f.follower_number , f.followee_number
+      select m.member_number, m.member_nickname , m.member_comment , f.follower_number , f.followee_number , m.member_pfp
       from follows f  join `member` m 
       on f.followee_number = m.member_number 
       where f.follower_number = #{memberNumber}
@@ -36,7 +36,7 @@
    </select>
    
    <select id="mypagecreation" resultType="MypageVO" parameterType="MypageVO">
-      select  j.creation_number, j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count
+      select  j.member_number, j.creation_number, j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count
       from (
          select c.*, count(l.creation_number) like_count
          from creations c 
@@ -49,7 +49,7 @@
    </select>
    
    <select id="mypageinfo" parameterType="_int" resultType="MypageVO">
-      select member_nickname , member_comment , member_pfp
+      select  member_number ,member_nickname , member_comment , member_pfp
       from `member`
       where member_number = #{memberNumber}
    </select>   
@@ -58,7 +58,7 @@
       select creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
       from (
          select c.creation_number, creation_title , creation_sumnail, member_nickname, member_pfp ,
-            count(l.creation_number) like_count
+            count(l.creation_number) like_count , m.member_number
          from creations c
          join `member` m 
          on c.member_number = #{memberNumber} and c.member_number = m.member_number 

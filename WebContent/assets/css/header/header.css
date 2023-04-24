@@ -1,12 +1,14 @@
 /* 전체 배경화면 색상 */
 * {
   background-color : #fffcfc;
- /* backgro */und-color: #fffff8;
+ /* background-color: #fffff8; */
 }
 
 @font-face {
   font-family: "Hyemin";
-  src: url("/assets/fonts/Hyemin.ttf");
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 body > hr {
@@ -14,6 +16,11 @@ body > hr {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
+/* body {
+	font-family : "Hyemin";
+	font-size : 18px;
+} */
 
 main {
   width: 100%;
@@ -76,13 +83,14 @@ header{
 .dropbtn1 ,
 .dropbtn2 ,
 .dropbtn3{
-	  font-family: "Hyemin";
   color: black;
   font-size: 16px;
   border: none;
   cursor: pointer;
   list-style: none;
   width: 150px;
+  font-family : "Hyemin";
+  font-size : 19px;
 }
 
 /* .dropbtn3 {
@@ -95,13 +103,14 @@ header{
 } */
 
 .dropbtn4 {
-  font-family: "Hyemin";
   color: black;
   font-size: 16px;
   border: none;
   cursor: pointer;
   list-style: none;
   width: 100px;
+  font-family : "Hyemin";
+  font-size : 19px;
 }
 
 .dropbtn1:hover,
@@ -109,6 +118,7 @@ header{
 .dropbtn3 > a:hover,
 .dropbtn4:hover {
 	color : #ce97fa;
+  font-family : "Hyemin";
 }
 
 .dropbtn1 {
@@ -142,6 +152,7 @@ header{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   position: absolute;
   z-index : 2;
+  font-family : "Hyemin";
 }
 
 /* 드롭 서브 메뉴 링크 설정 */
@@ -149,11 +160,12 @@ header{
 .dropdown-content2 > a,
 .dropdown-content3 > a,
 .dropdown-content4 > a {
-  font-family: "Hyemin";
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-family : "Hyemin";
+  font-size : 18px;
 }
 
 /* 드롭 서브 메뉴 마우스 이벤트 */
@@ -205,6 +217,7 @@ header{
   border-radius: 5px;
   text-decoration-line: none;
   font-family: "Hyemin";
+  font-size : 18px;
 }
 
 .login-btn:hover,
@@ -224,6 +237,7 @@ header{
   border-radius: 5px;
   text-decoration-line: none;
   font-family: "Hyemin";
+  font-size : 18px;
 }
 
 .logout-btn{
@@ -236,6 +250,7 @@ header{
   border-radius: 5px;
   text-decoration-line: none;
   font-family: "Hyemin";
+   font-size : 18px;
 }
 
 .btn1-box>.login2-btn{
@@ -249,7 +264,6 @@ header{
   border-radius: 5px;
   text-decoration-line: none;
   text-align: center;
-  font-family: "Hyemin";
 }
 
 .category {

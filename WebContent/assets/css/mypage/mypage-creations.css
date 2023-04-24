@@ -1,5 +1,12 @@
-*{
-  background-color: rgb(255, 255, 245);
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+	font-family: 'GmarketSansMedium';
 }
 
 hr {
@@ -165,7 +172,7 @@ section {
 .creation-like ,
 .creation-comment {
 	display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .creations-like {

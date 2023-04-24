@@ -1,0 +1,254 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+	 font-family: 'GmarketSansMedium';
+}
+
+hr {
+  width: 85%;
+  color: gary;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-box-bin {
+  height: 30px;
+}
+
+.main-aside {
+  width: 15%;
+  height: 100%;
+  display: flex;
+
+  align-items: center;
+  color: white;
+}
+
+.creations-main {
+  padding: 10px 10px;
+  margin: 0 30px;
+  display: block;
+  flex-wrap: wrap;
+  width: 80%;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.creations-main2 {
+  padding: 10px 10px;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.creations {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 80%;
+}
+
+.creations-title {
+  width: 70%;
+  align-items: center;
+}
+
+.creations-btn {
+  padding-top: 20px;
+  height: 50px;
+  align-content: end;
+}
+
+.creations-btn  > a {
+  padding: 10px 7px;
+  border-radius: 5px;
+  align-items: end;
+  text-decoration: none;
+  color : black;
+}
+
+.creations-btn > a:hover {
+	color : #ce97fa;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 800px;
+}
+
+.mypage-main {
+  width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 430px;
+  height: 360px;
+  margin: 10px;
+  padding: 15px;
+  /* border: 1px solid rgb(205, 205, 205); */
+}
+
+.likes ,
+.comment {
+  width: 20px;
+  height: 20px;
+}
+
+.mypage-name {
+  width: 70%;
+  height: 60%;
+}
+
+.editbtn > a {
+  width: 80px;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.click {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.name > a {
+  text-decoration: none;
+  color: black;
+}
+
+.creations-main2 > section {
+  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+}
+
+.creations-img {
+  /* border: 0.3px solid gray; */
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.creations-img > img {
+  width: 430px;
+  height: 230px;
+  align-items: center;
+}
+
+.creations-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0px;
+}
+
+.sub-author {
+  display: flex;
+  padding: 5px 8px;
+  align-items: center;
+}
+
+.sub-author > img {
+  width: 30px;
+  height: 30px;
+}
+
+.sub-author  a {
+  padding: 5px 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.sub-title {
+  padding: 8px 0 7px 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sub-title > a {
+  text-decoration: none;
+  color: black;
+}
+
+.sub-author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.sub-author  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub-author-name  a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+/* .creations-sub {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: black;
+} */
+
+.creation-like ,
+.creation-comment {
+	display: flex;
+    align-items: flex-start;
+}
+
+.creation-like {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creation-like > img{
+  width: 20px;
+  height: 20px;
+}
+
+.creation-comment {
+  padding: 0 10px;
+  font-size: 20px;
+}
+
+.creation-comment > img{
+  width: 22px;
+  height: 22px;
+}
+
+.count {
+	margin : 0 5px;
+}

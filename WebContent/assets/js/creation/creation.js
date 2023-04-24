@@ -9,8 +9,9 @@ let $deleteBtn = $('.delete-btn');
 
 let creationNumber = $listBtn.data('creationnumber');
 
-$listBtn.on('click', () => {
-	window.location.href = '/creations/pageListOk.ct?categoryCode=' +categoryCode + '&categoryName=' + categoryName;
+$listBtn.on('click', (e) => {
+	e.preventDefault();
+	window.history.back();
 });
 
 $editBtn.on('click' , ()=> {
@@ -46,7 +47,14 @@ function showComment(comments){
 		<div class="comment-main">
 				            <div class="comment-img-box">
 				          <div class="comment-img">
-				            <img src="/userProfile/${comment.memberPfp}">
+							`;
+							if(comment.memberPfp){
+								text += `<img src="/userProfile/${comment.memberPfp}">`;
+							}else{
+								text += `<img src="/assets/images/member/—Pngtree—vector business men icon_4186858.png">`;
+							}
+							
+				            text +=`<img src="/userProfile/${comment.memberPfp}">
 				          </div>
 				        </div>
 				          <div class="comment-box">

@@ -1,7 +1,12 @@
-* {
-	/* margin: 10px;
-  padding: 10px 0; */
-	background-color: rgb(255, 255, 245);
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+	 font-family: 'GmarketSansMedium';
 }
 
 body>hr {
@@ -143,7 +148,6 @@ header {
 /* 일반 스타일 */
 body {
 	/* background-color: #f8f8f8; */
-	font-family: "Noto Sans KR", sans-serif;
 }
 
 .container {
