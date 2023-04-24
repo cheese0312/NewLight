@@ -222,9 +222,15 @@ function newColour() {
 						method="post">
 						<fieldset>
 							<div class="info-people info">
+							<c:if test="${not empty memberDTO.getMemberPfp()}">
 								<img
 									src="${pageContext.request.contextPath}/userProfile/${memberDTO.getMemberPfp()}"
 									alt="" class="info-people-img" />
+									</c:if>
+									<c:if test="${empty memberDTO.getMemberPfp()}">
+									<img src="${pageContext.request.contextPath}/assets/images/member/people.png"
+							class="info-people-img">
+									</c:if>
 								<button type="button" class="pfp-btn">사진 변경</button>
 								<input type="file" class="pfp-input" name="memberPfp">
 							
@@ -303,7 +309,7 @@ function newColour() {
 							<div class="cencel-save">
 								<button>
 									<a
-										href="${pageContext.request.contextPath}/mypage/creationsOk.mp" style="background-color:rgb(198, 133, 238);">
+										href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
 										취소</a>
 								</button>
 								<button>저장</button>

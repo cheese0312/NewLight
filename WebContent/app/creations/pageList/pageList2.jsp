@@ -8,9 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Creations</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/creations/background.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/header/header.css">
+	href="${pageContext.request.contextPath}/assets/css/creations/pageList2.css">
 	
 </head>
 <!-- 1차,2차 배경화면 + 트레이싱 처리 화면 -->
@@ -54,8 +52,13 @@
 										</div>
 										<div class="sub-author">
 										<div class="sub-author-img">
+											<c:if test="${not empty creation.getMemberPfp() }">
 											<img
 												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
+												</c:if>
+												<c:if test="${empty creation.getMemberPfp()}">
+												<img src="${pageContext.request.contextPath}/assets/img/member/people.png">
+												</c:if>
 											</div>
 											<div class="sub-author-name">
 											<a
@@ -67,13 +70,13 @@
 										<div class="creations-sub">
                                        <div class="creation-like">
                                           <img
-                                             src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+                                             src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
                                           <span class="count"><c:out value="${creation.getLikeCount()}" /></span>
                                           </div>
                                           <div class="creation-comment">
                                           
                                           <img
-                                             src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+                                             src="${pageContext.request.contextPath}/assets/img/member/reply.png">
                                           <span class="count"><c:out value="${creation.getCommentCount()}" /></span>
                                        </div>
                                        </div>

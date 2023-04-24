@@ -59,15 +59,15 @@ public class CreationReadOkController implements Execute {
 		String path = null;
 		
 		if(checkPath.getCategoryName().equals("만화")) {
-			path = "/app/creations/background/aniView.jsp";
+			path = "/app/creations/creation/aniView.jsp";
 		}else {
-			path = "/app/creations/background/creation.jsp";
+			path = "/app/creations/creation/creation.jsp";
 		}
 			
 		req.getRequestDispatcher(path).forward(req, resp);
 		req.setAttribute("isLike", isLike);
 		System.out.println(creationsVO);
-		req.getRequestDispatcher("/app/creations/background/creation.jsp").forward(req, resp);
+		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
 
 	}
 

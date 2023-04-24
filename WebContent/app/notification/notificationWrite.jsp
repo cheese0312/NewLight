@@ -17,7 +17,7 @@
 </head>
 <body>
 
-     <%@include file ="/app/header3.jsp" %>
+     <%@include file ="/app/header.jsp" %>
     <form action="${pageContext.request.contextPath}/notification/notificationWriteOk.nc" method="post" >
     <section>
         <div class="gd">
