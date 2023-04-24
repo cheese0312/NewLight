@@ -75,7 +75,7 @@
 										</div>
 										<div class="create-people">
 										<a
-											href="${pageContext.request.contextPath}/mypage/creationsOk.mp">
+											href="${pageContext.request.contextPath}/mypage/creationsOk.mp?memberNumber=${content.getMemberNumber()}">
 											<div class="create-img">
 											<img
 											src="${pageContext.request.contextPath}/userProfile/${content.getMemberPfp()}"

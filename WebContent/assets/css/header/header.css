@@ -1,7 +1,7 @@
 /* 전체 배경화면 색상 */
 * {
-  background-color : #fffcfc;
- /* backgro */und-color: #fffff8;
+ background-color : #fffcfc; 
+ /*  background-color: #fffff8;  */
 }
 
 @font-face {

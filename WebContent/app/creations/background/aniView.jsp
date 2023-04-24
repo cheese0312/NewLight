@@ -51,10 +51,10 @@
 							<div class="prev">&lt</div>
 							<div class="next">&gt</div>
 						</div>
+					</div>
 						<div class="creations-comment-content">
 							 <span> <c:out value="${creation.getCreationContent()}" /> </span> 
 						</div>
-					</div>
 					<div class="click-main">
 						<div class="click">
 							<div class="creations-like">
@@ -81,80 +81,7 @@
 					</div>
 				</div>
 
-				<!-- <div class="comment">
-					<div class="comment-input">
-						<div class="comment-text">
-							<textarea name="content" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
-						</div>
-						<div class="comment-ok-btn">
-							<button type="button">작성</button>
-						</div>
-					</div>
-
-					<div class="comment-border">
-						<div class="comment-main">
-							<div class="comment-img-box">
-								<div class="comment-img">
-									<img src="../img/—Pngtree—vector business men icon_4186858.png"
-										alt="" />
-								</div>
-							</div>
-							<div class="comment-box">
-								<div class="comment-member">
-									작성자
-									<div class="comment-content">그림이 너무 예뻐요 :)</div>
-								</div>
-								<div class="comment-writeday">2023-04-05</div>
-							</div>
-
-							<div class="comment-btn">
-								<button type="button">수정</button>
-								<button type="button">삭제</button>
-							</div>
-						</div>
-
-						<div class="comment-main">
-							<div class="comment-img-box">
-								<div class="comment-img">
-									<img src="../img/—Pngtree—vector business men icon_4186858.png"
-										alt="" />
-								</div>
-							</div>
-							<div class="comment-box">
-								<div class="comment-member">
-									작성자
-									<div class="comment-content">그림이 너무 예뻐요 :)</div>
-								</div>
-								<div class="comment-writeday">2023-04-05</div>
-							</div>
-
-							<div class="comment-btn">
-								<button type="button">수정</button>
-								<button type="button">삭제</button>
-							</div>
-						</div>
-
-						<div class="comment-main">
-							<div class="comment-img-box">
-								<div class="comment-img">
-									<img src="../img/10_징검다리를_하나_둘.jpg" alt="" />
-								</div>
-							</div>
-							<div class="comment-box">
-								<div class="comment-member">
-									작성자
-									<div class="comment-content">그림이 너무 예뻐요 :)</div>
-								</div>
-								<div class="comment-writeday">2023-04-05</div>
-							</div>
-
-							<div class="comment-btn">
-								<button type="button">수정</button>
-								<button type="button">삭제</button>
-							</div>
-						</div>
-					</div>
-				</div> -->
+				
 				<div class="comment">
 					<div class="comment-input">
 						<input type="hidden" name="creationNumber"
@@ -163,7 +90,7 @@
 							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 						</div>
 						<div class="comment-ok-btn">
-							<button type="button" class="comment-submit commnet-btn-ok">작성</button>
+							<button type="button" class="comment-submit commnet-btn-ok">등록</button>
 						</div>
 					</div>
 
@@ -178,7 +105,7 @@
 	<script>
 		let memberNumber = "${sessionScope.memberNumber}";
 	</script>
-	<script src="${pagetContext.request.contextPath}/assets/js/creation/creation.js"></script>
 	<script src="${pageContext.request.contextPath}/assets/js/anislide.js"></script>
+	<script src="${pagetContext.request.contextPath}/assets/js/creation/creation.js"></script>
 </body>
 </html>

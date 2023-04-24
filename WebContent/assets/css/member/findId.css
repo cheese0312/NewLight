@@ -25,8 +25,6 @@ img {
 }
 
 body {
-	font-family: 'Nanum Gothic', sans-serif;
-	font-size: 0.7rem;
 	color: #999;
 	line-height: 1rem;
 	letter-spacing: 0.1px;
@@ -57,6 +55,12 @@ h4, h5 {
 	font-family: 'Nanum Gothic', sans-serif;
 }
 
+#check-name-msg,
+#check-phone-msg{
+	font-size : 13px;
+	color : red;
+}
+
 h4 {
 	font-size: 1.1rem;
 	line-height: 1.4rem;
@@ -77,12 +81,12 @@ a:visited {
 }
 
 a:hover {
-	color: red;
+	color:#ce97fa;
 }
 
-a:active {
-	color: red;
-}
+/* a:active {
+	color: #ce97fa;
+} */
 
 button {
 	font-size: 0.7rem;
@@ -94,7 +98,7 @@ button {
 }
 
 button:hover {
-	background: crimson;
+	/* background: crimson; */
 	color: white;
 	cursor: pointer;
 }
@@ -274,9 +278,16 @@ input {
 	border: 1px solid #bbb;
 }
 
+.user-name{
+	padding: 8px 0px 10px;
+    display: block;
+}
+
 .txt {
-	width: 355.4px;
+	/* width: 355.4px; */
+	width : 100%;
 	padding: 0.5rem 10px;
+	border-radius : 4px;
 }
 
 .email {
@@ -284,9 +295,16 @@ input {
 	padding: 0.5rem 10px;
 }
 
+.user-phone{
+	padding: 8px 0px 10px;
+    display: block;
+}
+
 .phone {
-	width: 113.4px;
+	/* width: 113.4px; */
+	width : 100%;
 	padding: 0.5rem 10px;
+	border-radius : 4px;
 }
 
 select {
@@ -298,7 +316,8 @@ select {
 }
 
 .okbtn {
-	background-color:#ce97fa;
+	/* ackground-color:#ce97fa; */
+	background-color: rgb(221, 221, 221);
 	margin-left: 39%;
 	margin-top: 1rem;
 	color: #fff;
@@ -306,7 +325,7 @@ select {
 }
 
 .okbtn:hover {
-	background-color: #C31916;
+	background-color:#ce97fa;
 	margin-top: 1rem;
 	color: #fff;
 }
