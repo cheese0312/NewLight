@@ -96,9 +96,6 @@ public class CreationUploadOkController implements Execute{
 			
 		}
 		
-//		boolean isOne = creationDTO.getCreationCode().equals("101");
-//		String cate = creationDTO.getCreationName();
-		
 		if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("만화")) {
 			path = "/crations/aniListOk.ct";
 		}else if(creationDTO.getCreationCode().equals("101") && creationDTO.getCreationName().equals("카카오톡 테마")) {

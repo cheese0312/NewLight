@@ -23,7 +23,7 @@ public class StatusUpdateOkControlloer implements Execute {
 		
 		adminDAO.statusUpdate(adminVO);
 
-		String status = req.getParameter("memberStatus").equals("Y") ? "Y" : "X";
+		String status = req.getParameter("memberStatus").equals("Y") ? "활동 가능" : "활동 불가능";
 		
 		resp.setContentType("text/html; charset=utf-8");
 		

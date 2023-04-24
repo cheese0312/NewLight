@@ -11,16 +11,22 @@
 <body>
    <!-- 헤더 -->
    <%@include file="/app/header.jsp"%>
+   <main>
    <form action="${pageContext.request.contextPath}/mypage/creationsOk.mp"
       method="post">
       
-      <main>
+      
          <div class="main">
             <div class="main-container">
                <div class="mypage-main">
                         <div class="mypage-img">
-                           <img
-                              src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
+                           <c:if test="${not empty memberPfp }">
+							<img src="${pageContext.request.contextPath}/userProfile/${memberPfp}">
+						   </c:if>
+						<c:if test="${empty memberPfp }">
+						<img src="${pageContext.request.contextPath}/assets/img/member/people.png"
+							alt="">
+						</c:if>
                         </div>
                   <div class="mypage-box">
                      <div class="mypage-name">${memberNickname}</div>
@@ -28,7 +34,9 @@
                   </div>
                   <div class="bin"></div>
                   <div class="editbtn">
+                  <c:if test="${sessionScope.memberNumber == param.memberNumber }">
                      <a href="${pageContext.request.contextPath}/mypage/mypageEdit.me">프로필수정</a>
+                  </c:if>
                   </div>
 
                </div>
@@ -37,19 +45,21 @@
                <section>
                   <div class="click">
                      <div class="name">
-                        <a href="/mypage/creationsOk.mp">내 작품</a>
+                        <a href="/mypage/creationsOk.mp?memberNumber=${memberNumber }">내 작품</a>
+                     </div>
+                     <c:if test="${sessionScope.memberNumber == param.memberNumber }">
+                     <div class="name">
+                        <a href="/mypage/followOk.mp?memberNumber=${memberNumber }">팔로워</a>
                      </div>
                      <div class="name">
-                        <a href="/mypage/followOk.mp">팔로우</a>
+                        <a href="/mypage/likeOk.mp?memberNumber=${memberNumber }">좋아요</a>
                      </div>
-                     <div class="name">
-                        <a href="/mypage/likeOk.mp">좋아요</a>
-                     </div>
+                     </c:if>
 
                   </div>
                   <div class="mypage-main2">
                      <section>
-                     <c:if test=""></c:if>
+                     
                         <c:choose>
                            <c:when test="${not empty creationList}">
                               <c:forEach var="creations" items="${mypageLikeCount}">
@@ -61,8 +71,15 @@
                                        </div>
                                        <div class="sub-author">
                                        <div class="sub-author-img">
-                                          <img
+                                       <c:if test="${not empty creations.getMemberPfp() }">
+                                       <img
                                              src="${pageContext.request.contextPath}/userProfile/${creations.getMemberPfp()}">
+                                       </c:if>
+                                       <c:if test="${empty creations.getMemberPfp()}">
+                                       <img
+                                             src="${pageContext.request.contextPath}/assets/img/member/people.png">
+                                       </c:if>
+                                          
                                              </div>
                                              <div class="sub-author-name">
                                           <a href="#"> <c:out value="${creations.getMemberNickname()}"/> </a>
@@ -71,13 +88,13 @@
                                        <div class="creations-sub">
                                        <div class="creation-like">
                                           <img
-                                             src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png">
+                                             src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
                                           <span class="count"><c:out value="${creations.getLikeCount()}" /></span>
                                           </div>
                                           <div class="creation-comment">
                                           
                                           <img
-                                             src="${pageContext.request.contextPath}/assets/images/member/pngegg.png">
+                                             src="${pageContext.request.contextPath}/assets/img/member/reply.png">
                                           <span class="count"><c:out value="${creations.getCommentCount()}" /></span>
                                        </div>
                                        </div>
@@ -106,8 +123,9 @@
                </section>
             </div>
          </div>
-      </main>
+      
    </form>
+   </main>
    <!-- 푸터 -->
    <%@include file="/app/footer.jsp"%>
 </body>

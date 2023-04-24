@@ -19,7 +19,7 @@
 			<div class="logo">
 				 <a href="${pageContext.request.contextPath}/main/mainpageListOk.mi">
 				 <img
-					src="${pageContext.request.contextPath}/assets/images/logo/logo2.png">
+					src="${pageContext.request.contextPath}/assets/img/logo/logo2.png">
 					</a>
 			</div>
 			<!-- 헤더 메인 박스 -->
@@ -36,7 +36,7 @@
 						<div class="dropdown1">
 
 							<!-- 드롭 박스 버튼 -->
-							<li class="dropbtn1">별구름<img src="${pageContext.request.contextPath}/assets/images/free-icon-cloud.png"></li>
+							<li class="dropbtn1">별구름<img src="${pageContext.request.contextPath}/assets/img/free-icon-cloud.png"></li>
 
 							<!-- 드롭 서브 메뉴 -->
 							<li class="dropdown-content1">
@@ -108,7 +108,7 @@
 						<a href="${pageContext.request.contextPath}/member/login.me" class="login-btn">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<a href="${pageContext.request.contextPath}/mypage/creationsOk.mp" class="mypage-btn">마이 페이지</a>
+						<a href="${pageContext.request.contextPath}/mypage/creationsOk.mp?memberNumber=${memberNumber}" class="mypage-btn">마이 페이지</a>
 						<a href="${pageContext.request.contextPath}/member/logoutOk.me" class="logout-btn">로그아웃</a>
 					</c:otherwise>
 				</c:choose>

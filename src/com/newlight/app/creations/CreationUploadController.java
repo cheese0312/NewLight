@@ -20,7 +20,7 @@ public class CreationUploadController implements Execute{
 		
 		req.setAttribute("creation", creationDAO.select2(creationNumber));
 		
-		req.getRequestDispatcher("/app/creations/theme/upload.jsp").forward(req, resp);
+		req.getRequestDispatcher("/app/main/upload.jsp").forward(req, resp);
 	}
 
 }

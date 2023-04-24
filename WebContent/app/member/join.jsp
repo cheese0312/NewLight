@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/member/joinStyle2.css">
+	href="${pageContext.request.contextPath}/assets/css/member/join.css">
 	<script type="text/javascript">
 // <![CDATA[
 var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"

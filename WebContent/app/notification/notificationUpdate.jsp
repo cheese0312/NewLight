@@ -17,7 +17,7 @@
 </head>
 <body>
 
-     <%@include file ="/app/header3.jsp" %>
+     <%@include file ="/app/header.jsp" %>
     <form action="${pageContext.request.contextPath}/notification/notificationUpdateOk.nc" method="post" >
     
     <input type="hidden" name="notificationNumber" value="${notification.getNotificationNumber()}">

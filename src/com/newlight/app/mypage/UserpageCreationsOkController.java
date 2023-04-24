@@ -8,34 +8,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.newlight.app.Execute;
-import com.newlight.app.dao.CreationsDAO;
-import com.newlight.app.dao.LikesDAO;
 import com.newlight.app.dao.MypageDAO;
 import com.newlight.app.dto.MypageVO;
 
-public class MypageCreationsOkController implements Execute {
+public class UserpageCreationsOkController implements Execute {
 
 	@Override
-	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {	
+	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		req.setCharacterEncoding("utf-8");
 
 		MypageDAO mypageDAO = new MypageDAO();
 		MypageVO mypageVO = new MypageVO();
 
 		
-		int memberNumber = (Integer)req.getSession().getAttribute("memberNumber");
+//		int memberNumber = mypageDAO.mypageinfo(Integer.valueOf(req.getParameter("memberNumber")));
 
-		mypageVO.setMemberNumber(memberNumber);
+		mypageVO.setMemberNumber(Integer.valueOf(req.getParameter("memberNumber")));
 		mypageVO.setMemberNickname(req.getParameter("memberNickname"));
 
-		mypageVO = mypageDAO.mypageinfo(memberNumber);
-		
-//		req.setAttribute("memberNumber", mypageVO.getMemberNumber());
+		mypageVO = mypageDAO.mypageinfo(Integer.valueOf(req.getParameter("memberNumber")));
+
 		req.setAttribute("memberPfp", mypageVO.getMemberPfp());
 		req.setAttribute("memberNickname", mypageVO.getMemberNickname());
 		req.setAttribute("memberComment", mypageVO.getMemberComment());
 		
-		mypageVO.setMemberNumber(memberNumber);
+		mypageVO.setMemberNumber(Integer.valueOf(req.getParameter("memberNumber")));
+//		req.setAttribute("memberNumber", Integer.valueOf(req.getParameter("memberNumber")));
 		
 //		---------------------------------------------------------------------------------------------------------------------------
 

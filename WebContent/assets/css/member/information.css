@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+	 font-family: 'GmarketSansMedium';
+}
+
+body>hr {
+	width: 60%;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+main {
+	width: 95%;
+	display: block;
+	/* padding-left: 150px; */
+	/* display: flex;
+  justify-content: center; */
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+/* section */
+fieldset {
+	padding: 30px;
+}
+
+.info-container {
+	display: flex;
+	justify-content: center;
+}
+
+.info-people-img {
+	width: 70px;
+	height: 70px;
+	margin-bottom: 10px;
+}
+
+.info-people {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-people>button {
+	margin-right: 429px;
+    margin-left: 10px;
+}
+
+.info-name {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-id {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-pw {
+/* 	display: block;
+	justify-content: space-between;
+	margin-bottom: 10px; */
+	display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-phone {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-nickname {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-selfy {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-intro {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.info-website {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	width: 58%;
+}
+
+textarea {
+	resize: none;
+	width: 340px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.cencel-save {
+	display: flex;
+	justify-content: center;
+}
+
+.user-delete>a {
+	color: gray;
+	text-decoration : none;
+}
+
+.user-delete>a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.cencel-save>button {
+	margin: 0 50px;
+	/* background-color: rgb(198, 133, 238); */
+	width: 50px;
+	height: 30px;
+	border: 1px solid gray;
+	cursor: pointer;
+	border-radius : 8px;
+	color : gray;
+}
+
+.cencel-save a {
+	color : gray;
+	text-decoration : none;
+}
+
+.cencel-save a:hover {
+	color : #ce97fa;
+}
+
+.cencel-save > button:hover {
+	border: 1px solid #ce97fa;
+	color : #ce97fa;
+}
+
+.pfp-input {
+  display: none;
+}
+
+.info {
+	display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.count {
+	font-size : 10px;
+}
+
+label {
+	width : 20%
+}
+
+span {
+	width : 10%
+}
+
+.info-pw-sub > span {
+	font-size : 10px;
+	color : red;
+}
+
+.pfp-btn {
+	border : 1px solid gray;
+	border-radius : 9px;
+	padding : 3px 5px;
+	color : gray;
+}
+
+.pfp-btn:hover {
+	border : 1px solid #ce97fa;
+	color : #ce97fa;
+}

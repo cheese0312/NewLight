@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>창작물 업로드</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/upload.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/creations/upload.css">
 </head>
 <body>
 
@@ -21,13 +21,13 @@
     <div class="creations-sub-main">
       <h3>나만의 새로운 빛 만들기 - <label><c:out value="${memberNickname}"/></label></h3>
     
-    <div class="creations-title">
+    <div class="creations-title padding">
       <div class="content-mente">
       <label>제목을 입력하세요 :)</label>
       </div>
       <input type="text" value="${creation.getCreationTitle()}" name="creationTitle">
     </div>
-    <div class="creations-option">
+    <div class="creations-option padding">
       <div class="category-name">
         <div class="content-mente">
      <label>카테고리를 선택하세요</label> 
@@ -37,8 +37,8 @@
     <div class="category1">
       <select name="category1" id="category1">
         <option value="0">----</option>
-        <option value="101">1차 창작물</option>
-        <option value="201">2차 창작물</option>
+        <option value="101">별구름</option>
+        <option value="201">별숲</option>
       </select>
     </div>
     <div class="category2">
@@ -46,6 +46,7 @@
         <option value="0">----</option>
         <option value="손그림">손그림</option>
         <option value="배경화면">배경화면</option>
+        <option value="트레이싱">트레이싱</option>
         <option value="카톡테마">카카오톡 테마</option>
         <option value="폰트">폰트</option>
         <option value="만화">만화</option>
@@ -53,14 +54,14 @@
     </div>
   </div>
     </div>
-    <div class="creations-content">
+    <div class="creations-content padding">
       <div class="content-mente">
       <label> 창작물 소개를 적어주세요 :) </label>
     </div>
       <textarea name="creationContent" id="creations-content" cols="70" rows="12"><c:out value="${creation.getCreationContent()}"/></textarea>
     </div>
 
-    <div class="form-group">
+    <div class="form-group padding">
       <label for="file">파일 첨부</label>
       <div class="image-upload-wrap">
        <input type="file" id="file" name="boardFile" accept=".jpg, .jpeg, .png" multiple/>
@@ -102,6 +103,6 @@
   <!-- 푸터 -->
     <%@include file ="/app/footer.jsp" %>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="${pagetContext.request.contextPath}/assets/js/boardUpload.js"></script>
+  <script src="${pagetContext.request.contextPath}/assets/js/creation/boardUpload.js"></script>
 </body>
 </html>

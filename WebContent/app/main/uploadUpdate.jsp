@@ -39,8 +39,8 @@
     <div class="category1">
       <select name="category1" id="category1">
         <option value="0">----</option>
-        <option value="101">1차 창작물</option>
-        <option value="201">2차 창작물</option>
+        <option value="101">별구름</option>
+        <option value="201">별숲</option>
       </select>
     </div>
     <div class="category2">
@@ -48,6 +48,7 @@
         <option value="0">----</option>
         <option value="손그림">손그림</option>
         <option value="배경화면">배경화면</option>
+        <option value="트레이싱">트레이싱</option>
         <option value="카톡테마">카카오톡 테마</option>
         <option value="폰트">폰트</option>
         <option value="만화">만화</option>
@@ -104,6 +105,6 @@
   <!-- 푸터 -->
     <%@include file ="/app/footer.jsp" %>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="${pagetContext.request.contextPath}/assets/js/boardUpload.js"></script>
+  <script src="${pagetContext.request.contextPath}/assets/js/creation/boardUpload.js"></script>
 </body>
 </html>
