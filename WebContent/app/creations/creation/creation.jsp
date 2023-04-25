@@ -62,7 +62,7 @@
 									<div class="theme-down-box">
 										<div class="folder-icon">
 											<img
-												src="${pageContext.request.contextPath}/assets/img/folder.png"
+												src="${pageContext.request.contextPath}/assets/img/creation/folder.png"
 												alt="" />
 											<div class="donwload-name"><c:out value="${creationFile.getFileSystemName()}"></c:out></div>
 										</div>
@@ -70,9 +70,9 @@
 											<a
 												href="${pageContext.request.contextPath}/creationFile/download.ccmf?fileSystemName=${creationFile.getFileSystemName()}&fileOriginalName=${creationFile.getFileOriginalName()}"
 												class=""> <img
-												src="${pageContext.request.contextPath}/assets/img/download.png"
+												src="${pageContext.request.contextPath}/assets/img/creation/download.png"
 												alt="" />
-											</a>
+											</a>      		
 										</div>
 									</div>
 								</div>

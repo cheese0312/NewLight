@@ -51,7 +51,7 @@ function showComment(comments){
 							if(comment.memberPfp){
 								text += `<img src="/userProfile/${comment.memberPfp}">`;
 							}else{
-								text += `<img src="/assets/img/member/peoply.png">`;
+								text += `<img src="/assets/img/member/people.png">`;
 							}
 							
 				            text +=`<img src="/userProfile/${comment.memberPfp}">
