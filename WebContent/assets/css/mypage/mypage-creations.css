@@ -1,12 +1,16 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
 }
 
 body {
-	font-family: 'GmarketSansMedium';
+font-family: 'GmarketSansMedium';
+}
+
+*{
+  background-color: rgb(255, 255, 245);
 }
 
 hr {
@@ -66,18 +70,15 @@ section {
   height: 60%;
 }
 
-.editbtn > a{
+.editbtn > a {
   width: 80px;
-  /* background-color: rgb(213, 213, 213); */
+  background-color: rgb(213, 213, 213);
   text-decoration: none;
   color: black;
   border-radius: 5px;
   padding: 2px 5px;
 }
 
-.editbtn > a:hover {
-	color : #ce97fa;
-}
 
 .likes,
 .comment {
@@ -96,10 +97,6 @@ section {
 .name > a {
   text-decoration: none;
   color: grey;
-}
-
-.name > a:hover{
-	color : #ce97fa;
 }
 
 .mypage-main2 > section {
@@ -173,7 +170,7 @@ section {
 .creation-like ,
 .creation-comment {
 	display: flex;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .creations-like {
@@ -220,12 +217,6 @@ section {
 .creations-msg {
   padding: 10px 0;
 }
-
-
-
-
-
-
 
 .creation-like > img {
   width: 20px;

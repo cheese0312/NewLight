@@ -1,4 +1,8 @@
 * {
+/*    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   resize: none; */
    box-sizing: border-box;
    resize: none;
 }
@@ -68,10 +72,13 @@ h4 {
    border-radius: 5px;
    cursor: pointer;
    margin-right: 10px;
+   border-color: #B4AEE8;
     color: #B4AEE8;
 }
 
 .list-btn:hover, .edit-btn:hover, .delete-btn:hover {
+   background-color: rgb(198, 133, 238);
+   color: #fff;
    color : #ce97fa;
    font-family: 'GmarketSansMedium';
 }
@@ -154,15 +161,16 @@ svg {
 }
 
 .comment-form button {
-	padding: 10px 20px;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-right: 10px;
-	border-color: #B4AEE8;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 10px;
+   border-color: #B4AEE8;
     color: #B4AEE8;
 }
 
 .comment-form button:hover {
+   background-color: rgb(198, 133, 238);
 	font-family: 'GmarketSansMedium';
 	border : 1px solid #ce97fa;
    color : #ce97fa;
@@ -241,6 +249,7 @@ svg {
 }
 
 .comment-btn-group button:hover {
+   background-color: rgb(198, 133, 238);
 	font-family: 'GmarketSansMedium';
    border : 1px solid #ce97fa;
    color : #ce97fa;

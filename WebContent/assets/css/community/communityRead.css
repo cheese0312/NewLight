@@ -8,7 +8,7 @@
 }
 
 body {
-	font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
   section{
       width: 1200px;
@@ -376,10 +376,28 @@ svg {
 	font-size: 17px;
 }
 
-.comment-btn>.comment-modify-ready:hover {
-	cursor: pointer;
-	color: #B4AEE8;
-	border-color: #B4AEE8;
+.comment-btn>.comment-modify-ready:hover{
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
+}
+
+.comment-btn>.comment-delete:hover{
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
+}
+
+.comment-btn>.comment-modify:hover{
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
+}
+
+.btn>.go:hover{
+   cursor:pointer;
+   color: #B4AEE8;
+   border-color: #B4AEE8;
 }
 
 .comment-btn>.comment-delete:hover {
