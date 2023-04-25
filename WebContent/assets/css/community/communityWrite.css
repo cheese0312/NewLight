@@ -10,15 +10,6 @@ body {
 	 font-family: 'GmarketSansMedium';
 }
 
-  section>.big-box{
-    width: 65%;
-    height: 100%;
-    border-top:3px solid rgb(80, 123, 158);
-    margin: 20px 390px;
-    border-bottom: 3px solid rgb(80, 123, 158) ;
-    background-color: rgb(252, 252, 236);
-  }
-
 section>.gd{
   display: flex;
   justify-content: space-between;
@@ -47,6 +38,7 @@ header{
     height: 30px;
     border: 1px solid rgb(201, 200, 200);
     border-radius: 5px;
+    font-family: 'GmarketSansMedium';
 }
 
 .small-box>.word1{
@@ -62,6 +54,7 @@ header{
     resize: none;
     border-radius: 5px;
     padding : 10px;
+    font-family: 'GmarketSansMedium';
 }
 
 /* 이미지 업로드 스타일 */
@@ -110,6 +103,7 @@ svg {
     left: 0;
     cursor: pointer;
     opacity: 0;
+    font-family: 'GmarketSansMedium';
  }
  
  .form-group>.file{

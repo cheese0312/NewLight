@@ -1,8 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	resize: none;
+   box-sizing: border-box;
+   resize: none;
 }
 
 @font-face {
@@ -13,19 +11,18 @@
 }
 
 body {
-	 font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
 
 .container {
-	margin: 0 auto;
-	max-width: 1024px;
-	padding: 20px;
+   margin: 0 auto;
+   max-width: 1024px;
+   padding: 20px;
 }
 
 h4 {
-	margin-bottom: 30px;
-	font-size: 2rem;
-	font-family: "Hyemin";
+   margin-bottom: 30px;
+   font-size: 2rem;
    animation-name: delay;
    animation-duration: 2s;
    animation-delay: 0s;
@@ -34,464 +31,277 @@ h4 {
 
 /* 게시글 정보 스타일 */
 .view-info {
-	margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .title-wrap>span {
-	margin-right: 20px;
-	font-size: 0.8rem;
-	color: #999;
+   margin-right: 20px;
+   font-size: 0.8rem;
+   color: #999;
 }
 
 .info-title {
-	display: flex;
+   display: flex;
+   align-items: center;
 }
 
 .title-wrap {
-	margin-right: 20px;
-}
-
-.view-info .writer {
-	font-family: "Hyemin";
+   margin-right: 20px;
 }
 
 /* 게시글 내용 스타일 */
 .view-content {
-	margin-bottom: 30px;
-	line-height: 1.5;
-	font-size: 1rem;
-	white-space: pre-line;
+   margin-bottom: 30px;
+   line-height: 1.5;
+   font-size: 1rem;
+   white-space: pre-line;
 }
 
 /* 버튼 스타일 */
 .btn-group {
-	text-align: right;
-	margin-top: 30px;
+   text-align: right;
+   margin-top: 30px;
 }
 
 .list-btn, .edit-btn, .delete-btn {
-	color: black;
-	background-color: rgb(198, 133, 238);
-	padding: 10px 20px;
-	border-radius: 5px;
-	border: none;
-	transition: background-color 0.3s ease, color 0.3s ease;
-	cursor: pointer;
-	margin-right: 10px;
-	font-family: "Hyemin";
+	font-family: 'GmarketSansMedium';
+   padding: 7px 5px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 10px;
+    color: gray;
+    border : none;
 }
 
 .list-btn:hover, .edit-btn:hover, .delete-btn:hover {
-	background-color: rgb(198, 133, 238);
-	color: #fff;
+   color : #ce97fa;
+   font-family: 'GmarketSansMedium';
 }
 
 .view-attach {
-	margin-bottom: 20px;
+   margin-bottom: 20px;
 }
 
 .view-attach>a {
-	color: #333;
-	text-decoration: none;
-	font-family: "Hyemin";
-	margin-right: 10px;
+   color: #333;
+   text-decoration: none;
+   margin-right: 10px;
 }
 
 .view-attach>a:hover {
-	text-decoration: underline;
+   text-decoration: underline;
 }
 
 /* 첨부파일 스타일 */
 .view-attach {
-	display: flex;
-	justify-content: center;
+   display: flex;
+   justify-content: center;
 }
 
 .img-box {
-	width: 150px;
-	margin: 10px;
-	position: relative;
+   width: 150px;
+   margin: 10px;
+   position: relative;
 }
 
 .img-box>img {
-	width: 100%;
-	height: 100%;
+   width: 100%;
+   height: 100%;
 }
 
 .download-btn {
-	background-color: rgba(0, 0, 0, 0.4);
-	width: 1.5em;
-	height: 1.5em;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	cursor: pointer;
-	border-radius: 4px;
+   background-color: rgba(0, 0, 0, 0.4);
+   width: 1.5em;
+   height: 1.5em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   cursor: pointer;
+   border-radius: 4px;
 }
 
 .download-btn:hover>svg {
-	stroke: rgb(255, 87, 87);
-	fill: rgb(255, 87, 87);
+   stroke: rgb(255, 87, 87);
+   fill: rgb(255, 87, 87);
 }
 
 svg {
-	width: 1em;
-	height: 1em;
-	fill: rgb(255, 255, 255);
-	stroke-width: 1;
-	stroke: rgb(255, 255, 255);
+   width: 1em;
+   height: 1em;
+   fill: rgb(255, 255, 255);
+   stroke-width: 1;
+   stroke: rgb(255, 255, 255);
 }
 
 /* 댓글 스타일 */
 .comment-wrap {
-	margin-top: 20px;
+   margin-top: 20px;
 }
 
 .comment-form {
-	margin: 50px 0 70px 0;
+   margin: 50px 0 70px 0;
 }
 
 .comment-form textarea {
-	width: 70%;
-	height: 100px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	resize: none;
+	font-family: 'GmarketSansMedium';
+   width: 70%;
+   height: 100px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   resize: none;
+   margin: 10px 0;
 }
 
 .comment-form button {
-	margin-top: 10px;
-	padding: 5px 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: rgb(198, 133, 238);
-	color: #fff;
-	cursor: pointer;
+	font-family: 'GmarketSansMedium';
+   padding: 7px 7px;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-right: 10px;
+   color: gray;
+   border: 1px solid gray;
 }
 
 .comment-form button:hover {
-	background-color: rgb(198, 133, 238);
+	font-family: 'GmarketSansMedium';
+	border : 1px solid #ce97fa;
+   color : #ce97fa;
 }
 
 .form-group {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
 }
 
 .form-group>label {
-	margin-right: 10px;
-	font-size: 12px;
+   margin-right: 10px;
+   font-size: 12px;
 }
 
 #comment-list {
-	list-style: none;
+   list-style: none;
 }
 
 .comment-item {
-	margin-bottom: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-.comment-writer {
-	font-family: "Hyemin";
+   margin-bottom: 20px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
 }
 
 .comment-date {
-	margin-left: 10px;
-	font-size: 12px;
-	color: #999;
+   margin-left: 10px;
+   font-size: 12px;
+   color: #999;
 }
 
 .comment-content {
-	margin-top: 5px;
+   margin-top: 5px;
 }
 
 .comment-list li {
-	border-bottom: 1px solid #e0e0e0;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+   margin-bottom: 20px;
+   padding-bottom: 20px;
 }
 
 .comment-info {
-	font-size: 14px;
-	color: #999;
-	display: flex;
-	justify-content: space-around;
+	font-family: 'GmarketSansMedium';
+   font-size: 14px;
+   color: #999;
+   display: flex;
+   justify-content: space-around;
 }
 
 .comment-info .writer {
-	margin-right: 10px;
+   margin-right: 10px;
 }
 
 .comment-content p {
-	font-size: 16px;
-	line-height: 1.5;
-	margin-top: 10px;
+	font-family: 'GmarketSansMedium';
+   font-size: 16px;
+   line-height: 1.5;
+   margin-top: 10px;
 }
 
 .comment-content-wrap {
-	display: flex;
-	justify-content: space-around;
+   display: flex;
+   justify-content: space-around;
 }
 
 .comment-btn-group button {
-	margin-top: 10px;
-	padding: 5px 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: rgb(198, 133, 238);
-	color: #fff;
-	cursor: pointer;
+	font-family: 'GmarketSansMedium';
+   margin-top: 10px;
+   padding: 5px 10px;
+   border: 1px solid gray;
+   color : gray;
+   border-radius: 5px;
+   cursor: pointer;
 }
 
 .comment-btn-group button:hover {
-	background-color: rgb(198, 133, 238);
+	font-family: 'GmarketSansMedium';
+   border : 1px solid #ce97fa;
+   color : #ce97fa;
 }
 
 .none {
-	display: none;
+   display: none;
 }
 
 .comment-list textarea {
-	width: 900px;
-	height: 40px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	resize: none;
+	font-family: 'GmarketSansMedium';
+   width: 900px;
+   height: 40px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   resize: none;
 }
 
 .btn {
-	margin: 10px;
-	padding: 10px;
-	border-radius: 5px;
+   margin: 10px;
+   padding: 10px;
+   border-radius: 5px;
 }
 
 li {
-	list-style-type: none;
+   list-style-type: none;
 }
 
 .list-box {
-	margin-left: 530px;
+   margin-left: 530px;
 }
 
 .footee {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 textarea {
-	resize: none;
+   resize: none;
+   font-family: 'GmarketSansMedium';
 }
 
 #comment-input {
-	width: 640px;
+   width: 640px;
 }
 
 #comment-count {
-	margin-bottom: 100px;
+   margin-bottom: 100px;
 }
 
 .reply-date {
-	display: flex;
-	margin: 10px;
-	padding: 10px;
-	height: 80px;
-	justify-content: center;
-	flex-direction: column;
+   display: flex;
+   margin: 10px;
+   padding: 10px;
+   height: 80px;
+   justify-content: center;
+   flex-direction: column;
 }
-
-/* 댓글 스타일 */
-.comment-wrap {
-	margin-top: 20px;
-}
-
-.comment-form {
-	margin: 50px 0 70px 0;
-}
-
-.comment-form textarea {
-	width: 70%;
-	height: 100px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	resize: none;
-	white-space: pre-line;
-}
-
-.comment-form button {
-	margin-top: 10px;
-	padding: 5px 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: rgb(198, 133, 238);
-	color: black;
-	cursor: pointer;
-	font-family: "Hyemin";
-}
-
-.comment-form button:hover {
-	background-color: rgb(198, 133, 238);
-	background: #ce97fa;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.form-group>label {
-	margin-right: 10px;
-	font-size: 12px;
-}
-
-#comment-list {
-	list-style: none;
-}
-
-.comment-item {
-	margin-bottom: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	padding: 10px;
-}
-
-.comment-writer {
-	font-family: "Hyemin";
-}
-
-.comment-date {
-	margin-left: 10px;
-	font-size: 12px;
-	color: #999;
-}
-
-.comment-content {
-	margin-top: 5px;
-}
-
-.comment-list li {
-	border-bottom: 1px solid #e0e0e0;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-}
-
-.comment-info {
-	font-size: 14px;
-	color: #999;
-}
-
-.comment-info .writer {
-	margin-right: 10px;
-}
-
-.comment-content p {
-	font-size: 16px;
-	line-height: 1.5;
-	margin-top: 10px;
-}
-
-.comment-btn-group button {
-	margin-top: 10px;
-	padding: 5px 10px;
-	border: none;
-	border-radius: 5px;
-	background-color: rgb(198, 133, 238);
-	color: black;
-	font-family: "Hyemin";
-	cursor: pointer;
-}
-
-.comment-btn-group button:hover {
-	background-color: rgb(198, 133, 238);
-}
-
-.none {
-	display: none;
-}
-
-.comment-list textarea {
-	width: 900px;
-	height: 40px;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	resize: none;
-}
-
-
-
-
-.view-title span{
-    position: relative;
-    overflow: hidden;
-    display: block;
-    line-height: 1.2;
-}
-
-.view-title span::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(-101%);
-}
-
-.view-title span::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--bg-color);
-    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
-    transform: translateX(0);
-}
-
-.view-title span:nth-of-type(1)::before,
-.view-title span:nth-of-type(1)::after{
-    animation-delay: 1s;
-}
-
-.view-title span:nth-of-type(2)::before,
-.view-title span:nth-of-type(2)::after{
-    animation-delay: 1.5s;
-}
-
-@keyframes a-ltr-after{
-    0% {transform: translateX(-100%)}
-    100% {transform: translateX(101%)}
-}
-
-@keyframes a-ltr-before{
-    0% {transform: translateX(0)}
-    100% {transform: translateX(200%)}
-}
-
-@keyframes delay {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-
-
-@keyframes color {
-    0%   {color: lightblue;}
-    25%  {color: mistyrose;}
-    50%  {color: khaki;}
-    100% {color: black;}
-}
-
-
