@@ -108,11 +108,11 @@
 			<ul id="comment-list">
 				<li>
 					<div class="comment-info">
-						<span class="writer">홍길동</span> <span class="date">2222-22-22</span>
+						<span class="writer"></span> <span class="date"></span>
 					</div>
 					<div class="comment-content-wrap">
 						<div class="comment-content">
-							<p>안녕하세요</p>
+							<p></p>
 						</div>
 						<div class="comment-btn-group">
 							<button type=button class="comment-modify">수정</button>

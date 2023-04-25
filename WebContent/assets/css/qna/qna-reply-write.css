@@ -6,14 +6,16 @@
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'GmarketSansMedium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 
 body {
-	 font-family: 'GmarketSansMedium';
+	font-family: 'GmarketSansMedium';
 }
 
 section>.big-box {
@@ -27,12 +29,11 @@ section>.gd {
 	justify-content: space-between;
 }
 
-
 .writer-sub {
 	display: flex;
-    /* margin: 10px 450px; */
-    padding: 10px 10px;
-    /* margin-bottom: -20px;*/
+	/* margin: 10px 450px; */
+	padding: 10px 10px;
+	/* margin-bottom: -20px;*/
 }
 
 .writer-sub>.author {
@@ -106,15 +107,17 @@ section>.gd {
 	justify-content: space-between;
 }
 
+.button:hover {
+	border-radius: 5px;
+}
+
 .button>button {
-	padding: 6px;
-	border-radius: 5.5%;
-	font-size: 17px;
-	border: none;
-	background-color: #ce97fa;
-	border-width: 0.5px;
-	font-family: "Hyemin";
+	padding: 10px 20px;
+	border-radius: 5px;
 	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
+	color: #B4AEE8;
 }
 
 /* 이미지 업로드 스타일 */

@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>aniview</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/aniview.css" />
+   href="${pageContext.request.contextPath}/assets/css/creations/aniview.css" />
 	
 </head>
 <body>
@@ -90,7 +90,7 @@
 				<div class="comment">
 					<div class="comment-input">
 						<input type="hidden" name="creationNumber"
-							value="${creation.getMemberNumber() }">
+							value="${creation.getMemberNumber()}">
 						<div class="comment-text">
 							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 						</div>

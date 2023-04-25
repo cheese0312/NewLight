@@ -277,27 +277,26 @@ font-family: "Hyemin";
 }
 
 .pagination a {
-	color: #333;
-	text-decoration: none;
-	font-family: "Hyemin";
-	padding: 10px;
-	margin: 0 5px;
-	border-radius: 5px;
-	border: 1px solid #333;
-	transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-color: #B4AEE8;
+    color: #B4AEE8;
 }
 
 .pagination a:hover {
-	background-color: rgb(255, 87, 87);
-	border-color: rgb(255, 87, 87);
-	color: #fff;
+  background-color: rgb(198, 133, 238);
+	background: #ce97fa;
+    color: #fff;
+    border-radius: 5px;
 }
 
-.pagination .active {
-	background-color: #ce97fa;
-	border-color: #ce97fa;
-	color: black;
-}
 
 /* 글쓰기 버튼 스타일 */
 .write-btn-wrap {
@@ -306,19 +305,22 @@ font-family: "Hyemin";
 }
 
 .write-btn {
-	color: black;
-	background-color: #ce97fa; padding : 10px 20px;
-	border-radius: 5px;
-	border: none;
-	transition: background-color 0.3s ease, color 0.3s ease;
 	text-decoration: none;
-	font-family: "Hyemin";
-	padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-color: #B4AEE8;
+    color: #B4AEE8;
 }
 
 .write-btn:hover {
-	background-color:#ce97fa;
-	color: #fff;
+	background-color: rgb(198, 133, 238);
+	background: #ce97fa;
+    color: #fff;
+    border-radius: 5px;
 }
 
 a {
