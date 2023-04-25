@@ -56,11 +56,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="info-content">
-            <span class="content-writer">작성자</span>
-            <span class="content-date">작성일</span>
-            <span class="content-hit">조회수</span>
-          </div> -->
 				</div>
 				<!-- 임시 내용 -->
 				<div class="view-content">

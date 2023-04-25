@@ -20,14 +20,8 @@
 <form action="${pageContext.request.contextPath}/notification/notificationReadOk.nc" method ="post">
     <section>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-<%--     <input type="hidden" name="notificationNumber" value="${notification.getNotificationNumber()}">  --%>
-           <h1>공지사항</h1>
             <div class="big-box">
+           <h1>공지사항</h1>
                 <div class="title">
                     <h1>
                      <c:out value="${notification.getNotificationTitle()}"/>

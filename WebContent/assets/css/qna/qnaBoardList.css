@@ -34,7 +34,6 @@ body {
    padding: 20px;
 }
 
-/* 헤더 영역 스타일 */
 .header {
    display: flex;
    justify-content: space-between;
@@ -100,7 +99,7 @@ font-family: "Hyemin";
 
 .board-table th {
    text-align: left;
-   /* background-color: #f0f0f0; */
+   font-family: "Hyemin";
 }
 
 .board-table td {
@@ -164,7 +163,7 @@ font-family: "Hyemin";
 
 .pagination a:hover {
   background-color: rgb(198, 133, 238);
-	background: #ce97fa;
+   background: #ce97fa;
     color: #fff;
     border-radius: 5px;
 }
@@ -189,8 +188,8 @@ font-family: "Hyemin";
 }
 
 .write-btn:hover {
-	background-color: rgb(198, 133, 238);
-	background: #ce97fa;
+   background-color: rgb(198, 133, 238);
+   background: #ce97fa;
     color: #fff;
     border-radius: 5px;
 }

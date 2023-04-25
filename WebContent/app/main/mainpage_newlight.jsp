@@ -25,7 +25,7 @@
 					
 						<div class="category-menu-1 width">
 							<li class="menu-list">
-							<a href="/creations/pageListOk.ct?categoryCode=101&categoryName=손그림" class="menu-list-1">
+							<a href="/creations/pageListOk.ct?categoryCode=101&categoryName=폰트" class="menu-list-1">
 							<strong class="font-name">손글씨<span class="font-size">(Font)</span></strong>
 							<img src="${pageContext.request.contextPath}/assets/img/main/fontCategory.png" class="handpen-img" /> 
 							</a>
