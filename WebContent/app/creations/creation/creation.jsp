@@ -72,7 +72,7 @@
 												class=""> <img
 												src="${pageContext.request.contextPath}/assets/img/creation/download.png"
 												alt="" />
-											</a>
+											</a>      		
 										</div>
 									</div>
 								</div>

@@ -86,10 +86,11 @@ section {
 }
 
 .click{
+	width : 100%;
   display: flex;
   justify-content: space-around;
   text-align: left;
-  padding-left: 20px;
+  align-items: center;
 } 
 
 .name > a {
@@ -235,5 +236,4 @@ section {
 	width: 20px;
   height: 20px;
 }
-
 

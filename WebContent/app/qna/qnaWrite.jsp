@@ -9,19 +9,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>문의사항 글쓰기</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/qna/qna-reply-write.css" />
+	href="${pageContext.request.contextPath}/assets/css/community/communityWrite.css" />
 </head>
 <%@include file="/app/header.jsp"%>
 
     <form action="${pageContext.request.contextPath}/qna/QnAWriteOk.qn" method="post" enctype="multipart/form-data">
     <section>
      <input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
-        <div class="gd">
-        <h3>문의사항 글쓰기</h3>
-       </div>
+        
      
         <div class="big-box">
-            
+            <div class="gd">
+        <h3>문의사항 글쓰기</h3>
+       </div>
             
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
@@ -80,24 +80,6 @@
 <br />
 <br />
 <br />
-
-<!-- 
-
-
-
-
-
-라인~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
- -->
-<br>
-<br>
-<br>
 
 <%@include file="/app/footer.jsp"%>
 <!-- 푸터 -->

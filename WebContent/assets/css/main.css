@@ -14,10 +14,6 @@ a {
   color : black;
 }
 
-.a__inline-block {
-  display: inline-block;
-}
-
 main {
   width: 95%;
   display: block;
@@ -246,7 +242,7 @@ li.menu-list:nth-child(5) {
 }
 
 .a__inline-block {
-    display: flex;
+	display: flex;
     align-items: center;
 }
 
@@ -256,9 +252,8 @@ li.menu-list:nth-child(5) {
 
 .icon-like ,
 .icon-comment {
-	display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .create-name {

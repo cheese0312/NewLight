@@ -39,6 +39,7 @@ public class CreationDonwloadController implements Execute {
          System.out.println(uploadPath);
 
 //      클라이언트에게 보내는 응답이 이전과 다르게 파일(바이트) 데이터이므로 컨텐트 타입을 설정해야한다.
+<<<<<<< HEAD
          resp.setContentType("application/octet-stream");
 
 //      resp의 헤더영역에 파일에 대한 추가정보 설정하기
@@ -73,4 +74,41 @@ public class CreationDonwloadController implements Execute {
       
    }
 
+=======
+         resp.setContentType("application/octet-stream; charset=utf-8");
+         
+         fileOriginalName = new String(fileOriginalName.getBytes("UTF-8"), "ISO-8859-1");
+//      resp의 헤더영역에 파일에 대한 추가정보 설정하기
+         resp.setHeader("Content-Length", file.length() + "");
+         resp.setHeader("Content-Disposition", "attachment; filename=" + fileOriginalName);
+
+         in = new FileInputStream(file);
+
+         out = resp.getOutputStream();
+
+         int readCnt = 0;
+
+         while ((readCnt = in.read(buffer)) != -1) {
+            out.write(buffer, 0, readCnt);
+         }
+      } catch (FileNotFoundException e) {
+         e.printStackTrace();
+      } catch (IOException e) {
+         e.printStackTrace();
+      } finally {
+         try {
+            if (in != null) {
+               in.close();
+            }
+            if (out != null) {
+               out.close();
+            }
+         } catch (IOException e) {
+            e.printStackTrace();
+         }
+      }
+      
+   }
+
+>>>>>>> 017c94509d72b18e8c36f012857e9a62043e766c
 }

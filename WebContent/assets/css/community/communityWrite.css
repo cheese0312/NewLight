@@ -39,6 +39,7 @@ header{
     height: 30px;
     border: 1px solid rgb(201, 200, 200);
     border-radius: 5px;
+    font-family: 'GmarketSansMedium';
 }
 
 .small-box>.word1{
@@ -54,6 +55,7 @@ header{
     resize: none;
     border-radius: 5px;
     padding : 10px;
+    font-family: 'GmarketSansMedium';
 }
 
 /* 이미지 업로드 스타일 */
@@ -102,6 +104,7 @@ svg {
     left: 0;
     cursor: pointer;
     opacity: 0;
+    font-family: 'GmarketSansMedium';
  }
  
  .form-group>.file{

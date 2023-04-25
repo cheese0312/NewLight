@@ -52,6 +52,7 @@ body {
 	margin: 20px 0;
 	height: 300px;
 	width: 65%; 
+	margin-left : -20px;
 }
 
 .small-box>.table {
@@ -67,6 +68,7 @@ body {
 .table>.name {
 	text-align: center;
 	width: 198px;
+	background : none;
 }
 
 .name>h1 {
@@ -76,6 +78,7 @@ body {
 .table>.title {
 	text-align: center;
 	width: 198px;
+	background : none;
 }
 
 .title>h1 {
@@ -85,6 +88,7 @@ body {
 .table>.comment {
 	width: 192px;
 	text-align: center;
+	background : none;
 }
 
 .comment>h1 {
@@ -94,6 +98,7 @@ body {
 .table>.date {
 	text-align: center;
 	width: 196px;
+	background : none;
 }
 
 .date>h1 {
@@ -103,6 +108,7 @@ body {
 .table>.cnt {
 	width: 200px;
 	text-align: center;
+	background : none;
 }
 
 .cnt>h1 {

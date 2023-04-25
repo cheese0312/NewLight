@@ -93,6 +93,7 @@
 		<br />
 		<br />
 		<!-- 댓글 수정중 -->
+		<c:if test="${sessionScope.memberId == 'admin' }">
 		<div class="comment-form">
 			<form id="comment-form">
 				<input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
@@ -102,29 +103,30 @@
 				</div>
 			</form>
 		</div>
+		</c:if>
 
 		<div class="comment-list">
 			<!-- 리스트 예시 -->
-			<ul id="comment-list">
-				<li>
-					<div class="comment-info">
-						<span class="writer"></span> <span class="date"></span>
-					</div>
-					<div class="comment-content-wrap">
-						<div class="comment-content">
-							<p></p>
-						</div>
-						<div class="comment-btn-group">
-							<button type=button class="comment-modify">수정</button>
-							<button type=button class="comment-delete">삭제</button>
-						</div>
-						<div class="comment-btn-group none">
-							<button type=button class="comment-modify">수정 완료</button>
-						</div>
-					</div>
-				</li>
-			</ul>
-			<!-- /리스트 예시 -->
+         <ul id="comment-list">
+            <li>
+               <div class="comment-info">
+                  <span class="writer"></span> <span class="date"></span>
+               </div>
+               <div class="comment-content-wrap">
+                  <div class="comment-content">
+                     <p></p>
+                  </div>
+                  <div class="comment-btn-group">
+                     <button type=button class="comment-modify">수정</button>
+                     <button type=button class="comment-delete">삭제</button>
+                  </div>
+                  <div class="comment-btn-group none">
+                     <button type=button class="comment-modify">수정 완료</button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <!-- /리스트 예시 -->
 		</div>
 
 		<!-- 댓글 수정중 -->
