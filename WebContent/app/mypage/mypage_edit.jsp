@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>information</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/information.css" />
+	href="${pageContext.request.contextPath}/assets/css/member/information.css" />
 	<script type="text/javascript">
 // <![CDATA[
 var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"

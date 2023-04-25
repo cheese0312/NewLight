@@ -10,14 +10,7 @@ body {
 	 font-family: 'GmarketSansMedium';
 }
 
-  section>.big-box{
-    width: 65%;
-    height: 100%;
-    border-top:3px solid rgb(80, 123, 158);
-    margin: 20px 390px;
-    border-bottom: 3px solid rgb(80, 123, 158) ;
-    background-color: rgb(252, 252, 236);
-  }
+
 
 section>.gd{
   display: flex;
@@ -58,7 +51,7 @@ header{
     width: 100%;
     height: 300px;
     border-color: rgb(201, 200, 200);
-    font-size: 20px;
+    font-size: 15px;
     resize: none;
     border-radius: 5px;
     padding : 10px;
@@ -77,6 +70,7 @@ svg {
     background-color: white;
     padding: 13px;
     position: relative;
+    width: 100%;
  }
  
  .upload-text {
@@ -201,5 +195,7 @@ svg {
  padding: 10px;
  }
  
- 
+ .color {
+ 	background-color : white;
+ }
  

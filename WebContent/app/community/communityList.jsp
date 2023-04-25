@@ -217,6 +217,8 @@ function createDiv(height, width) {
 	<form
 		action="${pageContext.request.contextPath}/community/communityListOk.cm" method="post">
 		<section>
+                
+			<div class="big-box">
 		 <div class="writer-btn">
                      <c:choose>
                 	<c:when test="${not empty sessionScope.memberNumber}">
@@ -224,8 +226,6 @@ function createDiv(height, width) {
                 	</c:when>
                 </c:choose>
         </div>
-                
-			<div class="big-box">
 				<ul class="menu">
                 <li class="writer">
                     <h1>작성자</h1>

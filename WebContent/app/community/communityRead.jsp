@@ -86,7 +86,7 @@
 
 				<div class="comment2">
 					<div class="comment-write">
-						<textarea class="comment-box" id="content">
+						<textarea class="comment-box" id="content" placeholder="댓글 내용을 입력하세요.">
                     </textarea>
 					</div>
 					<div class="btn">
@@ -94,15 +94,15 @@
 					</div>
 					<div class="hello">
 						<div class="date">
-							<p3>estherk773</p3>
+							<p3></p3>
 							<div class="none-none"></div>
 							<div class="fuck">
-								<p1>2023-03-20</p1>
+								<p1></p1>
 							</div>
 						</div>
 						<div class="commtent-sub" id="comment-sub">
 							<div class="delete">
-								<p2>안녕하세요. 오리가 너무 귀엽네요 ㅎㅎ </p2>
+								<p2></p2>
 							</div>
 							<div class="comment-btn">
 								<button type=button class="comment-modify-ready">수정</button>

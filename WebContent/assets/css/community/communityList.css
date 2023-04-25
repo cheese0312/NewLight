@@ -14,7 +14,7 @@ body {
 	display: flex;
 	justify-content: end;
 	align-items: center;
-	margin: 50px 340px;
+	width: 70%;
 }
 
 .writer-btn>a {
@@ -46,12 +46,14 @@ body {
 	border-bottom: 3px solid #B4AEE8;
 	width: 65%;
 	list-style-type: none;
+	margin-left: 20px;
 }
 
 .small-box {
 	margin: 20px 0;
 	height: 300px;
 	width: 65%; 
+	margin-left: -20px;
 }
 
 .small-box>.table {
@@ -67,6 +69,7 @@ body {
 .table>.name {
 	text-align: center;
 	width: 198px;
+	background: none;
 }
 
 .name>h1 {
@@ -76,6 +79,7 @@ body {
 .table>.title {
 	text-align: center;
 	width: 198px;
+	background: none;
 }
 
 .title>h1 {
@@ -85,6 +89,7 @@ body {
 .table>.comment {
 	width: 192px;
 	text-align: center;
+	background: none;
 }
 
 .comment>h1 {
@@ -94,6 +99,7 @@ body {
 .table>.date {
 	text-align: center;
 	width: 196px;
+	background: none;
 }
 
 .date>h1 {
@@ -144,7 +150,7 @@ body {
 .pagination .active {
 	background-color: rgb(231, 228, 228);
 	border-color: rgb(231, 228, 228);
-	color: #fff;
+	color: black;
 }
 
 .small-box>.table2 {

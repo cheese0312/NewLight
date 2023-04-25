@@ -1,8 +1,4 @@
 @charset "UTF-8";
-*{
-    margin: 0px;
-    padding : 0px;
-}
 
 @font-face {
     font-family: 'GmarketSansMedium';
@@ -20,33 +16,28 @@ header{
     height: 200px;
 }
 
-h1{
-    font-size: 25px;
-    margin: 20px 400px;
-}
-
 .big-box{
-    border-top: 5px solid #B4AEE8;
     height: 800px;
     width: 60%;
-    margin: 0 400px;
+    margin: 0 auto;
     border-bottom: 5px solid #B4AEE8;
 }
 
 .title{
     display: flex;
     justify-content: space-between;
-    height: 70px;
     align-items: center;
+    border-top: 5px solid #B4AEE8;
 }
 
 .title>h1{
     margin: 10px 2px;
-    font-size: 17px;
+    font-size: 13px;
 }
 
 .date>p{
     margin: 10px 10px;
+    font-size: 13px;
 }
 
 .else{
@@ -55,14 +46,17 @@ h1{
  
 
 .else>p{
-    margin: 20px 35px;
-    font-size: 20px;
+    margin: 20px 50px;
+    font-size: 15px;
 }
 
 .big-box>.remove{
-  width: 200px;
-   padding: 0 10px;
-   margin: 30px 1050px;
+width: 200px;
+    padding: 0 10px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  
 }
 
@@ -71,6 +65,7 @@ h1{
   border: 1px solid  #fffcfc;
   font-weight: bold;
   color: gray;
+  font-family: 'GmarketSansMedium'
 }
 
 .remove>.list{

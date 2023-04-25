@@ -11,7 +11,7 @@ body {
 
   section{
       width: 1200px;
-      margin: 0 350px;
+      margin: 0 auto;
      
     }
     
@@ -204,7 +204,7 @@ body {
   }
   
   .date>p{
-   width : 150px;
+   width : 500px;
   }
 
   
@@ -224,7 +224,6 @@ body {
 
 .download-btn {
    width: 8.5em;
-   height: 30.5em;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -233,6 +232,7 @@ body {
    right : 0;
    cursor: pointer;
    border-radius : 4px;
+   margin-bottom: 20px;
 }
 
 .download-btn:hover > svg{
@@ -258,6 +258,7 @@ svg {
   border-radius: 10%;
   border-color: #fffcfc;
   border: 1px solid #fffcfc;
+  font-family: 'GmarketSansMedium'
 }
 
 .remove>.list{
@@ -324,11 +325,11 @@ svg {
  }
  
   .go{
-  border-radius: 12px;
+  border-radius: 10px;
   margin: 15px 50px;
   border: 1px solid #e4dfdf;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 15px;
   color: #e4dfdf;
   width : 50px;
  }
@@ -345,7 +346,7 @@ svg {
  display : none;
  }
  
- .hello textarea {
+  .hello textarea {
    width: 800px;
    height: 40px;
    padding: 10px;
@@ -353,14 +354,16 @@ svg {
    border-radius: 5px;
    resize: none;
 }
-
+ 
 .comment-write textarea {
-	   width: 900px;
-   height: 100px;
    padding: 10px;
+   width: 900px;
+   height: 100px;
    border: 1px solid #ccc;
    border-radius: 5px;
    resize: none;
+   font-size: 15px;
+   font-family: 'GmarketSansMedium';
 }
 
 
