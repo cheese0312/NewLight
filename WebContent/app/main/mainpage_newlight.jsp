@@ -61,7 +61,7 @@
 						<div class="category-menu-4 width">
 						<li class="menu-list">
 						<a
-							href="${pageContext.request.contextPath}/app/creations/theme/kakaoThemeOne.jsp"
+							href="/creations/pageListOk.ct?categoryCode=101&categoryName=카톡테마"
 							class="menu-list-4">
 							<strong class="kakao-name">카톡테마</strong>
 							<img

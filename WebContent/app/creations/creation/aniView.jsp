@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>aniview</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/aniview.css" />
+	href="${pageContext.request.contextPath}/assets/css/creations/aniview.css" />
 	
 </head>
 <body>

@@ -111,26 +111,9 @@ hr {
 
 
 .member-status-btn {
-  
-  border: 0.3px solid gray;
+  background-color: gainsboro;
+  border: 0px solid;
   border-radius: 5px;
-}
-
-.none {
-	display : none;
-}
-
-.member-status-btn:hover {
-	color : #c071ff;
-	font-weight: bold;
-}
-
-.statusY{
-	color : blue;
-}
-
-.statusN {
-	color : red;
 }
 
 .none {

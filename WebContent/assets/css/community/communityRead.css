@@ -6,7 +6,7 @@
 }
 
 body {
-	 font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
 
   section{
@@ -284,27 +284,27 @@ svg {
 }
 
 .comment-btn>.comment-modify-ready:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
 }
 
 .comment-btn>.comment-delete:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
 }
 
 .comment-btn>.comment-modify:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
+   cursor : pointer;
+   color : #B4AEE8;
+   border-color : #B4AEE8;
 }
 
 .btn>.go:hover{
-	cursor:pointer;
-	color: #B4AEE8;
-	border-color: #B4AEE8;
+   cursor:pointer;
+   color: #B4AEE8;
+   border-color: #B4AEE8;
 }
 
 .remove>.delete{
@@ -355,7 +355,7 @@ svg {
 }
 
 .comment-write textarea {
-	   width: 900px;
+      width: 900px;
    height: 100px;
    padding: 10px;
    border: 1px solid #ccc;
