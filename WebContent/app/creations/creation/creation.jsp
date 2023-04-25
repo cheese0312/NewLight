@@ -32,7 +32,7 @@
 								src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
 								</c:if>
 								<c:if test="${empty creation.getMemberPfp()}">
-								<img src="${pageContext.request.contextPath}/assets/images/member/—Pngtree—vector business men icon_4186858.png">
+								<img src="${pageContext.request.contextPath}/assets/img/member/people.png">
 								</c:if>
 						</div>
 						<div class="creations-author">
@@ -72,7 +72,7 @@
 												class=""> <img
 												src="${pageContext.request.contextPath}/assets/img/creation/download.png"
 												alt="" />
-											</a>
+											</a>      		
 										</div>
 									</div>
 								</div>

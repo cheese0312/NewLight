@@ -18,21 +18,14 @@
 <body>
     <%@include file ="/app/header.jsp" %> 
 <br/>
-<hr/>
-<br/>
 <form action="${pageContext.request.contextPath}/notification/notificationListOk.nc" method="post">
 <section>
-    <br/>
-   
+<br/>
+<br/>
+<div class="grap">
     <div class="largetitle"><h1>공지사항</h1>
     </div>
     <div class="box"></div>
-<br/>
-<br/>
-<br/>
-
-
-<div class="grap">
 
 <div class="first">
     <h1>제목</h1>
@@ -59,50 +52,9 @@
 </c:otherwise>
 </c:choose>
 <br/>
-<!--  <div class="other">
-    <h3>서비스 변경 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>새 빛 '서비스 이용약관' 및 '개인정보처리방침' 변경 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>새 빛 '개인정보 처리 방침' 변경 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>서비스 업데이트 중단 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>서비스 업데이트 중단 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>서비스 업데이트 중단 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>서비스 업데이트 중단 안내</h3>
-    <h4>2023.03.18</h4>
-</div>
-<br/>
-<div class="other">
-    <h3>서비스 업데이트 중단 안내</h3>
-    <h4>2023.03.18</h4>
-</div> -->
-
 
 </div> 
 <br/>
-<!-- <div class="box1"></div> -->
 		<div class="pagination">
 					<ul>
 						<!-- ========== 페이징 처리 예시 ============ -->

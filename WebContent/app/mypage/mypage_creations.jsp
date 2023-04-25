@@ -9,13 +9,12 @@
    href="${pageContext.request.contextPath}/assets/css/mypage/mypage-creations.css">
 </head>
 <body>
+<<<<<<< HEAD
    <!-- 헤더 -->
    <%@include file="/app/header.jsp"%>
    <main>
    <form action="${pageContext.request.contextPath}/mypage/creationsOk.mp"
       method="post">
-      
-      
          <div class="main">
             <div class="main-container">
                <div class="mypage-main">

@@ -10,86 +10,46 @@ body {
 }
 
 
-/* .blank2>button{
-  
-  margin-left: 860px;
-  border-radius: 10%;
+.grap>.largetitle{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 400px;
+}
+
+.grap>.box{
+  border-bottom: 4px solid #B4AEE8;
+  margin: 0 400px;
+}
+
+.first{
+  display: flex;
+  border-bottom: 2px solid #eae9e9;
+  justify-content: space-between;
+  align-items: center;
   font-size: 10px;
-  height: 23px;
-  width: 50px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-  background-color: pink;
-  border: 1px solid pink;
-  
-} */
-
-section{
-    width: 70%;
-    margin: 300px;
-    margin-top: 10px;
-}
-
-
-
-section>.largetitle{
-    font-size: 15px;
-    width: 180px;
-    margin: 65px 110px;  
-}
-
-section>.box{
-    border-bottom: 4px solid #B4AEE8;
-    width: 80%;
-    margin: -40px 110px;
-}
-
-section>.box1{
-    border-bottom: 3px solid purple;
-    width: 80%;
-    margin: 3px 110px;
-}
-
-section>.grap>.first{
-    display: flex;
-    border-bottom: 2px solid #eae9e9;
-    width: 80%;
-    margin: 0 110px;
-    font-size: 10px;
-    justify-content: space-between;
-    height: 40px;
+  height: 40px; 
+  margin: 0 400px;
 }
 
 .first>h2{
-    margin: 5px 30px;
-   margin-top: 1px;
-   font-size : 17px;
-   width : 80px;
-
+ margin: 0 10px;
 }
 
 .first>h1{
-    margin:0 400px;
-    margin-top: 1px;
-    margin-left: 50px;
-     font-size :17px;
-}
+ margin-left: 10px;
+} 
 
 section>.grap>.other{
     border-bottom: 1px solid #eae9e9;
-    height: 30px;
-    width: 80%;
-    margin: 10px 110px;
+    height: 40px;
+    margin: 0 400px;
     display: flex;
-    font-size: 11px;
+    font-size: 12px;
     justify-content: space-between;
 }
 
 .other>h3{
-    margin: 5px 195px;
-   margin-top: -7px;
-   width: 50%;
-  margin-left: 20px;
+  margin-left: 10px;
   display: flex;
     align-items: center;
 }
@@ -101,7 +61,6 @@ h3>a{
 
 .other>h4{
     margin:0 10px;
-    margin-top: -5px;
       display: flex;
     align-items: center;
     font-size: 13px;
@@ -139,7 +98,6 @@ h3>a{
 .pagination > ul {
   display: flex;
   list-style: none;
-  /* background-color: rgb(238, 231, 231); */
 }
 
 .pagination a {
@@ -170,9 +128,6 @@ h3>a{
 	margin: 300px 0;
 	font-size : 20px;
 }
-
-
-
 
 footer{
     height: 200px;

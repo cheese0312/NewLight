@@ -15,8 +15,9 @@
 }
 
 body {
-   font-family: 'GmarketSansMedium';
+	font-family: 'GmarketSansMedium';
 }
+
 
 section>.big-box {
    height: 100%;
@@ -118,6 +119,10 @@ section>.gd {
    margin-right: 10px;
    border-color: #B4AEE8;
    color: #B4AEE8;
+}
+
+.button:hover {
+	border-radius: 5px;
 }
 
 /* 이미지 업로드 스타일 */

@@ -23,17 +23,7 @@
     <input type="hidden" name="notificationNumber" value="${notification.getNotificationNumber()}">
     
     <section>
-        <div class="gd">
-        <h1>글쓰기</h1>
 
-      <%--   <div class="writer-sub">
-            
-            <div class="writer2">
-            <c:out value="${memberNickName}"/>
-            </div>
-            <div class="author">님</div>
-        </div> --%>
-    </div>
         <div class="big-box">
             
             

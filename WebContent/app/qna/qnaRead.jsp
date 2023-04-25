@@ -16,17 +16,17 @@
 <br />
 <br />
 
-	<body>
-<form action="${pageContext.request.contextPath}/qna/QnAReadOk.qn"
-	method="post">
+<body>
+	<form action="${pageContext.request.contextPath}/qna/QnAReadOk.qn"
+		method="post">
 		<div class="container">
 			<div class="view-wrap">
 				<div class="view-title">
-					<h3><c:out value="${qna.getQnaTitle()}" /></h3>
-					<hr>
-					<br> 
-					<br>
+					<h4>
+						<span><c:out value="${qna.getQnaTitle()}" /></span>
+					</h4>
 				</div>
+				<hr>
 
 				<div class="view-info">
 					<div class="info-title">
@@ -34,10 +34,13 @@
 							<span class="writer">작성자</span>
 							<!-- 임시 작성자 -->
 							<div class="content-writer">
-								<c:out value="${qna.getMemberNickname()}" />
+								<a
+									href="${pageContext.request.contextPath}/mypage/creationsOk.mp"
+									style="text-decoration: none; font-weight: bold; color: black;"><c:out
+										value="${qna.getMemberNickname()}" /></a>
 							</div>
 						</div>
-						
+
 						<div class="title-wrap">
 							<span class="date">작성일</span>
 							<!-- 임시 작성일 -->
@@ -70,68 +73,69 @@
 
 				<div class="btn-group">
 					<!-- 각 버튼 처리 경로 js로 수정하기 -->
-					<button type="button" class="list-btn"data-qnanumber="${qna.getQnaNumber()}">목록</button>
-					<c:if test="${sessionScope.memberNumber == qna.getMemberNumber()}"> 
-					<button type="button" class="edit-btn">수정</button>
-					<button type="button" class="delete-btn">삭제</button>
-					 </c:if> 
-					 
+					<button type="button" class="list-btn"
+						data-qnanumber="${qna.getQnaNumber()}">목록</button>
+					<c:if test="${sessionScope.memberNumber == qna.getMemberNumber()}">
+						<button type="button" class="edit-btn">수정</button>
+						<button type="button" class="delete-btn">삭제</button>
+					</c:if>
+
 				</div>
 			</div>
 		</div>
 
 
-		<br />
-		<br />
-			<!-- 댓글 수정중 -->
-         <div class="comment-form">
-            <form id="comment-form">
-               <input type="hidden" name="qnaNumber"
-                  value="${qna.getQnaNumber()}">
-               <div class="form-group">
-                  <textarea name="content" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
-               <button type="button" class="submit-btn">댓글 작성</button>
-               </div>
-            </form>
-         </div>
-         
-         <div class="comment-list">
-         <!-- 리스트 예시 -->
-         <ul id="comment-list">
-            <li>
-               <div class="comment-info">
-                  <span class="writer"></span> <span class="date"></span>
-               </div>
-               <div class="comment-content-wrap">
-                  <div class="comment-content">
-                     <p></p>
-                  </div>
-                  <div class="comment-btn-group">
-                     <button type=button class="comment-modify">수정</button>
-                     <button type=button class="comment-delete">삭제</button>
-                  </div>
-                  <div class="comment-btn-group none">
-                     <button type=button class="comment-modify">수정 완료</button>
-                  </div>
-               </div>
-            </li>
-         </ul>
-         <!-- /리스트 예시 -->
-         </div>
+		<br /> <br />
+		<!-- 댓글 수정중 -->
+		<c:if test="${sessionScope.memberId == 'admin' }">
+			<div class="comment-form">
+				<form id="comment-form">
+					<input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">
+					<div class="form-group">
+						<textarea name="content" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
+						<button type="button" class="submit-btn">댓글 작성</button>
+					</div>
+				</form>
+			</div>
+		</c:if>
 
-         <!-- 댓글 수정중 -->
-</form>
-<br />
-<br />
-<br />
+		<div class="comment-list">
+			<!-- 리스트 예시 -->
+			<ul id="comment-list">
+				<li>
+					<div class="comment-info">
+						<span class="writer"></span> <span class="date"></span>
+					</div>
+					<div class="comment-content-wrap">
+						<div class="comment-content">
+							<p></p>
+						</div>
+						<div class="comment-btn-group">
+							<button type=button class="comment-modify">수정</button>
+							<button type=button class="comment-delete">삭제</button>
+						</div>
+						<div class="comment-btn-group none">
+							<button type=button class="comment-modify">수정 완료</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- /리스트 예시 -->
+		</div>
 
-<!-- 푸터 -->
-<%@include file="/app/footer.jsp"%>
+		<!-- 댓글 수정중 -->
+	</form>
+	<br />
+	<br />
+	<br />
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	let memberNumber ="${sessionScope.memberNumber}";
-</script>
-<script
-	src="${pageContext.request.contextPath}/assets/js/QnA/qnaRead.js"></script>
+	<!-- 푸터 -->
+	<%@include file="/app/footer.jsp"%>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		let memberNumber = "${sessionScope.memberNumber}";
+	</script>
+	<script
+		src="${pageContext.request.contextPath}/assets/js/QnA/qnaRead.js"></script>
 </html>

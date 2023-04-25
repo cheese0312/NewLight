@@ -1,7 +1,12 @@
-* {
-  background-color: #fffcfc;
-  margin: 0;
-  padding: 0;
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+	font-family: 'GmarketSansMedium';
 }
 
 hr {
@@ -62,14 +67,20 @@ main {
 .follow-btn {
   padding-top: 20px;
   text-align: center;
+  color : gray;
 }
 
 .follow-btn > a {
   padding: 5px 7px;
-  background-color: rgb(220, 220, 220);
+  /* background-color: rgb(220, 220, 220); */
+  /* border : 1px solid gray; */
   border-radius: 5px;
   text-decoration: none;
   color: black;
+}
+
+.follow-btn > a:hover{
+	color : #ce97fa;
 }
 
 .creations-main {
@@ -103,7 +114,6 @@ main {
   display: flex;
   /* justify-content: center; */
   text-align: left;
-  padding-left: 20px;
 }
 
 .click-btn {
@@ -118,23 +128,31 @@ main {
 }
 
 .creations-like {
-  padding: 0 10px;
-  font-size: 15px;
+	display: flex;
+    padding: 0px 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .creations-like > img {
   width: 15px;
   height: 15px;
+  padding: 0 5px;
 }
 
 .creations-comment {
-  padding: 0 10px;
-  font-size: 15px;
+	display: flex;
+    padding: 0px 10px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .creations-comment > img {
   width: 17px;
   height: 17px;
+  padding: 0 5px;
 }
 
 .comment {
