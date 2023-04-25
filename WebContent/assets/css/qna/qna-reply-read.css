@@ -64,13 +64,12 @@ h4 {
 }
 
 .list-btn, .edit-btn, .delete-btn {
-	font-family: 'GmarketSansMedium';
-   padding: 7px 5px;
-   border-radius: 5px;
-   cursor: pointer;
-   margin-right: 10px;
-    color: gray;
-    border : none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
+    color: #B4AEE8;
 }
 
 .list-btn:hover, .edit-btn:hover, .delete-btn:hover {
@@ -157,13 +156,12 @@ svg {
 }
 
 .comment-form button {
-	font-family: 'GmarketSansMedium';
-   padding: 7px 7px;
-   border-radius: 5px;
-   cursor: pointer;
-   margin-right: 10px;
-   color: gray;
-   border: 1px solid gray;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
+    color: #B4AEE8;
 }
 
 .comment-form button:hover {

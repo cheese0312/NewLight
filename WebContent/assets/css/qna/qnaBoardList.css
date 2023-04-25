@@ -164,7 +164,7 @@ font-family: "Hyemin";
 
 .pagination a:hover {
   background-color: rgb(198, 133, 238);
-   background: #ce97fa;
+	background: #ce97fa;
     color: #fff;
     border-radius: 5px;
 }
@@ -177,7 +177,7 @@ font-family: "Hyemin";
 }
 
 .write-btn {
-   text-decoration: none;
+	text-decoration: none;
     margin: 0 5px;
     border-radius: 5px;
     border: 1px solid #333;
@@ -189,8 +189,8 @@ font-family: "Hyemin";
 }
 
 .write-btn:hover {
-   background-color: rgb(198, 133, 238);
-   background: #ce97fa;
+	background-color: rgb(198, 133, 238);
+	background: #ce97fa;
     color: #fff;
     border-radius: 5px;
 }

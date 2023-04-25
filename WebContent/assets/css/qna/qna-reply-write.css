@@ -6,7 +6,16 @@
 }
 
 @font-face {
-   font-family: 'GmarketSansMedium';
+	font-family: 'GmarketSansMedium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+body {
+	font-family: 'GmarketSansMedium';
    src:
       url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
       format('woff');
@@ -14,9 +23,6 @@
    font-style: normal;
 }
 
-body {
-   font-family: 'GmarketSansMedium';
-}
 
 section>.big-box {
    height: 100%;
@@ -30,10 +36,10 @@ section>.gd {
 }
 
 .writer-sub {
-   display: flex;
-   /* margin: 10px 450px; */
-   padding: 10px 10px;
-   /* margin-bottom: -20px;*/
+	display: flex;
+	/* margin: 10px 450px; */
+	padding: 10px 10px;
+	/* margin-bottom: -20px;*/
 }
 
 .writer-sub>.author {
@@ -111,13 +117,17 @@ section>.gd {
    border-radius: 5px;
 }
 
+.button:hover {
+	border-radius: 5px;
+}
+
 .button>button {
-   padding: 10px 20px;
-   border-radius: 5px;
-   cursor: pointer;
-   margin-right: 10px;
-   border-color: #B4AEE8;
-   color: #B4AEE8;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
+	color: #B4AEE8;
 }
 
 /* 이미지 업로드 스타일 */
