@@ -10,7 +10,6 @@
 <title>aniview</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/creations/aniview.css" />
-	
 </head>
 <body>
 	<%@include file="/app/header.jsp"%>
@@ -33,7 +32,7 @@
 									alt="" class="info-people-img" />
 									</c:if>
 									<c:if test="${empty creation.getMemberPfp()}">
-									<img src="${pageContext.request.contextPath}/assets/images/member/people.png"
+									<img src="${pageContext.request.contextPath}/assets/img/member/people.png"
 							class="info-people-img">
 									</c:if>
 						</div>
@@ -65,11 +64,11 @@
 					<div class="click-main">
 						<div class="click">
 							<div class="creations-like">
-								<img src="${pageContext.request.contextPath}/assets/images/member/free-icon-hearts-138533.png" alt="" />
+								<img src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png" alt="" />
 								<c:out value="${likeCount }" />
 							</div>
 							<div class="creations-comment">
-								<img src="${pageContext.request.contextPath}/assets/images/member/reply.png" alt="" />
+								<img src="${pageContext.request.contextPath}/assets/img/member/reply.png"/>
 								<c:out value="${creationComment }" />
 							</div>
 						</div>
@@ -90,7 +89,7 @@
 				<div class="comment">
 					<div class="comment-input">
 						<input type="hidden" name="creationNumber"
-							value="${creation.getMemberNumber() }">
+							value="${creation.getMemberNumber()}">
 						<div class="comment-text">
 							<textarea name="commentContent" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 						</div>

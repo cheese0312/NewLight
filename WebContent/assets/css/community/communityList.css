@@ -109,6 +109,7 @@ body {
 .table>.cnt {
 	width: 200px;
 	text-align: center;
+	background : none;
 }
 
 .cnt>h1 {

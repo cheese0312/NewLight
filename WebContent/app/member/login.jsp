@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/member/login.css">
-<!-- 	<script type="text/javascript">
+	<script type="text/javascript">
 // <![CDATA[
 var colours=new Array('#f00', '#f06', '#f0f', '#f6f', '#f39', '#f9c'); // colours of the hearts
 var minisize=16; // smallest size of hearts in pixels
@@ -185,7 +185,7 @@ function createDiv(height, width) {
 }
 // ]]>
 </script>
- -->
+
 </head>
 <body>
 	<!-- 헤더 -->

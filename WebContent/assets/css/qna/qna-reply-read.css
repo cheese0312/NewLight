@@ -1,6 +1,4 @@
 * {
-   margin: 0;
-   padding: 0;
    box-sizing: border-box;
    resize: none;
 }
@@ -25,7 +23,6 @@ body {
 h4 {
    margin-bottom: 30px;
    font-size: 2rem;
-   font-family: "Hyemin";
    animation-name: delay;
    animation-duration: 2s;
    animation-delay: 0s;
@@ -45,14 +42,11 @@ h4 {
 
 .info-title {
    display: flex;
+   align-items: center;
 }
 
 .title-wrap {
    margin-right: 20px;
-}
-
-.view-info .writer {
-   font-family: "Hyemin";
 }
 
 /* 게시글 내용 스타일 */
@@ -74,13 +68,12 @@ h4 {
    border-radius: 5px;
    cursor: pointer;
    margin-right: 10px;
-   border-color: #B4AEE8;
     color: #B4AEE8;
 }
 
 .list-btn:hover, .edit-btn:hover, .delete-btn:hover {
-   background-color: rgb(198, 133, 238);
-   color: #fff;
+   color : #ce97fa;
+   font-family: 'GmarketSansMedium';
 }
 
 .view-attach {
@@ -90,7 +83,6 @@ h4 {
 .view-attach>a {
    color: #333;
    text-decoration: none;
-   font-family: "Hyemin";
    margin-right: 10px;
 }
 
@@ -152,6 +144,7 @@ svg {
 }
 
 .comment-form textarea {
+	font-family: 'GmarketSansMedium';
    width: 70%;
    height: 100px;
    padding: 10px;
@@ -161,16 +154,18 @@ svg {
 }
 
 .comment-form button {
-   padding: 10px 20px;
-   border-radius: 5px;
-   cursor: pointer;
-   margin-right: 10px;
-   border-color: #B4AEE8;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
     color: #B4AEE8;
 }
 
 .comment-form button:hover {
-   background-color: rgb(198, 133, 238);
+	font-family: 'GmarketSansMedium';
+	border : 1px solid #ce97fa;
+   color : #ce97fa;
 }
 
 .form-group {
@@ -196,10 +191,6 @@ svg {
    padding: 10px;
 }
 
-.comment-writer {
-   font-family: "Hyemin";
-}
-
 .comment-date {
    margin-left: 10px;
    font-size: 12px;
@@ -211,12 +202,12 @@ svg {
 }
 
 .comment-list li {
-   border-bottom: 1px solid #e0e0e0;
    margin-bottom: 20px;
    padding-bottom: 20px;
 }
 
 .comment-info {
+	font-family: 'GmarketSansMedium';
    font-size: 14px;
    color: #999;
    display: flex;
@@ -228,6 +219,7 @@ svg {
 }
 
 .comment-content p {
+	font-family: 'GmarketSansMedium';
    font-size: 16px;
    line-height: 1.5;
    margin-top: 10px;
@@ -239,17 +231,19 @@ svg {
 }
 
 .comment-btn-group button {
+	font-family: 'GmarketSansMedium';
    margin-top: 10px;
    padding: 5px 10px;
-   border: none;
+   border: 1px solid gray;
+   color : gray;
    border-radius: 5px;
-   background-color: rgb(198, 133, 238);
-   color: #fff;
    cursor: pointer;
 }
 
 .comment-btn-group button:hover {
-   background-color: rgb(198, 133, 238);
+	font-family: 'GmarketSansMedium';
+   border : 1px solid #ce97fa;
+   color : #ce97fa;
 }
 
 .none {
@@ -257,6 +251,7 @@ svg {
 }
 
 .comment-list textarea {
+	font-family: 'GmarketSansMedium';
    width: 900px;
    height: 40px;
    padding: 10px;
@@ -287,6 +282,7 @@ li {
 
 textarea {
    resize: none;
+   font-family: 'GmarketSansMedium';
 }
 
 #comment-input {

@@ -15,8 +15,9 @@
 }
 
 body {
-   font-family: 'GmarketSansMedium';
+	font-family: 'GmarketSansMedium';
 }
+
 
 section>.big-box {
    height: 100%;
@@ -30,10 +31,10 @@ section>.gd {
 }
 
 .writer-sub {
-   display: flex;
-   /* margin: 10px 450px; */
-   padding: 10px 10px;
-   /* margin-bottom: -20px;*/
+	display: flex;
+	/* margin: 10px 450px; */
+	padding: 10px 10px;
+	/* margin-bottom: -20px;*/
 }
 
 .writer-sub>.author {
@@ -118,6 +119,19 @@ section>.gd {
    margin-right: 10px;
    border-color: #B4AEE8;
    color: #B4AEE8;
+}
+
+.button:hover {
+	border-radius: 5px;
+}
+
+.button>button {
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-right: 10px;
+	border-color: #B4AEE8;
+	color: #B4AEE8;
 }
 
 /* 이미지 업로드 스타일 */

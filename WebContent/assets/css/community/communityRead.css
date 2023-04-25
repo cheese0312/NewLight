@@ -1,14 +1,15 @@
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
+	font-family: 'GmarketSansMedium';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+		format('woff');
+	font-weight: 300;
+	font-style: normal;
 }
 
 body {
-	 font-family: 'GmarketSansMedium';
+	font-family: 'GmarketSansMedium';
 }
-
   section{
       width: 1200px;
       margin: 0 auto;
@@ -96,99 +97,38 @@ body {
     width: 50px;
     margin: -60px 780px;
      background-color:#fffcfc;
+  }     
+
+section {
+	width: 1200px;
+	margin: 0 auto;
 }
 
-.else>.comment>img{
-    width: 35px;
-    background-color:#fffcfc;
-  }
-
-  .big-box>.comment2{
-    border: 1px solid  #fffcfc;
-     background-color: #fffcfc;
-    width: 1000px;
-    margin: 98px;
-  
-  }
-
-  .comment2>.hello{
-    border: 1px solid #fffcfc;
-    
-    background-color:#fffcfc;
-    display: block;
-    justify-content: space-between;
-  }
-
-  .hello>.date{
-    font-size: 13px;
-    margin: 10px 30px;
-    display: flex;
-    width: 90%;
-  }
-
-  .date>.none1{
-    border-right: 1px solid gray;
-    width: 20px;
-    height: 20px;
-    
-  }
-
-  .date>.fuck{
-    margin: 1px 16px;
-    background-color:#fffcfc;
-  }
-
-  .date>p3{
-    margin: 2px -1px;
-  }
-
-  .fuck>p1{
-    background-color:#fffcfc;
-    
-  }
-
-  .commtent-sub>.delete{
-    height: 0px;
-    width: 300%;
-    margin: 20px 15px;
-    background-color:#fffcfc;
-  }
-
-  .delete>p2{
-    background-color:#fffcfc;
-  }
-
-.comment-btn{
- background-color:#fffcfc;
- display: flex;
- width: 80%;
- margin: 0 -150px;
+section>.big-box {
+	height: auto;
 }
 
-  .comment-btn>button{
-    border-radius: 12px;
-    margin: 15px 2px;
-    border: 1px solid #e4dfdf;
-    font-weight: bold;
-    font-size: 13.5px;
-    color: #e4dfdf;
-  }
+.big-box>.title {
+	margin: 30px 80px;
+}
 
-  .commtent-sub {
-    display: flex;
-    justify-content: space-between;
-    background-color:#fffcfc;
-    margin: -25px 0px 45px 15px;
-  }
+.big-box>.menu {
+	display: flex;
+	list-style: none;
+	margin: 0 40px;
+}
 
- 
-  .comment2>.hello2{
-    border: 1px solid #fffcfc;
-    height: 99.5px;
-    background-color:#fffcfc;
-    margin: -10px 0;
+.menu>.writer {
+	display: flex;
+}
 
-  }
+.writer>h1 {
+	font-size: 15px;
+	margin: -15px 40px;
+	height: 20px;
+	width: 50px;
+	border-right: 1px solid gray;
+}
 
   .hello2>h1{
     height: 50px;
@@ -206,20 +146,172 @@ body {
   .date>p{
    width : 500px;
   }
+.view-attach {
+	width: 65%;
+	margin: 0 210px;
+}
 
-  
-  /* 첨부파일 스타일 */
+.writer>.writer2 {
+	margin: -15px -20px;
+	height: 20px;
+	width: 100px;
+}
 
+.blank {
+	width: 10%;
+}
 
+.big-box>hr {
+	margin: 30px;
+	color: gray;
+	background-color: rgb(242, 239, 239);
+}
+
+.big-box>.img-box {
+	border: 1px solid gray;
+	width: 70%;
+	height: 600px;
+	margin: 70px 175px;
+}
+
+.view-attach>.else {
+	background-color: #fffcfc;
+	border: 1px solid #fffcfc;
+	font-size: 17px;
+	white-space: pre-line;
+}
+
+.big-box>.else>p {
+	background-color: #fffcfc;
+	margin: 40px;
+}
+
+.line>hr {
+	margin: 70px 0;
+	color: gray;
+	width: 100%;
+}
+
+.else>.comment {
+	display: flex;
+	width: 50px;
+	margin: -60px 780px;
+	background-color: #fffcfc;
+}
+
+.else>.comment>img {
+	width: 35px;
+	background-color: #fffcfc;
+}
+
+.big-box>.comment2 {
+	border: 1px solid #fffcfc;
+	background-color: #fffcfc;
+	width: 1000px;
+	margin: 98px;
+}
+
+.comment2>.hello {
+	border: 1px solid #fffcfc;
+	background-color: #fffcfc;
+	display: block;
+	justify-content: space-between;
+}
+
+.hello>.date {
+	font-size: 13px;
+	margin: 10px 30px;
+	display: flex;
+	width: 90%;
+}
+
+.date>.none1 {
+	border-right: 1px solid gray;
+	width: 20px;
+	height: 20px;
+}
+
+.date>.fuck {
+	margin: 1px 16px;
+	background-color: #fffcfc;
+}
+
+.date>p3 {
+	margin: 2px -1px;
+}
+
+.fuck>p1 {
+	background-color: #fffcfc;
+}
+
+.commtent-sub>.delete {
+	height: 0px;
+	width: 300%;
+	margin: 20px 15px;
+	background-color: #fffcfc;
+}
+
+.delete>p2 {
+	background-color: #fffcfc;
+}
+
+.comment-btn {
+	background-color: #fffcfc;
+	display: flex;
+	width: 80%;
+	margin: 0 -150px;
+}
+
+.comment-btn>button {
+	border-radius: 12px;
+	margin: 15px 2px;
+	border: 1px solid #e4dfdf;
+	font-weight: bold;
+	font-size: 13.5px;
+	color: #e4dfdf;
+}
+
+.commtent-sub {
+	display: flex;
+	justify-content: space-between;
+	background-color: #fffcfc;
+	margin: -25px 0px 45px 15px;
+}
+
+.comment2>.hello2 {
+	border: 1px solid #fffcfc;
+	height: 99.5px;
+	background-color: #fffcfc;
+	margin: -10px 0;
+}
+
+.hello2>h1 {
+	height: 50px;
+	width: 50%;
+	margin: 50px 450px;
+	font-size: 19px;
+}
+
+.writer>.date {
+	margin: -30px 210px;
+	width: 80px;
+	font-size: 15px;
+}
+
+.date>p {
+	width: 150px;
+}
+
+/* 첨부파일 스타일 */
 .img-box {
-   margin: 10px;
-   position : relative;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	margin: 10px;
+	position: relative;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .img-box>img {
-   width: 65%;
-   margin : 0 130px;
+	width: 65%;
+	margin: 0 130px;
 }
 
 .download-btn {
@@ -235,23 +327,23 @@ body {
    margin-bottom: 20px;
 }
 
-.download-btn:hover > svg{
-   stroke : #B4AEE8;
-   fill: #B4AEE8;
+.download-btn:hover>svg {
+	stroke: #B4AEE8;
+	fill: #B4AEE8;
 }
 
 svg {
-   width: 1.5em; 
-   height:-5em;
-   fill: rgb(255,255,255);
-   stroke-width: 1;
-    stroke: rgb(150, 147, 147);
+	width: 1.5em;
+	height: -5em;
+	fill: rgb(255, 255, 255);
+	stroke-width: 1;
+	stroke: rgb(150, 147, 147);
 }
 
-.big-box>.remove{
-  width: 200px;
-   padding: 0 20px;
-   margin: 0 900px;
+.big-box>.remove {
+	width: 200px;
+	padding: 0 20px;
+	margin: 0 900px;
 }
 
 .remove>button{
@@ -261,61 +353,46 @@ svg {
   font-family: 'GmarketSansMedium'
 }
 
-.remove>.list{
-  font-size: 17px;
+.remove>.list {
+	font-size: 17px;
 }
 
-.remove > .list:hover {
-  cursor: pointer;
-   color: #B4AEE8;
+.remove>.list:hover {
+	cursor: pointer;
+	color: #B4AEE8;
 }
 
-.remove > .delete:hover {
-  cursor: pointer;
-   color: #B4AEE8;
+.remove>.delete:hover {
+	cursor: pointer;
+	color: #B4AEE8;
 }
 
-.remove > .edit:hover {
-  cursor: pointer;
-   color: #B4AEE8;
+.remove>.edit:hover {
+	cursor: pointer;
+	color: #B4AEE8;
 }
 
-.remove>.edit{
-  font-size: 17px;
+.remove>.edit {
+	font-size: 17px;
 }
 
-.comment-btn>.comment-modify-ready:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
-}
-
-.comment-btn>.comment-delete:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
-}
-
-.comment-btn>.comment-modify:hover{
-	cursor : pointer;
-	color : #B4AEE8;
-	border-color : #B4AEE8;
-}
-
-.btn>.go:hover{
-	cursor:pointer;
+.comment-btn>.comment-modify-ready:hover {
+	cursor: pointer;
 	color: #B4AEE8;
 	border-color: #B4AEE8;
 }
 
-.remove>.delete{
-  font-size: 17px;
-  margin: 0 -10px;
+.comment-btn>.comment-delete:hover {
+	cursor: pointer;
+	color: #B4AEE8;
+	border-color: #B4AEE8;
 }
 
-  .comment-write{
-    background-color: #fffcfc;
-  }
+.comment-btn>.comment-modify:hover {
+	cursor: pointer;
+	color: #B4AEE8;
+	border-color: #B4AEE8;
+}
 
  .comment-box{
   border: 1px solid black;
@@ -334,7 +411,16 @@ svg {
   width : 50px;
  }
  
+.btn>.go:hover {
+	cursor: pointer;
+	color: #B4AEE8;
+	border-color: #B4AEE8;
+}
 
+.remove>.delete {
+	font-size: 17px;
+	margin: 0 -10px;
+}
 
  .btn{
   background-color: #fffcfc;
@@ -353,6 +439,46 @@ svg {
    border: 1px solid #ccc;
    border-radius: 5px;
    resize: none;
+  }   
+   
+.comment-write {
+	background-color: #fffcfc;
+}
+
+.comment-box {
+	border: 1px solid black;
+	height: 100px;
+	width: 80%;
+	margin: 0 50px;
+}
+
+.go {
+	border-radius: 12px;
+	margin: 15px 50px;
+	border: 1px solid #e4dfdf;
+	font-weight: bold;
+	font-size: 17px;
+	color: #e4dfdf;
+	width: 50px;
+}
+
+.btn {
+	background-color: #fffcfc;
+	margin-bottom: 10px;
+	margin: 0 900px;
+}
+
+.none {
+	display: none;
+}
+
+.hello textarea {
+	width: 800px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	resize: none;
 }
  
 .comment-write textarea {
@@ -366,7 +492,6 @@ svg {
    font-family: 'GmarketSansMedium';
 }
 
-
-  footer{
-    height: 100px;
-  }
+footer {
+	height: 100px;
+}

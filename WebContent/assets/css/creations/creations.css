@@ -5,10 +5,6 @@
     font-style: normal;
 }
 
-*{
-  background-color: rgb(255, 255, 245);
-}
-
 body {
 	font-family: 'GmarketSansMedium';
 }
@@ -158,6 +154,7 @@ main {
 .creations-like  img{
   width: 15px;
   height: 15px;
+  padding: 0 5px;
 }
 
 .creations-like a {
@@ -190,12 +187,6 @@ main {
 }
 
 .comment-input {
-/*   display: flex;
-  width: 90%;
-  padding-left: 50px;
-  padding-bottom: 20px;
-  align-items: center;
-  justify-content: center; */
   display: flex;
     width: 90%;
     padding-left: 50px;
@@ -233,6 +224,7 @@ main {
   height: 30px;
   font-family: 'GmarketSansMedium';
   font-weight: normal;
+  padding: 8px 0;
 }
 
 .comment-main{
@@ -241,7 +233,7 @@ main {
 }
 
 .comment-border {
-  border: 1px solid gray;
+  border: 0px solid gray;
   width: 95%;
   /* border-radius: 7px; */
 }
@@ -267,6 +259,7 @@ main {
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding: 8px 0;
 }
 
 .none{
@@ -274,9 +267,12 @@ main {
 }
 
 .comment-btn > button {
-  margin: 0 5px;
   font-family: 'GmarketSansMedium';
   font-weight: normal;
+  margin: 3px 5px;
+    padding: 5px 6px;
+    font-family: 'GmarketSansMedium';
+    font-weight: normal;
 }
 
 .comment-img > img {
