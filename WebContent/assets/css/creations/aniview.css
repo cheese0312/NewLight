@@ -40,6 +40,12 @@ main {
   padding: 10px;
 }
 
+.creations-background-title{
+	font-size: 1.17em;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
 .main-aside {
   width: 15%;
   height: 100%;
@@ -101,7 +107,7 @@ main {
 }
 
 .creations-comment-content {
-  padding: 15px 0;
+  padding: 15px;
   /* padding-left: 30px; */
 }
 
@@ -185,6 +191,7 @@ main {
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
+  font-family: 'GmarketSansMedium';
 }
 
 .comment-ok-btn {
@@ -335,6 +342,7 @@ li {
     cursor: pointer;
     color: #e3dede;
     font-weight: bold;
+    font-family: 'GmarketSansMedium';
 }
 
 .commnet-btn-ok:hover{

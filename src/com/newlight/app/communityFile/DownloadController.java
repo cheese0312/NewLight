@@ -40,7 +40,6 @@ public class DownloadController implements Execute {
          resp.setContentType("application/octet-stream; charset=utf-8");
          
          fileOriginalName = new String(fileOriginalName.getBytes("UTF-8"), "ISO-8859-1");
-//      resp의 헤더영역에 파일에 대한 추가 정보를 설정한다.
          resp.setHeader("Content-Length", file.length()+"");
          resp.setHeader("Content-Disposition", "attachment; filename=" + fileOriginalName);
          

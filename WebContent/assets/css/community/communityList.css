@@ -7,156 +7,156 @@
 }
 
 body {
-    font-family: 'GmarketSansMedium';
+	 font-family: 'GmarketSansMedium';
 }
 
 .writer-btn {
-   display: flex;
-   justify-content: end;
-   align-items: center;
-   width: 70%;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	width: 70%;
 }
 
 .writer-btn>a {
-   text-decoration: none;
-   color: black;
-   font-size: 20px;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
 }
 
 .writer-btn a:hover {
-   border-color: #B4AEE8;
-   color: #B4AEE8;
+	border-color: #B4AEE8;
+	color: #B4AEE8;
 }
 
 .big-box {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   align-content: center;
-   margin: 70px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
+	margin: 70px 0;
 }
 
 .big-box>.menu {
-   display: flex;
-   font-size: 10px;
-   justify-content: space-around;
-   align-items: center;
-   height: 60px;
-   border-bottom: 3px solid #B4AEE8;
-   width: 65%;
-   list-style-type: none;
-   margin-left: 20px;
+	display: flex;
+	font-size: 10px;
+	justify-content: space-around;
+	align-items: center;
+	height: 60px;
+	border-bottom: 3px solid #B4AEE8;
+	width: 65%;
+	list-style-type: none;
+	margin-left: 20px;
 }
 
 .small-box {
-   height: 300px;
-   width: 65%; 
-   margin-left: -20px;
+	height: 300px;
+	width: 65%; 
+	margin-left: -20px;
 }
 
 .small-box>.table {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-   list-style-type: none;
-   border-bottom: 1px solid rgb(231, 228, 228);
-   height: 40px;
-   width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style-type: none;
+	border-bottom: 1px solid rgb(231, 228, 228);
+	height: 40px;
+	width: 100%;
 }
 
 .table>.name {
-   text-align: center;
-   width: 198px;
-   background: none;
+	text-align: center;
+	width: 198px;
+	background: none;
 }
 
 .name>h1 {
-   font-size: 13px;
+	font-size: 13px;
 }
 
 .table>.title {
-   text-align: center;
-   width: 198px;
-   background: none;
+	text-align: center;
+	width: 198px;
+	background: none;
 }
 
 .title>h1 {
-   font-size: 13px;
+	font-size: 13px;
 }
 
 .table>.comment {
-   width: 192px;
-   text-align: center;
-   background: none;
+	width: 192px;
+	text-align: center;
+	background: none;
 }
 
 .comment>h1 {
-   font-size: 13px;
+	font-size: 13px;
 }
 
 .table>.date {
-   text-align: center;
-   width: 196px;
-   background: none;
+	text-align: center;
+	width: 196px;
+	background: none;
 }
 
 .date>h1 {
-   font-size: 13px;
+	font-size: 13px;
 }
 
 .table>.cnt {
-   width: 200px;
-   text-align: center;
+	width: 200px;
+	text-align: center;
 }
 
 .cnt>h1 {
-   font-size: 13px;
+	font-size: 13px;
 }
 
 .pagination {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-right: 80px;
-   background-color: #fffcfc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 80px;
+	background-color: #fffcfc;
 }
 
 .pagination>ul {
-   display: flex;
-   list-style: none;
-   background-color: white;
+	display: flex;
+	list-style: none;
+	background-color: white;
 }
 
 .pagination a {
-   color: #333;
-   text-decoration: none;
-   font-weight: bold;
-   padding: 10px;
-   margin: 0 5px;
-   border-radius: 5px;
-   border: 1px solid rgb(231, 228, 228);
-   transition: background-color 0.3s ease, color 0.3s ease;
-   background-color: white;
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 10px;
+	margin: 0 5px;
+	border-radius: 5px;
+	border: 1px solid rgb(231, 228, 228);
+	transition: background-color 0.3s ease, color 0.3s ease;
+	background-color: white;
 }
 
 .pagination a:hover {
-   background-color: #B4AEE8;
-   border-color: #B4AEE8;
-   color: black;
+	background-color: #B4AEE8;
+	border-color: #B4AEE8;
+	color: black;
 }
 
 .pagination .active {
-   background-color: rgb(231, 228, 228);
-   border-color: rgb(231, 228, 228);
-   color: #fff;
+	background-color: rgb(231, 228, 228);
+	border-color: rgb(231, 228, 228);
+	color: #fff;
 }
 
 .small-box>.table2 {
-   font-size: 15px;
+	font-size: 15px;
 }
 
 a {
-   text-decoration: none;
-   color: black;
+	text-decoration: none;
+	color: black;
 }

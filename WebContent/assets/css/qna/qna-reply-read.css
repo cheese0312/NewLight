@@ -146,7 +146,7 @@ svg {
 }
 
 .comment-form textarea {
-font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    width: 60%;
    height: 100px;
    padding: 10px;

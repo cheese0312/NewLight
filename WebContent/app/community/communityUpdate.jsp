@@ -29,20 +29,11 @@
                   별물결 작성하기 -
                   <c:out value="${community.getMemberNickName()}" />
                </h1>
-
-
             </div>
-            
-            
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
               <input type="text" class="title" name="communityTitle" value="${community.getCommunityTitle()}" required />
               <br>
-              <!-- <div class="writer-sub">
-               <div class="line"></div>
-               <div class="author">작성자</div> <input type="text" class="writer"> 
-              <div class="writer2">estherk773</div>
-            </div> -->
               <br>
               <div class="word1"> <p>내용</p></div>
               <textarea type="text" class="word" name="communityContent"><c:out value="${community.getCommunityContent()}"/></textarea>
