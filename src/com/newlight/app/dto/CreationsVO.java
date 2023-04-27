@@ -21,6 +21,7 @@ public class CreationsVO {
    private String likeCount;
    private String commentCount;
    private String creationWriteday;
+   private int isFollow;
    private List<CreationsFileDTO> files;
    
    public CreationsVO() {
@@ -164,14 +165,23 @@ public class CreationsVO {
 		this.creationWriteday = creationWriteday;
 	}
 
+	public int getIsFollow() {
+		return isFollow;
+	}
+
+	public void setIsFollow(int isFollow) {
+		this.isFollow = isFollow;
+	}
+
 	@Override
 	public String toString() {
-		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle + ", creationContent="
-				+ creationContent + ", creationCode=" + creationCode + ", creationName=" + creationName + ", categoryName="
-				+ categoryName + ", commentWritedate=" + commentWritedate + ", memberNumber=" + memberNumber
-				+ ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp + ", creationSumnail=" + creationSumnail
-				+ ", commentNumber=" + commentNumber + ", commentContent=" + commentContent + ", likeCount=" + likeCount
-				+ ", commentCount=" + commentCount + ", creationWriteday=" + creationWriteday + ", files=" + files + "]";
+		return "CreationsVO [creationNumber=" + creationNumber + ", creationTitle=" + creationTitle
+				+ ", creationContent=" + creationContent + ", creationCode=" + creationCode + ", creationName="
+				+ creationName + ", categoryName=" + categoryName + ", commentWritedate=" + commentWritedate
+				+ ", memberNumber=" + memberNumber + ", memberNickname=" + memberNickname + ", memberPfp=" + memberPfp
+				+ ", creationSumnail=" + creationSumnail + ", commentNumber=" + commentNumber + ", commentContent="
+				+ commentContent + ", likeCount=" + likeCount + ", commentCount=" + commentCount + ", creationWriteday="
+				+ creationWriteday + ", isFollow=" + isFollow + ", files=" + files + "]";
 	}
 
 }

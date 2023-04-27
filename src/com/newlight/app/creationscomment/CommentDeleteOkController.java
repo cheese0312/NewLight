@@ -11,14 +11,14 @@ import com.newlight.app.dao.CreationsDAO;
 
 public class CommentDeleteOkController implements Execute {
 
-	@Override
-	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		CreationsDAO creationsDAO = new CreationsDAO();
-		
-		int commnetNumber = Integer.valueOf(req.getParameter("commentNumber"));
-		
-		creationsDAO.commentDelete(commnetNumber);
+   @Override
+   public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+	      CreationsDAO creationsDAO = new CreationsDAO();
+	      
+	      int commnetNumber = Integer.valueOf(req.getParameter("commentNumber"));
+	      
+	      creationsDAO.commentDelete(commnetNumber);
 
-	}
+   }
 
 }

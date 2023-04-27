@@ -1,16 +1,12 @@
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 }
 
 body {
-font-family: 'GmarketSansMedium';
-}
-
-*{
-  background-color: rgb(255, 255, 245);
+	font-family: 'GmarketSansMedium';
 }
 
 hr {
@@ -70,15 +66,18 @@ section {
   height: 60%;
 }
 
-.editbtn > a {
+.editbtn > a{
   width: 80px;
-  background-color: rgb(213, 213, 213);
+  /* background-color: rgb(213, 213, 213); */
   text-decoration: none;
   color: black;
   border-radius: 5px;
   padding: 2px 5px;
 }
 
+.editbtn > a:hover {
+	color : #ce97fa;
+}
 
 .likes,
 .comment {
@@ -97,6 +96,10 @@ section {
 .name > a {
   text-decoration: none;
   color: grey;
+}
+
+.name > a:hover{
+	color : #ce97fa;
 }
 
 .mypage-main2 > section {
@@ -129,6 +132,7 @@ section {
 .sub-author {
   display: flex;
   padding: 5px 5px;
+  align-items: center;
 }
 
 .sub-author-img {
@@ -151,7 +155,7 @@ section {
 }
 
 .sub-title {
-  padding: 20px 0 10px 10px;
+  padding: 5px 0 5px 10px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -159,6 +163,10 @@ section {
 .sub-title > a {
   text-decoration: none;
   color: black;
+}
+
+.sub-title > a:hover {
+	color : #ce97fa;
 }
 
 .creations-sub {
@@ -170,12 +178,12 @@ section {
 .creation-like ,
 .creation-comment {
 	display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .creations-like {
-  padding: 0 10px;
-  font-size: 20px;
+  padding: 3px 10px;
+  font-size: 17px;
 }
 
 .creations-like > img{
@@ -184,8 +192,8 @@ section {
 }
 
 .creations-comment {
-  padding: 0 10px;
-  font-size: 20px;
+  padding: 3px 10px;
+  font-size: 17px;
 }
 
 .creations-comment > img{

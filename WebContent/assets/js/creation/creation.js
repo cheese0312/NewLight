@@ -212,15 +212,15 @@ $likeBtn.on('click' , function(e){
 			let likeCnt = parseInt($('.likeCount').text().trim());
 						
 			if(result1 == 0) {
-				$children2.find('img').attr('src', '/assets/images/member/free-icon-hearts-138533.png');
+				$children2.find('img').attr('src', '/assets/img/member/free-icon-hearts-138533.png');
+				$('.likeCount').text(likeCnt+1);
 				/*$children2.eq(1).show();
 				$children2.eq(0).hide();*/
-				$('.likeCount').text(likeCnt+1);
 			} else {
-				$children2.find('img').attr('src', '/assets/images/member/IMG_1993.png');
+				$children2.find('img').attr('src', '/assets/img/member/IMG_1993.png');
+				$('.likeCount').text(likeCnt-1);
 				/*$children2.eq(0).show();
 				$children2.eq(1).hide();*/
-				$('.likeCount').text(likeCnt-1);
 			}
 			
 			
