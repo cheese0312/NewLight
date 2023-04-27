@@ -27,6 +27,7 @@ public class CreationReadOkController implements Execute {
 		
 		CreationsDAO creationsDAO = new CreationsDAO();
 		CreationsVO creationsVO = creationsDAO.creationContent(creationNumber);
+		System.out.println(creationNumber);
 		
 		Map<String, Integer> followMap = new HashMap<String, Integer>();
 		followMap.put("followerNumber",  creationsVO.getMemberNumber());
@@ -75,7 +76,7 @@ public class CreationReadOkController implements Execute {
 		req.getRequestDispatcher(path).forward(req, resp);
 		req.setAttribute("isLike", isLike);
 		
-		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
+//		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
 
 	}
 

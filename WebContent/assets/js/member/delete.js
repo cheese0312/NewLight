@@ -3,6 +3,7 @@
  */
 
 let $delete = $('.userDelete');
+let $loginBtn = $('.login-btn');
 
 $delete.on('click', function(e){
 	e.preventDefault();

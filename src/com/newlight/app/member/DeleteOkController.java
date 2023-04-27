@@ -97,14 +97,18 @@ public class DeleteOkController implements Execute {
 		qnaDAO.deleteMember(memberNumber);
 		likeDAO.deleteMemeber(memberNumber);
 		ccDAO.deleteMember(memberNumber);
+		ccDAO.commenteAllDelete(memberNumber);
 		cfDAO.deleteMember(memberNumber);
 		communityDAO.deleteMember(memberNumber);
 		followsDAO.deleteMember(memberNumber);
 		creationCommentDAO.deleteMember(memberNumber);
+		creationCommentDAO.commenteAllDelete(memberNumber);
 		creationFileDAO.deleteMember(memberNumber);
 		creationDAO.deleteMember(memberNumber);
 		memberDAO.deleteMember(memberNumber);
+		
 		session.invalidate();
+		
 		resp.sendRedirect("/main/mainpageListOk.mi");
 
 	}

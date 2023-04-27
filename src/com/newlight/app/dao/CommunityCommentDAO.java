@@ -16,10 +16,6 @@ public class CommunityCommentDAO {
 	public CommunityCommentDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-	
-	public void deleteMember(int memberNumber) {
-		sqlSession.delete("communityComment.deleteMember", memberNumber);
-	}
 
 	public List<CommunityCommentVO> selectAll(int communityNumber){
 		return sqlSession.selectList("communityComment.selectAll", communityNumber);
@@ -40,6 +36,15 @@ public class CommunityCommentDAO {
 	
 	public void update(CommunityCommentDTO communityCommentDTO) {
 		sqlSession.update("communityComment.update", communityCommentDTO);	
+	}
+	
+//	회원탈퇴 시 커뮤니티 댓글 삭제
+	public void deleteMember(int memberNumber) {
+		sqlSession.delete("communityComment.deleteMember", memberNumber);
+	}
+	
+	public void commenteAllDelete(int memberNumber) {
+		sqlSession.delete("communityComment.commentAllDelete", memberNumber);
 	}
 	
 }

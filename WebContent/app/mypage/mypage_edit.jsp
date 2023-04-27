@@ -265,7 +265,7 @@ function newColour() {
                      </div>
                      <div class="info-nickname info">
                         <label for="nickname-change">닉네임
-                        <span class="count">(0/300)</span> 
+                        <span class="count">(<span class="nickname-count">0</span>/300)</span> 
                          </label> <input
                            type="text" name="memberNickname" id="nickname-change" required value="${memberDTO.getMemberNickname() }"/>
                         <span></span>
@@ -276,7 +276,7 @@ function newColour() {
                      <div class="info-selfy info">
                         <label for="selfy-change">
                         한 줄 소개
-                        <span class="count">(0/800)</span>
+                        <span class="count">(<span class="selfy-count">0</span>/800)</span>
                         </label> <input
                            type="text" name="memberComment" id="selfy-change" required />
                            <span></span>
