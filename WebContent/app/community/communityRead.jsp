@@ -86,8 +86,7 @@
 
 				<div class="comment2">
 					<div class="comment-write">
-						<textarea class="comment-box" id="content" placeholder="댓글 내용을 입력하세요.">
-                    </textarea>
+						<textarea class="comment-box" id="content" placeholder="댓글 내용을 입력하세요."></textarea>
 					</div>
 					<div class="btn">
 						<button class="go" type=button>등록</button>

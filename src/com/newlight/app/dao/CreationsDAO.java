@@ -29,6 +29,10 @@ public class CreationsDAO {
 		return sqlSession.selectOne("creations.select", creationNumber);
 	}
 	
+	public int followCount (Map<String, Integer> followMap){
+		return sqlSession.selectOne("creations.followCount" , followMap);
+	}
+	
 	public void insert(CreationsDTO creationDTO) {
 		sqlSession.insert("creations.insert", creationDTO);
 	}

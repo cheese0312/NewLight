@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,25 +41,43 @@
 							<span> <c:out value="${creation.getMemberNickname()}" />
 							</span>
 						</div>
+						<c:choose>
+						<c:when test="${isFollow == 0}">
 						<c:if
 							test="${sessionScope.memberNumber !=  creation.getMemberNumber()}">
-							<div class="follow-btn"
+							<div class="follow-btn none"
 								data-memberNumber="${creation.getMemberNumber() }">
 								<a href="#" class="follower">팔로우 ✔</a>
 							</div>
-							<div class="follow-btn none"
+							<div class="follow-btn"
 								data-memberNumber="${creation.getMemberNumber() }">
 								<a href="#" class="follower">팔로우 +</a>
 							</div>
 						</c:if>
+						</c:when>
+						
+						<c:otherwise>
+						<div class="follow-btn"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ✔</a>
+							</div>
+						<div class="follow-btn none"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 +</a>
+							</div>
+						</c:otherwise>
+						</c:choose>
 
 					</div>
 					<div class="creations-main">
 						<div class="creations-main-content">
 							<c:forEach var="creationFile" items="${creation.getFiles()}">
+							<c:set var="name" value="${creationFile.getFileSystemName() }"/>
+							<c:if test="${not fn:contains(name , '.ttf')} ">
 								<img
 									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}">
-
+							</c:if>
+								
 								<div class="download-btn-wrap">
 									<div class="theme-down-box">
 										<div class="folder-icon">

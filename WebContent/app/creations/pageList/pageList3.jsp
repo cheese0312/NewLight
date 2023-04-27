@@ -58,7 +58,7 @@
 												<img src="${pageContext.request.contextPath}/assets/img/member/people.png">
 												</c:if>
 											<a
-												href="${pageContext.request.contextPath}/app/mypage/mypage_creations.jsp">
+												href="${pageContext.request.contextPath}/userpage/creationsOk.mp?memberNumber=${creation.getMemberNumber()}">
 												<c:out value="${creation.getMemberNickname()}" />
 											</a>
 										</div>
