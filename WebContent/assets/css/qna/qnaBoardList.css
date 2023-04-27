@@ -34,6 +34,7 @@ body {
    padding: 20px;
 }
 
+/* 헤더 영역 스타일 */
 .header {
    display: flex;
    justify-content: space-between;
@@ -99,7 +100,7 @@ font-family: "Hyemin";
 
 .board-table th {
    text-align: left;
-   font-family: "Hyemin";
+   /* background-color: #f0f0f0; */
 }
 
 .board-table td {
@@ -176,22 +177,16 @@ font-family: "Hyemin";
 }
 
 .write-btn {
-	text-decoration: none;
+   text-decoration: none;
     margin: 0 5px;
-    border-radius: 5px;
-    border: 1px solid #333;
     padding: 10px 20px;
     cursor: pointer;
     margin-right: 10px;
-    border-color: #B4AEE8;
-    color: #B4AEE8;
+    color: black;
 }
 
 .write-btn:hover {
-   background-color: rgb(198, 133, 238);
-   background: #ce97fa;
-    color: #fff;
-    border-radius: 5px;
+    color: #ce97fa;
 }
 
 a {

@@ -228,7 +228,7 @@ function newColour() {
 									alt="" class="info-people-img" />
 									</c:if>
 									<c:if test="${empty memberDTO.getMemberPfp()}">
-									<img src="${pageContext.request.contextPath}/assets/images/member/people.png"
+									<img src="${pageContext.request.contextPath}/assets/img/member/people.png"
 							class="info-people-img">
 									</c:if>
 								<button type="button" class="pfp-btn">사진 변경</button>

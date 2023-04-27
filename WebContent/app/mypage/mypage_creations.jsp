@@ -9,7 +9,6 @@
    href="${pageContext.request.contextPath}/assets/css/mypage/mypage-creations.css">
 </head>
 <body>
-<<<<<<< HEAD
    <!-- 헤더 -->
    <%@include file="/app/header.jsp"%>
    <main>
@@ -44,14 +43,14 @@
                <section>
                   <div class="click">
                      <div class="name">
-                        <a href="/mypage/creationsOk.mp?memberNumber=${memberNumber }">내 작품</a>
+                        <a href="/mypage/creationsOk.mp?memberNumber=${memberNumber}">내 작품</a>
                      </div>
-                     <c:if test="${sessionScope.memberNumber == param.memberNumber }">
+                     <c:if test="${sessionScope.memberNumber == param.memberNumber}">
                      <div class="name">
-                        <a href="/mypage/followOk.mp?memberNumber=${memberNumber }">팔로워</a>
+                        <a href="/mypage/followOk.mp?memberNumber=${memberNumber}">팔로워</a>
                      </div>
                      <div class="name">
-                        <a href="/mypage/likeOk.mp?memberNumber=${memberNumber }">좋아요</a>
+                        <a href="/mypage/likeOk.mp?memberNumber=${memberNumber}">좋아요</a>
                      </div>
                      </c:if>
 
@@ -70,7 +69,7 @@
                                        </div>
                                        <div class="sub-author">
                                        <div class="sub-author-img">
-                                       <c:if test="${not empty creations.getMemberPfp() }">
+                                       <c:if test="${not empty creations.getMemberPfp()}">
                                        <img
                                              src="${pageContext.request.contextPath}/userProfile/${creations.getMemberPfp()}">
                                        </c:if>
