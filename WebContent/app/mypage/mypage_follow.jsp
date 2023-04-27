@@ -53,8 +53,8 @@
 					
 						<section>
 					<c:choose>
-						<c:when test="${not empty followerList}">
-							<c:forEach var="follow" items="${followerList}">
+						<c:when test="${not empty followCount}">
+							<c:forEach var="follow" items="${followCount}">
 								<div class="creations-main">
 									<div class="mypage-main2">
 										<div class="mypage-img">
@@ -73,15 +73,27 @@
 											<div class="mypage-content"><c:out value="${follow.getMemberComment()}"/></div>
 										</div>
 										<div class="bin"></div>
-										<c:if test="${sessionScope.memberNumber != follow.getMemberNumber() }">
+										<c:choose>
+										<c:when test="${follow.getIsFollow() == 0}">
+										<%-- <c:if test="${sessionScope.memberNumber != follow.getMemberNumber() }"> --%>
+										<div class="editbtn1 none" data-memberNumber="${follow.getMemberNumber() }">
+											<a href="#" class="follower" >팔로우 ✔</a>
+										</div>
+										<div class="editbtn1" data-memberNumber="${follow.getMemberNumber() }">
+											<a href="#" class="follower" >팔로우 +</a>
+										</div>
+										<%-- </c:if> --%>
+										</c:when>
+										
+										<c:otherwise>
 										<div class="editbtn1" data-memberNumber="${follow.getMemberNumber() }">
 											<a href="#" class="follower" >팔로우 ✔</a>
 										</div>
-										
 										<div class="editbtn1 none" data-memberNumber="${follow.getMemberNumber() }">
 											<a href="#" class="follower" >팔로우 +</a>
 										</div>
-										</c:if>
+										</c:otherwise>
+										</c:choose>
 									</div>
 									</div>
 									<hr class="mypage-main-hr2">

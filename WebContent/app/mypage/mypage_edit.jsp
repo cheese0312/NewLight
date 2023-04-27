@@ -220,6 +220,7 @@ function newColour() {
 					<form
 						action="${pageContext.request.contextPath}/mypage/mypageEdit.me"
 						method="post">
+						<h4>회원 정보 수정</h4>
 						<fieldset>
 							<div class="info-people info">
 							<c:if test="${not empty memberDTO.getMemberPfp()}">
@@ -266,7 +267,7 @@ function newColour() {
 								<label for="nickname-change">닉네임
 								<span class="count">(0/300)</span> 
 								 </label> <input
-									type="text" name="memberNickname" id="nickname-change" required />
+									type="text" name="memberNickname" id="nickname-change" required value="${memberDTO.getMemberNickname() }"/>
 								<span></span>
 								<div class="info-pw-sub">
 								<span class="check-msg" id="check-nickname-msg"></span>

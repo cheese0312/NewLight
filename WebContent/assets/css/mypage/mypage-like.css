@@ -130,8 +130,9 @@ section {
 }
 
 .sub-author {
-  display: flex;
-  padding: 5px 5px;
+	display: flex;
+    padding: 5px 5px;
+    align-items: center;
 }
 
 .sub-author-img {
@@ -154,9 +155,9 @@ section {
 }
 
 .sub-title {
-  padding: 20px 0 10px 10px;
-  font-size: 20px;
-  font-weight: bold;
+	padding: 5px 0 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .sub-title > a {

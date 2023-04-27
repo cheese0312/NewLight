@@ -15,6 +15,10 @@ body>hr {
 	margin-bottom: 30px;
 }
 
+h4 {
+	text-align : center;
+}
+
 main {
 	width: 95%;
 	display: block;
@@ -57,6 +61,7 @@ fieldset {
 .info-people>button {
 	margin-right: 429px;
     margin-left: 10px;
+    font-family: 'GmarketSansMedium';
 }
 
 .info-name {
@@ -120,6 +125,7 @@ input[type="text"], input[type="password"] {
 	margin-bottom: 10px;
 	margin-left: 30px;
 	width: 58%;
+	font-family: 'GmarketSansMedium';
 }
 
 textarea {
@@ -127,6 +133,7 @@ textarea {
 	width: 340px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	font-family: 'GmarketSansMedium';
 }
 
 .cencel-save {
@@ -146,13 +153,13 @@ textarea {
 
 .cencel-save>button {
 	margin: 0 50px;
-	/* background-color: rgb(198, 133, 238); */
 	width: 50px;
 	height: 30px;
 	border: 1px solid gray;
 	cursor: pointer;
 	border-radius : 8px;
 	color : gray;
+	font-family: 'GmarketSansMedium';
 }
 
 .cencel-save a {
@@ -177,6 +184,7 @@ textarea {
 	display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 .count {
@@ -191,9 +199,17 @@ span {
 	width : 10%
 }
 
+.info-pw-sub {
+	display : flex;
+	justify-content : center;
+	width: 70%;
+}
+
 .info-pw-sub > span {
 	font-size : 10px;
 	color : red;
+	width: 70%;
+	padding-left : 30px;
 }
 
 .pfp-btn {
