@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -132,6 +133,7 @@ section {
 .sub-author {
   display: flex;
   padding: 5px 5px;
+  align-items: center;
 }
 
 .sub-author-img {
@@ -154,7 +156,7 @@ section {
 }
 
 .sub-title {
-  padding: 20px 0 10px 10px;
+  padding: 5px 0 5px 10px;
   font-size: 20px;
   font-weight: bold;
 }

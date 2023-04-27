@@ -87,7 +87,7 @@
 
 		<br /> <br />
 		<!-- 댓글 수정중 -->
-		<c:if test="${sessionScope.memberId == 'admin' }">
+		<c:if test="${sessionScope.memberId == 'admin'}">
 			<div class="comment-form">
 				<form id="comment-form">
 					<input type="hidden" name="qnaNumber" value="${qna.getQnaNumber()}">

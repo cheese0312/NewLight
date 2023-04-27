@@ -59,15 +59,22 @@
 										<div class="creations-img">
 											<img src="${pageContext.request.contextPath}/upload/${like.getCreationSumnail()}">
 											<div class="sub-title">
-												<a href="# "> <c:out value="${like.getCreationTitle() }" /></a>
+												<a href="${pageContext.request.contextPath}/creations/creationRead.ct?creationNumber=${like.getCreationNumber()}"> <c:out value="${like.getCreationTitle() }" /></a>
 											</div>
 											<div class="sub-author">
 											<div class="sub-author-img">
-												<img
+											<c:if test="${not empty like.getMemberPfp()}">
+											<img
+													src="${pageContext.request.contextPath}/userProfile/${like.getMemberPfp()}">
+											</c:if>
+											<c:if test="${empty like.getMemberPfp()}">
+											<img
 													src="${pageContext.request.contextPath}/assets/img/member/people.png">
+											</c:if>
 												</div>
 												<div class="sub-author-name">
-												<a href="#"> <c:out value="${like.getMemberNickname() }" />
+												<a
+													href="${pageContext.request.contextPath}/userpage/creationsOk.mp?memberNumber=${like.getMemberNumber()}"> <c:out value="${like.getMemberNickname() }" />
 												</a>
 												</div>
 											</div>

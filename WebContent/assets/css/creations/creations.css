@@ -50,9 +50,10 @@ main {
 }
 
 .creations-info {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row
+	display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
 
 .creations-img {
@@ -69,12 +70,11 @@ main {
 }
 
 .creations-author {
-  width: 70%;
+  width: 60%;
 }
 
 
 .follow-btn {
-  padding-top: 20px;
   text-align: center;
   color : gray;
 }

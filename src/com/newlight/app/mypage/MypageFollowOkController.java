@@ -36,8 +36,11 @@ public class MypageFollowOkController implements Execute {
 		
 		List<MypageVO> followerList = mypageDAO.Followee(mypageVO);
 		req.setAttribute("followerList", followerList);
-		System.out.println(followerList);
 		
+		List<MypageVO> followCount = mypageDAO.followerCount(mypageVO);
+		req.setAttribute("followCount", followCount);
+		
+		System.out.println(followCount);
 		req.getRequestDispatcher("/app/mypage/mypage_follow.jsp").forward(req, resp);
 
 	}

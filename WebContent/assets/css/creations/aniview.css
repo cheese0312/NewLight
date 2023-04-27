@@ -56,9 +56,10 @@ main {
 }
 
 .creations-info {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+	display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
 }
 
 .creations-img > img {
@@ -71,7 +72,6 @@ main {
 }
 
 .follow-btn {
-  padding-top: 20px;
   text-align: center;
   color : gray;
 }
@@ -282,6 +282,8 @@ main {
   display: flex;
   position: absolute;
   left: 0;
+  padding : 0;
+  margin : 0;
 }
 
 .ani-view {

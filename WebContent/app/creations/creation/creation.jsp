@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,25 +41,43 @@
 							<span> <c:out value="${creation.getMemberNickname()}" />
 							</span>
 						</div>
+						<c:choose>
+						<c:when test="${isFollow == 0}">
 						<c:if
 							test="${sessionScope.memberNumber !=  creation.getMemberNumber()}">
-							<div class="follow-btn"
+							<div class="follow-btn none"
 								data-memberNumber="${creation.getMemberNumber() }">
 								<a href="#" class="follower">팔로우 ✔</a>
 							</div>
-							<div class="follow-btn none"
+							<div class="follow-btn"
 								data-memberNumber="${creation.getMemberNumber() }">
 								<a href="#" class="follower">팔로우 +</a>
 							</div>
 						</c:if>
+						</c:when>
+						
+						<c:otherwise>
+						<div class="follow-btn"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ✔</a>
+							</div>
+						<div class="follow-btn none"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 +</a>
+							</div>
+						</c:otherwise>
+						</c:choose>
 
 					</div>
 					<div class="creations-main">
 						<div class="creations-main-content">
 							<c:forEach var="creationFile" items="${creation.getFiles()}">
+							<c:set var="name" value="${creationFile.getFileSystemName() }"/>
+							<c:if test="${not fn:contains(name , '.ttf')} ">
 								<img
 									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}">
-
+							</c:if>
+								
 								<div class="download-btn-wrap">
 									<div class="theme-down-box">
 										<div class="folder-icon">
@@ -96,18 +116,18 @@
 									<c:choose>
 										<c:when test="${isLike == 0}">
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/img/member/IMG_1993.png">
+												src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
 											</a>
 										</c:when>
 										<c:otherwise>
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
+												src="${pageContext.request.contextPath}/assets/img/member/IMG_1993.png">
 											</a>
 										</c:otherwise>
 									</c:choose>
 									
 								</c:if>
-								<span class="likeCount"> <c:out value="${likeCount }" />
+								<span class="likeCount"> <c:out value="${likeCount}" />
 								</span>
 
 							</div>
@@ -115,7 +135,7 @@
 							<div class="creations-comment">
 								<img
 									src="${pageContext.request.contextPath}/assets/img/member/reply.png">
-								<span><c:out value="${creationComment }" /></span>
+								<span><c:out value="${creationComment}" /></span>
 							</div>
 						</div>
 

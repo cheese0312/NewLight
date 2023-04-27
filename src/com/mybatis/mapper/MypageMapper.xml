@@ -6,9 +6,9 @@
 
 <mapper namespace="mypage">
    <select id="mypageLikeList" parameterType = "MypageVO" resultType="MypageVO">
-      select creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
+      select j.creation_number ,creation_title , creation_sumnail, j.member_number, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
       from (
-         select c.creation_number, creation_title , creation_sumnail, member_nickname, member_pfp ,
+         select c.creation_number, creation_title , creation_sumnail, c.member_number ,member_nickname, member_pfp ,
             count(l.creation_number) like_count
          from creations c
          join `member` m 
@@ -28,6 +28,17 @@
       where f.follower_number = #{memberNumber}
    </select>
    
+   <select id="followerCount" parameterType="MypageVO" resultType="MypageVO">
+   select j.*, count(f2.follower_number) is_follow from (
+	select m.member_number, m.member_nickname , m.member_comment , f.follower_number , f.followee_number , m.member_pfp
+	from follows f  join `member` m 
+	on f.followee_number = m.member_number 
+	where f.follower_number = #{memberNumber}
+	) j left outer join follows f2 
+	on f2.followee_number=#{memberNumber} and f2.follower_number = j.member_number
+	group by j.member_number;
+   </select>
+   
    <select id="mypageCreations" resultType="MypageVO"  parameterType="map">
       select *
       from `member` m join creations c 
@@ -36,7 +47,7 @@
    </select>
    
    <select id="mypagecreation" resultType="MypageVO" parameterType="MypageVO">
-      select  j.member_number, j.creation_number, j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count
+      select  j.member_number, j.creation_number, j.creation_number ,j.creation_title, j.creation_sumnail, j.like_count , count(cc.comment_number) comment_count
       from (
          select c.*, count(l.creation_number) like_count
          from creations c 
@@ -55,7 +66,7 @@
    </select>   
    
    <select id="mypageLikeCount" parameterType="MypageVO" resultType="MypageVO">
-      select creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
+      select j.creation_number , creation_title , creation_sumnail, member_nickname, like_count, member_pfp , count(cc.creation_number) comment_count
       from (
          select c.creation_number, creation_title , creation_sumnail, member_nickname, member_pfp ,
             count(l.creation_number) like_count , m.member_number

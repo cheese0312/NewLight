@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>글쓰기</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/community/communityWrite.css"/>
+   href="${pageContext.request.contextPath}/assets/css/community/communityWrite.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">
+   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+   rel="stylesheet">
 </head>
 <body>
 
@@ -24,25 +24,16 @@
     
     <section>
         <div class="big-box">
-      				<div class="gd">
-					<h1>
-						별물결 작성하기 -
-						<c:out value="${community.getMemberNickName()}" />
-					</h1>
-
-
-				</div>
-            
-            
+                  <div class="gd">
+               <h1>
+                  별물결 작성하기 -
+                  <c:out value="${community.getMemberNickName()}" />
+               </h1>
+            </div>
             <div class="small-box">
               <div class="text1"><p>제목</p></div>
               <input type="text" class="title" name="communityTitle" value="${community.getCommunityTitle()}" required />
               <br>
-              <!-- <div class="writer-sub">
-               <div class="line"></div>
-               <div class="author">작성자</div> <input type="text" class="writer"> 
-              <div class="writer2">estherk773</div>
-            </div> -->
               <br>
               <div class="word1"> <p>내용</p></div>
               <textarea type="text" class="word" name="communityContent"><c:out value="${community.getCommunityContent()}"/></textarea>
