@@ -64,7 +64,7 @@ h4 {
 }
 
 .list-btn, .edit-btn, .delete-btn {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    padding: 7px 5px;
    border-radius: 5px;
    cursor: pointer;
@@ -146,7 +146,7 @@ svg {
 }
 
 .comment-form textarea {
-	font-family: 'GmarketSansMedium';
+font-family: 'GmarketSansMedium';
    width: 60%;
    height: 100px;
    padding: 10px;
@@ -157,7 +157,7 @@ svg {
 }
 
 .comment-form button {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    padding: 7px 7px;
    border-radius: 5px;
    cursor: pointer;
@@ -167,8 +167,8 @@ svg {
 }
 
 .comment-form button:hover {
-	font-family: 'GmarketSansMedium';
-	border : 1px solid #ce97fa;
+   font-family: 'GmarketSansMedium';
+   border : 1px solid #ce97fa;
    color : #ce97fa;
 }
 
@@ -211,7 +211,7 @@ svg {
 }
 
 .comment-info {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    font-size: 14px;
    color: #999;
    display: flex;
@@ -223,7 +223,7 @@ svg {
 }
 
 .comment-content p {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    font-size: 16px;
    line-height: 1.5;
    margin-top: 10px;
@@ -235,7 +235,7 @@ svg {
 }
 
 .comment-btn-group button {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    margin-top: 10px;
    padding: 5px 10px;
    border: 1px solid gray;
@@ -245,7 +245,7 @@ svg {
 }
 
 .comment-btn-group button:hover {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    border : 1px solid #ce97fa;
    color : #ce97fa;
 }
@@ -255,7 +255,7 @@ svg {
 }
 
 .comment-list textarea {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
    width: 900px;
    height: 40px;
    padding: 10px;

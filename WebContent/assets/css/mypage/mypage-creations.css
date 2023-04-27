@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'GmarketSansMedium';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
@@ -6,7 +7,7 @@
 }
 
 body {
-	font-family: 'GmarketSansMedium';
+   font-family: 'GmarketSansMedium';
 }
 
 hr {
@@ -76,7 +77,7 @@ section {
 }
 
 .editbtn > a:hover {
-	color : #ce97fa;
+   color : #ce97fa;
 }
 
 .likes,
@@ -86,7 +87,7 @@ section {
 }
 
 .click{
-	width : 100%;
+   width : 100%;
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -99,7 +100,7 @@ section {
 }
 
 .name > a:hover{
-	color : #ce97fa;
+   color : #ce97fa;
 }
 
 .mypage-main2 > section {
@@ -166,7 +167,7 @@ section {
 }
 
 .sub-title > a:hover {
-	color : #ce97fa;
+   color : #ce97fa;
 }
 
 .creations-sub {
@@ -177,7 +178,7 @@ section {
 
 .creation-like ,
 .creation-comment {
-	display: flex;
+   display: flex;
     align-items: flex-start;
 }
 
@@ -202,7 +203,7 @@ section {
 }
 
 .count {
-	margin : 0 5px;
+   margin : 0 5px;
 }
 
 .creations-main {
@@ -232,7 +233,6 @@ section {
 }
 
 .creation-comment > img {
-	width: 20px;
+   width: 20px;
   height: 20px;
 }
-

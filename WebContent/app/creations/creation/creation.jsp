@@ -116,18 +116,18 @@
 									<c:choose>
 										<c:when test="${isLike == 0}">
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/img/member/IMG_1993.png">
+												src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
 											</a>
 										</c:when>
 										<c:otherwise>
 											<a href="#" class="likeplus"> <img
-												src="${pageContext.request.contextPath}/assets/img/member/free-icon-hearts-138533.png">
+												src="${pageContext.request.contextPath}/assets/img/member/IMG_1993.png">
 											</a>
 										</c:otherwise>
 									</c:choose>
 									
 								</c:if>
-								<span class="likeCount"> <c:out value="${likeCount }" />
+								<span class="likeCount"> <c:out value="${likeCount}" />
 								</span>
 
 							</div>
@@ -135,7 +135,7 @@
 							<div class="creations-comment">
 								<img
 									src="${pageContext.request.contextPath}/assets/img/member/reply.png">
-								<span><c:out value="${creationComment }" /></span>
+								<span><c:out value="${creationComment}" /></span>
 							</div>
 						</div>
 

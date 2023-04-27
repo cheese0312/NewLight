@@ -13,11 +13,11 @@ public class CommentDeleteOkController implements Execute {
 
    @Override
    public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-	      CreationsDAO creationsDAO = new CreationsDAO();
-	      
-	      int commnetNumber = Integer.valueOf(req.getParameter("commentNumber"));
-	      
-	      creationsDAO.commentDelete(commnetNumber);
+      CreationsDAO creationsDAO = new CreationsDAO();
+      
+      int memberNumber = Integer.valueOf(req.getParameter("memberNumber"));
+      
+      creationsDAO.commentDelete(memberNumber);
 
    }
 
