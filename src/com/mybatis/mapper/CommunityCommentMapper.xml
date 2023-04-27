@@ -5,12 +5,6 @@
 <!-- 커뮤니티 SQL작성 -->
 <!-- SQL문 작성 , DB이름 추가 -->
 
-	<!-- 회원탈퇴 시 커뮤니티댓글 삭제 -->
-	<delete id="deleteMember" parameterType="_int">
-		delete from community_comment
-		where member_number = #{memberNumber}
-	</delete>
-
 	<select id="selectAll" parameterType="_int" resultType="CommunityCommentVO">
 	  select comment_number, comment_content, comment_date, community_number, 
 	  c.member_number, member_nickname
@@ -38,4 +32,17 @@
      set comment_content = #{commentContent}
      where comment_number = #{commentNumber}
    </update>
+   
+	<!-- 회원탈퇴 시 커뮤니티댓글 삭제 -->
+	<delete id="deleteMember" parameterType="_int">
+		delete from community_comment
+		where member_number = #{memberNumber}
+	</delete>
+	
+	<delete id="commentAllDelete" parameterType="_int">
+		delete cc FROM community_comment cc 
+		inner JOIN community c ON cc.community_number = c.community_number 
+		where c.member_number = #{memberNumber}
+	</delete>
+	
 </mapper>

@@ -39,3 +39,28 @@ $pwInput.on('blur', function(){
 	}
 	
 });
+
+/* 닉네임 한줄소개 글씨입력 시 카운트 증가 */
+let $nicknameCount = $('.nickname-count');
+let $selfyCount = $('.selfy-count');
+
+let $nicknameInput = $('#nickname-change');
+let $selfyInput = $('#selfy-change');
+
+$nicknameInput.on('keydown', function(){
+	console.log($(this).val().length);
+	$nicknameCount.text($(this).val().length);
+});
+
+$selfyInput.on('keydown', function(){
+	$selfyCount.text($(this).val().length);
+});
+
+
+
+
+
+
+
+
+

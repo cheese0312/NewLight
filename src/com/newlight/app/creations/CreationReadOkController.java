@@ -25,6 +25,7 @@ public class CreationReadOkController implements Execute {
 		
 		CreationsDAO creationsDAO = new CreationsDAO();
 		CreationsVO creationsVO = creationsDAO.creationContent(creationNumber);
+		System.out.println(creationNumber);
 		
 		CreationsFileDAO creationsFileDAO = new CreationsFileDAO();
 		List<CreationsFileDTO> creationsFiles = creationsFileDAO.select(creationNumber);
@@ -68,7 +69,7 @@ public class CreationReadOkController implements Execute {
 		req.setAttribute("isLike", isLike);
 		System.out.println(creationsVO);
 		
-		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
+//		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
 
 	}
 

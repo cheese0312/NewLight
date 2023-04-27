@@ -8,12 +8,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>글쓰기</title>
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/assets/css/community/communityWrite.css"/>
+   href="${pageContext.request.contextPath}/assets/css/community/communityWrite.css"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">
+   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+   rel="stylesheet">
 </head>
 <body>
 
@@ -23,18 +23,15 @@
     <input type="hidden" name="communityNumber" value="${community.getCommunityNumber()}">
     
     <section>
-        <div class="gd">
-        <h1>글쓰기</h1>
-
-        <div class="writer-sub">
-            
-            <div class="writer2">
-            <c:out value="${community.getMemberNickName()}"/>
-            </div>
-            <div class="author">님</div>
-        </div>
-    </div>
         <div class="big-box">
+                  <div class="gd">
+               <h1>
+                  별물결 작성하기 -
+                  <c:out value="${community.getMemberNickName()}" />
+               </h1>
+
+
+            </div>
             
             
             <div class="small-box">

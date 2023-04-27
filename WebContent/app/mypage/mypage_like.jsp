@@ -59,7 +59,7 @@
 										<div class="creations-img">
 											<img src="${pageContext.request.contextPath}/upload/${like.getCreationSumnail()}">
 											<div class="sub-title">
-												<a href="#"> <c:out value="${like.getCreationTitle() }" /></a>
+												<a href="/creations/creationRead.ct?creationNumber=${like.creationNumber}"> <c:out value="${like.getCreationTitle() }" /></a>
 											</div>
 											<div class="sub-author">
 											<div class="sub-author-img">
@@ -67,7 +67,7 @@
 													src="${pageContext.request.contextPath}/assets/img/member/people.png">
 												</div>
 												<div class="sub-author-name">
-												<a href="#"> <c:out value="${like.getMemberNickname() }" />
+												<a href="/mypage/creationsOk.mp?memberNumber=${memberNumber}"> <c:out value="${like.getMemberNickname() }" />
 												</a>
 												</div>
 											</div>

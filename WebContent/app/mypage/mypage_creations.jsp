@@ -9,7 +9,6 @@
    href="${pageContext.request.contextPath}/assets/css/mypage/mypage-creations.css">
 </head>
 <body>
-<<<<<<< HEAD
    <!-- 헤더 -->
    <%@include file="/app/header.jsp"%>
    <main>
