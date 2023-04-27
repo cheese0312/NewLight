@@ -146,6 +146,7 @@ section>.big-box {
   .date>p{
    width : 500px;
   }
+  
 .view-attach {
 	width: 65%;
 	margin: 0 210px;
@@ -298,9 +299,6 @@ section>.big-box {
 	font-size: 15px;
 }
 
-.date>p {
-	width: 150px;
-}
 
 /* 첨부파일 스타일 */
 .img-box {

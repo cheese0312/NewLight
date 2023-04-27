@@ -51,13 +51,11 @@ header{
 }
 
 .big-box>.remove{
-width: 200px;
     padding: 0 10px;
     margin: 30px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
- 
+    justify-content: flex-end;
+    align-items: center; 
 }
 
 .remove>button{

@@ -37,8 +37,9 @@ public class DownloadController implements Execute {
          System.out.println(uploadPath);
 //      클라이언트에게 보내는 응답이 이전과 다르게 파일(바이트) 데이터이므로 컨텐트 타입을
 //      설정해야 한다.
-         resp.setContentType("application/octet-stream;");
-//      resp의 헤더영역에 파일에 대한 추가 정보를 설정한다.
+         resp.setContentType("application/octet-stream; charset=utf-8");
+         
+         fileOriginalName = new String(fileOriginalName.getBytes("UTF-8"), "ISO-8859-1");
          resp.setHeader("Content-Length", file.length()+"");
          resp.setHeader("Content-Disposition", "attachment; filename=" + fileOriginalName);
          

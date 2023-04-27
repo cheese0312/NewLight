@@ -23,18 +23,15 @@
     <input type="hidden" name="communityNumber" value="${community.getCommunityNumber()}">
     
     <section>
-        <div class="gd">
-        <h1>글쓰기</h1>
-
-        <div class="writer-sub">
-            
-            <div class="writer2">
-            <c:out value="${community.getMemberNickName()}"/>
-            </div>
-            <div class="author">님</div>
-        </div>
-    </div>
         <div class="big-box">
+      				<div class="gd">
+					<h1>
+						별물결 작성하기 -
+						<c:out value="${community.getMemberNickName()}" />
+					</h1>
+
+
+				</div>
             
             
             <div class="small-box">

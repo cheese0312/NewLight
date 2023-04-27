@@ -59,7 +59,7 @@
 										<div class="creations-img">
 											<img src="${pageContext.request.contextPath}/upload/${like.getCreationSumnail()}">
 											<div class="sub-title">
-												<a href="#"> <c:out value="${like.getCreationTitle() }" /></a>
+												<a href="# "> <c:out value="${like.getCreationTitle() }" /></a>
 											</div>
 											<div class="sub-author">
 											<div class="sub-author-img">
