@@ -56,7 +56,6 @@ header{
     display: flex;
     justify-content: flex-end;
     align-items: center;
- 
 }
 
 .remove>button{
@@ -92,9 +91,6 @@ header{
 .remove>.delete{
   font-size: 17px;
 }
-
-
-
 
 footer{
     width: 100%;

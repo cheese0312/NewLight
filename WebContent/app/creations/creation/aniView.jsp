@@ -39,9 +39,32 @@
 						<div class="creations-author">
 							<span><c:out value="${creation.getMemberNickname()}" /></span>
 						</div>
-						<div class="follow-btn">
-							<a href="#">팔로우 ✔</a>
-						</div>
+						<c:choose>
+						<c:when test="${isFollow == 0}">
+						<c:if
+							test="${sessionScope.memberNumber !=  creation.getMemberNumber()}">
+							<div class="follow-btn none"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ✔</a>
+							</div>
+							<div class="follow-btn"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 +</a>
+							</div>
+						</c:if>
+						</c:when>
+						
+						<c:otherwise>
+						<div class="follow-btn"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 ✔</a>
+							</div>
+						<div class="follow-btn none"
+								data-memberNumber="${creation.getMemberNumber() }">
+								<a href="#" class="follower">팔로우 +</a>
+							</div>
+						</c:otherwise>
+						</c:choose>
 					</div>
 					<div class="creations-main">
 						<div class="creations-main-content">

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.session.SqlSession;
+
 import com.newlight.app.Execute;
 import com.newlight.app.dao.CommunityCommentDAO;
 import com.newlight.app.dao.CommunityDAO;
@@ -27,7 +29,7 @@ import com.newlight.app.dto.CommunityFileDTO;
 import com.newlight.app.dto.CreationsFileDTO;
 import com.newlight.app.dto.QnAFileDTO;
 
-public class DeleteOkController implements Execute{
+public class DeleteOkController implements Execute {
 	@Override
 	public void execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		QnACommentDAO qcDAO = new QnACommentDAO();
@@ -43,54 +45,53 @@ public class DeleteOkController implements Execute{
 		CreationsDAO creationDAO = new CreationsDAO();
 		QnADAO qnaDAO = new QnADAO();
 		MemberFileDAO memberFileDAO = new MemberFileDAO();
-		
-		
+
 		HttpSession session = req.getSession();
 		System.out.println(session.getAttribute("memberNumber"));
-		int memberNumber = (Integer)session.getAttribute("memberNumber");
-				
+		int memberNumber = (Integer) session.getAttribute("memberNumber");
+
 		String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
 		String profilePath = req.getSession().getServletContext().getRealPath("/") + "userProfile/";
-		
+
 		List<QnAFileDTO> qnaFiles = qnaFileDAO.selectDelete(memberNumber);
 		List<CommunityFileDTO> communityFiles = cfDAO.selectDelete(memberNumber);
 		List<CreationsFileDTO> creationFiles = creationFileDAO.selectDelete(memberNumber);
-		
-		for(QnAFileDTO file : qnaFiles) {
+
+		for (QnAFileDTO file : qnaFiles) {
 			File temp = new File(uploadPath, file.getFileSystemName());
-			
-			if(temp.exists()) {
+
+			if (temp.exists()) {
 				temp.delete();
 			}
 		}
-		
-		for(CommunityFileDTO file : communityFiles) {
+
+		for (CommunityFileDTO file : communityFiles) {
 			File temp = new File(uploadPath, file.getFileSystemName());
-			
-			if(temp.exists()) {
+
+			if (temp.exists()) {
 				temp.delete();
 			}
 		}
-		
-		for(CreationsFileDTO file : creationFiles) {
+
+		for (CreationsFileDTO file : creationFiles) {
 			File temp = new File(uploadPath, file.getFileSystemName());
-			
-			if(temp.exists()) {
+
+			if (temp.exists()) {
 				temp.delete();
 			}
 		}
-		
+
 //		실제 프로필 이미지 파일 삭제 처리
 		String pfpName = memberDAO.selectProfile(memberNumber);
-		
-		if(pfpName != null) {
+
+		if (pfpName != null) {
 			File file = new File(profilePath, pfpName);
-			
-			if(file.exists()) {
+
+			if (file.exists()) {
 				file.delete();
 			}
 		}
-		
+
 		qcDAO.deleteMember(memberNumber);
 		qnaFileDAO.deleteMember(memberNumber);
 		qnaDAO.deleteMember(memberNumber);
@@ -109,11 +110,6 @@ public class DeleteOkController implements Execute{
 		session.invalidate();
 		
 		resp.sendRedirect("/main/mainpageListOk.mi");
-		
+
 	}
 }
-
-
-
-
-

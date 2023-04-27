@@ -160,9 +160,9 @@ hr {
 }
 
 .sub-author {
-  display: flex;
-  padding: 5px 10px;
-  /* background: black; */
+	display: flex;
+    padding: 5px 10px;
+    align-items: center;
 }
 
 .sub-author > img {

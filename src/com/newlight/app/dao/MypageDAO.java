@@ -38,6 +38,10 @@ public class MypageDAO {
    public List<MypageVO> mypageLikeCount(MypageVO mypageVO) {
       return sqlSession.selectList("mypage.mypageLikeCount" , mypageVO);
    }
+   
+   public List<MypageVO> followerCount (MypageVO mypageVO){
+	   return sqlSession.selectList("mypage.followerCount", mypageVO);
+   }
 
 
 }

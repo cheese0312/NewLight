@@ -30,7 +30,7 @@
    <!-- 카테고리 테마별 창작물 조회하기 -->
    <select id="selectMenu" resultType="CreationsVO" parameterType="map">
       select c.creation_number , c.creation_title , c.creation_sumnail ,
-      m.member_nickname , m.member_pfp
+      m.member_nickname , m.member_pfp , m.member_number
       from creations c join `member` m
       on c.member_number = m.member_number and category_code = #{categoryCode}
       and category_name = #{categoryName}
@@ -41,7 +41,8 @@
       <!-- 카테고리 테마별 창작물 조회하기 -->
    <select id="selectMenu2" resultType="CreationsVO" parameterType="map">
       		select count(cc.comment_number ) comment_count, j.* from (
-			select count(l.member_number) like_count, m.member_nickname, m.member_pfp , c.* from creations c join
+			select count(l.member_number) like_count, m.member_nickname, m.member_pfp ,  c.* 
+			from creations c join
 			`member` m 
 			on c.member_number = m.member_number
 			left outer join likes l 
@@ -62,6 +63,12 @@
       on
       creation_number = #{creationNumber} and m.member_number =
       c.member_number
+   </select>
+   
+   <select id="followCount" parameterType="map" resultType="_int">
+   select count(follower_number) 
+	from follows f 
+	where follower_number = #{followerNumber} and followee_number =#{followeeNumber};
    </select>
 
    <!-- 창작물 삭제 -->

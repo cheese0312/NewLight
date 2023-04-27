@@ -1,7 +1,9 @@
 package com.newlight.app.creations;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -27,9 +29,14 @@ public class CreationReadOkController implements Execute {
 		CreationsVO creationsVO = creationsDAO.creationContent(creationNumber);
 		System.out.println(creationNumber);
 		
+		Map<String, Integer> followMap = new HashMap<String, Integer>();
+		followMap.put("followerNumber",  creationsVO.getMemberNumber());
+		followMap.put("followeeNumber", memberNumber);
+		
+		int isFollow = creationsDAO.followCount(followMap);
+		
 		CreationsFileDAO creationsFileDAO = new CreationsFileDAO();
 		List<CreationsFileDTO> creationsFiles = creationsFileDAO.select(creationNumber);
-		CreationsDTO creationsDTO = new CreationsDTO();
 		
 		LikesDTO likesDTO = new LikesDTO();
 		
@@ -51,9 +58,10 @@ public class CreationReadOkController implements Execute {
 		req.setAttribute("creationComment", creationComment);
 		req.setAttribute("commentList", commentList);
 		
+		req.setAttribute("isFollow", isFollow);
+		
 		List<CreationsFileDTO> files = creationsFileDAO.aniList(creationNumber);
 		
-		System.out.println(files);
 		req.setAttribute("files", files);
 		
 		CreationsVO checkPath = creationsDAO.creationRead(creationNumber);
@@ -67,7 +75,6 @@ public class CreationReadOkController implements Execute {
 			
 		req.getRequestDispatcher(path).forward(req, resp);
 		req.setAttribute("isLike", isLike);
-		System.out.println(creationsVO);
 		
 //		req.getRequestDispatcher("/app/creations/creation/creation.jsp").forward(req, resp);
 

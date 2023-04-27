@@ -64,7 +64,7 @@
     <div class="form-group padding">
       <label for="file">파일 첨부</label>
       <div class="image-upload-wrap">
-       <input type="file" id="file" name="boardFile" accept=".jpg, .jpeg, .png" multiple/>
+       <input type="file" id="file" name="boardFile" accept=".jpg, .jpeg, .png, .ttf , .theme, .apk" multiple/>
           <div class="image-upload-box">
              <div class="upload-text">
                 <div class="upload-icon">
