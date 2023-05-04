@@ -10,7 +10,7 @@
 <title>information</title>
 <link rel="stylesheet"
    href="${pageContext.request.contextPath}/assets/css/member/information.css" />
-   <script type="text/javascript">
+<!--    <script type="text/javascript">
 // <![CDATA[
 var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
 var sparkles=50;
@@ -208,6 +208,7 @@ function newColour() {
 }
 // ]]>
 </script>
+ -->
 </head>
 <body>
    <%@include file="/app/header.jsp"%>
@@ -226,7 +227,7 @@ function newColour() {
                      <c:if test="${not empty memberDTO.getMemberPfp()}">
                         <img
                            src="${pageContext.request.contextPath}/userProfile/${memberDTO.getMemberPfp()}"
-                           alt="" class="info-people-img" />
+                           alt="" class="info-people-img" value="${memberDTO.getMemberPfp()}"/>
                            </c:if>
                            <c:if test="${empty memberDTO.getMemberPfp()}">
                            <img src="${pageContext.request.contextPath}/assets/img/member/people.png"
@@ -250,7 +251,7 @@ function newColour() {
                      </div>
                      <div class="info-pw">
                         <label for="pw-change">비밀번호 </label> <input type="password"
-                           name="memberPassword" id="pw-change" required /> 
+                           name="memberPassword" id="pw-change" required  value="${memberDTO.getMemberPassword()}"/> 
                            <span></span>
                            <div class="info-pw-sub">
                            <span
@@ -260,7 +261,7 @@ function newColour() {
                      
                      <div class="info-phone info">
                         <label for="id-change">핸드폰 번호 </label> <input type="text"
-                           name="memberPhoneNumber" id="id-chnage" required />
+                           name="memberPhoneNumber" id="id-chnage" required value="${memberDTO.getMemberPhoneNumber()}"/>
                            <span></span>
                      </div>
                      <div class="info-nickname info">
@@ -278,28 +279,28 @@ function newColour() {
                         한 줄 소개
                         <span class="count">(<span class="selfy-count">0</span>/800)</span>
                         </label> <input
-                           type="text" name="memberComment" id="selfy-change" required />
+                           type="text" name="memberComment" id="selfy-change" required value="${memberDTO.getMemberComment()}"/>
                            <span></span>
                      </div>
                      <div class="info-address1 info">
                         <label for="address1-change">주소</label> <input type="text"
-                           name="memberAddress1" id="address1-change" required />
+                           name="memberAddress1" id="address1-change" required  value="${memberDTO.getMemberAddress1()}"/>
                            <span></span>
                      </div>
                      <div class="info-address2 info">
                         <label for="address2-change">상세주소</label> <input type="text"
-                           name="memberAddress2" id="address2-change" required />
+                           name="memberAddress2" id="address2-change" required value="${memberDTO.getMemberAddress2()}"/>
                            <span></span>
                      </div>
                      <div class="info-email info">
                         <label for="email-change">이메일</label> <input type="text"
-                           name="memberEmail" id="email-change" required />
+                           name="memberEmail" id="email-change" required value="${memberDTO.getMemberEmail()}"/>
                            <span></span>
                      </div>
                      <div class="info-website info">
                         <label for="website-change">웹 사이트</label> <input type="text"
                            name="memberWebsite" id="web-change" placeholder="http://"
-                           required />
+                           required value="${memberDTO.getMemberWebsite()}"/>
                            <span></span>
                      </div>
                      <div class="user-delete">

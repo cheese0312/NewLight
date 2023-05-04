@@ -165,9 +165,11 @@ hr {
 }
 
 .sub-author {
-  display: flex;
-  padding: 5px 5px;
+	display: flex;
+    padding: 5px 10px;
+    align-items: center;
 }
+
 
 .sub-author > img {
   width: 30px;
@@ -178,6 +180,25 @@ hr {
   padding: 5px;
   text-decoration: none;
   color: black;
+}
+
+.sub-author-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.sub-author-img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub-author-name > a {
+  padding: 5px;
+  text-decoration: none;
+  color : black;
 }
 
 .sub-title {

@@ -8,7 +8,7 @@
 <title>아이디 찾기</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/assets/css/member/findId.css">
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	// <![CDATA[
 	var colour = "random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
 	var sparkles = 50;
@@ -218,6 +218,7 @@
 	}
 	// ]]>
 </script>
+ -->
 </head>
 <body>
 	<!-- 헤더 -->

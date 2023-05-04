@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>창작물 업로드</title>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/upload.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/creations/upload.css">
 </head>
 <body>
 
@@ -80,7 +80,7 @@
                 최대 10개까지 업로드 가능
              </div>
              <div class="upload-text">
-                파일 형식 : jpg, png
+                파일 형식 : jpg, png, ktheme, apk, ttf
              </div>
              <div class="upload-text">
                 ※ 이미지를 등록하면 즉시 반영됩니다.

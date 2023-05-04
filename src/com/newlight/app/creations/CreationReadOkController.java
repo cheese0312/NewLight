@@ -33,6 +33,8 @@ public class CreationReadOkController implements Execute {
 		followMap.put("followerNumber",  creationsVO.getMemberNumber());
 		followMap.put("followeeNumber", memberNumber);
 		
+		System.out.println(creationsVO);
+		
 		int isFollow = creationsDAO.followCount(followMap);
 		
 		CreationsFileDAO creationsFileDAO = new CreationsFileDAO();

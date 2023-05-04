@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
    href="${pageContext.request.contextPath}/assets/css/member/findPw.css">
-   	<script type="text/javascript">
+<!--    	<script type="text/javascript">
 // <![CDATA[
 var colour="random"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
 var sparkles=50;
@@ -206,6 +206,7 @@ function newColour() {
 }
 // ]]>
 </script>
+ -->
 </head>
 <body>
 <!-- 헤더 -->

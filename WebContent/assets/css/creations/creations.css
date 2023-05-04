@@ -103,7 +103,7 @@ main {
   text-align: center;
 }
 
-.creations-main-content > img {
+.creations-main-content > .img-size2 {
   padding: 15px 0;
   width: 700px;
   height: 350px;
@@ -112,6 +112,7 @@ main {
 .creations-comment-content {
   padding: 15px 0;
   padding-left: 30px;
+  white-space : pre-line;
 }
 
 .click-main {
@@ -360,4 +361,9 @@ main {
 .commnet-btn-ok:hover {
 	border : 1px solid #8221ce;
   color: #8221ce;
+}
+
+.img-size {
+	width : 250px;
+	height : 250px;
 }

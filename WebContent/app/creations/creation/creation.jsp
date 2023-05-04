@@ -72,12 +72,22 @@
 					<div class="creations-main">
 						<div class="creations-main-content">
 							<c:forEach var="creationFile" items="${creation.getFiles()}">
-							<c:set var="name" value="${creationFile.getFileSystemName() }"/>
-							<c:if test="${not fn:contains(name , '.ttf')} ">
+							
+							<c:if test="${creation.getCategoryName() == '손그림' or creation.getCategoryName() == '폰트' or creation.getCategoryName() == '카톡테마'}">
+							<c:set var="name" value="${creationFile.getFileSystemName()}"/>
+							<c:if test="${not fn:contains(name , '.ttf') and not fn:contains(name , '.ktheme') and not fn:contains(name , '.apk')}">
 								<img
-									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}">
+									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}" class="img-size">
 							</c:if>
-								
+							</c:if>
+							
+							<c:if test="${creation.getCategoryName() == '배경화면' or creation.getCategoryName() == '트레이싱'}">
+							<c:set var="name" value="${creationFile.getFileSystemName()}"/>
+							<c:if test="${not fn:contains(name , '.ttf') and not fn:contains(name , '.ktheme') and not fn:contains(name , '.apk')}">
+								<img
+									src="${pageContext.request.contextPath}/upload/${creationFile.getFileSystemName()}" class="img-size2">
+							</c:if>
+							</c:if>
 								<div class="download-btn-wrap">
 									<div class="theme-down-box">
 										<div class="folder-icon">

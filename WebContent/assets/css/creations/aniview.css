@@ -145,10 +145,15 @@ main {
     justify-content: center;
 }
 
-.creations-like > img {
+.creations-like  img{
   width: 15px;
   height: 15px;
   padding: 0 5px;
+}
+
+.creations-like a {
+	text-decoration: none;
+	padding: 0 5px;
 }
 
 .creations-comment {

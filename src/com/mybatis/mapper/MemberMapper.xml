@@ -76,7 +76,7 @@
    </update>
 
    <select id="select" parameterType="_int" resultType="MemberDTO">
-      select member_name, member_id, member_pfp , member_nickname
+      select *
       from `member` m
       where member_number =
       #{memberNumber}

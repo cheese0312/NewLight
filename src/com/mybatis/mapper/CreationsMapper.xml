@@ -85,53 +85,12 @@
    <!-- 창작물 보기 -->
    <select id="creationContent" parameterType="_int" resultType="CreationsVO">
       select 
-      c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
+      c.creation_number, c.creation_title , c.creation_content , c.creation_writeday , c.category_name,
       c.creation_read_count , m.member_nickname , m.member_number , m.member_pfp
       from creations c join `member` m
       on c.member_number = m.member_number
       where c.creation_number = #{creationNumber}
    </select>
-
-   <!-- 창작물 보기, 메인페이지에서 창작물 게시글 진입 -->
-<!--    <select id="creationContent" parameterType="_int" resultType="CreationsVO">
-      select c.creation_number, c.creation_title , c.creation_content , c.creation_writeday ,
-      c.creation_read_count , m.member_nickname , m.member_number, m.member_pfp
-      from creations c join `member` m
-      on c.member_number = m.member_number
-      where c.creation_number = #{creationNumber}
-   </select> -->
-   
-   <!-- 카테고리 테마별 창작물 조회하기 -->
-<!--    <select id="selectMenu" resultType="CreationsVO" parameterType="map">
-      select c.creation_number , c.creation_title , c.creation_sumnail ,
-      m.member_nickname , m.member_pfp
-      from creations c join `member` m
-      on c.member_number = m.member_number and category_code = #{categoryCode}
-      and category_name = #{categoryName}
-      order by creation_number desc
-      limit 0,9
-   </select> -->
-
-<!--    <select id="select" parameterType="_int" resultType="CreationsVO">
-      select creation_number, creation_title, creation_content,
-      category_code, category_name, creation_writeday, m.member_number,
-      m.member_id , m.member_nickname
-      from `member` m join creations c
-      on
-      creation_number = #{creationNumber} and m.member_number =
-      c.member_number
-   </select>
-
-   창작물 삭제
-   <delete id="delete" parameterType="_int">
-      delete from creations
-      where
-      member_number = #{memberNumber}
-   </delete> -->
-
-<!--    <select id="getSequence" resultType="_int">
-      select last_insert_id()
-   </select> -->
 
    <!-- 창작물 댓글 갯수 -->
    <select id="creationComment" parameterType="_int" resultType="_int">

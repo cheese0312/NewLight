@@ -50,6 +50,7 @@
 											</a>
 										</div>
 										<div class="sub-author">
+										<div class="sub-author-img">
 											<c:if test="${not empty creation.getMemberPfp() }">
 											<img
 												src="${pageContext.request.contextPath}/userProfile/${creation.getMemberPfp()}">
@@ -57,10 +58,13 @@
 												<c:if test="${empty creation.getMemberPfp()}">
 												<img src="${pageContext.request.contextPath}/assets/img/member/people.png">
 												</c:if>
+											</div>
+											<div class="sub-author-name">
 											<a
 												href="${pageContext.request.contextPath}/userpage/creationsOk.mp?memberNumber=${creation.getMemberNumber()}">
 												<c:out value="${creation.getMemberNickname()}" />
 											</a>
+											</div>
 										</div>
 										<div class="creations-sub">
                                        <div class="creation-like">

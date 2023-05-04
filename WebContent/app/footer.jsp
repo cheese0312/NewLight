@@ -9,7 +9,7 @@
 </head>
 <body>
   <footer>
-    <hr>
+    <hr class="footer">
     <div class="footer-main">
       <div class="footer-sub">
       <div class="footer-service"><span>서비스 안내</span></div>

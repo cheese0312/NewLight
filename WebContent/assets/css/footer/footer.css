@@ -1,4 +1,4 @@
-footer > hr {
+.footer{
   width: 70%;
   color: rgb(185, 185, 185);
 }
@@ -29,3 +29,5 @@ footer > hr {
   font-size: 11px;
   text-align: end;
 }
+
+
